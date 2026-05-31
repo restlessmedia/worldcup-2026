@@ -1,0 +1,348 @@
+{
+  "phase": "pre_knockout",
+  "last_updated": null,
+  "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
+  "summary": {
+    "houses_alive": 17,
+    "teams_in_bracket": 0,
+    "r32_fixtures_set": 0
+  },
+  "rounds": [
+    {
+      "id": "r32",
+      "label": "Round of 32",
+      "matches": [
+        {
+          "id": "r32-01",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-02",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-03",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-04",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-05",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-06",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-07",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-08",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-09",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-10",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-11",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-12",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-13",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-14",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-15",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r32-16",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        }
+      ],
+      "houses": [],
+      "teams_count": 0
+    },
+    {
+      "id": "r16",
+      "label": "Round of 16",
+      "matches": [
+        {
+          "id": "r16-01",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-02",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-03",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-04",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-05",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-06",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-07",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "r16-08",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        }
+      ],
+      "houses": [],
+      "teams_count": 0
+    },
+    {
+      "id": "qf",
+      "label": "Quarter-finals",
+      "matches": [
+        {
+          "id": "qf-01",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "qf-02",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "qf-03",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "qf-04",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        }
+      ],
+      "houses": [],
+      "teams_count": 0
+    },
+    {
+      "id": "sf",
+      "label": "Semi-finals",
+      "matches": [
+        {
+          "id": "sf-01",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "sf-02",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        }
+      ],
+      "houses": [],
+      "teams_count": 0
+    },
+    {
+      "id": "third",
+      "label": "3rd place play-off",
+      "matches": [
+        {
+          "id": "third-01",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        }
+      ],
+      "houses": [],
+      "teams_count": 0
+    },
+    {
+      "id": "final",
+      "label": "Final",
+      "matches": [
+        {
+          "id": "final-01",
+          "home": null,
+          "away": null,
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        }
+      ],
+      "houses": [],
+      "teams_count": 0
+    }
+  ]
+}

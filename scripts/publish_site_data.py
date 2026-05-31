@@ -6,6 +6,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from build_knockout import build_knockout
 from build_standings import build_standings
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +68,7 @@ def public_results(results: dict) -> dict:
 
 def main() -> None:
     standings = build_standings()
+    knockout = build_knockout()
     draw = load_json(DATA / "draw.json")
     config = load_json(DATA / "config.json")
     fifa = load_json(DATA / "fifa-teams.json")
@@ -94,6 +96,7 @@ def main() -> None:
         "config.json": public_config(config),
         "fifa-teams.json": public_fifa_teams(fifa),
         "results.json": public_results(results),
+        "knockout.json": knockout,
         "meta.json": meta,
     }
 

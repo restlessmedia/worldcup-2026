@@ -67,6 +67,43 @@ Then run `python scripts/publish_site_data.py` and push.
 
 The publish script rebuilds `app/data/standings.json` (houses + wooden spoon league) from `results.json` + the draw.
 
+## Knockout bracket (`data/knockout.json`)
+
+After the group stage, edit **`data/knockout.json`** to fill the bracket. The site shows a horizontal knockout view with **team, flag, and house** on each slot.
+
+1. Set `"phase": "knockout"`
+2. Fill Round of 32 fixtures using **draw team names** for `home` and `away`
+3. Add scores — winners advance automatically to the next round
+
+```json
+{
+  "phase": "knockout",
+  "last_updated": "2026-07-05",
+  "rounds": [
+    {
+      "id": "r32",
+      "label": "Round of 32",
+      "matches": [
+        {
+          "id": "r32-01",
+          "home": "Belgium",
+          "away": "Japan",
+          "home_score": 2,
+          "away_score": 1,
+          "winner": null
+        }
+      ]
+    }
+  ]
+}
+```
+
+- Leave `winner` null — it is inferred from scores, or set explicitly to force a result
+- Later rounds fill in automatically from winners unless you override `home`/`away` manually
+- **3rd place play-off** (`third-01`) must be set manually (semi-final losers)
+
+On first publish, `data/knockout.json` is created automatically with empty TBD slots if missing.
+
 ## Wooden spoon tie-breakers
 
 If two teams tie on goals conceded, the site shows the same league position. Final tie-break rules are in `docs/rules.md` (matches played, goal difference, etc.).
@@ -76,6 +113,7 @@ If two teams tie on goals conceded, the site shows the same league position. Fin
 | Page | Local | Live (after deploy) |
 | --- | --- | --- |
 | Houses | http://localhost:8080/ | https://restlessmedia.github.io/worldcup-2026/ |
+| Knockout | http://localhost:8080/knockout.html | https://restlessmedia.github.io/worldcup-2026/knockout.html |
 | Wooden spoon | http://localhost:8080/spoon.html | https://restlessmedia.github.io/worldcup-2026/spoon.html |
 | Prizes & rules | http://localhost:8080/info.html | https://restlessmedia.github.io/worldcup-2026/info.html |
 

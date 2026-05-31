@@ -36,7 +36,7 @@ npm run dev
 
 Then open http://localhost:5173 (runs `publish_site_data` data sync automatically).
 
-Open http://localhost:8080 (houses), http://localhost:8080/spoon.html (wooden spoon), and http://localhost:8080/info.html (prizes & rules) after the production build above.
+Open http://localhost:8080 (houses), http://localhost:8080/knockout.html (knockout), http://localhost:8080/spoon.html (wooden spoon), and http://localhost:8080/info.html (prizes & rules) after the production build above.
 
 ## Updating during the tournament
 

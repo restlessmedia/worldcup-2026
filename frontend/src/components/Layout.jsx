@@ -11,6 +11,9 @@ export function Layout({ title, tagline, activeNav, children, footer }) {
             <a href="index.html" className={activeNav === "houses" ? "active" : ""}>
               Houses
             </a>
+            <a href="knockout.html" className={activeNav === "knockout" ? "active" : ""}>
+              Knockout
+            </a>
             <a href="spoon.html" className={activeNav === "spoon" ? "active" : ""}>
               Wooden spoon
             </a>
