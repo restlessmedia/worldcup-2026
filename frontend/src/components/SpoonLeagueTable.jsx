@@ -53,11 +53,9 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
               </td>
               <td className="house-label">{formatHouseLabel(row.house_id)}</td>
               <td className="num">{row.group || "—"}</td>
-              <td className="num" title={columns.worldRanking.hint}>
-                #{row.fifa_rank}
-              </td>
+              <td className="num">#{row.fifa_rank}</td>
               <td className="num ga-cell">
-                <strong title={columns.goalsConceded.hint}>{row.goals_conceded}</strong>
+                <strong>{row.goals_conceded}</strong>
               </td>
             </tr>
           );

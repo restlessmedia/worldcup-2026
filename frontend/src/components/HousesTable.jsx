@@ -60,10 +60,10 @@ export function HousesTable({ standings }) {
                   <td>
                     <TeamFlagRow teams={house.teams} onSelect={setSelectedTeam} showNames />
                   </td>
-                  <td className="num" title={columns.bestRanking.hint}>
+                  <td className="num">
                     <strong>{best}</strong>
                   </td>
-                  <td className="num" title={columns.stillIn.hint}>
+                  <td className="num">
                     {inPlay}/{house.teams_total}
                   </td>
                 </tr>

@@ -6,5 +6,5 @@
   "last_updated": null,
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (scores & fixtures)",
-  "notes": "Admin: update goals_conceded using draw team names as keys, then run python scripts/publish_site_data.py. See docs/updating-data.md."
+  "notes": "Admin: see docs/admin-runbook.md — edit goals_conceded, run python scripts/publish_update.py"
 }
