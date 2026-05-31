@@ -1,0 +1,1560 @@
+{
+  "generated_at": "2026-05-31T20:52:48.355375+00:00",
+  "tournament_status": "pre_tournament",
+  "results_updated": null,
+  "teams_in_play": 48,
+  "teams_total": 48,
+  "houses": [
+    {
+      "house_id": "1",
+      "teams_total": 4,
+      "teams_alive": 4,
+      "best_remaining_rank": 9,
+      "best_remaining_team": "Belgium",
+      "teams": [
+        {
+          "draw_name": "Belgium",
+          "display_name": "Belgium",
+          "fifa_code": "BEL",
+          "group": "G",
+          "fifa_rank": 9,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Uruguay",
+          "display_name": "Uruguay",
+          "fifa_code": "URU",
+          "group": "H",
+          "fifa_rank": 17,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Iraq",
+          "display_name": "Iraq",
+          "fifa_code": "IRQ",
+          "group": "I",
+          "fifa_rank": 57,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "New Zealand",
+          "display_name": "New Zealand",
+          "fifa_code": "NZL",
+          "group": "G",
+          "fifa_rank": 85,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "2",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 18,
+      "best_remaining_team": "Japan",
+      "teams": [
+        {
+          "draw_name": "Japan",
+          "display_name": "Japan",
+          "fifa_code": "JPN",
+          "group": "F",
+          "fifa_rank": 18,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Austria",
+          "display_name": "Austria",
+          "fifa_code": "AUT",
+          "group": "J",
+          "fifa_rank": 24,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "3",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 23,
+      "best_remaining_team": "Ecuador",
+      "teams": [
+        {
+          "draw_name": "Ecuador",
+          "display_name": "Ecuador",
+          "fifa_code": "ECU",
+          "group": "E",
+          "fifa_rank": 23,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Czechia (Czech Republic)",
+          "display_name": "Czechia",
+          "fifa_code": "CZE",
+          "group": "A",
+          "fifa_rank": 41,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "4",
+      "teams_total": 3,
+      "teams_alive": 3,
+      "best_remaining_rank": 4,
+      "best_remaining_team": "England",
+      "teams": [
+        {
+          "draw_name": "England",
+          "display_name": "England",
+          "fifa_code": "ENG",
+          "group": "L",
+          "fifa_rank": 4,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Netherlands (Holland)",
+          "display_name": "Netherlands",
+          "fifa_code": "NED",
+          "group": "F",
+          "fifa_rank": 7,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Mexico",
+          "display_name": "Mexico",
+          "fifa_code": "MEX",
+          "group": "A",
+          "fifa_rank": 15,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "5",
+      "teams_total": 3,
+      "teams_alive": 3,
+      "best_remaining_rank": 16,
+      "best_remaining_team": "USA",
+      "teams": [
+        {
+          "draw_name": "USA (United States)",
+          "display_name": "USA",
+          "fifa_code": "USA",
+          "group": "D",
+          "fifa_rank": 16,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Türkiye (Turkey)",
+          "display_name": "Türkiye",
+          "fifa_code": "TUR",
+          "group": "D",
+          "fifa_rank": 22,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Ghana",
+          "display_name": "Ghana",
+          "fifa_code": "GHA",
+          "group": "L",
+          "fifa_rank": 74,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "6",
+      "teams_total": 4,
+      "teams_alive": 4,
+      "best_remaining_rank": 6,
+      "best_remaining_team": "Brazil",
+      "teams": [
+        {
+          "draw_name": "Brazil",
+          "display_name": "Brazil",
+          "fifa_code": "BRA",
+          "group": "C",
+          "fifa_rank": 6,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Senegal",
+          "display_name": "Senegal",
+          "fifa_code": "SEN",
+          "group": "I",
+          "fifa_rank": 14,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Ivory Coast (Côte d'Ivoire)",
+          "display_name": "Ivory Coast",
+          "fifa_code": "CIV",
+          "group": "E",
+          "fifa_rank": 34,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Uzbekistan",
+          "display_name": "Uzbekistan",
+          "fifa_code": "UZB",
+          "group": "K",
+          "fifa_rank": 50,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "8",
+      "teams_total": 3,
+      "teams_alive": 3,
+      "best_remaining_rank": 27,
+      "best_remaining_team": "Australia",
+      "teams": [
+        {
+          "draw_name": "Australia",
+          "display_name": "Australia",
+          "fifa_code": "AUS",
+          "group": "D",
+          "fifa_rank": 27,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Tunisia",
+          "display_name": "Tunisia",
+          "fifa_code": "TUN",
+          "group": "F",
+          "fifa_rank": 44,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Jordan",
+          "display_name": "Jordan",
+          "fifa_code": "JOR",
+          "group": "J",
+          "fifa_rank": 63,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "11",
+      "teams_total": 4,
+      "teams_alive": 4,
+      "best_remaining_rank": 31,
+      "best_remaining_team": "Norway",
+      "teams": [
+        {
+          "draw_name": "Norway",
+          "display_name": "Norway",
+          "fifa_code": "NOR",
+          "group": "I",
+          "fifa_rank": 31,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Saudi Arabia",
+          "display_name": "Saudi Arabia",
+          "fifa_code": "KSA",
+          "group": "H",
+          "fifa_rank": 61,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Curacao (Curaçao)",
+          "display_name": "Curaçao",
+          "fifa_code": "CUW",
+          "group": "E",
+          "fifa_rank": 82,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Haiti",
+          "display_name": "Haiti",
+          "fifa_code": "HAI",
+          "group": "C",
+          "fifa_rank": 83,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "12",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 3,
+      "best_remaining_team": "Argentina",
+      "teams": [
+        {
+          "draw_name": "Argentina",
+          "display_name": "Argentina",
+          "fifa_code": "ARG",
+          "group": "J",
+          "fifa_rank": 3,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Algeria",
+          "display_name": "Algeria",
+          "fifa_code": "ALG",
+          "group": "J",
+          "fifa_rank": 28,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "13",
+      "teams_total": 4,
+      "teams_alive": 4,
+      "best_remaining_rank": 19,
+      "best_remaining_team": "Switzerland",
+      "teams": [
+        {
+          "draw_name": "Switzerland",
+          "display_name": "Switzerland",
+          "fifa_code": "SUI",
+          "group": "B",
+          "fifa_rank": 19,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Egypt",
+          "display_name": "Egypt",
+          "fifa_code": "EGY",
+          "group": "G",
+          "fifa_rank": 29,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Panama",
+          "display_name": "Panama",
+          "fifa_code": "PAN",
+          "group": "L",
+          "fifa_rank": 33,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Bosnia and Herzegovina (Bosnia)",
+          "display_name": "Bosnia",
+          "fifa_code": "BIH",
+          "group": "B",
+          "fifa_rank": 65,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "16",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 25,
+      "best_remaining_team": "South Korea",
+      "teams": [
+        {
+          "draw_name": "South Korea (Korea Republic)",
+          "display_name": "South Korea",
+          "fifa_code": "KOR",
+          "group": "A",
+          "fifa_rank": 25,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Paraguay",
+          "display_name": "Paraguay",
+          "fifa_code": "PAR",
+          "group": "D",
+          "fifa_rank": 40,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "18",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 55,
+      "best_remaining_team": "Qatar",
+      "teams": [
+        {
+          "draw_name": "Qatar",
+          "display_name": "Qatar",
+          "fifa_code": "QAT",
+          "group": "B",
+          "fifa_rank": 55,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Cape Verde",
+          "display_name": "Cape Verde",
+          "fifa_code": "CPV",
+          "group": "H",
+          "fifa_rank": 69,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "19",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 8,
+      "best_remaining_team": "Morocco",
+      "teams": [
+        {
+          "draw_name": "Morocco",
+          "display_name": "Morocco",
+          "fifa_code": "MAR",
+          "group": "C",
+          "fifa_rank": 8,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Croatia",
+          "display_name": "Croatia",
+          "fifa_code": "CRO",
+          "group": "L",
+          "fifa_rank": 11,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "20",
+      "teams_total": 2,
+      "teams_alive": 2,
+      "best_remaining_rank": 10,
+      "best_remaining_team": "Germany",
+      "teams": [
+        {
+          "draw_name": "Germany",
+          "display_name": "Germany",
+          "fifa_code": "GER",
+          "group": "E",
+          "fifa_rank": 10,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Sweden",
+          "display_name": "Sweden",
+          "fifa_code": "SWE",
+          "group": "F",
+          "fifa_rank": 38,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "21",
+      "teams_total": 3,
+      "teams_alive": 3,
+      "best_remaining_rank": 1,
+      "best_remaining_team": "France",
+      "teams": [
+        {
+          "draw_name": "France",
+          "display_name": "France",
+          "fifa_code": "FRA",
+          "group": "I",
+          "fifa_rank": 1,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Portugal",
+          "display_name": "Portugal",
+          "fifa_code": "POR",
+          "group": "K",
+          "fifa_rank": 5,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Iran",
+          "display_name": "Iran",
+          "fifa_code": "IRN",
+          "group": "G",
+          "fifa_rank": 21,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "22",
+      "teams_total": 3,
+      "teams_alive": 3,
+      "best_remaining_rank": 43,
+      "best_remaining_team": "Scotland",
+      "teams": [
+        {
+          "draw_name": "Scotland",
+          "display_name": "Scotland",
+          "fifa_code": "SCO",
+          "group": "C",
+          "fifa_rank": 43,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "DR Congo (Democratic Republic of the Congo)",
+          "display_name": "DR Congo",
+          "fifa_code": "COD",
+          "group": "K",
+          "fifa_rank": 46,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "South Africa",
+          "display_name": "South Africa",
+          "fifa_code": "RSA",
+          "group": "A",
+          "fifa_rank": 60,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    },
+    {
+      "house_id": "Coppice",
+      "teams_total": 3,
+      "teams_alive": 3,
+      "best_remaining_rank": 2,
+      "best_remaining_team": "Spain",
+      "teams": [
+        {
+          "draw_name": "Spain",
+          "display_name": "Spain",
+          "fifa_code": "ESP",
+          "group": "H",
+          "fifa_rank": 2,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Colombia",
+          "display_name": "Colombia",
+          "fifa_code": "COL",
+          "group": "K",
+          "fifa_rank": 13,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        },
+        {
+          "draw_name": "Canada",
+          "display_name": "Canada",
+          "fifa_code": "CAN",
+          "group": "B",
+          "fifa_rank": 30,
+          "status": "alive",
+          "goals_conceded": 0,
+          "fair_play_points": 0
+        }
+      ]
+    }
+  ],
+  "wooden_spoon": [
+    {
+      "house_id": "12",
+      "display_name": "Algeria",
+      "fifa_code": "ALG",
+      "goals_conceded": 0,
+      "fifa_rank": 28,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "house_id": "12",
+      "display_name": "Argentina",
+      "fifa_code": "ARG",
+      "goals_conceded": 0,
+      "fifa_rank": 3,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "house_id": "8",
+      "display_name": "Australia",
+      "fifa_code": "AUS",
+      "goals_conceded": 0,
+      "fifa_rank": 27,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "house_id": "2",
+      "display_name": "Austria",
+      "fifa_code": "AUT",
+      "goals_conceded": 0,
+      "fifa_rank": 24,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "house_id": "1",
+      "display_name": "Belgium",
+      "fifa_code": "BEL",
+      "goals_conceded": 0,
+      "fifa_rank": 9,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "house_id": "13",
+      "display_name": "Bosnia",
+      "fifa_code": "BIH",
+      "goals_conceded": 0,
+      "fifa_rank": 65,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "house_id": "6",
+      "display_name": "Brazil",
+      "fifa_code": "BRA",
+      "goals_conceded": 0,
+      "fifa_rank": 6,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "house_id": "Coppice",
+      "display_name": "Canada",
+      "fifa_code": "CAN",
+      "goals_conceded": 0,
+      "fifa_rank": 30,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "house_id": "18",
+      "display_name": "Cape Verde",
+      "fifa_code": "CPV",
+      "goals_conceded": 0,
+      "fifa_rank": 69,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "house_id": "Coppice",
+      "display_name": "Colombia",
+      "fifa_code": "COL",
+      "goals_conceded": 0,
+      "fifa_rank": 13,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "house_id": "19",
+      "display_name": "Croatia",
+      "fifa_code": "CRO",
+      "goals_conceded": 0,
+      "fifa_rank": 11,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "house_id": "11",
+      "display_name": "Curaçao",
+      "fifa_code": "CUW",
+      "goals_conceded": 0,
+      "fifa_rank": 82,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "house_id": "3",
+      "display_name": "Czechia",
+      "fifa_code": "CZE",
+      "goals_conceded": 0,
+      "fifa_rank": 41,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "house_id": "22",
+      "display_name": "DR Congo",
+      "fifa_code": "COD",
+      "goals_conceded": 0,
+      "fifa_rank": 46,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "house_id": "3",
+      "display_name": "Ecuador",
+      "fifa_code": "ECU",
+      "goals_conceded": 0,
+      "fifa_rank": 23,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "house_id": "13",
+      "display_name": "Egypt",
+      "fifa_code": "EGY",
+      "goals_conceded": 0,
+      "fifa_rank": 29,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "house_id": "4",
+      "display_name": "England",
+      "fifa_code": "ENG",
+      "goals_conceded": 0,
+      "fifa_rank": 4,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "house_id": "21",
+      "display_name": "France",
+      "fifa_code": "FRA",
+      "goals_conceded": 0,
+      "fifa_rank": 1,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "house_id": "20",
+      "display_name": "Germany",
+      "fifa_code": "GER",
+      "goals_conceded": 0,
+      "fifa_rank": 10,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "house_id": "5",
+      "display_name": "Ghana",
+      "fifa_code": "GHA",
+      "goals_conceded": 0,
+      "fifa_rank": 74,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "house_id": "11",
+      "display_name": "Haiti",
+      "fifa_code": "HAI",
+      "goals_conceded": 0,
+      "fifa_rank": 83,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "house_id": "21",
+      "display_name": "Iran",
+      "fifa_code": "IRN",
+      "goals_conceded": 0,
+      "fifa_rank": 21,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "house_id": "1",
+      "display_name": "Iraq",
+      "fifa_code": "IRQ",
+      "goals_conceded": 0,
+      "fifa_rank": 57,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "house_id": "6",
+      "display_name": "Ivory Coast",
+      "fifa_code": "CIV",
+      "goals_conceded": 0,
+      "fifa_rank": 34,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "house_id": "2",
+      "display_name": "Japan",
+      "fifa_code": "JPN",
+      "goals_conceded": 0,
+      "fifa_rank": 18,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "house_id": "8",
+      "display_name": "Jordan",
+      "fifa_code": "JOR",
+      "goals_conceded": 0,
+      "fifa_rank": 63,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "house_id": "4",
+      "display_name": "Mexico",
+      "fifa_code": "MEX",
+      "goals_conceded": 0,
+      "fifa_rank": 15,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "house_id": "19",
+      "display_name": "Morocco",
+      "fifa_code": "MAR",
+      "goals_conceded": 0,
+      "fifa_rank": 8,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "house_id": "4",
+      "display_name": "Netherlands",
+      "fifa_code": "NED",
+      "goals_conceded": 0,
+      "fifa_rank": 7,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "house_id": "1",
+      "display_name": "New Zealand",
+      "fifa_code": "NZL",
+      "goals_conceded": 0,
+      "fifa_rank": 85,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "house_id": "11",
+      "display_name": "Norway",
+      "fifa_code": "NOR",
+      "goals_conceded": 0,
+      "fifa_rank": 31,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "house_id": "13",
+      "display_name": "Panama",
+      "fifa_code": "PAN",
+      "goals_conceded": 0,
+      "fifa_rank": 33,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "house_id": "16",
+      "display_name": "Paraguay",
+      "fifa_code": "PAR",
+      "goals_conceded": 0,
+      "fifa_rank": 40,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "house_id": "21",
+      "display_name": "Portugal",
+      "fifa_code": "POR",
+      "goals_conceded": 0,
+      "fifa_rank": 5,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "house_id": "18",
+      "display_name": "Qatar",
+      "fifa_code": "QAT",
+      "goals_conceded": 0,
+      "fifa_rank": 55,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "house_id": "11",
+      "display_name": "Saudi Arabia",
+      "fifa_code": "KSA",
+      "goals_conceded": 0,
+      "fifa_rank": 61,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "house_id": "22",
+      "display_name": "Scotland",
+      "fifa_code": "SCO",
+      "goals_conceded": 0,
+      "fifa_rank": 43,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "house_id": "6",
+      "display_name": "Senegal",
+      "fifa_code": "SEN",
+      "goals_conceded": 0,
+      "fifa_rank": 14,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "house_id": "22",
+      "display_name": "South Africa",
+      "fifa_code": "RSA",
+      "goals_conceded": 0,
+      "fifa_rank": 60,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "house_id": "16",
+      "display_name": "South Korea",
+      "fifa_code": "KOR",
+      "goals_conceded": 0,
+      "fifa_rank": 25,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "house_id": "Coppice",
+      "display_name": "Spain",
+      "fifa_code": "ESP",
+      "goals_conceded": 0,
+      "fifa_rank": 2,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "house_id": "20",
+      "display_name": "Sweden",
+      "fifa_code": "SWE",
+      "goals_conceded": 0,
+      "fifa_rank": 38,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "house_id": "13",
+      "display_name": "Switzerland",
+      "fifa_code": "SUI",
+      "goals_conceded": 0,
+      "fifa_rank": 19,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "house_id": "8",
+      "display_name": "Tunisia",
+      "fifa_code": "TUN",
+      "goals_conceded": 0,
+      "fifa_rank": 44,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "house_id": "5",
+      "display_name": "Türkiye",
+      "fifa_code": "TUR",
+      "goals_conceded": 0,
+      "fifa_rank": 22,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "house_id": "5",
+      "display_name": "USA",
+      "fifa_code": "USA",
+      "goals_conceded": 0,
+      "fifa_rank": 16,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "house_id": "1",
+      "display_name": "Uruguay",
+      "fifa_code": "URU",
+      "goals_conceded": 0,
+      "fifa_rank": 17,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "house_id": "6",
+      "display_name": "Uzbekistan",
+      "fifa_code": "UZB",
+      "goals_conceded": 0,
+      "fifa_rank": 50,
+      "group": "K",
+      "status": "alive"
+    }
+  ],
+  "wooden_spoon_league": [
+    {
+      "position": 1,
+      "house_id": "12",
+      "display_name": "Algeria",
+      "fifa_code": "ALG",
+      "goals_conceded": 0,
+      "fifa_rank": 28,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "12",
+      "display_name": "Argentina",
+      "fifa_code": "ARG",
+      "goals_conceded": 0,
+      "fifa_rank": 3,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "8",
+      "display_name": "Australia",
+      "fifa_code": "AUS",
+      "goals_conceded": 0,
+      "fifa_rank": 27,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "2",
+      "display_name": "Austria",
+      "fifa_code": "AUT",
+      "goals_conceded": 0,
+      "fifa_rank": 24,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "1",
+      "display_name": "Belgium",
+      "fifa_code": "BEL",
+      "goals_conceded": 0,
+      "fifa_rank": 9,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "13",
+      "display_name": "Bosnia",
+      "fifa_code": "BIH",
+      "goals_conceded": 0,
+      "fifa_rank": 65,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "6",
+      "display_name": "Brazil",
+      "fifa_code": "BRA",
+      "goals_conceded": 0,
+      "fifa_rank": 6,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "Coppice",
+      "display_name": "Canada",
+      "fifa_code": "CAN",
+      "goals_conceded": 0,
+      "fifa_rank": 30,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "18",
+      "display_name": "Cape Verde",
+      "fifa_code": "CPV",
+      "goals_conceded": 0,
+      "fifa_rank": 69,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "Coppice",
+      "display_name": "Colombia",
+      "fifa_code": "COL",
+      "goals_conceded": 0,
+      "fifa_rank": 13,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "19",
+      "display_name": "Croatia",
+      "fifa_code": "CRO",
+      "goals_conceded": 0,
+      "fifa_rank": 11,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "11",
+      "display_name": "Curaçao",
+      "fifa_code": "CUW",
+      "goals_conceded": 0,
+      "fifa_rank": 82,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "3",
+      "display_name": "Czechia",
+      "fifa_code": "CZE",
+      "goals_conceded": 0,
+      "fifa_rank": 41,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "22",
+      "display_name": "DR Congo",
+      "fifa_code": "COD",
+      "goals_conceded": 0,
+      "fifa_rank": 46,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "3",
+      "display_name": "Ecuador",
+      "fifa_code": "ECU",
+      "goals_conceded": 0,
+      "fifa_rank": 23,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "13",
+      "display_name": "Egypt",
+      "fifa_code": "EGY",
+      "goals_conceded": 0,
+      "fifa_rank": 29,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "4",
+      "display_name": "England",
+      "fifa_code": "ENG",
+      "goals_conceded": 0,
+      "fifa_rank": 4,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "21",
+      "display_name": "France",
+      "fifa_code": "FRA",
+      "goals_conceded": 0,
+      "fifa_rank": 1,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "20",
+      "display_name": "Germany",
+      "fifa_code": "GER",
+      "goals_conceded": 0,
+      "fifa_rank": 10,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "5",
+      "display_name": "Ghana",
+      "fifa_code": "GHA",
+      "goals_conceded": 0,
+      "fifa_rank": 74,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "11",
+      "display_name": "Haiti",
+      "fifa_code": "HAI",
+      "goals_conceded": 0,
+      "fifa_rank": 83,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "21",
+      "display_name": "Iran",
+      "fifa_code": "IRN",
+      "goals_conceded": 0,
+      "fifa_rank": 21,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "1",
+      "display_name": "Iraq",
+      "fifa_code": "IRQ",
+      "goals_conceded": 0,
+      "fifa_rank": 57,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "6",
+      "display_name": "Ivory Coast",
+      "fifa_code": "CIV",
+      "goals_conceded": 0,
+      "fifa_rank": 34,
+      "group": "E",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "2",
+      "display_name": "Japan",
+      "fifa_code": "JPN",
+      "goals_conceded": 0,
+      "fifa_rank": 18,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "8",
+      "display_name": "Jordan",
+      "fifa_code": "JOR",
+      "goals_conceded": 0,
+      "fifa_rank": 63,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "4",
+      "display_name": "Mexico",
+      "fifa_code": "MEX",
+      "goals_conceded": 0,
+      "fifa_rank": 15,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "19",
+      "display_name": "Morocco",
+      "fifa_code": "MAR",
+      "goals_conceded": 0,
+      "fifa_rank": 8,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "4",
+      "display_name": "Netherlands",
+      "fifa_code": "NED",
+      "goals_conceded": 0,
+      "fifa_rank": 7,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "1",
+      "display_name": "New Zealand",
+      "fifa_code": "NZL",
+      "goals_conceded": 0,
+      "fifa_rank": 85,
+      "group": "G",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "11",
+      "display_name": "Norway",
+      "fifa_code": "NOR",
+      "goals_conceded": 0,
+      "fifa_rank": 31,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "13",
+      "display_name": "Panama",
+      "fifa_code": "PAN",
+      "goals_conceded": 0,
+      "fifa_rank": 33,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "16",
+      "display_name": "Paraguay",
+      "fifa_code": "PAR",
+      "goals_conceded": 0,
+      "fifa_rank": 40,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "21",
+      "display_name": "Portugal",
+      "fifa_code": "POR",
+      "goals_conceded": 0,
+      "fifa_rank": 5,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "18",
+      "display_name": "Qatar",
+      "fifa_code": "QAT",
+      "goals_conceded": 0,
+      "fifa_rank": 55,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "11",
+      "display_name": "Saudi Arabia",
+      "fifa_code": "KSA",
+      "goals_conceded": 0,
+      "fifa_rank": 61,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "22",
+      "display_name": "Scotland",
+      "fifa_code": "SCO",
+      "goals_conceded": 0,
+      "fifa_rank": 43,
+      "group": "C",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "6",
+      "display_name": "Senegal",
+      "fifa_code": "SEN",
+      "goals_conceded": 0,
+      "fifa_rank": 14,
+      "group": "I",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "22",
+      "display_name": "South Africa",
+      "fifa_code": "RSA",
+      "goals_conceded": 0,
+      "fifa_rank": 60,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "16",
+      "display_name": "South Korea",
+      "fifa_code": "KOR",
+      "goals_conceded": 0,
+      "fifa_rank": 25,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "Coppice",
+      "display_name": "Spain",
+      "fifa_code": "ESP",
+      "goals_conceded": 0,
+      "fifa_rank": 2,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "20",
+      "display_name": "Sweden",
+      "fifa_code": "SWE",
+      "goals_conceded": 0,
+      "fifa_rank": 38,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "13",
+      "display_name": "Switzerland",
+      "fifa_code": "SUI",
+      "goals_conceded": 0,
+      "fifa_rank": 19,
+      "group": "B",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "8",
+      "display_name": "Tunisia",
+      "fifa_code": "TUN",
+      "goals_conceded": 0,
+      "fifa_rank": 44,
+      "group": "F",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "5",
+      "display_name": "Türkiye",
+      "fifa_code": "TUR",
+      "goals_conceded": 0,
+      "fifa_rank": 22,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "5",
+      "display_name": "USA",
+      "fifa_code": "USA",
+      "goals_conceded": 0,
+      "fifa_rank": 16,
+      "group": "D",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "1",
+      "display_name": "Uruguay",
+      "fifa_code": "URU",
+      "goals_conceded": 0,
+      "fifa_rank": 17,
+      "group": "H",
+      "status": "alive"
+    },
+    {
+      "position": 1,
+      "house_id": "6",
+      "display_name": "Uzbekistan",
+      "fifa_code": "UZB",
+      "goals_conceded": 0,
+      "fifa_rank": 50,
+      "group": "K",
+      "status": "alive"
+    }
+  ],
+  "wooden_spoon_leader": null,
+  "results_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures"
+}

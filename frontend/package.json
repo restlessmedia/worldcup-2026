@@ -1,0 +1,18 @@
+{
+  "name": "worldcup-sweepstake",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/sync-data.mjs && vite",
+    "build": "node scripts/prebuild-clean.mjs && vite build",
+    "preview": "vite preview --port 8080"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5"
+  }
+}

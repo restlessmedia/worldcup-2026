@@ -9,7 +9,7 @@ This file is the reference for **how the sweepstake works** and **how we talk ab
 ### How it works
 
 - **17 houses**, **48 teams** — each house holds 1–4 teams from the locked draw (`archive/draw-results.xlsx`).
-- **Main prizes** go to the house whose **last remaining team** reaches each stage (last team standing wins the pot share for that place).
+- **Main prizes (1st–4th)** go to the house whose **last remaining team** reaches each stage — winner, final loser, semi-final play-off winner, semi-final play-off loser.
 - **Side prizes**: most goals conceded (“wooden spoon”) and fair play award.
 
 ### Prize pot (£240 total)
@@ -104,9 +104,11 @@ Same tone. Focus on:
 | Refresh FIFA team data | `python scripts/fetch_fifa_teams.py` then `sync_teams_from_fifa.py` |
 | Verify draw extraction | `python scripts/verify_extraction.py` |
 | Verify FIFA mapping | `python scripts/verify_fifa_data.py` |
+| **Publish public dashboard** | `python scripts/publish_site_data.py` |
 
 Generated copy: `output/picks-summary.txt`  
-Per-house snippets: `output/houses/`
+Per-house snippets: `output/houses/`  
+**Public dashboard:** `app/` → [deployment guide](deployment.md)
 
 The generator (`scripts/generate_picks_summary.py`) follows this document — change the rules here first, then adjust the script if needed.
 

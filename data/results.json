@@ -4,5 +4,7 @@
   "goals_conceded": {},
   "fair_play_points": {},
   "last_updated": null,
-  "notes": "Populate during the tournament. goals_conceded maps team id -> total conceded."
+  "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
+  "source_label": "FIFA match centre (scores & fixtures)",
+  "notes": "Admin: update goals_conceded using draw team names as keys, then run python scripts/publish_site_data.py. See docs/updating-data.md."
 }

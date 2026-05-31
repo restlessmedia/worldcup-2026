@@ -1,0 +1,135 @@
+[
+  {
+    "house_id": "1",
+    "teams": [
+      "Belgium",
+      "Iraq",
+      "Uruguay",
+      "New Zealand"
+    ]
+  },
+  {
+    "house_id": "2",
+    "teams": [
+      "Austria",
+      "Japan"
+    ]
+  },
+  {
+    "house_id": "3",
+    "teams": [
+      "Czechia (Czech Republic)",
+      "Ecuador"
+    ]
+  },
+  {
+    "house_id": "4",
+    "teams": [
+      "Mexico",
+      "Netherlands (Holland)",
+      "England"
+    ]
+  },
+  {
+    "house_id": "5",
+    "teams": [
+      "Ghana",
+      "USA (United States)",
+      "Türkiye (Turkey)"
+    ]
+  },
+  {
+    "house_id": "6",
+    "teams": [
+      "Brazil",
+      "Senegal",
+      "Uzbekistan",
+      "Ivory Coast (Côte d'Ivoire)"
+    ]
+  },
+  {
+    "house_id": "8",
+    "teams": [
+      "Tunisia",
+      "Australia",
+      "Jordan"
+    ]
+  },
+  {
+    "house_id": "11",
+    "teams": [
+      "Haiti",
+      "Norway",
+      "Saudi Arabia",
+      "Curacao (Curaçao)"
+    ]
+  },
+  {
+    "house_id": "12",
+    "teams": [
+      "Argentina",
+      "Algeria"
+    ]
+  },
+  {
+    "house_id": "13",
+    "teams": [
+      "Bosnia and Herzegovina (Bosnia)",
+      "Panama",
+      "Egypt",
+      "Switzerland"
+    ]
+  },
+  {
+    "house_id": "16",
+    "teams": [
+      "Paraguay",
+      "South Korea (Korea Republic)"
+    ]
+  },
+  {
+    "house_id": "18",
+    "teams": [
+      "Cape Verde",
+      "Qatar"
+    ]
+  },
+  {
+    "house_id": "19",
+    "teams": [
+      "Morocco",
+      "Croatia"
+    ]
+  },
+  {
+    "house_id": "20",
+    "teams": [
+      "Sweden",
+      "Germany"
+    ]
+  },
+  {
+    "house_id": "21",
+    "teams": [
+      "Iran",
+      "France",
+      "Portugal"
+    ]
+  },
+  {
+    "house_id": "22",
+    "teams": [
+      "DR Congo (Democratic Republic of the Congo)",
+      "Scotland",
+      "South Africa"
+    ]
+  },
+  {
+    "house_id": "Coppice",
+    "teams": [
+      "Colombia",
+      "Spain",
+      "Canada"
+    ]
+  }
+]

@@ -1,0 +1,294 @@
+{
+  "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams",
+  "fetched_at": "2026-05-31T20:09:00+00:00",
+  "teams": [
+    {
+      "fifa_name": "Canada",
+      "fifa_code": "CAN",
+      "group": "B",
+      "world_ranking": 30
+    },
+    {
+      "fifa_name": "Mexico",
+      "fifa_code": "MEX",
+      "group": "A",
+      "world_ranking": 15
+    },
+    {
+      "fifa_name": "USA",
+      "fifa_code": "USA",
+      "group": "D",
+      "world_ranking": 16
+    },
+    {
+      "fifa_name": "Algeria",
+      "fifa_code": "ALG",
+      "group": "J",
+      "world_ranking": 28
+    },
+    {
+      "fifa_name": "Argentina",
+      "fifa_code": "ARG",
+      "group": "J",
+      "world_ranking": 3
+    },
+    {
+      "fifa_name": "Australia",
+      "fifa_code": "AUS",
+      "group": "D",
+      "world_ranking": 27
+    },
+    {
+      "fifa_name": "Austria",
+      "fifa_code": "AUT",
+      "group": "J",
+      "world_ranking": 24
+    },
+    {
+      "fifa_name": "Belgium",
+      "fifa_code": "BEL",
+      "group": "G",
+      "world_ranking": 9
+    },
+    {
+      "fifa_name": "Bosnia and Herzegovina",
+      "fifa_code": "BIH",
+      "group": "B",
+      "world_ranking": 65
+    },
+    {
+      "fifa_name": "Brazil",
+      "fifa_code": "BRA",
+      "group": "C",
+      "world_ranking": 6
+    },
+    {
+      "fifa_name": "Cabo Verde",
+      "fifa_code": "CPV",
+      "group": "H",
+      "world_ranking": 69
+    },
+    {
+      "fifa_name": "Colombia",
+      "fifa_code": "COL",
+      "group": "K",
+      "world_ranking": 13
+    },
+    {
+      "fifa_name": "Congo DR",
+      "fifa_code": "COD",
+      "group": "K",
+      "world_ranking": 46
+    },
+    {
+      "fifa_name": "Côte d'Ivoire",
+      "fifa_code": "CIV",
+      "group": "E",
+      "world_ranking": 34
+    },
+    {
+      "fifa_name": "Croatia",
+      "fifa_code": "CRO",
+      "group": "L",
+      "world_ranking": 11
+    },
+    {
+      "fifa_name": "Curaçao",
+      "fifa_code": "CUW",
+      "group": "E",
+      "world_ranking": 82
+    },
+    {
+      "fifa_name": "Czechia",
+      "fifa_code": "CZE",
+      "group": "A",
+      "world_ranking": 41
+    },
+    {
+      "fifa_name": "Ecuador",
+      "fifa_code": "ECU",
+      "group": "E",
+      "world_ranking": 23
+    },
+    {
+      "fifa_name": "Egypt",
+      "fifa_code": "EGY",
+      "group": "G",
+      "world_ranking": 29
+    },
+    {
+      "fifa_name": "England",
+      "fifa_code": "ENG",
+      "group": "L",
+      "world_ranking": 4
+    },
+    {
+      "fifa_name": "France",
+      "fifa_code": "FRA",
+      "group": "I",
+      "world_ranking": 1
+    },
+    {
+      "fifa_name": "Germany",
+      "fifa_code": "GER",
+      "group": "E",
+      "world_ranking": 10
+    },
+    {
+      "fifa_name": "Ghana",
+      "fifa_code": "GHA",
+      "group": "L",
+      "world_ranking": 74
+    },
+    {
+      "fifa_name": "Haiti",
+      "fifa_code": "HAI",
+      "group": "C",
+      "world_ranking": 83
+    },
+    {
+      "fifa_name": "IR Iran",
+      "fifa_code": "IRN",
+      "group": "G",
+      "world_ranking": 21
+    },
+    {
+      "fifa_name": "Iraq",
+      "fifa_code": "IRQ",
+      "group": "I",
+      "world_ranking": 57
+    },
+    {
+      "fifa_name": "Japan",
+      "fifa_code": "JPN",
+      "group": "F",
+      "world_ranking": 18
+    },
+    {
+      "fifa_name": "Jordan",
+      "fifa_code": "JOR",
+      "group": "J",
+      "world_ranking": 63
+    },
+    {
+      "fifa_name": "Korea Republic",
+      "fifa_code": "KOR",
+      "group": "A",
+      "world_ranking": 25
+    },
+    {
+      "fifa_name": "Morocco",
+      "fifa_code": "MAR",
+      "group": "C",
+      "world_ranking": 8
+    },
+    {
+      "fifa_name": "Netherlands",
+      "fifa_code": "NED",
+      "group": "F",
+      "world_ranking": 7
+    },
+    {
+      "fifa_name": "New Zealand",
+      "fifa_code": "NZL",
+      "group": "G",
+      "world_ranking": 85
+    },
+    {
+      "fifa_name": "Norway",
+      "fifa_code": "NOR",
+      "group": "I",
+      "world_ranking": 31
+    },
+    {
+      "fifa_name": "Panama",
+      "fifa_code": "PAN",
+      "group": "L",
+      "world_ranking": 33
+    },
+    {
+      "fifa_name": "Paraguay",
+      "fifa_code": "PAR",
+      "group": "D",
+      "world_ranking": 40
+    },
+    {
+      "fifa_name": "Portugal",
+      "fifa_code": "POR",
+      "group": "K",
+      "world_ranking": 5
+    },
+    {
+      "fifa_name": "Qatar",
+      "fifa_code": "QAT",
+      "group": "B",
+      "world_ranking": 55
+    },
+    {
+      "fifa_name": "Saudi Arabia",
+      "fifa_code": "KSA",
+      "group": "H",
+      "world_ranking": 61
+    },
+    {
+      "fifa_name": "Scotland",
+      "fifa_code": "SCO",
+      "group": "C",
+      "world_ranking": 43
+    },
+    {
+      "fifa_name": "Senegal",
+      "fifa_code": "SEN",
+      "group": "I",
+      "world_ranking": 14
+    },
+    {
+      "fifa_name": "South Africa",
+      "fifa_code": "RSA",
+      "group": "A",
+      "world_ranking": 60
+    },
+    {
+      "fifa_name": "Spain",
+      "fifa_code": "ESP",
+      "group": "H",
+      "world_ranking": 2
+    },
+    {
+      "fifa_name": "Sweden",
+      "fifa_code": "SWE",
+      "group": "F",
+      "world_ranking": 38
+    },
+    {
+      "fifa_name": "Switzerland",
+      "fifa_code": "SUI",
+      "group": "B",
+      "world_ranking": 19
+    },
+    {
+      "fifa_name": "Tunisia",
+      "fifa_code": "TUN",
+      "group": "F",
+      "world_ranking": 44
+    },
+    {
+      "fifa_name": "Türkiye",
+      "fifa_code": "TUR",
+      "group": "D",
+      "world_ranking": 22
+    },
+    {
+      "fifa_name": "Uruguay",
+      "fifa_code": "URU",
+      "group": "H",
+      "world_ranking": 17
+    },
+    {
+      "fifa_name": "Uzbekistan",
+      "fifa_code": "UZB",
+      "group": "K",
+      "world_ranking": 50
+    }
+  ]
+}

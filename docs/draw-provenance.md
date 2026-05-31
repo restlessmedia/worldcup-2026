@@ -41,6 +41,10 @@ python scripts/generate_picks_summary.py
 
 Reports: `output/fifa-verification-report.md`
 
+## Public dashboard (GitHub Pages)
+
+See [deployment.md](deployment.md). Phase 1 live at `app/` — run `python scripts/publish_site_data.py` then push to `main`.
+
 ## Re-export from workbook
 
 Only if you need to re-snapshot the archive (should not be necessary):
