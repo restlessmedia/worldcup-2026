@@ -1,4 +1,5 @@
 import { flagUrl } from "../lib/data";
+import { copy } from "../lib/labels";
 
 export function TeamFlag({ team, onSelect, size = 28, showName = true }) {
   const eliminated = team.status === "eliminated";
@@ -8,7 +9,7 @@ export function TeamFlag({ team, onSelect, size = 28, showName = true }) {
       type="button"
       className={`flag-btn${showName ? " flag-btn--with-name" : ""}${eliminated ? " flag-btn--out" : ""}`}
       onClick={() => onSelect(team)}
-      aria-label={`${team.display_name}, FIFA rank ${team.fifa_rank}`}
+      aria-label={`${team.display_name}, ${copy.worldRankingLong(team.fifa_rank)}`}
       title={showName ? undefined : team.display_name}
     >
       <img

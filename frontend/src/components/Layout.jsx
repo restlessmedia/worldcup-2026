@@ -7,20 +7,22 @@ export function Layout({ title, tagline, activeNav, children, footer }) {
         <div className="topbar-inner">
           <h1>{title}</h1>
           {tagline ? <p className="tagline">{tagline}</p> : null}
-          <nav className="site-nav" aria-label="Site sections">
-            <a href="index.html" className={activeNav === "houses" ? "active" : ""}>
-              Houses
-            </a>
-            <a href="knockout.html" className={activeNav === "knockout" ? "active" : ""}>
-              Knockout
-            </a>
-            <a href="spoon.html" className={activeNav === "spoon" ? "active" : ""}>
-              Wooden spoon
-            </a>
-            <a href="info.html" className={activeNav === "info" ? "active" : ""}>
-              Prizes & rules
-            </a>
-          </nav>
+          <div className="site-nav-scroll">
+            <nav className="site-nav" aria-label="Site sections">
+              <a href="index.html" className={activeNav === "houses" ? "active" : ""}>
+                Houses
+              </a>
+              <a href="knockout.html" className={activeNav === "knockout" ? "active" : ""}>
+                Knockout
+              </a>
+              <a href="spoon.html" className={activeNav === "spoon" ? "active" : ""}>
+                Wooden spoon
+              </a>
+              <a href="info.html" className={activeNav === "info" ? "active" : ""}>
+                Prizes & rules
+              </a>
+            </nav>
+          </div>
         </div>
       </header>
 

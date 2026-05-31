@@ -1,5 +1,6 @@
 import { useSiteData } from "./hooks/useSiteData";
 import { potTotal } from "./lib/format";
+import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { PrizeList } from "./components/PrizeList";
 
@@ -79,7 +80,7 @@ export function InfoApp() {
         </ol>
 
         <p className="meta">
-          FIFA team data from {meta.fifa_data_date?.slice(0, 10) || "fifa.com"}.
+          {copy.teamDataSource(meta.fifa_data_date?.slice(0, 10))}.
         </p>
       </Card>
     </Layout>

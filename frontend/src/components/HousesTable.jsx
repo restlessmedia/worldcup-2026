@@ -1,21 +1,47 @@
 import { useState } from "react";
 import { formatHouseLabel } from "../lib/format";
+import { columns } from "../lib/labels";
+import { ColumnHeader } from "./ColumnHeader";
 import { TeamFlagRow } from "./TeamFlag";
 import { TeamModal } from "./TeamModal";
 
 export function HousesTable({ standings }) {
   const [selectedTeam, setSelectedTeam] = useState(null);
 
+  const houseCards = standings.houses.map((house) => {
+    const inPlay =
+      standings.tournament_status === "pre_tournament"
+        ? house.teams_total
+        : house.teams_alive;
+    const best = house.best_remaining_rank
+      ? `#${house.best_remaining_rank} world ranking`
+      : "—";
+
+    return (
+      <article key={house.house_id} className="house-card">
+        <header className="house-card__head">
+          <span className="house-card__id">{formatHouseLabel(house.house_id)}</span>
+          <span className="house-card__meta">
+            {inPlay}/{house.teams_total} still in · best {best}
+          </span>
+        </header>
+        <TeamFlagRow teams={house.teams} onSelect={setSelectedTeam} showNames />
+      </article>
+    );
+  });
+
   return (
     <>
-      <div className="table-wrap">
+      <div className="house-cards">{houseCards}</div>
+
+      <div className="table-wrap houses-table-wrap">
         <table className="data-table">
           <thead>
             <tr>
-              <th scope="col">House</th>
-              <th scope="col">Teams</th>
-              <th scope="col">Best rank</th>
-              <th scope="col">In play</th>
+              <ColumnHeader {...columns.house} />
+              <ColumnHeader {...columns.team} />
+              <ColumnHeader {...columns.bestRanking} />
+              <ColumnHeader {...columns.stillIn} />
             </tr>
           </thead>
           <tbody>
@@ -34,10 +60,10 @@ export function HousesTable({ standings }) {
                   <td>
                     <TeamFlagRow teams={house.teams} onSelect={setSelectedTeam} showNames />
                   </td>
-                  <td className="num">
+                  <td className="num" title={columns.bestRanking.hint}>
                     <strong>{best}</strong>
                   </td>
-                  <td className="num">
+                  <td className="num" title={columns.stillIn.hint}>
                     {inPlay}/{house.teams_total}
                   </td>
                 </tr>

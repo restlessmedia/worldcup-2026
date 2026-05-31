@@ -22,8 +22,8 @@ export function splitPrizes(config) {
       id: isGoals ? "goals" : "fair-play",
       title: isGoals ? "Most goals conceded" : "Fair play award",
       subtitle: isGoals
-        ? "Wooden spoon — team with the highest GA"
-        : "Best fair play record in the sweepstake",
+        ? "Wooden spoon — team that lets in the most goals"
+        : "Best disciplinary record in the sweepstake",
       amount: prize.amount_gbp,
       percent: prize.percent,
     };

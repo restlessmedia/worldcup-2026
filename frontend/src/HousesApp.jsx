@@ -1,5 +1,6 @@
 import { useSiteData } from "./hooks/useSiteData";
 import { tournamentStatusLine } from "./lib/format";
+import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { HousesTable } from "./components/HousesTable";
 
@@ -31,13 +32,13 @@ export function HousesApp() {
       activeNav="houses"
       footer={
         <p>
-          Rankings from{" "}
+          {copy.rankingsSource}{" "}
           <a
             href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams"
             target="_blank"
             rel="noopener noreferrer"
           >
-            fifa.com
+            View on fifa.com
           </a>
           . Banter, not betting tips.
         </p>

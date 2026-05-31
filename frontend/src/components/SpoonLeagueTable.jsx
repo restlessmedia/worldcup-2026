@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { formatHouseLabel, formatMoney } from "../lib/format";
+import { columns } from "../lib/labels";
 import { splitPrizes } from "../lib/prizes";
+import { ColumnHeader } from "./ColumnHeader";
 import { TeamFlag } from "./TeamFlag";
 import { TeamModal } from "./TeamModal";
 
@@ -25,12 +27,12 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
     <table className="league-table league-table--spoon">
       <thead>
         <tr>
-          <th scope="col">Pos</th>
-          <th scope="col">Team</th>
-          <th scope="col">House</th>
-          <th scope="col">Grp</th>
-          <th scope="col">FIFA</th>
-          <th scope="col">GA</th>
+          <ColumnHeader {...columns.position} />
+          <ColumnHeader {...columns.team} />
+          <ColumnHeader {...columns.house} />
+          <ColumnHeader {...columns.group} />
+          <ColumnHeader {...columns.worldRanking} />
+          <ColumnHeader {...columns.goalsConceded} />
         </tr>
       </thead>
       <tbody>
@@ -47,13 +49,15 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
                 <span className={`pos-badge${posBadgeClass(row, leader)}`}>{pos}</span>
               </td>
               <td>
-                <TeamFlag team={row} onSelect={setSelectedTeam} />
+                <TeamFlag team={row} onSelect={setSelectedTeam} showName={false} />
               </td>
               <td className="house-label">{formatHouseLabel(row.house_id)}</td>
               <td className="num">{row.group || "—"}</td>
-              <td className="num">#{row.fifa_rank}</td>
+              <td className="num" title={columns.worldRanking.hint}>
+                #{row.fifa_rank}
+              </td>
               <td className="num ga-cell">
-                <strong>{row.goals_conceded}</strong>
+                <strong title={columns.goalsConceded.hint}>{row.goals_conceded}</strong>
               </td>
             </tr>
           );
@@ -71,15 +75,18 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
               <h3>Most goals conceded</h3>
               <p className="league-shell__sub">
                 {hasGoals
-                  ? "Highest GA leads the wooden spoon race"
-                  : "Tournament not started — all teams on 0 GA"}
+                  ? "The team with the most goals scored against them wins the wooden spoon side prize"
+                  : "Tournament not started — every team is on 0 goals conceded"}
               </p>
             </div>
             <span className="league-shell__prize">
               Prize {formatMoney(goalsPrize?.amount)}
             </span>
           </div>
-          <div className="table-wrap table-wrap--flush">{table}</div>
+          <div className="table-wrap table-wrap--flush table-wrap--scroll">
+            <p className="scroll-hint scroll-hint--table">Scroll table →</p>
+            {table}
+          </div>
         </div>
       ) : (
         <div className="table-wrap">{table}</div>

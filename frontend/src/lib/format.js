@@ -1,3 +1,5 @@
+import { copy } from "./labels";
+
 export function formatHouseLabel(houseId) {
   return houseId === "Coppice" ? "Coppice" : houseId;
 }
@@ -29,7 +31,7 @@ export function tournamentStatusLine(standings, config) {
   const status =
     standings.tournament_status === "pre_tournament"
       ? "Pre-tournament"
-      : `${standings.teams_in_play} of ${standings.teams_total} teams in play`;
+      : `${standings.teams_in_play} of ${standings.teams_total} teams still in the tournament`;
   return `${status} · ${standings.houses.length} houses · ${pot} pot · 1st–4th prizes + side prizes`;
 }
 
@@ -40,7 +42,7 @@ export function spoonTagline(standings) {
     : "Pre-tournament — all teams on 0 goals conceded";
 
   const leaderText = leader
-    ? ` · Leader: ${leader.display_name} (${leader.goals_conceded} GA, ${formatHouseLabel(leader.house_id)})`
+    ? ` · ${copy.woodenSpoonLeader(leader.display_name, leader.goals_conceded, formatHouseLabel(leader.house_id))}`
     : "";
 
   return `${updated}${leaderText}`;

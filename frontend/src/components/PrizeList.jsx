@@ -1,4 +1,5 @@
 import { formatMoney } from "../lib/format";
+import { copy } from "../lib/labels";
 import { mainPrizeTotal, sidePrizeTotal, splitPrizes } from "../lib/prizes";
 
 function MainPrizeRow({ prize }) {
@@ -15,11 +16,11 @@ function MainPrizeRow({ prize }) {
 }
 
 function SidePrizeRow({ prize }) {
+  const badge = prize.id === "goals" ? copy.sidePrizeSpoon : copy.sidePrizeFairPlay;
+
   return (
     <div className={`prize-row prize-row--side prize-row--${prize.id}`}>
-      <span className="prize-ordinal prize-ordinal--side">
-        {prize.id === "goals" ? "GA" : "FP"}
-      </span>
+      <span className="prize-ordinal prize-ordinal--side">{badge}</span>
       <div className="prize-copy">
         <span className="prize-title">{prize.title}</span>
         <span className="prize-subtitle">
