@@ -1,0 +1,220 @@
+[
+  {
+    "house_id": "1",
+    "teams": [
+      "Belgium",
+      "Iraq",
+      "Uruguay",
+      "New Zealand"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "2",
+    "teams": [
+      "Austria",
+      "Japan"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "3",
+    "teams": [
+      "Czechia (Czech Republic)",
+      "Ecuador"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "4",
+    "teams": [
+      "Mexico",
+      "Netherlands (Holland)",
+      "England"
+    ],
+    "ticket_picker": "Owen & Hazel",
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "5",
+    "teams": [
+      "Ghana",
+      "USA (United States)",
+      "Türkiye (Turkey)"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "6",
+    "teams": [
+      "Brazil",
+      "Senegal",
+      "Uzbekistan",
+      "Ivory Coast (Côte d'Ivoire)"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "8",
+    "teams": [
+      "Tunisia",
+      "Australia",
+      "Jordan"
+    ],
+    "ticket_picker": "Jess",
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "11",
+    "teams": [
+      "Haiti",
+      "Norway",
+      "Saudi Arabia",
+      "Curacao (Curaçao)"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "12",
+    "teams": [
+      "Argentina",
+      "Algeria"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "13",
+    "teams": [
+      "Bosnia and Herzegovina (Bosnia)",
+      "Panama",
+      "Egypt",
+      "Switzerland"
+    ],
+    "ticket_picker": "(Child)",
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "16",
+    "teams": [
+      "Paraguay",
+      "South Korea (Korea Republic)"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "18",
+    "teams": [
+      "Cape Verde",
+      "Qatar"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "19",
+    "teams": [
+      "Morocco",
+      "Croatia"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "20",
+    "teams": [
+      "Sweden",
+      "Germany"
+    ],
+    "ticket_picker": "(Child)",
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "21",
+    "teams": [
+      "Iran",
+      "France",
+      "Portugal"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "22",
+    "teams": [
+      "DR Congo (Democratic Republic of the Congo)",
+      "Scotland",
+      "South Africa"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  },
+  {
+    "house_id": "Coppice",
+    "teams": [
+      "Colombia",
+      "Spain",
+      "Canada"
+    ],
+    "ticket_picker": null,
+    "payment": {
+      "to_pay": null,
+      "paid": null
+    }
+  }
+]

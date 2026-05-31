@@ -1,0 +1,242 @@
+[
+  {
+    "id": "Algeria",
+    "common_name": null,
+    "display_name": "Algeria"
+  },
+  {
+    "id": "Argentina",
+    "common_name": null,
+    "display_name": "Argentina"
+  },
+  {
+    "id": "Australia",
+    "common_name": null,
+    "display_name": "Australia"
+  },
+  {
+    "id": "Austria",
+    "common_name": null,
+    "display_name": "Austria"
+  },
+  {
+    "id": "Belgium",
+    "common_name": null,
+    "display_name": "Belgium"
+  },
+  {
+    "id": "Bosnia and Herzegovina",
+    "common_name": "Bosnia",
+    "display_name": "Bosnia and Herzegovina (Bosnia)"
+  },
+  {
+    "id": "Brazil",
+    "common_name": null,
+    "display_name": "Brazil"
+  },
+  {
+    "id": "Canada",
+    "common_name": null,
+    "display_name": "Canada"
+  },
+  {
+    "id": "Cape Verde",
+    "common_name": null,
+    "display_name": "Cape Verde"
+  },
+  {
+    "id": "Colombia",
+    "common_name": null,
+    "display_name": "Colombia"
+  },
+  {
+    "id": "Croatia",
+    "common_name": null,
+    "display_name": "Croatia"
+  },
+  {
+    "id": "Curacao",
+    "common_name": "Curaçao",
+    "display_name": "Curacao (Curaçao)"
+  },
+  {
+    "id": "Czechia",
+    "common_name": "Czech Republic",
+    "display_name": "Czechia (Czech Republic)"
+  },
+  {
+    "id": "DR Congo",
+    "common_name": "Democratic Republic of the Congo",
+    "display_name": "DR Congo (Democratic Republic of the Congo)"
+  },
+  {
+    "id": "Ecuador",
+    "common_name": null,
+    "display_name": "Ecuador"
+  },
+  {
+    "id": "Egypt",
+    "common_name": null,
+    "display_name": "Egypt"
+  },
+  {
+    "id": "England",
+    "common_name": null,
+    "display_name": "England"
+  },
+  {
+    "id": "France",
+    "common_name": null,
+    "display_name": "France"
+  },
+  {
+    "id": "Germany",
+    "common_name": null,
+    "display_name": "Germany"
+  },
+  {
+    "id": "Ghana",
+    "common_name": null,
+    "display_name": "Ghana"
+  },
+  {
+    "id": "Haiti",
+    "common_name": null,
+    "display_name": "Haiti"
+  },
+  {
+    "id": "Iran",
+    "common_name": null,
+    "display_name": "Iran"
+  },
+  {
+    "id": "Iraq",
+    "common_name": null,
+    "display_name": "Iraq"
+  },
+  {
+    "id": "Ivory Coast",
+    "common_name": "Côte d'Ivoire",
+    "display_name": "Ivory Coast (Côte d'Ivoire)"
+  },
+  {
+    "id": "Japan",
+    "common_name": null,
+    "display_name": "Japan"
+  },
+  {
+    "id": "Jordan",
+    "common_name": null,
+    "display_name": "Jordan"
+  },
+  {
+    "id": "Mexico",
+    "common_name": null,
+    "display_name": "Mexico"
+  },
+  {
+    "id": "Morocco",
+    "common_name": null,
+    "display_name": "Morocco"
+  },
+  {
+    "id": "Netherlands",
+    "common_name": "Holland",
+    "display_name": "Netherlands (Holland)"
+  },
+  {
+    "id": "New Zealand",
+    "common_name": null,
+    "display_name": "New Zealand"
+  },
+  {
+    "id": "Norway",
+    "common_name": null,
+    "display_name": "Norway"
+  },
+  {
+    "id": "Panama",
+    "common_name": null,
+    "display_name": "Panama"
+  },
+  {
+    "id": "Paraguay",
+    "common_name": null,
+    "display_name": "Paraguay"
+  },
+  {
+    "id": "Portugal",
+    "common_name": null,
+    "display_name": "Portugal"
+  },
+  {
+    "id": "Qatar",
+    "common_name": null,
+    "display_name": "Qatar"
+  },
+  {
+    "id": "Saudi Arabia",
+    "common_name": null,
+    "display_name": "Saudi Arabia"
+  },
+  {
+    "id": "Scotland",
+    "common_name": null,
+    "display_name": "Scotland"
+  },
+  {
+    "id": "Senegal",
+    "common_name": null,
+    "display_name": "Senegal"
+  },
+  {
+    "id": "South Africa",
+    "common_name": null,
+    "display_name": "South Africa"
+  },
+  {
+    "id": "South Korea",
+    "common_name": "Korea Republic",
+    "display_name": "South Korea (Korea Republic)"
+  },
+  {
+    "id": "Spain",
+    "common_name": null,
+    "display_name": "Spain"
+  },
+  {
+    "id": "Sweden",
+    "common_name": null,
+    "display_name": "Sweden"
+  },
+  {
+    "id": "Switzerland",
+    "common_name": null,
+    "display_name": "Switzerland"
+  },
+  {
+    "id": "Tunisia",
+    "common_name": null,
+    "display_name": "Tunisia"
+  },
+  {
+    "id": "Türkiye",
+    "common_name": "Turkey",
+    "display_name": "Türkiye (Turkey)"
+  },
+  {
+    "id": "Uruguay",
+    "common_name": null,
+    "display_name": "Uruguay"
+  },
+  {
+    "id": "USA",
+    "common_name": "United States",
+    "display_name": "USA (United States)"
+  },
+  {
+    "id": "Uzbekistan",
+    "common_name": null,
+    "display_name": "Uzbekistan"
+  }
+]

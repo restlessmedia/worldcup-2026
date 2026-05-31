@@ -1,0 +1,54 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "currency": "GBP",
+  "totals": {
+    "total_teams": 48,
+    "participating_house_count": 17,
+    "initial_response_ticket_count": 26,
+    "requested_ticket_count": 52,
+    "allocated_ticket_count": 48,
+    "initial_min_tickets_per_house": 2.823529411764706,
+    "ticket_cost": 5
+  },
+  "prizes": [
+    {
+      "name": "1st prize (overall winner)",
+      "percent": 50,
+      "amount_gbp": 120
+    },
+    {
+      "name": "2nd prize (final loser)",
+      "percent": 20,
+      "amount_gbp": 48
+    },
+    {
+      "name": "3rd prize (semi-final play-off winner)",
+      "percent": 12,
+      "amount_gbp": 28.799999999999997
+    },
+    {
+      "name": "4th prize (semi-final play-off loser)",
+      "percent": 8,
+      "amount_gbp": 19.2
+    },
+    {
+      "name": "Most goals conceded",
+      "percent": 5,
+      "amount_gbp": 12
+    },
+    {
+      "name": "Fair play award",
+      "percent": 5,
+      "amount_gbp": 12
+    }
+  ],
+  "side_prize_tie_break": {
+    "prize": "Most goals team tie rule order",
+    "order": "Most goals conceded\nIf tied, most matches played loses (because they conceded the same number across more games)\nIf still tied, worst goal difference\nIf still tied, fewest goals scored\nIf still tied, earliest team drawn in the sweepstake draw (or a coin toss)"
+  },
+  "scoring_model": "last_team_standing",
+  "notes": [
+    "Main prizes go to the house whose last remaining team reaches each stage.",
+    "Side prizes: most goals conceded, fair play award."
+  ]
+}

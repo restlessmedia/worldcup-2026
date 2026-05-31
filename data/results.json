@@ -1,0 +1,8 @@
+{
+  "matches": [],
+  "teams_eliminated": [],
+  "goals_conceded": {},
+  "fair_play_points": {},
+  "last_updated": null,
+  "notes": "Populate during the tournament. goals_conceded maps team id -> total conceded."
+}

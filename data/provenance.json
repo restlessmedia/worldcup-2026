@@ -1,0 +1,8 @@
+{
+  "source_file": "archive/draw-results.xlsx",
+  "exported_on": "2026-05-31",
+  "status": "frozen",
+  "description": "Line-in-the-sand snapshot of the sweepstake draw. Do not edit the workbook; update data/results.json during the tournament.",
+  "archive_sha256": "40a9f1a479853401c88256d362bc53a18dd07d5a8eb4bb81e16b15377459fd05",
+  "verified_at": "2026-05-31T20:08:32.947946+00:00"
+}

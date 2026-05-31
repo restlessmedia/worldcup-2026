@@ -1,0 +1,155 @@
+[
+  {
+    "respondent": "Phil & Davina",
+    "house_id": "1",
+    "min_expected_tickets": 2,
+    "requested_tickets": 4,
+    "allocated_tickets": 4,
+    "allocation_reduced": null,
+    "label": "House 1 - 4"
+  },
+  {
+    "respondent": "Colin & Jill",
+    "house_id": "2",
+    "min_expected_tickets": 2,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 2 - 2"
+  },
+  {
+    "respondent": "Owen & Hazel",
+    "house_id": "3",
+    "min_expected_tickets": 1,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 3 - 2"
+  },
+  {
+    "respondent": "Karen & Ian",
+    "house_id": "4",
+    "min_expected_tickets": 1,
+    "requested_tickets": 4,
+    "allocated_tickets": 3,
+    "allocation_reduced": "(Changed)",
+    "label": "House 4 - 3 (Changed)"
+  },
+  {
+    "respondent": "John P",
+    "house_id": "5",
+    "min_expected_tickets": 1,
+    "requested_tickets": 3,
+    "allocated_tickets": 3,
+    "allocation_reduced": null,
+    "label": "House 5 - 3"
+  },
+  {
+    "respondent": "Carl H",
+    "house_id": "6",
+    "min_expected_tickets": 1,
+    "requested_tickets": 4,
+    "allocated_tickets": 4,
+    "allocation_reduced": null,
+    "label": "House 6 - 4"
+  },
+  {
+    "respondent": "Lisa & Steph",
+    "house_id": "8",
+    "min_expected_tickets": 2,
+    "requested_tickets": 3,
+    "allocated_tickets": 3,
+    "allocation_reduced": null,
+    "label": "House 8 - 3"
+  },
+  {
+    "respondent": "Mike T",
+    "house_id": "11",
+    "min_expected_tickets": 1,
+    "requested_tickets": 4,
+    "allocated_tickets": 4,
+    "allocation_reduced": null,
+    "label": "House 11 - 4"
+  },
+  {
+    "respondent": "Lorna & Nigel",
+    "house_id": "12",
+    "min_expected_tickets": 2,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 12 - 2"
+  },
+  {
+    "respondent": "Nikki & Adam",
+    "house_id": "13",
+    "min_expected_tickets": 2,
+    "requested_tickets": 4,
+    "allocated_tickets": 4,
+    "allocation_reduced": null,
+    "label": "House 13 - 4"
+  },
+  {
+    "respondent": "Sarah H",
+    "house_id": "16",
+    "min_expected_tickets": 2,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 16 - 2"
+  },
+  {
+    "respondent": "Amelia",
+    "house_id": "18",
+    "min_expected_tickets": 1,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 18 - 2"
+  },
+  {
+    "respondent": "Katie & Nick",
+    "house_id": "19",
+    "min_expected_tickets": 2,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 19 - 2"
+  },
+  {
+    "respondent": "Rod & Sarah",
+    "house_id": "20",
+    "min_expected_tickets": 2,
+    "requested_tickets": 2,
+    "allocated_tickets": 2,
+    "allocation_reduced": null,
+    "label": "House 20 - 2"
+  },
+  {
+    "respondent": "Adele",
+    "house_id": "21",
+    "min_expected_tickets": 1,
+    "requested_tickets": 4,
+    "allocated_tickets": 3,
+    "allocation_reduced": "(Changed)",
+    "label": "House 21 - 3 (Changed)"
+  },
+  {
+    "respondent": "Matt & Anna",
+    "house_id": "22",
+    "min_expected_tickets": 1,
+    "requested_tickets": 4,
+    "allocated_tickets": 3,
+    "allocation_reduced": "(Changed)",
+    "label": "House 22 - 3 (Changed)"
+  },
+  {
+    "respondent": "Matt & Helen",
+    "house_id": "Coppice",
+    "min_expected_tickets": 2,
+    "requested_tickets": 4,
+    "allocated_tickets": 3,
+    "allocation_reduced": "(Changed)",
+    "label": "House Coppice - 3 (Changed)"
+  }
+]

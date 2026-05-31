@@ -1,0 +1,4 @@
+openpyxl>=3.1.0
+
+# Optional: live refresh from FIFA teams page (JavaScript-rendered)
+# pip install playwright && playwright install chromium
