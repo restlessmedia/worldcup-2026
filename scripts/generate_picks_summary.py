@@ -1,4 +1,7 @@
-"""Generate WhatsApp-friendly house pick summaries from draw + FIFA team data."""
+"""Generate WhatsApp-friendly house pick summaries from draw + FIFA team data.
+
+Tone and format: see docs/rules.md
+"""
 
 from __future__ import annotations
 

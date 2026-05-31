@@ -11,6 +11,7 @@ The sweepstake draw is **frozen** as of the export date recorded in `data/proven
 | Team profiles & ratings | `data/teams.json` (synced from FIFA) |
 | Sign-up responses (archive) | `data/responses.json` |
 | Prize rules | `data/config.json` |
+| **Rules & comms tone** | **`docs/rules.md`** |
 
 ## Workflow
 
