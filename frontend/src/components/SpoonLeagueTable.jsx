@@ -49,7 +49,12 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
                 <span className={`pos-badge${posBadgeClass(row, leader)}`}>{pos}</span>
               </td>
               <td>
-                <TeamFlag team={row} onSelect={setSelectedTeam} showName={false} />
+                <TeamFlag
+                  team={row}
+                  onSelect={setSelectedTeam}
+                  showName={false}
+                  fetchPriority={index < 4 ? "high" : undefined}
+                />
               </td>
               <td className="house-label">{formatHouseLabel(row.house_id)}</td>
               <td className="num">{row.group || "—"}</td>

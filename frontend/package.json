@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/sync-data.mjs && vite",
+    "sync-flags": "python ../scripts/sync_flags.py",
+    "sync-data": "node scripts/sync-data.mjs",
+    "dev": "npm run sync-data && vite",
     "build": "node scripts/prebuild-clean.mjs && vite build",
     "preview": "vite preview --port 8080"
   },

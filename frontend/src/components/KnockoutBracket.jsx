@@ -6,6 +6,7 @@ import {
   PATHWAY_LEFT,
   PATHWAY_RIGHT,
   PATHWAY_ROUND_ORDER,
+  PATHWAY_ROUND_ORDER_REVERSED,
   indexMatches,
   pathwayFeederPlacements,
   pathwayGridPlacements,
@@ -15,7 +16,7 @@ import { copy, roundLabels } from "../lib/labels";
 import { FlagPlaceholder } from "./FlagPlaceholder";
 import { TeamModal } from "./TeamModal";
 
-function KnockoutSlot({ team, score, isWinner, onSelect, compact = false }) {
+function KnockoutSlot({ team, score, isWinner, onSelect, compact = false, fetchPriority }) {
   const flagClass = compact
     ? "knockout-slot__flag-icon"
     : "knockout-slot__flag-icon knockout-slot__flag-icon--lg";
@@ -46,7 +47,8 @@ function KnockoutSlot({ team, score, isWinner, onSelect, compact = false }) {
           className={flagClass}
           width={compact ? undefined : 22}
           height={compact ? undefined : 22}
-          loading="lazy"
+          loading={fetchPriority === "high" ? "eager" : "lazy"}
+          fetchPriority={fetchPriority}
         />
       ) : (
         <FlagPlaceholder
@@ -103,7 +105,7 @@ function gridRowStyle(row, rowSpan) {
 function KnockoutPathway({ side, pathway, matchesById, onSelect }) {
   const placements = pathwayGridPlacements(side);
   const feeders = pathwayFeederPlacements(side);
-  const headerOrder = side === "left" ? PATHWAY_ROUND_ORDER : [...PATHWAY_ROUND_ORDER].reverse();
+  const headerOrder = side === "left" ? PATHWAY_ROUND_ORDER : PATHWAY_ROUND_ORDER_REVERSED;
 
   return (
     <div className={`knockout-pathway-grid knockout-pathway-grid--${side}`}>
@@ -144,10 +146,17 @@ function KnockoutPathway({ side, pathway, matchesById, onSelect }) {
 export function KnockoutBracket({ knockout }) {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const preKnockout = knockout.phase === "pre_knockout";
-  const matchesById = useMemo(() => indexMatches(knockout), [knockout]);
+  const matchesById = useMemo(
+    () => (preKnockout ? {} : indexMatches(knockout)),
+    [knockout, preKnockout],
+  );
 
-  const finalMatch = resolveMatch(matchesById, CENTER_MATCHES.final);
-  const thirdMatch = resolveMatch(matchesById, CENTER_MATCHES.third);
+  const finalMatch = preKnockout
+    ? null
+    : resolveMatch(matchesById, CENTER_MATCHES.final);
+  const thirdMatch = preKnockout
+    ? null
+    : resolveMatch(matchesById, CENTER_MATCHES.third);
 
   return (
     <div className="knockout-bracket-shell enter-item">
@@ -167,38 +176,40 @@ export function KnockoutBracket({ knockout }) {
         </p>
       )}
 
-      <div className="knockout-tree-viewport">
-        <div className={`knockout-tree${preKnockout ? " knockout-tree--pre" : ""}`}>
-          <KnockoutPathway
-            side="left"
-            pathway={PATHWAY_LEFT}
-            matchesById={matchesById}
-            onSelect={setSelectedTeam}
-          />
+      {!preKnockout ? (
+        <div className="knockout-tree-viewport">
+          <div className="knockout-tree">
+            <KnockoutPathway
+              side="left"
+              pathway={PATHWAY_LEFT}
+              matchesById={matchesById}
+              onSelect={setSelectedTeam}
+            />
 
-          <div className="knockout-tree__center">
-            <div className="knockout-tree__col knockout-tree__col--center" data-round="final">
-              <header className="knockout-tree__col-head">{roundLabels.final.label}</header>
-              <div className="knockout-tree__col-body">
-                <KnockoutMatchNode match={finalMatch} onSelect={setSelectedTeam} />
+            <div className="knockout-tree__center">
+              <div className="knockout-tree__col knockout-tree__col--center" data-round="final">
+                <header className="knockout-tree__col-head">{roundLabels.final.label}</header>
+                <div className="knockout-tree__col-body">
+                  <KnockoutMatchNode match={finalMatch} onSelect={setSelectedTeam} />
+                </div>
+              </div>
+              <div className="knockout-tree__col knockout-tree__col--center" data-round="third">
+                <header className="knockout-tree__col-head">{roundLabels.third.label}</header>
+                <div className="knockout-tree__col-body">
+                  <KnockoutMatchNode match={thirdMatch} onSelect={setSelectedTeam} compact />
+                </div>
               </div>
             </div>
-            <div className="knockout-tree__col knockout-tree__col--center" data-round="third">
-              <header className="knockout-tree__col-head">{roundLabels.third.label}</header>
-              <div className="knockout-tree__col-body">
-                <KnockoutMatchNode match={thirdMatch} onSelect={setSelectedTeam} compact />
-              </div>
-            </div>
+
+            <KnockoutPathway
+              side="right"
+              pathway={PATHWAY_RIGHT}
+              matchesById={matchesById}
+              onSelect={setSelectedTeam}
+            />
           </div>
-
-          <KnockoutPathway
-            side="right"
-            pathway={PATHWAY_RIGHT}
-            matchesById={matchesById}
-            onSelect={setSelectedTeam}
-          />
         </div>
-      </div>
+      ) : null}
 
       <TeamModal team={selectedTeam} onClose={() => setSelectedTeam(null)} />
     </div>

@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import "../styles/motion.css";
 import { formatDateTimeShort } from "../lib/format";
+import { prefetchPageData } from "../lib/navPrefetch";
 
 export function Layout({ title, tagline, updatedAt, activeNav, children, footer }) {
   const updatedLabel = formatDateTimeShort(updatedAt);
@@ -21,16 +22,36 @@ export function Layout({ title, tagline, updatedAt, activeNav, children, footer 
           {tagline ? <p className="tagline">{tagline}</p> : null}
           <div className="site-nav-scroll">
             <nav className="site-nav" aria-label="Site sections">
-              <a href="index.html" className={activeNav === "houses" ? "active" : ""}>
+              <a
+                href="index.html"
+                className={activeNav === "houses" ? "active" : ""}
+                onMouseEnter={() => prefetchPageData("index.html")}
+                onFocus={() => prefetchPageData("index.html")}
+              >
                 Houses
               </a>
-              <a href="knockout.html" className={activeNav === "knockout" ? "active" : ""}>
+              <a
+                href="knockout.html"
+                className={activeNav === "knockout" ? "active" : ""}
+                onMouseEnter={() => prefetchPageData("knockout.html")}
+                onFocus={() => prefetchPageData("knockout.html")}
+              >
                 Knockout
               </a>
-              <a href="spoon.html" className={activeNav === "spoon" ? "active" : ""}>
+              <a
+                href="spoon.html"
+                className={activeNav === "spoon" ? "active" : ""}
+                onMouseEnter={() => prefetchPageData("spoon.html")}
+                onFocus={() => prefetchPageData("spoon.html")}
+              >
                 Wooden spoon
               </a>
-              <a href="info.html" className={activeNav === "info" ? "active" : ""}>
+              <a
+                href="info.html"
+                className={activeNav === "info" ? "active" : ""}
+                onMouseEnter={() => prefetchPageData("info.html")}
+                onFocus={() => prefetchPageData("info.html")}
+              >
                 Prizes & rules
               </a>
             </nav>

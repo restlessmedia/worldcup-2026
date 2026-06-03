@@ -1,1 +1,0 @@
-import{r as t,i as n}from"./Layout-utMYuRky.js";function c(){const[a,r]=t.useState(null),[e,s]=t.useState(null);return t.useEffect(()=>{n().then(r).catch(o=>s(o.message))},[]),{data:a,error:e,loading:!a&&!e}}export{c as u};

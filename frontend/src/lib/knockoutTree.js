@@ -38,6 +38,7 @@ export const CENTER_MATCHES = {
 };
 
 export const PATHWAY_ROUND_ORDER = ["r32", "r16", "qf", "sf"];
+export const PATHWAY_ROUND_ORDER_REVERSED = [...PATHWAY_ROUND_ORDER].reverse();
 
 export function indexMatches(knockout) {
   const byId = {};

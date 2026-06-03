@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
-import { loadSiteData } from "../lib/data";
+import { loadStandingsPageData } from "../lib/data";
 
-export function useSiteData() {
+export function useSiteData(loader = loadStandingsPageData) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    loadSiteData()
-      .then(setData)
-      .catch((err) => setError(err.message));
-  }, []);
+    let cancelled = false;
+    loader()
+      .then((payload) => {
+        if (!cancelled) setData(payload);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err.message);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [loader]);
 
   return { data, error, loading: !data && !error };
 }

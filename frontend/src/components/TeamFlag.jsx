@@ -1,7 +1,7 @@
 import { flagUrl } from "../lib/data";
 import { copy } from "../lib/labels";
 
-export function TeamFlag({ team, onSelect, size = 28, showName = true }) {
+export function TeamFlag({ team, onSelect, size = 28, showName = true, fetchPriority }) {
   const eliminated = team.status === "eliminated";
 
   return (
@@ -17,19 +17,30 @@ export function TeamFlag({ team, onSelect, size = 28, showName = true }) {
         alt=""
         width={size}
         height={size}
-        loading="lazy"
+        loading={fetchPriority === "high" ? "eager" : "lazy"}
+        fetchPriority={fetchPriority}
       />
       {showName ? <span className="flag-btn__name">{team.display_name}</span> : null}
     </button>
   );
 }
 
-export function TeamFlagRow({ teams, onSelect, showNames = true }) {
+export function TeamFlagRow({ teams, onSelect, showNames = true, priorityStart = 99 }) {
   return (
     <div className={`flag-row${showNames ? " flag-row--named" : ""}`}>
-      {teams.map((team) => (
-        <TeamFlag key={team.fifa_code} team={team} onSelect={onSelect} showName={showNames} />
-      ))}
+      {teams.map((team, index) => {
+        const globalIndex = priorityStart + index;
+        const fetchPriority = globalIndex < 4 ? "high" : undefined;
+        return (
+          <TeamFlag
+            key={team.fifa_code}
+            team={team}
+            onSelect={onSelect}
+            showName={showNames}
+            fetchPriority={fetchPriority}
+          />
+        );
+      })}
     </div>
   );
 }

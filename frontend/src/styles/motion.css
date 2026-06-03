@@ -122,6 +122,11 @@
     animation-delay: 0.58s;
   }
 
+  .motion-stagger-table {
+    animation: enter-fade 0.32s ease both;
+    animation-delay: 0.1s;
+  }
+
   .motion-stagger-table tbody tr {
     animation: enter-rise 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
@@ -150,14 +155,8 @@
   .motion-stagger-table tbody tr:nth-child(8) {
     animation-delay: 0.33s;
   }
-  .motion-stagger-table tbody tr:nth-child(9) {
-    animation-delay: 0.36s;
-  }
-  .motion-stagger-table tbody tr:nth-child(10) {
-    animation-delay: 0.39s;
-  }
-  .motion-stagger-table tbody tr:nth-child(n + 11) {
-    animation-delay: 0.42s;
+  .motion-stagger-table tbody tr:nth-child(n + 9) {
+    animation-delay: 0.33s;
   }
 
   .modal-backdrop {
@@ -197,6 +196,7 @@
   .layout.page-stagger > *,
   .enter-item,
   .motion-stagger > *,
+  .motion-stagger-table,
   .motion-stagger-table tbody tr,
   .modal-backdrop,
   .modal,

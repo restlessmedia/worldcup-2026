@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { flagUrl } from "../lib/data";
 import { formatHouseLabel } from "../lib/format";
 import { copy } from "../lib/labels";
@@ -38,7 +39,7 @@ export function TeamModal({ team, onClose }) {
         ? "Still in the tournament"
         : team.status;
 
-  return (
+  return createPortal(
     <div className="modal-backdrop" onClick={onClose} role="presentation">
       <div
         className="modal"
@@ -52,7 +53,13 @@ export function TeamModal({ team, onClose }) {
         </button>
 
         <div className="modal-header">
-          <img src={flagUrl(team.fifa_code)} alt="" width="48" height="48" />
+          <img
+            src={flagUrl(team.fifa_code)}
+            alt=""
+            width="48"
+            height="48"
+            fetchPriority="high"
+          />
           <div>
             <h3 id="team-modal-title">{team.display_name}</h3>
             {team.draw_name && team.draw_name !== team.display_name ? (
@@ -98,6 +105,7 @@ export function TeamModal({ team, onClose }) {
           ) : null}
         </dl>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

@@ -1,4 +1,5 @@
 import { useSiteData } from "./hooks/useSiteData";
+import { loadInfoPageData } from "./lib/data";
 import { potTotal, resolveSiteUpdatedAt } from "./lib/format";
 import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
@@ -14,7 +15,7 @@ function tieBreakSteps(config) {
 }
 
 export function InfoApp() {
-  const { data, error, loading } = useSiteData();
+  const { data, error, loading } = useSiteData(loadInfoPageData);
 
   if (loading) {
     return (
@@ -32,7 +33,7 @@ export function InfoApp() {
     );
   }
 
-  const { config, meta, standings } = data;
+  const { config, meta } = data;
   const ruleLines = config.notes || [];
   const tieBreaks = tieBreakSteps(config);
 
@@ -40,7 +41,7 @@ export function InfoApp() {
     <Layout
       title="Prizes & rules"
       tagline={`${potTotal(config)} pot · main prizes, side prizes, and tie-breakers`}
-      updatedAt={resolveSiteUpdatedAt({ meta, standings })}
+      updatedAt={resolveSiteUpdatedAt({ meta })}
       activeNav="info"
     >
       <Card title="Prizes" hint="Last team standing at each stage wins the main prizes.">
