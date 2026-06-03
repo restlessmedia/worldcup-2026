@@ -32,10 +32,10 @@ export function HousesTable({ standings }) {
 
   return (
     <>
-      <div className="house-cards">{houseCards}</div>
+      <div className="house-cards motion-stagger">{houseCards}</div>
 
       <div className="table-wrap houses-table-wrap">
-        <table className="data-table">
+        <table className="data-table motion-stagger-table">
           <thead>
             <tr>
               <ColumnHeader {...columns.house} />

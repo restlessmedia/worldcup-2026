@@ -20,6 +20,32 @@ export function formatDate(value) {
   });
 }
 
+export function formatDateTimeShort(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+}
+
+/** Best timestamp for “when was the site data last built/updated”. */
+export function resolveSiteUpdatedAt({ meta, standings, knockout } = {}) {
+  return (
+    standings?.results_updated ||
+    meta?.results_updated ||
+    knockout?.last_updated ||
+    standings?.generated_at ||
+    meta?.published_at ||
+    null
+  );
+}
+
 export function potTotal(config) {
   return formatMoney(
     config.prizes?.reduce((sum, prize) => sum + (prize.amount_gbp || 0), 0)

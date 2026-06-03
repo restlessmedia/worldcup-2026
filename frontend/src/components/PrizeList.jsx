@@ -42,13 +42,13 @@ export function PrizeList({ config }) {
   const { main, side } = splitPrizes(config);
 
   return (
-    <div className="prize-list-grid">
+    <div className="prize-list-grid motion-stagger">
       <section className="prize-section">
         <div className="prize-section-head">
           <h3>Main prizes</h3>
           <span className="prize-section-total">{mainPrizeTotal(main)}</span>
         </div>
-        <div className="prize-rows">
+        <div className="prize-rows motion-stagger">
           {main.map((prize) => (
             <MainPrizeRow key={prize.ordinal} prize={prize} />
           ))}
@@ -60,7 +60,7 @@ export function PrizeList({ config }) {
           <h3>Side prizes</h3>
           <span className="prize-section-total">{sidePrizeTotal(side)}</span>
         </div>
-        <div className="prize-rows">
+        <div className="prize-rows motion-stagger">
           {side.map((prize) => (
             <SidePrizeRow key={prize.id} prize={prize} />
           ))}

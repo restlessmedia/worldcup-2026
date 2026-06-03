@@ -74,12 +74,28 @@ a:hover {
   padding: 1rem 1.25rem 1.1rem;
 }
 
+.topbar-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
 .topbar h1 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--text);
+}
+
+.topbar-updated {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
 }
 
 .topbar .tagline {
@@ -154,6 +170,13 @@ a:hover {
   box-shadow: var(--shadow-sm);
   padding: 1.25rem 1.35rem 1.35rem;
   margin-bottom: 1rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .card h2 {
@@ -175,6 +198,10 @@ a:hover {
   margin-top: 0.75rem;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.card--knockout {
+  overflow: visible;
 }
 
 /* ── Tables ── */
@@ -214,6 +241,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .house-card__head {
@@ -424,9 +452,10 @@ a:hover {
 }
 
 .houses-table-wrap .flag-row--named {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8.25rem, max-content));
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.35rem 0.45rem;
+  align-items: center;
 }
 
 /* ── League shell (wooden spoon) ── */
@@ -538,6 +567,7 @@ a:hover {
   min-height: 44px;
   border-color: var(--line);
   background: var(--surface);
+  justify-content: flex-start;
 }
 
 .flag-btn--with-name:hover {
@@ -762,7 +792,7 @@ a:hover {
 
 .prize-rows {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.65rem;
 }
 
 .prize-row {
@@ -774,6 +804,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .prize-row--1st { border-left: 3px solid #eab308; }
@@ -797,6 +828,13 @@ a:hover {
   color: var(--text-tertiary);
 }
 
+.prize-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
 .prize-title {
   font-weight: 600;
   font-size: 0.875rem;
@@ -817,67 +855,278 @@ a:hover {
 
 /* ── Knockout ── */
 
+.knockout-bracket-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.knockout-bracket-shell .scroll-hint--knockout {
+  display: none;
+}
+
+.empty-note--knockout {
+  margin: 0;
+}
+
 .knockout-summary {
-  margin: 0 0 0.85rem;
+  margin: 0;
   font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
-.knockout-scroll {
-  overflow-x: auto;
-  margin: 0 -0.15rem;
-  padding-bottom: 0.35rem;
+/* Bracket tree — two pathways meeting at the final */
+
+.knockout-tree-viewport {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.25rem 0 0.5rem;
 }
 
-.knockout-bracket {
+.knockout-tree {
+  --bracket-gap: clamp(0.15rem, 0.45vw, 0.5rem);
   display: flex;
-  gap: 0.75rem;
-  min-width: min-content;
-  padding: 0.15rem;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  gap: var(--bracket-gap);
 }
 
-.knockout-round {
-  flex: 0 0 12.5rem;
+.knockout-pathway-grid {
+  flex: 4 1 0;
+  min-width: 0;
+  width: 100%;
+  font-size: clamp(0.5rem, 0.72vw, 0.625rem);
+}
+
+.knockout-pathway-grid__headers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--bracket-gap);
+  margin-bottom: 0.3rem;
+}
+
+.knockout-pathway-grid__body {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(0, auto));
+  column-gap: var(--bracket-gap);
+  row-gap: 0.12rem;
+  align-items: center;
+}
+
+.knockout-grid-cell {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: stretch;
+  position: relative;
+  z-index: 1;
+  min-height: 0;
+  width: 100%;
 }
 
-.knockout-round__head {
-  padding: 0.6rem 0.75rem;
-  border-radius: var(--radius-md);
+.knockout-grid-cell__match {
+  width: 100%;
+}
+
+.knockout-grid-feeder {
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pair → next round (vertical + midpoint tick) */
+.knockout-pathway-grid--left .knockout-grid-feeder::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 0;
+  border-right: 2px solid var(--line-strong);
+  transform: translateX(calc(var(--bracket-gap) / 2));
+}
+
+.knockout-pathway-grid--left .knockout-grid-feeder::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: calc(var(--bracket-gap) / 2);
+  border-top: 2px solid var(--line-strong);
+  transform: translate(100%, -50%);
+}
+
+.knockout-pathway-grid--right .knockout-grid-feeder::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 0;
+  border-left: 2px solid var(--line-strong);
+  transform: translateX(calc(var(--bracket-gap) / -2));
+}
+
+.knockout-pathway-grid--right .knockout-grid-feeder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: calc(var(--bracket-gap) / 2);
+  border-top: 2px solid var(--line-strong);
+  transform: translate(-100%, -50%);
+}
+
+/* Later rounds → next column (half gap between grid columns) */
+.knockout-pathway-grid--left .knockout-grid-cell--r16::after,
+.knockout-pathway-grid--left .knockout-grid-cell--qf::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: calc(var(--bracket-gap) / 2);
+  border-top: 2px solid var(--line-strong);
+  transform: translate(100%, -50%);
+  pointer-events: none;
+}
+
+.knockout-pathway-grid--right .knockout-grid-cell--r16::after,
+.knockout-pathway-grid--right .knockout-grid-cell--qf::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: calc(var(--bracket-gap) / 2);
+  border-top: 2px solid var(--line-strong);
+  transform: translate(-100%, -50%);
+  pointer-events: none;
+}
+
+/* Semi → final (full tree gap to centre column) */
+.knockout-pathway-grid--left .knockout-grid-cell--sf::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: var(--bracket-gap);
+  border-top: 2px solid var(--line-strong);
+  transform: translate(100%, -50%);
+  pointer-events: none;
+}
+
+.knockout-pathway-grid--right .knockout-grid-cell--sf::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: var(--bracket-gap);
+  border-top: 2px solid var(--line-strong);
+  transform: translate(-100%, -50%);
+  pointer-events: none;
+}
+
+.knockout-tree__col-head {
+  margin: 0;
+  padding: 0.2rem 0.15rem;
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--text-secondary);
   background: #f8fafc;
   border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.knockout-round__head h3 {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.knockout-round__meta {
-  display: block;
-  margin-top: 0.1rem;
-  font-size: 0.6875rem;
-  color: var(--text-tertiary);
-}
-
-.knockout-round__matches {
+.knockout-tree__col {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: space-around;
+}
+
+.knockout-tree__col-body {
+  display: flex;
+  align-items: center;
   flex: 1;
+}
+
+.knockout-tree__center {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--bracket-gap);
+  padding: calc(0.5rem + 1.2em) 0 0;
+  align-self: stretch;
+  position: relative;
+  z-index: 2;
+  background: var(--surface);
+  font-size: clamp(0.5rem, 0.72vw, 0.625rem);
+}
+
+.knockout-tree__col--center {
+  width: 100%;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.knockout-tree__col--center .knockout-tree__col-head {
+  margin-bottom: 0.3rem;
+}
+
+.knockout-tree__col--center .knockout-tree__col-body {
+  flex: none;
+}
+
+.knockout-tree__center .knockout-match--compact .knockout-match__vs,
+.knockout-pathway-grid .knockout-match--compact .knockout-match__vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0.15rem 0.25rem;
+  height: auto;
+  min-height: 1.1rem;
+  line-height: 1;
+  font-size: 0.5625rem;
+  letter-spacing: 0.03em;
+}
+
+.knockout-tree__center .knockout-slot--compact,
+.knockout-pathway-grid .knockout-slot--compact {
+  grid-template-columns: 1.75em minmax(0, 1fr) auto;
+  gap: 0.15rem 0.2rem;
+  align-items: center;
+  padding: 0.3rem 0.28rem;
+  min-height: 1.65rem;
+}
+
+.knockout-tree__center .knockout-slot--tbd,
+.knockout-pathway-grid .knockout-slot--tbd {
+  grid-template-columns: 1.75em;
+  align-items: center;
+  padding: 0.3rem 0.28rem;
+  min-height: 1.65rem;
 }
 
 .knockout-match {
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   background: var(--surface);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+}
+
+.knockout-match--compact {
+  border-radius: 6px;
+  box-shadow: none;
 }
 
 .knockout-match__vs {
@@ -889,6 +1138,40 @@ a:hover {
   background: #f8fafc;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+/* Bracket tree — fluid match cards (scale with column width) */
+.knockout-pathway-grid .knockout-slot__flag-icon,
+.knockout-tree__center .knockout-slot__flag-icon {
+  grid-area: flag;
+  width: 1.75em;
+  height: 1.75em;
+  min-width: 14px;
+  min-height: 14px;
+  max-width: 22px;
+  max-height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  object-fit: cover;
+}
+
+.knockout-slot__flag-icon--lg {
+  width: 22px;
+  height: 22px;
+  max-width: none;
+  max-height: none;
+}
+
+.knockout-pathway-grid .knockout-slot__name,
+.knockout-pathway-grid .knockout-slot__score {
+  font-size: inherit;
+  line-height: 1.15;
+}
+
+.knockout-pathway-grid .knockout-slot__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .knockout-slot {
@@ -908,17 +1191,33 @@ a:hover {
   touch-action: manipulation;
 }
 
-.knockout-slot img,
-.knockout-slot__placeholder {
-  grid-area: flag;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
+.knockout-slot--compact {
+  grid-template-columns: 14px 1fr auto;
+  grid-template-areas: "flag name score";
+  gap: 0.08rem 0.3rem;
+  padding: 0.15rem 0.35rem;
+  min-height: 0;
 }
 
-.knockout-slot__placeholder {
-  background: var(--bg);
+.knockout-slot img,
+.knockout-slot .flag-placeholder {
+  grid-area: flag;
+}
+
+.flag-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px dashed var(--line-strong);
+  background: #f1f5f9;
+  color: var(--text-tertiary);
+}
+
+.flag-placeholder svg {
+  width: 58%;
+  height: 58%;
 }
 
 .knockout-slot__name {
@@ -942,16 +1241,13 @@ a:hover {
 }
 
 .knockout-slot--tbd {
-  display: block;
-  padding: 0.55rem 0.6rem;
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  grid-template-areas: "flag .";
+  padding: 0.15rem 0.35rem;
   background: #f8fafc;
   cursor: default;
-}
-
-.knockout-slot__tbd {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--text-tertiary);
+  align-items: center;
 }
 
 .knockout-slot--winner {
@@ -1026,7 +1322,6 @@ a:hover {
 
   .house-card .flag-btn--with-name {
     width: 100%;
-    justify-content: flex-start;
     min-width: 0;
   }
 
@@ -1076,10 +1371,6 @@ a:hover {
     -webkit-overflow-scrolling: touch;
   }
 
-  .scroll-hint--knockout {
-    display: block;
-  }
-
   .scroll-hint--table {
     display: block;
     padding: 0.5rem 0.75rem 0;
@@ -1088,21 +1379,28 @@ a:hover {
     border-bottom: 1px solid var(--line);
   }
 
-  .knockout-scroll {
-    margin: 0 -1.05rem;
-    padding: 0 1.05rem 0.5rem;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 1.05rem;
+  .knockout-tree {
+    --bracket-gap: clamp(0.1rem, 1.5vw, 0.4rem);
   }
 
-  .knockout-round {
-    flex: 0 0 min(82vw, 16rem);
-    scroll-snap-align: start;
+  .knockout-pathway-grid {
+    font-size: clamp(0.45rem, 2.8vw, 0.6rem);
   }
 
-  .knockout-slot {
-    min-height: 44px;
+  .knockout-tree__center {
+    padding-top: calc(0.45rem + 1.2em);
+  }
+
+  .knockout-pathway-grid .knockout-slot--compact,
+  .knockout-pathway-grid .knockout-slot--tbd {
+    min-height: 36px;
+    padding: 0.32rem 0.22rem;
     touch-action: manipulation;
+  }
+
+  .knockout-pathway-grid .knockout-match--compact .knockout-match__vs {
+    min-height: 1rem;
+    padding: 0.12rem 0.2rem;
   }
 
   .prize-row {
@@ -1144,6 +1442,7 @@ a:hover {
     min-width: 38rem;
   }
 }
+
 
 @media (max-width: 400px) {
   .house-card__head {

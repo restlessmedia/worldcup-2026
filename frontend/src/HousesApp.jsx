@@ -1,5 +1,5 @@
 import { useSiteData } from "./hooks/useSiteData";
-import { tournamentStatusLine } from "./lib/format";
+import { resolveSiteUpdatedAt, tournamentStatusLine } from "./lib/format";
 import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { HousesTable } from "./components/HousesTable";
@@ -23,12 +23,13 @@ export function HousesApp() {
     );
   }
 
-  const { standings, config } = data;
+  const { standings, config, meta } = data;
 
   return (
     <Layout
       title="World Cup 2026 sweepstake"
       tagline={tournamentStatusLine(standings, config)}
+      updatedAt={resolveSiteUpdatedAt({ meta, standings })}
       activeNav="houses"
       footer={
         <p>

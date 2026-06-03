@@ -32,6 +32,26 @@ def house_sort_key(house_id: str) -> tuple:
     return (1, house_id.lower())
 
 
+def spoon_likelihood_lookup(teams_payload: dict) -> dict[str, int]:
+    by_code: dict[str, int] = {}
+    for team in teams_payload.get("teams") or []:
+        score = int(team.get("wooden_spoon_likelihood") or 0)
+        code = team.get("fifa_code")
+        if code:
+            by_code[code] = score
+    return by_code
+
+
+def wooden_spoon_sort_key(team: dict, *, pre_tournament: bool) -> tuple:
+    if pre_tournament:
+        return (
+            -team.get("wooden_spoon_likelihood", 0),
+            -team["fifa_rank"],
+            team["display_name"],
+        )
+    return (-team["goals_conceded"], team["display_name"])
+
+
 def fifa_lookup(fifa_payload: dict) -> dict[str, dict]:
     by_name = {team["fifa_name"]: team for team in fifa_payload["teams"]}
     draw_map = fifa_payload["draw_name_map"]
@@ -48,7 +68,9 @@ def build_standings() -> dict:
     draw = load_json("draw.json")
     results = load_json("results.json")
     fifa = load_json("fifa-teams.json")
+    teams_meta = load_json("teams.json")
     lookup = fifa_lookup(fifa)
+    spoon_likelihood = spoon_likelihood_lookup(teams_meta)
 
     eliminated = set(results.get("teams_eliminated") or [])
     goals_conceded = results.get("goals_conceded") or {}
@@ -86,6 +108,7 @@ def build_standings() -> dict:
                 "fifa_rank": rank,
                 "status": status,
                 "goals_conceded": conceded,
+                "wooden_spoon_likelihood": spoon_likelihood.get(info["fifa_code"], 0),
                 "fair_play_points": int(fair_play.get(draw_name, fair_play.get(info["fifa_name"], 0)) or 0),
             }
             team_rows.append(row)
@@ -105,20 +128,23 @@ def build_standings() -> dict:
 
     houses.sort(key=lambda h: house_sort_key(h["house_id"]))
 
+    spoon_rows = [
+        {
+            "house_id": t["house_id"],
+            "display_name": t["display_name"],
+            "fifa_code": t["fifa_code"],
+            "goals_conceded": t["goals_conceded"],
+            "wooden_spoon_likelihood": t["wooden_spoon_likelihood"],
+            "fifa_rank": t["fifa_rank"],
+            "group": t["group"],
+            "status": t["status"],
+        }
+        for t in all_teams
+    ]
+    pre_tournament_spoon = all(t["goals_conceded"] == 0 for t in spoon_rows)
     wooden_spoon = sorted(
-        [
-            {
-                "house_id": t["house_id"],
-                "display_name": t["display_name"],
-                "fifa_code": t["fifa_code"],
-                "goals_conceded": t["goals_conceded"],
-                "fifa_rank": t["fifa_rank"],
-                "group": t["group"],
-                "status": t["status"],
-            }
-            for t in all_teams
-        ],
-        key=lambda t: (-t["goals_conceded"], t["display_name"]),
+        spoon_rows,
+        key=lambda t: wooden_spoon_sort_key(t, pre_tournament=pre_tournament_spoon),
     )
 
     league = []

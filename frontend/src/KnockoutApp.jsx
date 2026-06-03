@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { loadJson } from "./lib/data";
-import { formatDate } from "./lib/format";
+import { formatDate, resolveSiteUpdatedAt } from "./lib/format";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { KnockoutBracket } from "./components/KnockoutBracket";
 
@@ -16,11 +16,15 @@ function knockoutTagline(knockout) {
 
 export function KnockoutApp() {
   const [knockout, setKnockout] = useState(null);
+  const [meta, setMeta] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    loadJson("knockout.json")
-      .then(setKnockout)
+    Promise.all([loadJson("knockout.json"), loadJson("meta.json")])
+      .then(([knockoutData, metaData]) => {
+        setKnockout(knockoutData);
+        setMeta(metaData);
+      })
       .catch((err) => setError(err.message));
   }, []);
 
@@ -41,8 +45,16 @@ export function KnockoutApp() {
   }
 
   return (
-    <Layout title="Knockout" tagline={knockoutTagline(knockout)} activeNav="knockout">
-      <Card hint="Sweepstake teams and houses on each knockout fixture. Winners advance automatically when scores are entered.">
+    <Layout
+      title="Knockout"
+      tagline={knockoutTagline(knockout)}
+      updatedAt={resolveSiteUpdatedAt({ meta, knockout })}
+      activeNav="knockout"
+    >
+      <Card
+        className="card--knockout"
+        hint="Sweepstake teams and houses on each knockout fixture. Winners advance automatically when scores are entered."
+      >
         <KnockoutBracket knockout={knockout} />
       </Card>
     </Layout>

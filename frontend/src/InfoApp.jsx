@@ -1,5 +1,5 @@
 import { useSiteData } from "./hooks/useSiteData";
-import { potTotal } from "./lib/format";
+import { potTotal, resolveSiteUpdatedAt } from "./lib/format";
 import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { PrizeList } from "./components/PrizeList";
@@ -32,7 +32,7 @@ export function InfoApp() {
     );
   }
 
-  const { config, meta } = data;
+  const { config, meta, standings } = data;
   const ruleLines = config.notes || [];
   const tieBreaks = tieBreakSteps(config);
 
@@ -40,6 +40,7 @@ export function InfoApp() {
     <Layout
       title="Prizes & rules"
       tagline={`${potTotal(config)} pot · main prizes, side prizes, and tie-breakers`}
+      updatedAt={resolveSiteUpdatedAt({ meta, standings })}
       activeNav="info"
     >
       <Card title="Prizes" hint="Last team standing at each stage wins the main prizes.">
@@ -47,7 +48,7 @@ export function InfoApp() {
       </Card>
 
       <Card title="Rules">
-        <ul className="rules">
+        <ul className="rules motion-stagger">
           {ruleLines.map((line) => (
             <li key={line}>{line}</li>
           ))}
@@ -64,7 +65,7 @@ export function InfoApp() {
         hint="Wooden spoon (most goals conceded) and how deadlocks are settled."
       >
         <h3 className="subsection-title">Wooden spoon league</h3>
-        <ul className="rules">
+        <ul className="rules motion-stagger">
           <li>Teams tied on goals conceded share the same league position.</li>
           <li>
             See the{" "}
@@ -73,7 +74,7 @@ export function InfoApp() {
         </ul>
 
         <h3 className="subsection-title">If still tied on most goals conceded</h3>
-        <ol className="rules rules--ordered">
+        <ol className="rules rules--ordered motion-stagger">
           {tieBreaks.map((step) => (
             <li key={step}>{step}</li>
           ))}

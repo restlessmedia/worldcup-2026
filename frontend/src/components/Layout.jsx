@@ -1,11 +1,23 @@
 import "../styles/global.css";
+import "../styles/motion.css";
+import { formatDateTimeShort } from "../lib/format";
 
-export function Layout({ title, tagline, activeNav, children, footer }) {
+export function Layout({ title, tagline, updatedAt, activeNav, children, footer }) {
+  const updatedLabel = formatDateTimeShort(updatedAt);
+
   return (
     <>
-      <header className="topbar">
+      <header className="topbar page-enter">
         <div className="topbar-inner">
-          <h1>{title}</h1>
+          <div className="topbar-title-row">
+            <h1>{title}</h1>
+            {updatedLabel ? (
+              <p className="topbar-updated">
+                Updated{" "}
+                <time dateTime={updatedAt}>{updatedLabel}</time>
+              </p>
+            ) : null}
+          </div>
           {tagline ? <p className="tagline">{tagline}</p> : null}
           <div className="site-nav-scroll">
             <nav className="site-nav" aria-label="Site sections">
@@ -26,7 +38,7 @@ export function Layout({ title, tagline, activeNav, children, footer }) {
         </div>
       </header>
 
-      <div className="layout">
+      <div className="layout page-stagger">
         {children}
         {footer ? <footer className="footer">{footer}</footer> : null}
       </div>
@@ -34,9 +46,9 @@ export function Layout({ title, tagline, activeNav, children, footer }) {
   );
 }
 
-export function Card({ title, hint, children, link }) {
+export function Card({ title, hint, children, link, className = "" }) {
   return (
-    <section className="card">
+    <section className={className ? `card ${className}` : "card"}>
       {title ? <h2>{title}</h2> : null}
       {hint ? <p className="hint">{hint}</p> : null}
       {children}

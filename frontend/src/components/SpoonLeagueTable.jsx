@@ -24,7 +24,7 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
   const hasGoals = league.some((row) => row.goals_conceded > 0);
 
   const table = (
-    <table className="league-table league-table--spoon">
+    <table className="league-table league-table--spoon motion-stagger-table">
       <thead>
         <tr>
           <ColumnHeader {...columns.position} />
@@ -67,14 +67,14 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
   return (
     <>
       {showHeader ? (
-        <div className="league-shell">
+        <div className="league-shell enter-item">
           <div className="league-shell__header">
             <div>
               <h3>Most goals conceded</h3>
               <p className="league-shell__sub">
                 {hasGoals
                   ? "The team with the most goals scored against them wins the wooden spoon side prize"
-                  : "Tournament not started — every team is on 0 goals conceded"}
+                  : "Tournament not started — ranked by wooden spoon likelihood (weakest teams first)"}
               </p>
             </div>
             <span className="league-shell__prize">
