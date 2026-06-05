@@ -1,3 +1,5 @@
+import { placeholderLabel } from "./placeholderLabels";
+
 const UK_TZ = "Europe/London";
 
 export function ukDateKey(utcValue) {
@@ -55,6 +57,7 @@ export function fixtureInvolvesTeam(fixture, fifaCode) {
 function sideShortLabel(team) {
   if (!team) return "tbd";
   if (team.fifa_code) return team.fifa_code.toLowerCase();
+  if (team.status === "placeholder") return placeholderLabel(team.draw_name || team.display_name).toLowerCase();
   return (team.display_name || team.draw_name || "tbd").toLowerCase();
 }
 
@@ -111,6 +114,31 @@ export function parseDateKey(key) {
   return { year, month: month - 1, day };
 }
 
+const TOURNAMENT_START = { year: 2026, month: 5, day: 1 };
+const TOURNAMENT_END = { year: 2026, month: 6, day: 31 };
+
+export function todayDateKey() {
+  return ukDateKey(new Date().toISOString());
+}
+
+function todayParts() {
+  const key = todayDateKey();
+  if (!key) return { ...TOURNAMENT_START };
+  return parseDateKey(key);
+}
+
+function clampViewMonth(parts) {
+  if (parts.year < TOURNAMENT_START.year) return { ...TOURNAMENT_START };
+  if (parts.year > TOURNAMENT_END.year) return { year: TOURNAMENT_END.year, month: TOURNAMENT_END.month, day: 1 };
+  if (parts.year === TOURNAMENT_START.year && parts.month < TOURNAMENT_START.month) {
+    return { ...TOURNAMENT_START };
+  }
+  if (parts.year === TOURNAMENT_END.year && parts.month > TOURNAMENT_END.month) {
+    return { year: TOURNAMENT_END.year, month: TOURNAMENT_END.month, day: 1 };
+  }
+  return parts;
+}
+
 export function buildMonthGrid(year, monthIndex) {
   const firstOfMonth = new Date(year, monthIndex, 1);
   const startOffset = (firstOfMonth.getDay() + 6) % 7;
@@ -132,7 +160,7 @@ export function buildMonthGrid(year, monthIndex) {
 
 export function initialViewMonth(fixtures, teamFilter) {
   const byDay = groupFixturesByDay(fixtures);
-  const todayKey = ukDateKey(new Date().toISOString());
+  const todayKey = todayDateKey();
   const keys = [...byDay.keys()].sort();
 
   if (teamFilter) {
@@ -140,20 +168,15 @@ export function initialViewMonth(fixtures, teamFilter) {
       byDay.get(key).some((fixture) => fixtureInvolvesTeam(fixture, teamFilter)),
     );
     const upcoming = teamKeys.find((key) => key >= todayKey);
-    const chosen = upcoming || teamKeys[0];
-    if (chosen) return parseDateKey(chosen);
+    if (upcoming) return parseDateKey(upcoming);
   }
 
-  if (todayKey && keys.includes(todayKey)) {
-    return parseDateKey(todayKey);
-  }
-  if (keys.length) return parseDateKey(keys[0]);
-  return { year: 2026, month: 5, day: 1 };
+  return clampViewMonth(todayParts());
 }
 
 export function initialSelectedDay(fixtures, teamFilter, viewMonth) {
   const byDay = groupFixturesByDay(fixtures);
-  const todayKey = ukDateKey(new Date().toISOString());
+  const todayKey = todayDateKey();
   const monthPrefix = `${viewMonth.year}-${String(viewMonth.month + 1).padStart(2, "0")}`;
 
   const monthKeys = [...byDay.keys()]
@@ -165,9 +188,10 @@ export function initialSelectedDay(fixtures, teamFilter, viewMonth) {
       byDay.get(key).some((fixture) => fixtureInvolvesTeam(fixture, teamFilter)),
     );
     const upcoming = teamKeys.find((key) => key >= todayKey);
-    return upcoming || teamKeys[0] || monthKeys[0] || null;
+    if (upcoming) return upcoming;
+    if (teamKeys[0]) return teamKeys[0];
   }
 
-  if (todayKey?.startsWith(monthPrefix) && byDay.has(todayKey)) return todayKey;
+  if (todayKey?.startsWith(monthPrefix)) return todayKey;
   return monthKeys[0] || null;
 }

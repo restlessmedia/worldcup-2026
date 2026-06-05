@@ -31,7 +31,10 @@ export function FixturesApp() {
   const fixturesByDay = useMemo(() => groupFixturesByDay(fixtures), [fixtures]);
 
   const [viewMonth, setViewMonth] = useState(() => initialViewMonth(fixtures, teamFilter));
-  const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(() => {
+    const month = initialViewMonth([], teamFilter);
+    return initialSelectedDay([], teamFilter, month);
+  });
 
   useEffect(() => {
     let cancelled = false;

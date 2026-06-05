@@ -1,5 +1,6 @@
 import { flagUrl } from "../lib/data";
-import { fixtureMatchupShort, formatMonthYear, sortFixturesByRank } from "../lib/fixtures";
+import { fixtureMatchupShort, formatMonthYear, sortFixturesByRank, todayDateKey } from "../lib/fixtures";
+import { placeholderLabel } from "../lib/placeholderLabels";
 import { FlagPlaceholder } from "./FlagPlaceholder";
 
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -20,7 +21,7 @@ function CalendarSideFlag({ team }) {
     );
   }
 
-  const label = team?.display_name || "TBD";
+  const label = placeholderLabel(team?.draw_name || team?.display_name);
   return <FlagPlaceholder size={CAL_FLAG_SIZE} label={label} className="fixture-calendar__flag-placeholder" />;
 }
 
@@ -59,10 +60,7 @@ export function FixtureCalendar({
 }) {
   const atStart = year === TOURNAMENT_START.year && month === TOURNAMENT_START.month;
   const atEnd = year === TOURNAMENT_END.year && month === TOURNAMENT_END.month;
-  const todayKey = (() => {
-    const now = new Date();
-    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-  })();
+  const todayKey = todayDateKey();
 
   return (
     <div className="fixture-calendar">

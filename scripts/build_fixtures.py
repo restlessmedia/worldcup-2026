@@ -9,11 +9,12 @@ from pathlib import Path
 
 from build_knockout import enrich_team
 from build_standings import fifa_lookup, load_json, short_name
+from placeholder_labels import placeholder_display_name
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
-PLACEHOLDER_RE = re.compile(r"^[0-9A-Z]+(/[0-9A-Z]+)*$|^W[0-9]+$|^L[0-9]+$")
+PLACEHOLDER_RE = re.compile(r"^[0-9A-Z]+(/[0-9A-Z]+)*$|^W[0-9]+$|^RU[0-9]+$|^L[0-9]+$")
 
 
 def is_placeholder(name: str | None) -> bool:
@@ -33,7 +34,7 @@ def enrich_side(
     if is_placeholder(draw_name):
         return {
             "draw_name": draw_name,
-            "display_name": draw_name,
+            "display_name": placeholder_display_name(draw_name),
             "fifa_code": None,
             "house_id": None,
             "group": None,

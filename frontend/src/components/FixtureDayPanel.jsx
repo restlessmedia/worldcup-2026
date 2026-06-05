@@ -1,4 +1,5 @@
 import { formatKickoffUk } from "../lib/fixtures";
+import { teamDisplayName } from "../lib/placeholderLabels";
 import { roundLabels } from "../lib/labels";
 import { TeamFlag } from "./TeamFlag";
 
@@ -37,7 +38,7 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
           ) : (
             <span className="fixture-row__placeholder" aria-hidden="true" />
           )}
-          <span className="fixture-row__name">{fixture.home?.display_name || "TBD"}</span>
+          <span className="fixture-row__name">{teamDisplayName(fixture.home)}</span>
         </div>
 
         <span className="fixture-row__score" aria-label={score ? `Score ${score}` : "Kick-off time"}>
@@ -52,7 +53,7 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
           ) : (
             <span className="fixture-row__placeholder" aria-hidden="true" />
           )}
-          <span className="fixture-row__name">{fixture.away?.display_name || "TBD"}</span>
+          <span className="fixture-row__name">{teamDisplayName(fixture.away)}</span>
         </div>
       </div>
     </article>
