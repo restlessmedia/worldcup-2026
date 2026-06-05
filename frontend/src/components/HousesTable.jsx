@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDesktopHousesLayout } from "../hooks/useMediaQuery";
 import { formatHouseLabel } from "../lib/format";
 import { columns } from "../lib/labels";
 import { ColumnHeader } from "./ColumnHeader";
 import { TeamFlagRow } from "./TeamFlag";
+import { HouseFixturesModal } from "./HouseFixturesModal";
 import { TeamModal } from "./TeamModal";
 
 function houseInPlay(standings, house) {
@@ -19,9 +20,34 @@ function houseBestLabel(house, compact) {
     : `#${house.best_remaining_rank} world ranking`;
 }
 
-export function HousesTable({ standings }) {
+function HouseFixtureLink({ house, onSelect }) {
+  return (
+    <button
+      type="button"
+      className="house-fixtures-link"
+      onClick={(event) => onSelect(house, event)}
+      aria-label={`View fixtures for ${formatHouseLabel(house.house_id)}`}
+    >
+      Fixtures
+    </button>
+  );
+}
+
+export function HousesTable({ standings, fixtures = [] }) {
   const [selectedTeam, setSelectedTeam] = useState(null);
+  const [selectedHouse, setSelectedHouse] = useState(null);
+  const houseFixtureTriggerRef = useRef(null);
   const showTable = useDesktopHousesLayout();
+
+  function openHouseFixtures(house, event) {
+    houseFixtureTriggerRef.current = event.currentTarget;
+    setSelectedHouse(house);
+  }
+
+  function closeHouseFixtures() {
+    setSelectedHouse(null);
+    houseFixtureTriggerRef.current?.focus();
+  }
 
   return (
     <>
@@ -44,7 +70,12 @@ export function HousesTable({ standings }) {
 
                 return (
                   <tr key={house.house_id}>
-                    <td className="house-label">{formatHouseLabel(house.house_id)}</td>
+                    <td className="house-label">
+                      <span className="house-label__content">
+                        <span>{formatHouseLabel(house.house_id)}</span>
+                        <HouseFixtureLink house={house} onSelect={openHouseFixtures} />
+                      </span>
+                    </td>
                     <td>
                       <TeamFlagRow
                         teams={house.teams}
@@ -75,7 +106,10 @@ export function HousesTable({ standings }) {
             return (
               <article key={house.house_id} className="house-card">
                 <header className="house-card__head">
-                  <span className="house-card__id">{formatHouseLabel(house.house_id)}</span>
+                  <span className="house-card__title">
+                    <span className="house-card__id">{formatHouseLabel(house.house_id)}</span>
+                    <HouseFixtureLink house={house} onSelect={openHouseFixtures} />
+                  </span>
                   <span className="house-card__meta">
                     {inPlay}/{house.teams_total} still in · best {best}
                   </span>
@@ -93,6 +127,11 @@ export function HousesTable({ standings }) {
       )}
 
       <TeamModal team={selectedTeam} onClose={() => setSelectedTeam(null)} />
+      <HouseFixturesModal
+        house={selectedHouse}
+        fixtures={fixtures}
+        onClose={closeHouseFixtures}
+      />
     </>
   );
 }

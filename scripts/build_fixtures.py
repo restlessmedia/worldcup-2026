@@ -31,6 +31,8 @@ def enrich_side(
 ) -> dict | None:
     if not draw_name:
         return None
+    if lookup.get(draw_name):
+        return enrich_team(draw_name, lookup, eliminated, draw_to_house)
     if is_placeholder(draw_name):
         return {
             "draw_name": draw_name,

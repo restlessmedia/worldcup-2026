@@ -1,4 +1,4 @@
-import { placeholderLabel } from "./placeholderLabels";
+import { placeholderLabel } from "./placeholderLabels.js";
 
 const UK_TZ = "Europe/London";
 
@@ -30,6 +30,19 @@ export function formatKickoffUk(utcValue) {
   });
 }
 
+export function formatFixtureDateUk(utcValue) {
+  if (!utcValue) return null;
+  const date = new Date(utcValue);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("en-GB", {
+    timeZone: UK_TZ,
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
 export function formatMonthYear(year, monthIndex) {
   const date = new Date(year, monthIndex, 1);
   return date.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
@@ -52,6 +65,18 @@ export function groupFixturesByDay(fixtures) {
 export function fixtureInvolvesTeam(fixture, fifaCode) {
   if (!fifaCode) return true;
   return fixture.home?.fifa_code === fifaCode || fixture.away?.fifa_code === fifaCode;
+}
+
+export function buildHouseFixtureList(fixtures, teams) {
+  const teamCodes = new Set((teams || []).map((team) => team.fifa_code).filter(Boolean));
+  if (!teamCodes.size) return [];
+
+  return (fixtures || [])
+    .filter(
+      (fixture) =>
+        teamCodes.has(fixture.home?.fifa_code) || teamCodes.has(fixture.away?.fifa_code),
+    )
+    .sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
 }
 
 function sideShortLabel(team) {

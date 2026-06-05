@@ -111,13 +111,13 @@
       "kickoff_utc": "2026-06-13T01:00:00Z",
       "venue": "Los Angeles",
       "home": {
-        "draw_name": "USA",
+        "draw_name": "USA (United States)",
         "display_name": "USA",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "fifa_code": "USA",
+        "house_id": "5",
+        "group": "D",
+        "fifa_rank": 16,
+        "status": "alive"
       },
       "away": {
         "draw_name": "Paraguay",
@@ -886,13 +886,13 @@
       "kickoff_utc": "2026-06-19T19:00:00Z",
       "venue": "Seattle",
       "home": {
-        "draw_name": "USA",
+        "draw_name": "USA (United States)",
         "display_name": "USA",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "fifa_code": "USA",
+        "house_id": "5",
+        "group": "D",
+        "fifa_rank": 16,
+        "status": "alive"
       },
       "away": {
         "draw_name": "Australia",
@@ -1825,13 +1825,13 @@
         "status": "alive"
       },
       "away": {
-        "draw_name": "USA",
+        "draw_name": "USA (United States)",
         "display_name": "USA",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "fifa_code": "USA",
+        "house_id": "5",
+        "group": "D",
+        "fifa_rank": 16,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,

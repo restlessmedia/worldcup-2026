@@ -23,7 +23,7 @@ export function HousesApp() {
     );
   }
 
-  const { standings, config, meta } = data;
+  const { standings, config, meta, fixtures } = data;
 
   return (
     <Layout
@@ -47,9 +47,9 @@ export function HousesApp() {
     >
       <Card
         title="Houses"
-        hint="Tap a flag for team details."
+        hint="Tap a flag for team details, or open a house's fixture list."
       >
-        <HousesTable standings={standings} />
+        <HousesTable standings={standings} fixtures={fixtures?.fixtures || []} />
       </Card>
     </Layout>
   );

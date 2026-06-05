@@ -55,12 +55,14 @@ def wooden_spoon_sort_key(team: dict, *, pre_tournament: bool) -> tuple:
 def fifa_lookup(fifa_payload: dict) -> dict[str, dict]:
     by_name = {team["fifa_name"]: team for team in fifa_payload["teams"]}
     draw_map = fifa_payload["draw_name_map"]
+    fifa_to_draw = {fifa_name: draw_name for draw_name, fifa_name in draw_map.items()}
     lookup: dict[str, dict] = {}
     for draw_name, fifa_name in draw_map.items():
         if fifa_name in by_name:
             lookup[draw_name] = {**by_name[fifa_name], "draw_name": draw_name}
     for team in fifa_payload["teams"]:
-        lookup.setdefault(team["fifa_name"], {**team, "draw_name": team["fifa_name"]})
+        draw_name = fifa_to_draw.get(team["fifa_name"], team["fifa_name"])
+        lookup.setdefault(team["fifa_name"], {**team, "draw_name": draw_name})
     return lookup
 
 

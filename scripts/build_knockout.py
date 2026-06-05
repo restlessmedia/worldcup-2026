@@ -136,12 +136,13 @@ def enrich_team(
             "house_id": draw_to_house.get(draw_name),
             "status": "unknown",
         }
-    status = "eliminated" if draw_name in eliminated else "alive"
+    canonical_draw_name = info.get("draw_name") or draw_name
+    status = "eliminated" if canonical_draw_name in eliminated else "alive"
     return {
-        "draw_name": draw_name,
+        "draw_name": canonical_draw_name,
         "display_name": short_name(info["fifa_name"]),
         "fifa_code": info["fifa_code"],
-        "house_id": draw_to_house.get(draw_name),
+        "house_id": draw_to_house.get(canonical_draw_name, draw_to_house.get(draw_name)),
         "group": info.get("group"),
         "fifa_rank": info.get("world_ranking"),
         "status": status,

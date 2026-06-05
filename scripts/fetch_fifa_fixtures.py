@@ -57,7 +57,7 @@ def fifa_to_draw_names(fifa: dict, draw_names: set[str]) -> dict[str, str]:
         if draw_name in draw_names:
             mapping[fifa_name] = draw_name
         if code:
-            mapping[code] = draw_name if draw_name in draw_names else draw_name
+            mapping.setdefault(code, draw_name)
     return mapping
 
 

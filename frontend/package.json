@@ -6,6 +6,7 @@
     "sync-flags": "python ../scripts/sync_flags.py",
     "sync-data": "node scripts/sync-data.mjs",
     "dev": "npm run sync-data && vite",
+    "test": "node --test",
     "build": "node scripts/prebuild-clean.mjs && vite build",
     "preview": "vite preview --port 8080"
   },

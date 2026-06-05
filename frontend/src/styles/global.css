@@ -256,6 +256,13 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
+.house-card__title,
+.house-label__content {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
 .house-card__meta {
   font-size: 0.75rem;
   color: var(--text-tertiary);
@@ -434,6 +441,30 @@ a:hover {
   white-space: nowrap;
   color: var(--text);
   width: 1%;
+}
+
+.house-fixtures-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.house-fixtures-link:hover {
+  color: var(--accent-hover);
+}
+
+.house-fixtures-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
 }
 
 /* Houses table — team column gets remaining width; stats stay compact */
@@ -637,6 +668,10 @@ a:hover {
   border: 1px solid var(--line);
 }
 
+.modal--house-fixtures {
+  width: min(100%, 42rem);
+}
+
 .modal-close {
   position: absolute;
   top: 0.65rem;
@@ -662,6 +697,10 @@ a:hover {
   gap: 0.85rem;
   margin-bottom: 1rem;
   padding-right: 1.5rem;
+}
+
+.modal-header--stacked {
+  align-items: flex-start;
 }
 
 .modal-header img {
@@ -712,6 +751,84 @@ a:hover {
 .modal-actions a {
   font-weight: 600;
   font-size: 0.875rem;
+}
+
+.house-fixture-groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.house-fixture-group h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.house-fixture-group__list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.house-fixture {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.65rem 0.85rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fafbfc;
+}
+
+.house-fixture__time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+}
+
+.house-fixture__time time {
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.house-fixture__match {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.house-fixture__team {
+  min-width: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.house-fixture__team:last-child {
+  text-align: right;
+}
+
+.house-fixture__team--house {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.house-fixture__vs {
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.house-fixture__venue {
+  grid-column: 2;
+  margin: -0.25rem 0 0;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
 }
 
 /* ── Fixture calendar ── */
@@ -1887,6 +2004,23 @@ a:hover {
   .modal-close {
     width: 2.75rem;
     height: 2.75rem;
+  }
+
+  .house-fixture {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .house-fixture__time {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .house-fixture__venue {
+    grid-column: 1;
+    margin-top: -0.1rem;
   }
 }
 

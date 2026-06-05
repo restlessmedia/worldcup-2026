@@ -57,12 +57,13 @@ export async function loadJson(name) {
 }
 
 export async function loadStandingsPageData() {
-  const [standings, config, meta] = await Promise.all([
+  const [standings, config, meta, fixtures] = await Promise.all([
     loadJson("standings.json"),
     loadJson("config.json"),
     loadJson("meta.json"),
+    loadJson("fixtures.json"),
   ]);
-  return { standings, config, meta };
+  return { standings, config, meta, fixtures };
 }
 
 export async function loadInfoPageData() {
