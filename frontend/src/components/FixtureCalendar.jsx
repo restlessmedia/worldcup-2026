@@ -1,5 +1,11 @@
 import { flagUrl } from "../lib/data";
-import { fixtureMatchupShort, formatMonthYear, sortFixturesByRank, todayDateKey } from "../lib/fixtures";
+import {
+  fixtureInvolvesAnyTeam,
+  fixtureMatchupShort,
+  formatMonthYear,
+  sortFixturesByRank,
+  todayDateKey,
+} from "../lib/fixtures";
 import { placeholderLabel } from "../lib/placeholderLabels";
 import { FlagPlaceholder } from "./FlagPlaceholder";
 
@@ -53,6 +59,7 @@ export function FixtureCalendar({
   fixturesByDay,
   selectedDay,
   teamFilter,
+  highlightCodes,
   showTeams,
   onSelectDay,
   onPrevMonth,
@@ -104,15 +111,15 @@ export function FixtureCalendar({
           const dayFixtures = fixturesByDay.get(cell.key) || [];
           const previewFixtures = sortFixturesByRank(dayFixtures);
           const hasMatches = dayFixtures.length > 0;
-          const teamMatches = teamFilter
-            ? dayFixtures.filter(
-                (fixture) =>
-                  fixture.home?.fifa_code === teamFilter || fixture.away?.fifa_code === teamFilter,
-              )
+          const highlightCodeSet = new Set(
+            highlightCodes?.length ? highlightCodes : teamFilter ? [teamFilter] : [],
+          );
+          const highlightedMatches = highlightCodeSet.size
+            ? dayFixtures.filter((fixture) => fixtureInvolvesAnyTeam(fixture, highlightCodeSet))
             : [];
           const isSelected = selectedDay === cell.key;
           const isToday = cell.key === todayKey;
-          const highlightTeam = teamFilter && teamMatches.length > 0;
+          const highlightTeam = highlightedMatches.length > 0;
 
           let className = "fixture-calendar__day";
           if (!hasMatches) className += " fixture-calendar__day--empty";
@@ -148,8 +155,7 @@ export function FixtureCalendar({
                 <span className="fixture-calendar__match-flags-list" aria-hidden="true">
                   {previewFixtures.slice(0, MAX_MATCHUPS_IN_CELL).map((fixture) => {
                     const highlighted =
-                      teamFilter &&
-                      (fixture.home?.fifa_code === teamFilter || fixture.away?.fifa_code === teamFilter);
+                      highlightCodeSet.size > 0 && fixtureInvolvesAnyTeam(fixture, highlightCodeSet);
                     return <CalendarMatchup key={fixture.id} fixture={fixture} highlighted={highlighted} />;
                   })}
                   {dayFixtures.length > MAX_MATCHUPS_IN_CELL ? (
@@ -167,8 +173,7 @@ export function FixtureCalendar({
                       <span
                         key={fixture.id}
                         className={
-                          teamFilter &&
-                          (fixture.home?.fifa_code === teamFilter || fixture.away?.fifa_code === teamFilter)
+                          highlightCodeSet.size > 0 && fixtureInvolvesAnyTeam(fixture, highlightCodeSet)
                             ? "fixture-calendar__dot fixture-calendar__dot--team"
                             : "fixture-calendar__dot"
                         }

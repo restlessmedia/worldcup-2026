@@ -15,14 +15,17 @@ function scoreLine(fixture) {
   return `${fixture.home_score} – ${fixture.away_score}`;
 }
 
-function FixtureSide({ team, onSelectTeam, highlighted, away = false }) {
+function FixtureSide({ team, onSelectTeam, highlighted, highlightLabel, away = false }) {
   const name = teamDisplayName(team);
   const className = `fixture-row__side${away ? " fixture-row__side--away" : ""}${
     highlighted ? " fixture-row__side--highlight" : ""
   }`;
 
   return (
-    <div className={className} aria-label={highlighted ? `${name} (selected team)` : undefined}>
+    <div
+      className={className}
+      aria-label={highlighted && highlightLabel ? `${name} (${highlightLabel})` : undefined}
+    >
       {team?.fifa_code ? (
         <TeamFlag team={team} onSelect={onSelectTeam} size={24} showName={false} />
       ) : (
@@ -36,11 +39,15 @@ function FixtureSide({ team, onSelectTeam, highlighted, away = false }) {
   );
 }
 
-function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
+function FixtureRow({ fixture, onSelectTeam, highlightCode, highlightCodes, highlightLabel }) {
   const kickoff = formatKickoffUk(fixture.kickoff_utc);
   const score = scoreLine(fixture);
-  const highlightHome = highlightCode && fixture.home?.fifa_code === highlightCode;
-  const highlightAway = highlightCode && fixture.away?.fifa_code === highlightCode;
+  const highlightHome = highlightCodes?.size
+    ? highlightCodes.has(fixture.home?.fifa_code)
+    : highlightCode && fixture.home?.fifa_code === highlightCode;
+  const highlightAway = highlightCodes?.size
+    ? highlightCodes.has(fixture.away?.fifa_code)
+    : highlightCode && fixture.away?.fifa_code === highlightCode;
 
   return (
     <article className="fixture-row">
@@ -57,6 +64,7 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
           team={fixture.home}
           onSelectTeam={onSelectTeam}
           highlighted={highlightHome}
+          highlightLabel={highlightLabel}
         />
 
         <span className="fixture-row__score" aria-label={score ? `Score ${score}` : "Kick-off time"}>
@@ -67,6 +75,7 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
           team={fixture.away}
           onSelectTeam={onSelectTeam}
           highlighted={highlightAway}
+          highlightLabel={highlightLabel}
           away
         />
       </div>
@@ -74,7 +83,7 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
   );
 }
 
-export function FixtureDayPanel({ dayKey, fixtures, teamFilter, onSelectTeam }) {
+export function FixtureDayPanel({ dayKey, fixtures, teamFilter, highlightCodes, highlightLabel, onSelectTeam }) {
   if (!dayKey) {
     return <p className="empty-note">Select a day with matches to see kick-off times.</p>;
   }
@@ -90,6 +99,9 @@ export function FixtureDayPanel({ dayKey, fixtures, teamFilter, onSelectTeam }) 
     month: "long",
     year: "numeric",
   });
+  const highlightCodeSet = new Set(
+    highlightCodes?.length ? highlightCodes : teamFilter ? [teamFilter] : [],
+  );
 
   return (
     <section className="fixture-day-panel" aria-labelledby="fixture-day-title">
@@ -104,6 +116,8 @@ export function FixtureDayPanel({ dayKey, fixtures, teamFilter, onSelectTeam }) 
             fixture={fixture}
             onSelectTeam={onSelectTeam}
             highlightCode={teamFilter}
+            highlightCodes={highlightCodeSet}
+            highlightLabel={highlightLabel}
           />
         ))}
       </div>

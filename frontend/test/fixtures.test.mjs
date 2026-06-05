@@ -43,3 +43,38 @@ test("formatFixtureDateUk presents a long UK fixture date", () => {
   assert.equal(typeof fixtures.formatFixtureDateUk, "function");
   assert.equal(fixtures.formatFixtureDateUk("2026-06-14T16:00:00Z"), "Sunday, 14 June 2026");
 });
+
+test("fixtureInvolvesAnyTeam matches any code in a house", () => {
+  assert.equal(typeof fixtures.fixtureInvolvesAnyTeam, "function");
+
+  const fixture = {
+    home: { display_name: "Belgium", fifa_code: "BEL" },
+    away: { display_name: "Egypt", fifa_code: "EGY" },
+  };
+
+  assert.equal(fixtures.fixtureInvolvesAnyTeam(fixture, ["URU", "BEL"]), true);
+  assert.equal(fixtures.fixtureInvolvesAnyTeam(fixture, ["URU", "NZL"]), false);
+});
+
+test("initialSelectedDay can select the next fixture matching a house filter", () => {
+  const filter = (fixture) => fixtures.fixtureInvolvesAnyTeam(fixture, ["BEL", "URU"]);
+  const allFixtures = [
+    {
+      id: "other",
+      kickoff_utc: "2026-06-11T19:00:00Z",
+      home: { fifa_code: "MEX" },
+      away: { fifa_code: "RSA" },
+    },
+    {
+      id: "house",
+      kickoff_utc: "2026-06-14T16:00:00Z",
+      home: { fifa_code: "URU" },
+      away: { fifa_code: "BEL" },
+    },
+  ];
+
+  assert.equal(
+    fixtures.initialSelectedDay(allFixtures, null, { year: 2026, month: 5 }, filter),
+    "2026-06-14",
+  );
+});
