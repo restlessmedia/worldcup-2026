@@ -31,20 +31,20 @@ export function Layout({ title, tagline, updatedAt, activeNav, children, footer 
                 Houses
               </a>
               <a
-                href="knockout.html"
-                className={activeNav === "knockout" ? "active" : ""}
-                onMouseEnter={() => prefetchPageData("knockout.html")}
-                onFocus={() => prefetchPageData("knockout.html")}
-              >
-                Knockout
-              </a>
-              <a
                 href="fixtures.html"
                 className={activeNav === "fixtures" ? "active" : ""}
                 onMouseEnter={() => prefetchPageData("fixtures.html")}
                 onFocus={() => prefetchPageData("fixtures.html")}
               >
                 Fixtures
+              </a>
+              <a
+                href="knockout.html"
+                className={activeNav === "knockout" ? "active" : ""}
+                onMouseEnter={() => prefetchPageData("knockout.html")}
+                onFocus={() => prefetchPageData("knockout.html")}
+              >
+                Knockout
               </a>
               <a
                 href="spoon.html"

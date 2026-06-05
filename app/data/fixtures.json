@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T09:12:03.571944+00:00",
+  "generated_at": "2026-06-05T08:04:22.275694+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "fetched_at": "2026-06-05T08:04:22.128697+00:00",
   "fixture_count": 104,
@@ -2251,7 +2251,7 @@
       "venue": "Los Angeles",
       "home": {
         "draw_name": "2A",
-        "display_name": "2nd in Group A",
+        "display_name": "2A",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2260,7 +2260,7 @@
       },
       "away": {
         "draw_name": "2B",
-        "display_name": "2nd in Group B",
+        "display_name": "2B",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2282,7 +2282,7 @@
       "venue": "Houston",
       "home": {
         "draw_name": "1C",
-        "display_name": "1st in Group C",
+        "display_name": "1C",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2291,7 +2291,7 @@
       },
       "away": {
         "draw_name": "2F",
-        "display_name": "2nd in Group F",
+        "display_name": "2F",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2313,7 +2313,7 @@
       "venue": "Boston",
       "home": {
         "draw_name": "1E",
-        "display_name": "1st in Group E",
+        "display_name": "1E",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2322,7 +2322,7 @@
       },
       "away": {
         "draw_name": "3ABCDF",
-        "display_name": "Best 3rd-place team (groups A, B, C, D, F)",
+        "display_name": "3ABCDF",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2344,7 +2344,7 @@
       "venue": "Monterrey",
       "home": {
         "draw_name": "1F",
-        "display_name": "1st in Group F",
+        "display_name": "1F",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2353,7 +2353,7 @@
       },
       "away": {
         "draw_name": "2C",
-        "display_name": "2nd in Group C",
+        "display_name": "2C",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2375,7 +2375,7 @@
       "venue": "Dallas",
       "home": {
         "draw_name": "2E",
-        "display_name": "2nd in Group E",
+        "display_name": "2E",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2384,7 +2384,7 @@
       },
       "away": {
         "draw_name": "2I",
-        "display_name": "2nd in Group I",
+        "display_name": "2I",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2406,7 +2406,7 @@
       "venue": "New Jersey",
       "home": {
         "draw_name": "1I",
-        "display_name": "1st in Group I",
+        "display_name": "1I",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2415,7 +2415,7 @@
       },
       "away": {
         "draw_name": "3CDFGH",
-        "display_name": "Best 3rd-place team (groups C, D, F, G, H)",
+        "display_name": "3CDFGH",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2437,7 +2437,7 @@
       "venue": "Mexico City",
       "home": {
         "draw_name": "1A",
-        "display_name": "1st in Group A",
+        "display_name": "1A",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2446,7 +2446,7 @@
       },
       "away": {
         "draw_name": "3CEFHI",
-        "display_name": "Best 3rd-place team (groups C, E, F, H, I)",
+        "display_name": "3CEFHI",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2468,7 +2468,7 @@
       "venue": "Atlanta",
       "home": {
         "draw_name": "1L",
-        "display_name": "1st in Group L",
+        "display_name": "1L",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2477,7 +2477,7 @@
       },
       "away": {
         "draw_name": "3EHIJK",
-        "display_name": "Best 3rd-place team (groups E, H, I, J, K)",
+        "display_name": "3EHIJK",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2499,7 +2499,7 @@
       "venue": "Seattle",
       "home": {
         "draw_name": "1G",
-        "display_name": "1st in Group G",
+        "display_name": "1G",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2508,7 +2508,7 @@
       },
       "away": {
         "draw_name": "3AEHIJ",
-        "display_name": "Best 3rd-place team (groups A, E, H, I, J)",
+        "display_name": "3AEHIJ",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2530,7 +2530,7 @@
       "venue": "San Francisco Bay Area",
       "home": {
         "draw_name": "1D",
-        "display_name": "1st in Group D",
+        "display_name": "1D",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2539,7 +2539,7 @@
       },
       "away": {
         "draw_name": "3BEFIJ",
-        "display_name": "Best 3rd-place team (groups B, E, F, I, J)",
+        "display_name": "3BEFIJ",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2561,7 +2561,7 @@
       "venue": "Los Angeles",
       "home": {
         "draw_name": "1H",
-        "display_name": "1st in Group H",
+        "display_name": "1H",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2570,7 +2570,7 @@
       },
       "away": {
         "draw_name": "2J",
-        "display_name": "2nd in Group J",
+        "display_name": "2J",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2592,7 +2592,7 @@
       "venue": "Toronto",
       "home": {
         "draw_name": "2K",
-        "display_name": "2nd in Group K",
+        "display_name": "2K",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2601,7 +2601,7 @@
       },
       "away": {
         "draw_name": "2L",
-        "display_name": "2nd in Group L",
+        "display_name": "2L",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2623,7 +2623,7 @@
       "venue": "Vancouver",
       "home": {
         "draw_name": "1B",
-        "display_name": "1st in Group B",
+        "display_name": "1B",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2632,7 +2632,7 @@
       },
       "away": {
         "draw_name": "3EFGIJ",
-        "display_name": "Best 3rd-place team (groups E, F, G, I, J)",
+        "display_name": "3EFGIJ",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2654,7 +2654,7 @@
       "venue": "Dallas",
       "home": {
         "draw_name": "2D",
-        "display_name": "2nd in Group D",
+        "display_name": "2D",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2663,7 +2663,7 @@
       },
       "away": {
         "draw_name": "2G",
-        "display_name": "2nd in Group G",
+        "display_name": "2G",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2685,7 +2685,7 @@
       "venue": "Miami",
       "home": {
         "draw_name": "1J",
-        "display_name": "1st in Group J",
+        "display_name": "1J",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2694,7 +2694,7 @@
       },
       "away": {
         "draw_name": "2H",
-        "display_name": "2nd in Group H",
+        "display_name": "2H",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2716,7 +2716,7 @@
       "venue": "Kansas City",
       "home": {
         "draw_name": "1K",
-        "display_name": "1st in Group K",
+        "display_name": "1K",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2725,7 +2725,7 @@
       },
       "away": {
         "draw_name": "3DEIJL",
-        "display_name": "Best 3rd-place team (groups D, E, I, J, L)",
+        "display_name": "3DEIJL",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2747,7 +2747,7 @@
       "venue": "Houston",
       "home": {
         "draw_name": "W73",
-        "display_name": "Winner of Round of 32 (match 73)",
+        "display_name": "W73",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2756,7 +2756,7 @@
       },
       "away": {
         "draw_name": "W75",
-        "display_name": "Winner of Round of 32 (match 75)",
+        "display_name": "W75",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2778,7 +2778,7 @@
       "venue": "Philadelphia",
       "home": {
         "draw_name": "W74",
-        "display_name": "Winner of Round of 32 (match 74)",
+        "display_name": "W74",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2787,7 +2787,7 @@
       },
       "away": {
         "draw_name": "W77",
-        "display_name": "Winner of Round of 32 (match 77)",
+        "display_name": "W77",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2809,7 +2809,7 @@
       "venue": "New Jersey",
       "home": {
         "draw_name": "W76",
-        "display_name": "Winner of Round of 32 (match 76)",
+        "display_name": "W76",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2818,7 +2818,7 @@
       },
       "away": {
         "draw_name": "W78",
-        "display_name": "Winner of Round of 32 (match 78)",
+        "display_name": "W78",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2840,7 +2840,7 @@
       "venue": "Mexico City",
       "home": {
         "draw_name": "W79",
-        "display_name": "Winner of Round of 32 (match 79)",
+        "display_name": "W79",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2849,7 +2849,7 @@
       },
       "away": {
         "draw_name": "W80",
-        "display_name": "Winner of Round of 32 (match 80)",
+        "display_name": "W80",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2871,7 +2871,7 @@
       "venue": "Dallas",
       "home": {
         "draw_name": "W83",
-        "display_name": "Winner of Round of 32 (match 83)",
+        "display_name": "W83",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2880,7 +2880,7 @@
       },
       "away": {
         "draw_name": "W84",
-        "display_name": "Winner of Round of 32 (match 84)",
+        "display_name": "W84",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2902,7 +2902,7 @@
       "venue": "Seattle",
       "home": {
         "draw_name": "W81",
-        "display_name": "Winner of Round of 32 (match 81)",
+        "display_name": "W81",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2911,7 +2911,7 @@
       },
       "away": {
         "draw_name": "W82",
-        "display_name": "Winner of Round of 32 (match 82)",
+        "display_name": "W82",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2933,7 +2933,7 @@
       "venue": "Atlanta",
       "home": {
         "draw_name": "W86",
-        "display_name": "Winner of Round of 32 (match 86)",
+        "display_name": "W86",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2942,7 +2942,7 @@
       },
       "away": {
         "draw_name": "W88",
-        "display_name": "Winner of Round of 32 (match 88)",
+        "display_name": "W88",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2964,7 +2964,7 @@
       "venue": "Vancouver",
       "home": {
         "draw_name": "W85",
-        "display_name": "Winner of Round of 32 (match 85)",
+        "display_name": "W85",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2973,7 +2973,7 @@
       },
       "away": {
         "draw_name": "W87",
-        "display_name": "Winner of Round of 32 (match 87)",
+        "display_name": "W87",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -2995,7 +2995,7 @@
       "venue": "Boston",
       "home": {
         "draw_name": "W89",
-        "display_name": "Winner of Round of 16 (match 89)",
+        "display_name": "W89",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3004,7 +3004,7 @@
       },
       "away": {
         "draw_name": "W90",
-        "display_name": "Winner of Round of 16 (match 90)",
+        "display_name": "W90",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3026,7 +3026,7 @@
       "venue": "Los Angeles",
       "home": {
         "draw_name": "W93",
-        "display_name": "Winner of Round of 16 (match 93)",
+        "display_name": "W93",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3035,7 +3035,7 @@
       },
       "away": {
         "draw_name": "W94",
-        "display_name": "Winner of Round of 16 (match 94)",
+        "display_name": "W94",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3057,7 +3057,7 @@
       "venue": "Miami",
       "home": {
         "draw_name": "W91",
-        "display_name": "Winner of Round of 16 (match 91)",
+        "display_name": "W91",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3066,7 +3066,7 @@
       },
       "away": {
         "draw_name": "W92",
-        "display_name": "Winner of Round of 16 (match 92)",
+        "display_name": "W92",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3088,7 +3088,7 @@
       "venue": "Kansas City",
       "home": {
         "draw_name": "W95",
-        "display_name": "Winner of Round of 16 (match 95)",
+        "display_name": "W95",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3097,7 +3097,7 @@
       },
       "away": {
         "draw_name": "W96",
-        "display_name": "Winner of Round of 16 (match 96)",
+        "display_name": "W96",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3119,7 +3119,7 @@
       "venue": "Dallas",
       "home": {
         "draw_name": "W97",
-        "display_name": "Winner of quarter-final 1",
+        "display_name": "W97",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3128,7 +3128,7 @@
       },
       "away": {
         "draw_name": "W98",
-        "display_name": "Winner of quarter-final 2",
+        "display_name": "W98",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3150,7 +3150,7 @@
       "venue": "Atlanta",
       "home": {
         "draw_name": "W99",
-        "display_name": "Winner of quarter-final 3",
+        "display_name": "W99",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3159,7 +3159,7 @@
       },
       "away": {
         "draw_name": "W100",
-        "display_name": "Winner of quarter-final 4",
+        "display_name": "W100",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3181,7 +3181,7 @@
       "venue": "Miami",
       "home": {
         "draw_name": "RU101",
-        "display_name": "Loser of semi-final 1",
+        "display_name": "RU101",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3190,7 +3190,7 @@
       },
       "away": {
         "draw_name": "RU102",
-        "display_name": "Loser of semi-final 2",
+        "display_name": "RU102",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3212,7 +3212,7 @@
       "venue": "New Jersey",
       "home": {
         "draw_name": "W101",
-        "display_name": "Winner of semi-final 1",
+        "display_name": "W101",
         "fifa_code": null,
         "house_id": null,
         "group": null,
@@ -3221,7 +3221,7 @@
       },
       "away": {
         "draw_name": "W102",
-        "display_name": "Winner of semi-final 2",
+        "display_name": "W102",
         "fifa_code": null,
         "house_id": null,
         "group": null,
