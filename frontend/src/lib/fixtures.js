@@ -67,15 +67,18 @@ export function fixtureInvolvesTeam(fixture, fifaCode) {
   return fixture.home?.fifa_code === fifaCode || fixture.away?.fifa_code === fifaCode;
 }
 
+export function fixtureInvolvesAnyTeam(fixture, fifaCodes) {
+  const codes = fifaCodes instanceof Set ? fifaCodes : new Set((fifaCodes || []).filter(Boolean));
+  if (!codes.size) return true;
+  return codes.has(fixture.home?.fifa_code) || codes.has(fixture.away?.fifa_code);
+}
+
 export function buildHouseFixtureList(fixtures, teams) {
   const teamCodes = new Set((teams || []).map((team) => team.fifa_code).filter(Boolean));
   if (!teamCodes.size) return [];
 
   return (fixtures || [])
-    .filter(
-      (fixture) =>
-        teamCodes.has(fixture.home?.fifa_code) || teamCodes.has(fixture.away?.fifa_code),
-    )
+    .filter((fixture) => fixtureInvolvesAnyTeam(fixture, teamCodes))
     .sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
 }
 
@@ -127,10 +130,20 @@ export function getTeamFilterFromUrl() {
   return new URLSearchParams(window.location.search).get("team");
 }
 
+export function getHouseFilterFromUrl() {
+  return new URLSearchParams(window.location.search).get("house");
+}
+
 export function setTeamFilterInUrl(fifaCode) {
+  setFixtureFiltersInUrl({ team: fifaCode, house: null });
+}
+
+export function setFixtureFiltersInUrl({ team, house }) {
   const url = new URL(window.location.href);
-  if (fifaCode) url.searchParams.set("team", fifaCode);
+  if (team) url.searchParams.set("team", team);
   else url.searchParams.delete("team");
+  if (house) url.searchParams.set("house", house);
+  else url.searchParams.delete("house");
   window.history.replaceState({}, "", url);
 }
 
@@ -183,14 +196,16 @@ export function buildMonthGrid(year, monthIndex) {
   return cells;
 }
 
-export function initialViewMonth(fixtures, teamFilter) {
+export function initialViewMonth(fixtures, teamFilter, fixtureFilter) {
   const byDay = groupFixturesByDay(fixtures);
   const todayKey = todayDateKey();
   const keys = [...byDay.keys()].sort();
 
-  if (teamFilter) {
+  if (teamFilter || fixtureFilter) {
     const teamKeys = keys.filter((key) =>
-      byDay.get(key).some((fixture) => fixtureInvolvesTeam(fixture, teamFilter)),
+      byDay.get(key).some((fixture) =>
+        fixtureFilter ? fixtureFilter(fixture) : fixtureInvolvesTeam(fixture, teamFilter),
+      ),
     );
     const upcoming = teamKeys.find((key) => key >= todayKey);
     if (upcoming) return parseDateKey(upcoming);
@@ -199,7 +214,7 @@ export function initialViewMonth(fixtures, teamFilter) {
   return clampViewMonth(todayParts());
 }
 
-export function initialSelectedDay(fixtures, teamFilter, viewMonth) {
+export function initialSelectedDay(fixtures, teamFilter, viewMonth, fixtureFilter) {
   const byDay = groupFixturesByDay(fixtures);
   const todayKey = todayDateKey();
   const monthPrefix = `${viewMonth.year}-${String(viewMonth.month + 1).padStart(2, "0")}`;
@@ -208,9 +223,11 @@ export function initialSelectedDay(fixtures, teamFilter, viewMonth) {
     .filter((key) => key.startsWith(monthPrefix))
     .sort();
 
-  if (teamFilter) {
+  if (teamFilter || fixtureFilter) {
     const teamKeys = monthKeys.filter((key) =>
-      byDay.get(key).some((fixture) => fixtureInvolvesTeam(fixture, teamFilter)),
+      byDay.get(key).some((fixture) =>
+        fixtureFilter ? fixtureFilter(fixture) : fixtureInvolvesTeam(fixture, teamFilter),
+      ),
     );
     const upcoming = teamKeys.find((key) => key >= todayKey);
     if (upcoming) return upcoming;
