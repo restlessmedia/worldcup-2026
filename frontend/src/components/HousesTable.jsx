@@ -20,6 +20,20 @@ function houseBestLabel(house, compact) {
     : `#${house.best_remaining_rank} world ranking`;
 }
 
+function CalendarIcon() {
+  return (
+    <svg
+      className="house-fixtures-link__icon"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect x="3" y="4" width="10" height="9" rx="1.5" />
+      <path d="M5 2.5v3M11 2.5v3M3.5 7h9" />
+    </svg>
+  );
+}
+
 function HouseFixtureLink({ house, onSelect }) {
   return (
     <button
@@ -28,17 +42,24 @@ function HouseFixtureLink({ house, onSelect }) {
       onClick={(event) => onSelect(house, event)}
       aria-label={`View fixtures for ${formatHouseLabel(house.house_id)}`}
     >
-      <svg
-        className="house-fixtures-link__icon"
-        viewBox="0 0 16 16"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <rect x="3" y="4" width="10" height="9" rx="1.5" />
-        <path d="M5 2.5v3M11 2.5v3M3.5 7h9" />
-      </svg>
+      <CalendarIcon />
       Fixtures
     </button>
+  );
+}
+
+function HouseCalendarLink({ house }) {
+  const label = formatHouseLabel(house.house_id);
+
+  return (
+    <a
+      className="house-fixtures-link house-fixtures-link--calendar"
+      href={`fixtures.html?house=${encodeURIComponent(house.house_id)}`}
+      aria-label={`Open fixture calendar for ${label}`}
+    >
+      <CalendarIcon />
+      Calendar
+    </a>
   );
 }
 
@@ -83,6 +104,7 @@ export function HousesTable({ standings, fixtures = [] }) {
                       <span className="house-label__content">
                         <span>{formatHouseLabel(house.house_id)}</span>
                         <HouseFixtureLink house={house} onSelect={openHouseFixtures} />
+                        <HouseCalendarLink house={house} />
                       </span>
                     </td>
                     <td>
@@ -118,6 +140,7 @@ export function HousesTable({ standings, fixtures = [] }) {
                   <span className="house-card__title">
                     <span className="house-card__id">{formatHouseLabel(house.house_id)}</span>
                     <HouseFixtureLink house={house} onSelect={openHouseFixtures} />
+                    <HouseCalendarLink house={house} />
                   </span>
                   <span className="house-card__meta">
                     {inPlay}/{house.teams_total} still in · best {best}

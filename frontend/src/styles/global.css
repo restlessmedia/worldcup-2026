@@ -899,13 +899,17 @@ a:hover {
 
 .fixture-toolbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 0.6rem 0.85rem;
+  max-width: 100%;
 }
 
 .fixture-toolbar__filter {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex: 1 1 11rem;
   min-width: 0;
 }
 
@@ -920,7 +924,7 @@ a:hover {
 
 .fixture-toolbar__select {
   width: auto;
-  min-width: 9rem;
+  min-width: 0;
   max-width: 14rem;
   padding: 0.5rem 0.65rem;
   border: 1px solid var(--line-strong);
@@ -2064,6 +2068,20 @@ a:hover {
   .modal-close {
     width: 2.75rem;
     height: 2.75rem;
+  }
+
+  .fixture-card__controls,
+  .fixture-toolbar {
+    width: 100%;
+  }
+
+  .fixture-toolbar__filter {
+    flex: 1 1 100%;
+  }
+
+  .fixture-toolbar__select {
+    width: 100%;
+    max-width: none;
   }
 
   .house-fixture {
