@@ -70,6 +70,11 @@ export async function loadInfoPageData() {
   return { config, meta };
 }
 
+export async function loadFixturesPageData() {
+  const [fixtures, meta] = await Promise.all([loadJson("fixtures.json"), loadJson("meta.json")]);
+  return { fixtures, meta };
+}
+
 /** @deprecated Use loadStandingsPageData or loadInfoPageData */
 export async function loadSiteData() {
   return loadStandingsPageData();

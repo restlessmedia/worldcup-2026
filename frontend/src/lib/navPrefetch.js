@@ -1,6 +1,7 @@
 const PREFETCH_BY_PAGE = {
   "index.html": ["standings.json", "config.json", "meta.json"],
   "knockout.html": ["knockout.json", "meta.json"],
+  "fixtures.html": ["fixtures.json", "meta.json"],
   "spoon.html": ["standings.json", "config.json", "meta.json"],
   "info.html": ["config.json", "meta.json"],
 };

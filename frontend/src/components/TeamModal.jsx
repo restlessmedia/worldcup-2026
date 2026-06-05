@@ -104,6 +104,12 @@ export function TeamModal({ team, onClose }) {
             />
           ) : null}
         </dl>
+
+        {team.fifa_code ? (
+          <p className="modal-actions">
+            <a href={`fixtures.html?team=${team.fifa_code}`}>View fixtures</a>
+          </p>
+        ) : null}
       </div>
     </div>,
     document.body,

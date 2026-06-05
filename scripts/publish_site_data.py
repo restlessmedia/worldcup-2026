@@ -6,6 +6,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from build_fixtures import build_fixtures
 from build_knockout import build_knockout
 from build_standings import build_standings
 
@@ -69,6 +70,7 @@ def public_results(results: dict) -> dict:
 def main() -> None:
     standings = build_standings()
     knockout = build_knockout()
+    fixtures = build_fixtures()
     draw = load_json(DATA / "draw.json")
     config = load_json(DATA / "config.json")
     fifa = load_json(DATA / "fifa-teams.json")
@@ -84,6 +86,8 @@ def main() -> None:
         "results_source_url": results.get("source_url"),
         "results_source_label": results.get("source_label"),
         "results_updated": results.get("last_updated"),
+        "fixtures_fetched": fixtures.get("fetched_at"),
+        "fixtures_source": fixtures.get("source_url"),
         "update_guide_url": f"{repo}/blob/main/docs/updating-data.md",
         "results_file_url": f"{repo}/blob/main/data/results.json",
         "site_phase": 1,
@@ -97,6 +101,7 @@ def main() -> None:
         "fifa-teams.json": public_fifa_teams(fifa),
         "results.json": public_results(results),
         "knockout.json": knockout,
+        "fixtures.json": fixtures,
         "meta.json": meta,
     }
 

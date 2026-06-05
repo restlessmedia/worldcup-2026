@@ -39,6 +39,14 @@ export function Layout({ title, tagline, updatedAt, activeNav, children, footer 
                 Knockout
               </a>
               <a
+                href="fixtures.html"
+                className={activeNav === "fixtures" ? "active" : ""}
+                onMouseEnter={() => prefetchPageData("fixtures.html")}
+                onFocus={() => prefetchPageData("fixtures.html")}
+              >
+                Fixtures
+              </a>
+              <a
                 href="spoon.html"
                 className={activeNav === "spoon" ? "active" : ""}
                 onMouseEnter={() => prefetchPageData("spoon.html")}

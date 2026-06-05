@@ -14,6 +14,7 @@ export default defineConfig({
         knockout: resolve(__dirname, "knockout.html"),
         spoon: resolve(__dirname, "spoon.html"),
         info: resolve(__dirname, "info.html"),
+        fixtures: resolve(__dirname, "fixtures.html"),
       },
       output: {
         manualChunks: {

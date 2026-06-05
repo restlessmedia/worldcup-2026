@@ -703,6 +703,475 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.modal-actions {
+  margin: 1rem 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.modal-actions a {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* ── Fixture calendar ── */
+
+.fixture-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.fixture-card__head h2 {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+}
+
+.fixture-card__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem 1rem;
+  margin-left: auto;
+}
+
+.fixture-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.fixture-toolbar__filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.fixture-toolbar__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.fixture-toolbar__select {
+  width: auto;
+  min-width: 9rem;
+  max-width: 14rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.fixture-toolbar__select:focus-visible {
+  outline: 2px solid var(--accent-muted);
+  border-color: var(--accent);
+}
+
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.toggle-switch__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.toggle-switch__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.toggle-switch__track {
+  position: relative;
+  display: inline-block;
+  width: 2.75rem;
+  height: 1.5rem;
+  border-radius: var(--radius-full);
+  background: var(--line-strong);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toggle-switch__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+  transition: transform 0.2s ease;
+}
+
+.toggle-switch__input:checked + .toggle-switch__track {
+  background: var(--accent);
+}
+
+.toggle-switch__input:checked + .toggle-switch__track .toggle-switch__thumb {
+  transform: translateX(1.25rem);
+}
+
+.toggle-switch__input:focus-visible + .toggle-switch__track {
+  outline: 2px solid var(--accent-muted);
+  outline-offset: 2px;
+}
+
+.toggle-switch:hover .toggle-switch__track {
+  background: #cbd5e1;
+}
+
+.toggle-switch:hover .toggle-switch__input:checked + .toggle-switch__track {
+  background: var(--accent-hover);
+}
+
+.fixture-calendar__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.fixture-calendar__month {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.fixture-calendar__nav-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fixture-calendar__nav-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.fixture-calendar__nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.fixture-calendar__grid-scroll {
+  overflow-x: auto;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem 0.35rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fixture-calendar__weekdays,
+.fixture-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(5.75rem, 1fr));
+  gap: 0.5rem;
+  min-width: 40.25rem;
+}
+
+.fixture-calendar__weekdays {
+  margin-bottom: 0.35rem;
+}
+
+.fixture-calendar__weekday {
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
+.fixture-calendar__pad {
+  min-height: 3.5rem;
+}
+
+.fixture-calendar__day {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  min-height: 3.5rem;
+  padding: 0.4rem 0.3rem 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-align: left;
+}
+
+.fixture-calendar__day--flags {
+  min-height: 6.75rem;
+  padding: 0.5rem 0.4rem 0.55rem;
+}
+
+.fixture-calendar__day:hover:not(:disabled) {
+  border-color: var(--accent-muted);
+  background: #f8fffe;
+}
+
+.fixture-calendar__day--empty {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.fixture-calendar__day--selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-muted);
+}
+
+.fixture-calendar__day--today .fixture-calendar__day-num {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.fixture-calendar__day--team {
+  border-color: var(--accent);
+}
+
+.fixture-calendar__day--has-matches {
+  background: #f8fafc;
+}
+
+.fixture-calendar__day-num {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.fixture-calendar__day-matches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: auto;
+}
+
+.fixture-calendar__match-count {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.fixture-calendar__match-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.fixture-calendar__dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.fixture-calendar__dot--team {
+  background: var(--accent);
+}
+
+.fixture-calendar__match-flags-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  width: 100%;
+  flex: 1;
+  margin-top: 0.2rem;
+}
+
+.fixture-calendar__match-flags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.25rem 0.2rem;
+  border-radius: var(--radius-sm);
+}
+
+.fixture-calendar__match-flags--team {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-muted);
+}
+
+.fixture-calendar__flag {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.fixture-calendar__flag-placeholder {
+  width: 26px;
+  height: 26px;
+}
+
+.fixture-calendar__vs {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  line-height: 1;
+  flex-shrink: 0;
+  padding: 0 0.15rem;
+}
+
+.fixture-calendar__match-more {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding-top: 0.1rem;
+}
+
+.fixture-day-panel {
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.fixture-day-panel__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fixture-day-panel__tz {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.fixture-day-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.fixture-row {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fafbfc;
+}
+
+.fixture-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.65rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.fixture-row__time {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.8125rem;
+}
+
+.fixture-row__stage {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.fixture-row__matchup {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fixture-row__side {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.fixture-row__side--away {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.fixture-row__side--highlight .fixture-row__name {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.fixture-row__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fixture-row__score {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.fixture-row__placeholder {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.fixture-row .flag-btn {
+  flex-shrink: 0;
+}
+
 /* ── Misc ── */
 
 .empty-note {
