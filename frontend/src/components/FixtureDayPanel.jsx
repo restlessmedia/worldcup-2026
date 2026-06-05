@@ -15,9 +15,32 @@ function scoreLine(fixture) {
   return `${fixture.home_score} – ${fixture.away_score}`;
 }
 
+function FixtureSide({ team, onSelectTeam, highlighted, away = false }) {
+  const name = teamDisplayName(team);
+  const className = `fixture-row__side${away ? " fixture-row__side--away" : ""}${
+    highlighted ? " fixture-row__side--highlight" : ""
+  }`;
+
+  return (
+    <div className={className} aria-label={highlighted ? `${name} (selected team)` : undefined}>
+      {team?.fifa_code ? (
+        <TeamFlag team={team} onSelect={onSelectTeam} size={24} showName={false} />
+      ) : (
+        <span className="fixture-row__placeholder" aria-hidden="true" />
+      )}
+      <span className="fixture-row__name">
+        {highlighted ? <span className="fixture-row__highlight-dot" aria-hidden="true" /> : null}
+        <span>{name}</span>
+      </span>
+    </div>
+  );
+}
+
 function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
   const kickoff = formatKickoffUk(fixture.kickoff_utc);
   const score = scoreLine(fixture);
+  const highlightHome = highlightCode && fixture.home?.fifa_code === highlightCode;
+  const highlightAway = highlightCode && fixture.away?.fifa_code === highlightCode;
 
   return (
     <article className="fixture-row">
@@ -30,31 +53,22 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode }) {
       </div>
 
       <div className="fixture-row__matchup">
-        <div
-          className={`fixture-row__side${highlightCode && fixture.home?.fifa_code === highlightCode ? " fixture-row__side--highlight" : ""}`}
-        >
-          {fixture.home?.fifa_code ? (
-            <TeamFlag team={fixture.home} onSelect={onSelectTeam} size={24} showName={false} />
-          ) : (
-            <span className="fixture-row__placeholder" aria-hidden="true" />
-          )}
-          <span className="fixture-row__name">{teamDisplayName(fixture.home)}</span>
-        </div>
+        <FixtureSide
+          team={fixture.home}
+          onSelectTeam={onSelectTeam}
+          highlighted={highlightHome}
+        />
 
         <span className="fixture-row__score" aria-label={score ? `Score ${score}` : "Kick-off time"}>
           {score || kickoff}
         </span>
 
-        <div
-          className={`fixture-row__side fixture-row__side--away${highlightCode && fixture.away?.fifa_code === highlightCode ? " fixture-row__side--highlight" : ""}`}
-        >
-          {fixture.away?.fifa_code ? (
-            <TeamFlag team={fixture.away} onSelect={onSelectTeam} size={24} showName={false} />
-          ) : (
-            <span className="fixture-row__placeholder" aria-hidden="true" />
-          )}
-          <span className="fixture-row__name">{teamDisplayName(fixture.away)}</span>
-        </div>
+        <FixtureSide
+          team={fixture.away}
+          onSelectTeam={onSelectTeam}
+          highlighted={highlightAway}
+          away
+        />
       </div>
     </article>
   );

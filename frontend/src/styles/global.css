@@ -1296,6 +1296,14 @@ a:hover {
 }
 
 .fixture-row__side--highlight .fixture-row__name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 100%;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid var(--accent-muted);
+  border-radius: var(--radius-full);
+  background: var(--accent-soft);
   color: var(--accent);
   font-weight: 700;
 }
@@ -1306,6 +1314,20 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.fixture-row__name > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fixture-row__highlight-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.12);
+  flex-shrink: 0;
 }
 
 .fixture-row__score {
