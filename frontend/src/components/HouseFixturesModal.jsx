@@ -40,9 +40,15 @@ function groupByDate(fixtures) {
 }
 
 function MatchSide({ team, highlighted }) {
+  const name = teamDisplayName(team);
+
   return (
-    <span className={highlighted ? "house-fixture__team house-fixture__team--house" : "house-fixture__team"}>
-      {teamDisplayName(team)}
+    <span
+      className={highlighted ? "house-fixture__team house-fixture__team--house" : "house-fixture__team"}
+      aria-label={highlighted ? `${name} (house team)` : undefined}
+    >
+      {highlighted ? <span className="house-fixture__house-dot" aria-hidden="true" /> : null}
+      <span>{name}</span>
     </span>
   );
 }

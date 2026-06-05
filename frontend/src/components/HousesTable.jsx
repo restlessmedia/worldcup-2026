@@ -28,6 +28,15 @@ function HouseFixtureLink({ house, onSelect }) {
       onClick={(event) => onSelect(house, event)}
       aria-label={`View fixtures for ${formatHouseLabel(house.house_id)}`}
     >
+      <svg
+        className="house-fixtures-link__icon"
+        viewBox="0 0 16 16"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <rect x="3" y="4" width="10" height="9" rx="1.5" />
+        <path d="M5 2.5v3M11 2.5v3M3.5 7h9" />
+      </svg>
       Fixtures
     </button>
   );

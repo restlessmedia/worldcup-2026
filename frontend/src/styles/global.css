@@ -446,25 +446,41 @@ a:hover {
 .house-fixtures-link {
   display: inline-flex;
   align-items: center;
-  padding: 0;
-  border: 0;
-  background: transparent;
+  gap: 0.25rem;
+  padding: 0.22rem 0.45rem;
+  border: 1px solid var(--accent-muted);
+  border-radius: var(--radius-full);
+  background: var(--accent-soft);
   color: var(--accent);
   font: inherit;
   font-size: 0.75rem;
   font-weight: 600;
+  line-height: 1;
   cursor: pointer;
   touch-action: manipulation;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.house-fixtures-link__icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
 }
 
 .house-fixtures-link:hover {
+  border-color: var(--accent);
+  background: #dffcf4;
   color: var(--accent-hover);
 }
 
 .house-fixtures-link:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: var(--radius-sm);
+  outline-offset: 2px;
 }
 
 /* Houses table — team column gets remaining width; stats stay compact */
@@ -803,18 +819,40 @@ a:hover {
 }
 
 .house-fixture__team {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   min-width: 0;
   font-size: 0.875rem;
   font-weight: 600;
 }
 
 .house-fixture__team:last-child {
+  justify-content: flex-end;
   text-align: right;
 }
 
 .house-fixture__team--house {
+  justify-self: start;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid var(--accent-muted);
+  border-radius: var(--radius-full);
+  background: var(--accent-soft);
   color: var(--accent);
   font-weight: 700;
+}
+
+.house-fixture__team--house:last-child {
+  justify-self: end;
+}
+
+.house-fixture__house-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.12);
+  flex-shrink: 0;
 }
 
 .house-fixture__vs {
