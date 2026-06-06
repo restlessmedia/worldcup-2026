@@ -67,6 +67,7 @@ export function fixtureInvolvesTeam(fixture, fifaCode) {
   return fixture.home?.fifa_code === fifaCode || fixture.away?.fifa_code === fifaCode;
 }
 
+<<<<<<< HEAD
 export function fixtureInvolvesAnyTeam(fixture, fifaCodes) {
   const codes = fifaCodes instanceof Set ? fifaCodes : new Set((fifaCodes || []).filter(Boolean));
   if (!codes.size) return true;
@@ -80,6 +81,11 @@ export function buildHouseFixtureList(fixtures, teams) {
   return (fixtures || [])
     .filter((fixture) => fixtureInvolvesAnyTeam(fixture, teamCodes))
     .sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
+=======
+export function fixtureInvolvesHouse(fixture, houseId) {
+  if (!houseId) return true;
+  return fixture.home?.house_id === houseId || fixture.away?.house_id === houseId;
+>>>>>>> 9809950 (Update HTML files to reference new asset files, including updated scripts and styles for improved performance. Remove deprecated scripts and enhance the layout styles across all pages. Ensure consistent asset references and improve mobile support with updated preconnect links for font loading.)
 }
 
 function sideShortLabel(team) {
@@ -124,6 +130,21 @@ export function teamsFromFixtures(fixtures) {
     }
   }
   return [...byCode.values()].sort((a, b) => a.display_name.localeCompare(b.display_name));
+}
+
+export function housesFromFixtures(fixtures) {
+  const ids = new Set();
+  for (const fixture of fixtures) {
+    for (const side of [fixture.home, fixture.away]) {
+      if (side?.house_id) ids.add(side.house_id);
+    }
+  }
+  return [...ids].sort((a, b) => {
+    const numA = Number(a);
+    const numB = Number(b);
+    if (!Number.isNaN(numA) && !Number.isNaN(numB)) return numA - numB;
+    return String(a).localeCompare(String(b));
+  });
 }
 
 export function getTeamFilterFromUrl() {

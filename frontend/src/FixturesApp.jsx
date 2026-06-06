@@ -9,12 +9,17 @@ import { loadJson } from "./lib/data";
 import { resolveSiteUpdatedAt } from "./lib/format";
 import {
   buildMonthGrid,
+<<<<<<< HEAD
   buildHouseFixtureList,
   fixtureInvolvesAnyTeam,
+=======
+  fixtureInvolvesHouse,
+>>>>>>> 9809950 (Update HTML files to reference new asset files, including updated scripts and styles for improved performance. Remove deprecated scripts and enhance the layout styles across all pages. Ensure consistent asset references and improve mobile support with updated preconnect links for font loading.)
   fixtureInvolvesTeam,
   getHouseFilterFromUrl,
   getTeamFilterFromUrl,
   groupFixturesByDay,
+  housesFromFixtures,
   initialSelectedDay,
   initialViewMonth,
   setFixtureFiltersInUrl,
@@ -28,9 +33,13 @@ export function FixturesApp() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [teamFilter, setTeamFilter] = useState(() => getTeamFilterFromUrl());
+<<<<<<< HEAD
   const [houseFilter, setHouseFilter] = useState(() =>
     getTeamFilterFromUrl() ? null : getHouseFilterFromUrl(),
   );
+=======
+  const [houseFilter, setHouseFilter] = useState(null);
+>>>>>>> 9809950 (Update HTML files to reference new asset files, including updated scripts and styles for improved performance. Remove deprecated scripts and enhance the layout styles across all pages. Ensure consistent asset references and improve mobile support with updated preconnect links for font loading.)
   const [showTeams, setShowTeams] = useState(true);
   const [selectedTeam, setSelectedTeam] = useState(null);
 
@@ -99,10 +108,19 @@ export function FixturesApp() {
   }, []);
 
   const filteredFixtures = useMemo(() => {
+<<<<<<< HEAD
     if (teamFilter) return fixtures.filter((fixture) => fixtureInvolvesTeam(fixture, teamFilter));
     if (selectedHouse) return buildHouseFixtureList(fixtures, selectedHouse.teams);
     return fixtures;
   }, [fixtures, teamFilter, selectedHouse]);
+=======
+    return fixtures.filter((fixture) => {
+      if (teamFilter && !fixtureInvolvesTeam(fixture, teamFilter)) return false;
+      if (houseFilter && !fixtureInvolvesHouse(fixture, houseFilter)) return false;
+      return true;
+    });
+  }, [fixtures, teamFilter, houseFilter]);
+>>>>>>> 9809950 (Update HTML files to reference new asset files, including updated scripts and styles for improved performance. Remove deprecated scripts and enhance the layout styles across all pages. Ensure consistent asset references and improve mobile support with updated preconnect links for font loading.)
 
   const filteredByDay = useMemo(() => groupFixturesByDay(filteredFixtures), [filteredFixtures]);
 
@@ -112,12 +130,16 @@ export function FixturesApp() {
   );
 
   const teams = useMemo(() => teamsFromFixtures(fixtures), [fixtures]);
+<<<<<<< HEAD
   const highlightCodes = teamFilter
     ? [teamFilter]
     : selectedHouseTeamCodes.length
       ? selectedHouseTeamCodes
       : [];
   const highlightLabel = selectedHouse ? "house team" : teamFilter ? "selected team" : null;
+=======
+  const houses = useMemo(() => housesFromFixtures(fixtures), [fixtures]);
+>>>>>>> 9809950 (Update HTML files to reference new asset files, including updated scripts and styles for improved performance. Remove deprecated scripts and enhance the layout styles across all pages. Ensure consistent asset references and improve mobile support with updated preconnect links for font loading.)
 
   function applyTeamFilter(fifaCode) {
     setTeamFilter(fifaCode);
@@ -190,7 +212,11 @@ export function FixturesApp() {
               onTeamFilterChange={applyTeamFilter}
               houses={houses}
               houseFilter={houseFilter}
+<<<<<<< HEAD
               onHouseFilterChange={applyHouseFilter}
+=======
+              onHouseFilterChange={setHouseFilter}
+>>>>>>> 9809950 (Update HTML files to reference new asset files, including updated scripts and styles for improved performance. Remove deprecated scripts and enhance the layout styles across all pages. Ensure consistent asset references and improve mobile support with updated preconnect links for font loading.)
             />
             <ToggleSwitch
               id="fixture-show-teams"
