@@ -1982,25 +1982,13 @@ a:hover {
 
   .house-card .flag-row--named {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 0.35rem;
-    overflow-x: auto;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    scrollbar-width: none;
-  }
-
-  .house-card .flag-row--named::-webkit-scrollbar {
-    display: none;
   }
 
   .house-card .flag-btn--with-name {
     width: auto;
-    flex-shrink: 0;
+    max-width: 100%;
     min-width: 0;
     padding: 0.25rem 0.5rem 0.25rem 0.25rem;
     gap: 0.3rem;
