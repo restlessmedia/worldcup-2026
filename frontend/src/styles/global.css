@@ -1101,7 +1101,7 @@ a:hover {
   padding: 0.5rem 0.4rem 0.55rem;
 }
 
-.fixture-calendar__day:hover:not(:disabled) {
+.fixture-calendar__day:not(.fixture-calendar__day--selected):hover:not(:disabled) {
   border-color: var(--accent-muted);
   background: #f8fffe;
 }
@@ -1111,10 +1111,16 @@ a:hover {
   cursor: default;
 }
 
+.fixture-calendar__day--flags:not(.fixture-calendar__day--selected),
+.fixture-calendar__day--has-matches:not(.fixture-calendar__day--selected) {
+  border-color: var(--line-strong);
+  background: #f8fafc;
+}
+
 .fixture-calendar__day--selected {
   border-color: var(--accent);
-  background: var(--accent-soft);
-  box-shadow: inset 0 0 0 1px var(--accent-muted);
+  background: #dffcf4;
+  box-shadow: inset 0 0 0 2px var(--accent), 0 6px 16px rgba(15, 118, 110, 0.12);
 }
 
 .fixture-calendar__day--today .fixture-calendar__day-num {
@@ -1124,10 +1130,6 @@ a:hover {
 
 .fixture-calendar__day--team {
   border-color: var(--accent);
-}
-
-.fixture-calendar__day--has-matches {
-  background: #f8fafc;
 }
 
 .fixture-calendar__day-num {
@@ -1191,7 +1193,7 @@ a:hover {
 
 .fixture-calendar__match-flags--team {
   background: var(--accent-soft);
-  box-shadow: inset 0 0 0 1px var(--accent-muted);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 .fixture-calendar__flag {
@@ -1308,10 +1310,11 @@ a:hover {
   gap: 0.35rem;
   max-width: 100%;
   padding: 0.18rem 0.45rem;
-  border: 1px solid var(--accent-muted);
+  border: 1px solid var(--accent);
   border-radius: var(--radius-full);
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: #dffcf4;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.14);
   font-weight: 700;
 }
 
