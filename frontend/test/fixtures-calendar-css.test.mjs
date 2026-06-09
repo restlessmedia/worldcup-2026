@@ -57,6 +57,11 @@ test("fixture calendar active states are stronger than inactive match states", a
   );
   assert.match(
     css,
+    /\.fixture-calendar__day:not\(\.fixture-calendar__day--selected\):hover:not\(:disabled\)\s*\{/s,
+    "generic hover styles should not override selected calendar days",
+  );
+  assert.match(
+    css,
     /\.fixture-row__side--highlight \.fixture-row__name\s*\{[^}]*border:\s*1px solid var\(--accent\);/s,
     "highlighted countries in the revealed fixture list should use the strong accent border",
   );

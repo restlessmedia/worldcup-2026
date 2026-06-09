@@ -43,6 +43,10 @@ jobs:
       - name: Sync flag images
         run: python scripts/sync_flags.py
 
+      - name: Test frontend
+        run: npm test
+        working-directory: frontend
+
       - name: Build frontend
         run: npm run build
         working-directory: frontend

@@ -1101,7 +1101,7 @@ a:hover {
   padding: 0.5rem 0.4rem 0.55rem;
 }
 
-.fixture-calendar__day:hover:not(:disabled) {
+.fixture-calendar__day:not(.fixture-calendar__day--selected):hover:not(:disabled) {
   border-color: var(--accent-muted);
   background: #f8fffe;
 }
