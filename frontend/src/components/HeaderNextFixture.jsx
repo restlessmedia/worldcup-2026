@@ -1,16 +1,41 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  fixtureHouseMatchupShort,
-  formatKickoffUk,
-  getTodaysUpcomingFixtures,
-} from "../lib/fixtures";
+import { flagUrl } from "../lib/data";
+import { formatKickoffUk, getTodaysUpcomingFixtures } from "../lib/fixtures";
+import { teamDisplayName } from "../lib/placeholderLabels";
+import { FlagPlaceholder } from "./FlagPlaceholder";
 
 const DISPLAY_MS = 5500;
 const TRANSITION_MS = 520;
+const FLAG_SIZE = 16;
+
+function TeamSide({ team }) {
+  const name = teamDisplayName(team);
+
+  return (
+    <span className="topbar-next-fixture__team">
+      {team?.fifa_code ? (
+        <img
+          src={flagUrl(team.fifa_code)}
+          alt=""
+          className="topbar-next-fixture__flag"
+          width={FLAG_SIZE}
+          height={FLAG_SIZE}
+          loading="lazy"
+        />
+      ) : (
+        <FlagPlaceholder
+          size={FLAG_SIZE}
+          label={name}
+          className="topbar-next-fixture__flag-placeholder"
+        />
+      )}
+      <span className="topbar-next-fixture__team-name">{name}</span>
+    </span>
+  );
+}
 
 function FixtureLine({ fixture }) {
   const kickoff = formatKickoffUk(fixture.kickoff_utc);
-  const matchup = fixtureHouseMatchupShort(fixture, { compact: true });
 
   return (
     <>
@@ -18,10 +43,16 @@ function FixtureLine({ fixture }) {
       <time className="topbar-next-fixture__time" dateTime={fixture.kickoff_utc}>
         {kickoff}
       </time>
-      <span className="topbar-next-fixture__matchup" aria-hidden="true">
+      <span className="topbar-next-fixture__sep" aria-hidden="true">
         ·
       </span>
-      <span className="topbar-next-fixture__matchup">{matchup}</span>
+      <span className="topbar-next-fixture__matchup">
+        <TeamSide team={fixture.home} />
+        <span className="topbar-next-fixture__vs" aria-hidden="true">
+          v
+        </span>
+        <TeamSide team={fixture.away} />
+      </span>
     </>
   );
 }

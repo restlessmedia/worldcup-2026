@@ -114,13 +114,13 @@ a:hover {
 .topbar-next-fixture__viewport {
   display: block;
   position: relative;
-  height: 1.35em;
+  height: 1.125rem;
   overflow: hidden;
 }
 
 .topbar-next-fixture__item {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.3rem;
   white-space: nowrap;
 }
@@ -135,8 +135,52 @@ a:hover {
   font-variant-numeric: tabular-nums;
 }
 
-.topbar-next-fixture__matchup {
+.topbar-next-fixture__sep {
   color: var(--text-tertiary);
+}
+
+.topbar-next-fixture__matchup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.topbar-next-fixture__team {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.topbar-next-fixture__flag {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  display: block;
+}
+
+.topbar-next-fixture__flag-placeholder {
+  flex-shrink: 0;
+  color: var(--text-tertiary);
+}
+
+.topbar-next-fixture__team-name {
+  color: var(--text-secondary);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-next-fixture__vs {
+  color: var(--text-tertiary);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  flex-shrink: 0;
 }
 
 .site-nav {
