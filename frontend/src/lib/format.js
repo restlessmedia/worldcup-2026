@@ -1,4 +1,4 @@
-import { copy } from "./labels";
+import { copy } from "./labels.js";
 
 export function formatHouseLabel(houseId) {
   return houseId === "Coppice" ? "Coppice" : houseId;

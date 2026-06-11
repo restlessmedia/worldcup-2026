@@ -47,7 +47,7 @@ test("fixture calendar active states are stronger than inactive match states", a
 
   assert.match(
     css,
-    /\.fixture-calendar__day--flags:not\(\.fixture-calendar__day--selected\),\s*\.fixture-calendar__day--has-matches:not\(\.fixture-calendar__day--selected\)\s*\{[^}]*border-color:\s*var\(--line-strong\);/s,
+    /\.fixture-calendar__day--flags:not\(\.fixture-calendar__day--selected\),\s*\.fixture-calendar__day--houses:not\(\.fixture-calendar__day--selected\),\s*\.fixture-calendar__day--has-matches:not\(\.fixture-calendar__day--selected\)\s*\{[^}]*border-color:\s*var\(--line-strong\);/s,
     "inactive match days should keep a neutral stronger-than-empty border",
   );
   assert.match(
@@ -64,5 +64,10 @@ test("fixture calendar active states are stronger than inactive match states", a
     css,
     /\.fixture-row__side--highlight \.fixture-row__name\s*\{[^}]*border:\s*1px solid var\(--accent\);/s,
     "highlighted countries in the revealed fixture list should use the strong accent border",
+  );
+  assert.match(
+    css,
+    /\.fixture-row__side--highlight \.fixture-row__house-badge\s*\{[^}]*border-color:\s*var\(--accent\);/s,
+    "highlighted houses in the revealed fixture list should use the strong accent border",
   );
 });

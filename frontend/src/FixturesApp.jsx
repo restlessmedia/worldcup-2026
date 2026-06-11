@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { FixtureCalendar } from "./components/FixtureCalendar";
 import { FixtureDayPanel } from "./components/FixtureDayPanel";
 import { FixtureToolbar } from "./components/FixtureToolbar";
-import { ToggleSwitch } from "./components/ToggleSwitch";
 import { TeamModal } from "./components/TeamModal";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { loadJson } from "./lib/data";
@@ -21,6 +20,31 @@ import {
   teamsFromFixtures,
 } from "./lib/fixtures";
 
+const FIXTURE_DISPLAY_MODES = [
+  { value: "teams", label: "Teams" },
+  { value: "houses", label: "House" },
+  { value: "counts", label: "Matches" },
+];
+
+function FixtureDisplayControl({ value, onChange }) {
+  return (
+    <label className="fixture-display-control">
+      <span className="fixture-display-control__label">Show</span>
+      <select
+        className="fixture-display-control__select"
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+      >
+        {FIXTURE_DISPLAY_MODES.map((mode) => (
+          <option key={mode.value} value={mode.value}>
+            {mode.label}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
 export function FixturesApp() {
   const [fixturesData, setFixturesData] = useState(null);
   const [standings, setStandings] = useState(null);
@@ -31,7 +55,7 @@ export function FixturesApp() {
   const [houseFilter, setHouseFilter] = useState(() =>
     getTeamFilterFromUrl() ? null : getHouseFilterFromUrl(),
   );
-  const [showTeams, setShowTeams] = useState(true);
+  const [fixtureDisplayMode, setFixtureDisplayMode] = useState("teams");
   const [selectedTeam, setSelectedTeam] = useState(null);
 
   const fixtures = fixturesData?.fixtures || [];
@@ -192,11 +216,9 @@ export function FixturesApp() {
               houseFilter={houseFilter}
               onHouseFilterChange={applyHouseFilter}
             />
-            <ToggleSwitch
-              id="fixture-show-teams"
-              label="Show teams"
-              checked={showTeams}
-              onChange={setShowTeams}
+            <FixtureDisplayControl
+              value={fixtureDisplayMode}
+              onChange={setFixtureDisplayMode}
             />
           </div>
         </div>
@@ -209,7 +231,7 @@ export function FixturesApp() {
           selectedDay={selectedDay}
           teamFilter={teamFilter}
           highlightCodes={highlightCodes}
-          showTeams={showTeams}
+          displayMode={fixtureDisplayMode}
           onSelectDay={setSelectedDay}
           onPrevMonth={() => shiftMonth(-1)}
           onNextMonth={() => shiftMonth(1)}
@@ -221,6 +243,7 @@ export function FixturesApp() {
           teamFilter={teamFilter}
           highlightCodes={highlightCodes}
           highlightLabel={highlightLabel}
+          displayMode={fixtureDisplayMode}
           onSelectTeam={setSelectedTeam}
         />
       </Card>

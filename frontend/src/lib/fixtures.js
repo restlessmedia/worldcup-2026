@@ -1,4 +1,5 @@
 import { placeholderLabel } from "./placeholderLabels.js";
+import { formatHouseLabel } from "./format.js";
 
 const UK_TZ = "Europe/London";
 
@@ -96,6 +97,15 @@ function sideShortLabel(team) {
 
 export function fixtureMatchupShort(fixture) {
   return `${sideShortLabel(fixture.home)} v ${sideShortLabel(fixture.away)}`;
+}
+
+export function fixtureSideHouseLabel(team) {
+  if (!team?.house_id) return "TBD";
+  return formatHouseLabel(team.house_id);
+}
+
+export function fixtureHouseMatchupShort(fixture) {
+  return `${fixtureSideHouseLabel(fixture.home)} v ${fixtureSideHouseLabel(fixture.away)}`;
 }
 
 function teamRank(team) {

@@ -56,6 +56,17 @@ test("fixtureInvolvesAnyTeam matches any code in a house", () => {
   assert.equal(fixtures.fixtureInvolvesAnyTeam(fixture, ["URU", "NZL"]), false);
 });
 
+test("fixtureHouseMatchupShort presents the house labels for each side", () => {
+  assert.equal(typeof fixtures.fixtureHouseMatchupShort, "function");
+
+  const fixture = {
+    home: { display_name: "Mexico", fifa_code: "MEX", house_id: "4" },
+    away: { display_name: "Canada", fifa_code: "CAN", house_id: "Coppice" },
+  };
+
+  assert.equal(fixtures.fixtureHouseMatchupShort(fixture), "4 v Coppice");
+});
+
 test("initialSelectedDay can select the next fixture matching a house filter", () => {
   const filter = (fixture) => fixtures.fixtureInvolvesAnyTeam(fixture, ["BEL", "URU"]);
   const allFixtures = [
