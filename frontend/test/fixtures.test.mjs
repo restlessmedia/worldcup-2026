@@ -67,6 +67,17 @@ test("fixtureHouseMatchupShort presents the house labels for each side", () => {
   assert.equal(fixtures.fixtureHouseMatchupShort(fixture), "4 v Coppice");
 });
 
+test("fixtureHouseMatchupShort can use compact labels for narrow displays", () => {
+  const fixture = {
+    home: { display_name: "Canada", fifa_code: "CAN", house_id: "Coppice" },
+    away: { display_name: "South Africa", fifa_code: "RSA", house_id: "22" },
+  };
+
+  assert.equal(fixtures.fixtureSideHouseLabel(fixture.home, { compact: true }), "c");
+  assert.equal(fixtures.fixtureSideHouseLabel(fixture.away, { compact: true }), "22");
+  assert.equal(fixtures.fixtureHouseMatchupShort(fixture, { compact: true }), "c v 22");
+});
+
 test("initialSelectedDay can select the next fixture matching a house filter", () => {
   const filter = (fixture) => fixtures.fixtureInvolvesAnyTeam(fixture, ["BEL", "URU"]);
   const allFixtures = [

@@ -51,6 +51,22 @@ function CalendarMatchup({ fixture, highlighted }) {
   );
 }
 
+function CalendarHouseBadge({ team }) {
+  const label = fixtureSideHouseLabel(team);
+  const compactLabel = fixtureSideHouseLabel(team, { compact: true });
+
+  if (label === compactLabel) {
+    return <span className="fixture-calendar__house-badge">{label}</span>;
+  }
+
+  return (
+    <span className="fixture-calendar__house-badge" title={label}>
+      <span className="fixture-calendar__house-label fixture-calendar__house-label--full">{label}</span>
+      <span className="fixture-calendar__house-label fixture-calendar__house-label--compact">{compactLabel}</span>
+    </span>
+  );
+}
+
 function CalendarHouseMatchup({ fixture, highlighted }) {
   return (
     <span
@@ -60,11 +76,11 @@ function CalendarHouseMatchup({ fixture, highlighted }) {
           : "fixture-calendar__match-houses"
       }
     >
-      <span className="fixture-calendar__house-badge">{fixtureSideHouseLabel(fixture.home)}</span>
+      <CalendarHouseBadge team={fixture.home} />
       <span className="fixture-calendar__vs" aria-hidden="true">
         v
       </span>
-      <span className="fixture-calendar__house-badge">{fixtureSideHouseLabel(fixture.away)}</span>
+      <CalendarHouseBadge team={fixture.away} />
     </span>
   );
 }

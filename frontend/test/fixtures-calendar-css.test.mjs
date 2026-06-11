@@ -40,6 +40,16 @@ test("mobile fixture calendar scrolls horizontally instead of shrinking country 
     /\.fixture-calendar__flag,\s*\.fixture-calendar__flag-placeholder\s*\{[^}]*width:\s*14px/s,
     "mobile calendar should not shrink country icons below the base 26px size",
   );
+  assert.match(
+    mobileCss,
+    /\.fixture-calendar__house-label--full,\s*\.fixture-row__house-label--full\s*\{[^}]*display:\s*none;/s,
+    "mobile house badges should hide full-width labels such as Coppice",
+  );
+  assert.match(
+    mobileCss,
+    /\.fixture-calendar__house-label--compact,\s*\.fixture-row__house-label--compact\s*\{[^}]*display:\s*inline;/s,
+    "mobile house badges should show compact labels such as c",
+  );
 });
 
 test("fixture calendar active states are stronger than inactive match states", async () => {

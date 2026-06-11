@@ -1248,6 +1248,10 @@ a:hover {
   line-height: 1;
 }
 
+.fixture-calendar__house-label--compact {
+  display: none;
+}
+
 .fixture-calendar__flag {
   display: block;
   width: 26px;
@@ -1385,6 +1389,10 @@ a:hover {
   font-weight: 700;
   line-height: 1;
   flex-shrink: 0;
+}
+
+.fixture-row__house-label--compact {
+  display: none;
 }
 
 .fixture-row__side--highlight .fixture-row__house-badge {
@@ -2161,6 +2169,16 @@ a:hover {
   .fixture-calendar__match-more {
     font-size: 0.5625rem;
     line-height: 1.2;
+  }
+
+  .fixture-calendar__house-label--full,
+  .fixture-row__house-label--full {
+    display: none;
+  }
+
+  .fixture-calendar__house-label--compact,
+  .fixture-row__house-label--compact {
+    display: inline;
   }
 
   .fixture-calendar__match-count {

@@ -15,23 +15,36 @@ function scoreLine(fixture) {
   return `${fixture.home_score} – ${fixture.away_score}`;
 }
 
+function HouseBadge({ team }) {
+  const label = fixtureSideHouseLabel(team);
+  const compactLabel = fixtureSideHouseLabel(team, { compact: true });
+
+  if (label === compactLabel) {
+    return <span className="fixture-row__house-badge">{label}</span>;
+  }
+
+  return (
+    <span className="fixture-row__house-badge" title={label}>
+      <span className="fixture-row__house-label fixture-row__house-label--full">{label}</span>
+      <span className="fixture-row__house-label fixture-row__house-label--compact">{compactLabel}</span>
+    </span>
+  );
+}
+
 function FixtureSide({ team, onSelectTeam, highlighted, highlightLabel, displayMode, away = false }) {
   const name = teamDisplayName(team);
   const showHouse = displayMode === "houses";
-  const houseLabel = showHouse ? fixtureSideHouseLabel(team) : null;
   const className = `fixture-row__side${away ? " fixture-row__side--away" : ""}${
     highlighted ? " fixture-row__side--highlight" : ""
   }${showHouse ? " fixture-row__side--house" : ""}`;
   const ariaLabel = !showHouse && highlighted && highlightLabel
     ? `${name} (${highlightLabel})`
-      : undefined;
+    : undefined;
 
   return (
     <div className={className} aria-label={ariaLabel}>
       {showHouse ? (
-        <span className="fixture-row__house-badge">
-          {houseLabel}
-        </span>
+        <HouseBadge team={team} />
       ) : team?.fifa_code ? (
         <TeamFlag team={team} onSelect={onSelectTeam} size={24} showName={false} />
       ) : (

@@ -99,13 +99,14 @@ export function fixtureMatchupShort(fixture) {
   return `${sideShortLabel(fixture.home)} v ${sideShortLabel(fixture.away)}`;
 }
 
-export function fixtureSideHouseLabel(team) {
+export function fixtureSideHouseLabel(team, { compact = false } = {}) {
   if (!team?.house_id) return "TBD";
+  if (compact && team.house_id === "Coppice") return "c";
   return formatHouseLabel(team.house_id);
 }
 
-export function fixtureHouseMatchupShort(fixture) {
-  return `${fixtureSideHouseLabel(fixture.home)} v ${fixtureSideHouseLabel(fixture.away)}`;
+export function fixtureHouseMatchupShort(fixture, options) {
+  return `${fixtureSideHouseLabel(fixture.home, options)} v ${fixtureSideHouseLabel(fixture.away, options)}`;
 }
 
 function teamRank(team) {
