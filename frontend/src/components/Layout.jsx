@@ -3,7 +3,7 @@ import "../styles/motion.css";
 import { formatDateTimeShort } from "../lib/format";
 import { prefetchPageData } from "../lib/navPrefetch";
 
-export function Layout({ title, tagline, updatedAt, activeNav, children, footer }) {
+export function Layout({ title, tagline, updatedAt, activeNav, headerExtra, children, footer }) {
   const updatedLabel = formatDateTimeShort(updatedAt);
 
   return (
@@ -20,6 +20,7 @@ export function Layout({ title, tagline, updatedAt, activeNav, children, footer 
             ) : null}
           </div>
           {tagline ? <p className="tagline">{tagline}</p> : null}
+          {headerExtra || null}
           <div className="site-nav-scroll">
             <nav className="site-nav" aria-label="Site sections">
               <a

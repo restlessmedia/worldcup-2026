@@ -2,6 +2,7 @@ import { useSiteData } from "./hooks/useSiteData";
 import { resolveSiteUpdatedAt, tournamentStatusLine } from "./lib/format";
 import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
+import { HeaderNextFixture } from "./components/HeaderNextFixture";
 import { HousesTable } from "./components/HousesTable";
 
 export function HousesApp() {
@@ -30,6 +31,7 @@ export function HousesApp() {
       title="World Cup 2026 sweepstake"
       tagline={tournamentStatusLine(standings, config)}
       updatedAt={resolveSiteUpdatedAt({ meta, standings })}
+      headerExtra={<HeaderNextFixture fixtures={fixtures?.fixtures || []} />}
       activeNav="houses"
       footer={
         <p>

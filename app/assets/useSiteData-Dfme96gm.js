@@ -1,0 +1,1 @@
+import{k as c,r as a}from"./Layout-V68Tc7YJ.js";function f(r=c){const[s,u]=a.useState(null),[n,o]=a.useState(null);return a.useEffect(()=>{let t=!1;return r().then(e=>{t||u(e)}).catch(e=>{t||o(e.message)}),()=>{t=!0}},[r]),{data:s,error:n,loading:!s&&!n}}export{f as u};

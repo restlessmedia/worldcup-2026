@@ -78,6 +78,54 @@ test("fixtureHouseMatchupShort can use compact labels for narrow displays", () =
   assert.equal(fixtures.fixtureHouseMatchupShort(fixture, { compact: true }), "c v 22");
 });
 
+test("getTodaysUpcomingFixtures returns unplayed fixtures still to kick off today", () => {
+  const now = new Date("2026-06-11T15:00:00Z");
+  const allFixtures = [
+    {
+      id: "played-today",
+      kickoff_utc: "2026-06-11T13:00:00Z",
+      played: true,
+      home: { house_id: "1" },
+      away: { house_id: "2" },
+    },
+    {
+      id: "earlier-unplayed",
+      kickoff_utc: "2026-06-11T13:00:00Z",
+      played: false,
+      home: { house_id: "3" },
+      away: { house_id: "4" },
+    },
+    {
+      id: "later-today",
+      kickoff_utc: "2026-06-11T19:00:00Z",
+      played: false,
+      home: { house_id: "4" },
+      away: { house_id: "Coppice" },
+    },
+    {
+      id: "also-later",
+      kickoff_utc: "2026-06-11T21:00:00Z",
+      played: false,
+      home: { house_id: "5" },
+      away: { house_id: "6" },
+    },
+    {
+      id: "tomorrow",
+      kickoff_utc: "2026-06-12T19:00:00Z",
+      played: false,
+      home: { house_id: "7" },
+      away: { house_id: "8" },
+    },
+  ];
+
+  const result = fixtures.getTodaysUpcomingFixtures(allFixtures, { now });
+
+  assert.deepEqual(
+    result.map((fixture) => fixture.id),
+    ["later-today", "also-later"],
+  );
+});
+
 test("initialSelectedDay can select the next fixture matching a house filter", () => {
   const filter = (fixture) => fixtures.fixtureInvolvesAnyTeam(fixture, ["BEL", "URU"]);
   const allFixtures = [

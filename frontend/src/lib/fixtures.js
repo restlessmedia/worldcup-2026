@@ -190,6 +190,23 @@ export function todayDateKey() {
   return ukDateKey(new Date().toISOString());
 }
 
+/** Unplayed fixtures kicking off later today (UK), sorted by kickoff. */
+export function getTodaysUpcomingFixtures(fixtures, { now = new Date() } = {}) {
+  const todayKey = ukDateKey(now.toISOString());
+  if (!todayKey) return [];
+
+  const nowIso = now.toISOString();
+
+  return (fixtures || [])
+    .filter((fixture) => {
+      if (fixture.played) return false;
+      if (ukDateKey(fixture.kickoff_utc) !== todayKey) return false;
+      if (fixture.kickoff_utc && fixture.kickoff_utc < nowIso) return false;
+      return true;
+    })
+    .sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
+}
+
 function todayParts() {
   const key = todayDateKey();
   if (!key) return { ...TOURNAMENT_START };
