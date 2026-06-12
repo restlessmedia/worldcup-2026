@@ -39,7 +39,18 @@ Each update run writes:
 - `output/update-audit/audit.log` — one-line summary per run
 - `output/update-audit/YYYY-MM-DDTHHMMSSZ.json` — full step detail and validation report
 
+Both are committed to git (especially useful with the scheduled sync).
+
+## WhatsApp draft
+
+Each successful update also writes a copy-paste group message:
+
+- `output/whatsapp/latest.txt` — open this, copy, paste into WhatsApp
+- `output/whatsapp/YYYY-MM-DDTHHMMSSZ.txt` — archived copy from that run
+
+Tone and format follow `docs/rules.md`.
+
 ## Cloud agent / GitHub Actions
 
-- **Cursor cloud agent:** run `python3 scripts/run_tournament_update.py --skip-build`, review the audit log, commit, and push.
-- **GitHub Actions:** Actions → **Tournament update** → Run workflow (optional dry run first).
+- **Cursor cloud agent:** run `python3 scripts/run_tournament_update.py --skip-build`, review `output/update-audit/audit.log` and `output/whatsapp/latest.txt`, commit, and push.
+- **GitHub Actions:** runs automatically at **08:00 and 20:00 UTC**, or manually via Actions → **Tournament update** (optional dry run first).

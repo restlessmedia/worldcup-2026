@@ -29,13 +29,17 @@ Then commit and push. GitHub Actions builds and deploys the site.
 | `--skip-publish` | Sync + validate only; do not regenerate `app/data/` |
 | `--no-fetch` | Use existing `data/fixtures.json` (offline / replay) |
 
-**Audit log:** see `output/update-audit/audit.log` and timestamped JSON files in the same folder.
+**Audit log:** `output/update-audit/audit.log` plus timestamped JSON (committed to git).
 
-**Cloud agent prompt:** *"Run the tournament update from FIFA, review the audit log, commit, and push if validation passes."*
+**WhatsApp draft:** `output/whatsapp/latest.txt` — copy-paste into the group after reviewing.
 
-**GitHub Actions:** repo → Actions → **Tournament update** → Run workflow.
+**Scheduled sync:** GitHub Actions runs at **08:00 and 20:00 UTC** and commits changes automatically.
 
-Knockout bracket pairings are still manual in `data/knockout.json` — see [Step 3 — knockout](#step-3--edit-dataknockoutjson-when-relevant) below.
+**Cloud agent prompt:** *"Run the tournament update from FIFA, review the audit log and WhatsApp draft, commit, and push if validation passes."*
+
+**Manual trigger:** repo → Actions → **Tournament update** → Run workflow.
+
+Knockout bracket is **auto-synced** from FIFA (teams, scores, phase). Override `data/knockout.json` by hand only if FIFA data looks wrong — see [Step 3 — knockout](#step-3--edit-dataknockoutjson-when-relevant) below.
 
 ---
 
@@ -373,6 +377,8 @@ Algeria · Argentina · Australia · Austria · Belgium · Bosnia and Herzegovin
 | --- | --- |
 | `run_tournament_update.py` | Full pipeline: fetch → sync → validate → publish → audit |
 | `sync_results_from_fifa.py` | Sync `data/results.json` from FIFA only |
+| `sync_knockout_from_fifa.py` | Sync `data/knockout.json` from FIFA knockout fixtures |
+| `generate_update_message.py` | Write WhatsApp draft to `output/whatsapp/` |
 | `fetch_fifa_fixtures.py` | Refresh `data/fixtures.json` only |
 | `update_walkthrough.py` | Interactive manual entry |
 | `publish_update.py` | Validate + publish after manual edits |
