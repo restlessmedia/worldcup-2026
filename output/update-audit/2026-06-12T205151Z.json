@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-06-12T20:51:51.141927+00:00",
+  "mode": "live",
+  "steps": [
+    {
+      "name": "sync_results",
+      "changed": false,
+      "finished_matches": 2,
+      "teams_eliminated": 0,
+      "goals_teams": 4,
+      "elimination_notes": [],
+      "skipped_write": true
+    },
+    {
+      "name": "sync_knockout",
+      "changed": false,
+      "filled_r32": 0,
+      "notes": [],
+      "skipped_write": true
+    },
+    {
+      "name": "validate",
+      "ok": true
+    },
+    {
+      "name": "whatsapp_draft",
+      "paths": [
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/2026-06-12T205151Z.txt"
+      ]
+    }
+  ],
+  "summary": {
+    "data_changed": false,
+    "results_changed": false,
+    "knockout_changed": false,
+    "finished_matches": 2,
+    "teams_eliminated": 0,
+    "teams_still_in": 48,
+    "published": false,
+    "whatsapp_draft": "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+    "idempotent_noop": true
+  },
+  "status": "ok",
+  "validation_report": "# Update validation report\n\nGenerated: 2026-06-12 20:51 UTC\n\n**Source URL in data:** https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures\n**Results date:** 2026-06-12\n**Knockout phase:** pre_knockout\n\n## Results (houses + wooden spoon)\n\nNo issues found.\n\n### Wooden spoon preview (top 5)\n- Czechia (Czech Republic): 2 goals conceded\n- South Africa: 2 goals conceded\n- South Korea (Korea Republic): 1 goals conceded\n- Mexico: 0 goals conceded\n\n**Summary:** 48 teams still in · 0 eliminated · 4 teams with goals recorded\n\n## Knockout bracket\n\nNo issues found.\n\n## Verdict\n\n**Ready to publish.**\n",
+  "finished_at": "2026-06-12T20:51:51.458385+00:00"
+}
