@@ -1,2 +1,4 @@
 node_modules/
 frontend/public/data/
+__pycache__/
+*.pyc
