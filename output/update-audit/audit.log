@@ -1,0 +1,3 @@
+2026-06-12T06:18:28.842124+00:00 | status=error | changed=None | finished_matches=None | eliminated=None | published=None | detail=2026-06-12T061829Z.json
+2026-06-12T06:18:35.776853+00:00 | status=ok | changed=False | finished_matches=2 | eliminated=0 | published=True | detail=2026-06-12T061836Z.json
+2026-06-12T06:28:20.392209+00:00 | status=ok | changed=False | finished_matches=2 | eliminated=0 | published=True | detail=2026-06-12T062820Z.json

@@ -9,7 +9,7 @@ if str(SCRIPTS) not in sys.path:
 
 from build_fixtures import enrich_side  # noqa: E402
 from build_standings import fifa_lookup, load_json  # noqa: E402
-from fetch_fifa_fixtures import fifa_to_draw_names  # noqa: E402
+from fifa_source import fifa_to_draw_names  # noqa: E402
 
 
 class FixtureEnrichmentTest(unittest.TestCase):

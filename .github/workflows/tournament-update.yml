@@ -1,0 +1,46 @@
+name: Tournament update
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Validate only — do not commit changes"
+        type: boolean
+        default: false
+  schedule:
+    # 08:00 and 20:00 UTC — morning and evening UK-friendly syncs
+    - cron: "0 8,20 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync from FIFA
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            python scripts/run_tournament_update.py --dry-run
+          else
+            python scripts/run_tournament_update.py --skip-build --skip-publish
+          fi
+
+      - name: Commit tournament data if changed
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ output/update-audit/ output/whatsapp/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore: auto-sync tournament results from FIFA"
+            git push
+          fi

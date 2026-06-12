@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-06-05T08:04:22.128697+00:00",
+  "fetched_at": "2026-06-12T06:28:20.528112+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -16,8 +16,9 @@
       "home": "Mexico",
       "away": "South Africa",
       "venue": "Mexico City",
-      "home_score": null,
-      "away_score": null
+      "home_score": 2,
+      "away_score": 0,
+      "finished": true
     },
     {
       "id": "fifa-400021441",
@@ -31,8 +32,9 @@
       "home": "South Korea (Korea Republic)",
       "away": "Czechia (Czech Republic)",
       "venue": "Guadalajara",
-      "home_score": null,
-      "away_score": null
+      "home_score": 2,
+      "away_score": 1,
+      "finished": true
     },
     {
       "id": "fifa-400021449",
@@ -47,7 +49,8 @@
       "away": "Bosnia and Herzegovina (Bosnia)",
       "venue": "Toronto",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021458",
@@ -58,11 +61,12 @@
       "matchday": null,
       "match_number": 4,
       "kickoff_utc": "2026-06-13T01:00:00Z",
-      "home": "USA",
+      "home": "USA (United States)",
       "away": "Paraguay",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021447",
@@ -77,7 +81,8 @@
       "away": "Switzerland",
       "venue": "San Francisco Bay Area",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021456",
@@ -92,7 +97,8 @@
       "away": "Morocco",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021453",
@@ -107,7 +113,8 @@
       "away": "Scotland",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021463",
@@ -122,7 +129,8 @@
       "away": "Türkiye (Turkey)",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021464",
@@ -137,7 +145,8 @@
       "away": "Curacao (Curaçao)",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021470",
@@ -152,7 +161,8 @@
       "away": "Japan",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021467",
@@ -167,7 +177,8 @@
       "away": "Ecuador",
       "venue": "Philadelphia",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021474",
@@ -182,7 +193,8 @@
       "away": "Tunisia",
       "venue": "Monterrey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021482",
@@ -197,7 +209,8 @@
       "away": "Cape Verde",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021478",
@@ -212,7 +225,8 @@
       "away": "Egypt",
       "venue": "Seattle",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021486",
@@ -227,7 +241,8 @@
       "away": "Uruguay",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021476",
@@ -242,7 +257,8 @@
       "away": "New Zealand",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021490",
@@ -257,7 +273,8 @@
       "away": "Senegal",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021488",
@@ -272,7 +289,8 @@
       "away": "Norway",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021496",
@@ -287,7 +305,8 @@
       "away": "Algeria",
       "venue": "Kansas City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021498",
@@ -302,7 +321,8 @@
       "away": "Jordan",
       "venue": "San Francisco Bay Area",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021502",
@@ -317,7 +337,8 @@
       "away": "DR Congo (Democratic Republic of the Congo)",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021507",
@@ -332,7 +353,8 @@
       "away": "Croatia",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021510",
@@ -347,7 +369,8 @@
       "away": "Panama",
       "venue": "Toronto",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021504",
@@ -362,7 +385,8 @@
       "away": "Colombia",
       "venue": "Mexico City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021440",
@@ -377,7 +401,8 @@
       "away": "South Africa",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021446",
@@ -392,7 +417,8 @@
       "away": "Bosnia and Herzegovina (Bosnia)",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021450",
@@ -407,7 +433,8 @@
       "away": "Qatar",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021442",
@@ -422,7 +449,8 @@
       "away": "South Korea (Korea Republic)",
       "venue": "Guadalajara",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021462",
@@ -433,11 +461,12 @@
       "matchday": null,
       "match_number": 32,
       "kickoff_utc": "2026-06-19T19:00:00Z",
-      "home": "USA",
+      "home": "USA (United States)",
       "away": "Australia",
       "venue": "Seattle",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021454",
@@ -452,7 +481,8 @@
       "away": "Morocco",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021457",
@@ -467,7 +497,8 @@
       "away": "Haiti",
       "venue": "Philadelphia",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021460",
@@ -482,7 +513,8 @@
       "away": "Paraguay",
       "venue": "San Francisco Bay Area",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021472",
@@ -497,7 +529,8 @@
       "away": "Sweden",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021469",
@@ -512,7 +545,8 @@
       "away": "Ivory Coast (Côte d'Ivoire)",
       "venue": "Toronto",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021465",
@@ -527,7 +561,8 @@
       "away": "Curacao (Curaçao)",
       "venue": "Kansas City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021475",
@@ -542,7 +577,8 @@
       "away": "Japan",
       "venue": "Monterrey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021483",
@@ -557,7 +593,8 @@
       "away": "Saudi Arabia",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021477",
@@ -572,7 +609,8 @@
       "away": "Iran",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021487",
@@ -587,7 +625,8 @@
       "away": "Cape Verde",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021480",
@@ -602,7 +641,8 @@
       "away": "Egypt",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021494",
@@ -617,7 +657,8 @@
       "away": "Austria",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021492",
@@ -632,7 +673,8 @@
       "away": "Iraq",
       "venue": "Philadelphia",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021491",
@@ -647,7 +689,8 @@
       "away": "Senegal",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021499",
@@ -662,7 +705,8 @@
       "away": "Algeria",
       "venue": "San Francisco Bay Area",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021503",
@@ -677,7 +721,8 @@
       "away": "Uzbekistan",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021506",
@@ -692,7 +737,8 @@
       "away": "Ghana",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021511",
@@ -707,7 +753,8 @@
       "away": "Croatia",
       "venue": "Toronto",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021501",
@@ -722,7 +769,8 @@
       "away": "DR Congo (Democratic Republic of the Congo)",
       "venue": "Guadalajara",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021448",
@@ -737,7 +785,8 @@
       "away": "Qatar",
       "venue": "Seattle",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021451",
@@ -752,7 +801,8 @@
       "away": "Canada",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021452",
@@ -767,7 +817,8 @@
       "away": "Haiti",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021455",
@@ -782,7 +833,8 @@
       "away": "Brazil",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021444",
@@ -797,7 +849,8 @@
       "away": "Mexico",
       "venue": "Mexico City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021445",
@@ -812,7 +865,8 @@
       "away": "South Korea (Korea Republic)",
       "venue": "Monterrey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021466",
@@ -827,7 +881,8 @@
       "away": "Germany",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021468",
@@ -842,7 +897,8 @@
       "away": "Ivory Coast (Côte d'Ivoire)",
       "venue": "Philadelphia",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021471",
@@ -857,7 +913,8 @@
       "away": "Sweden",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021473",
@@ -872,7 +929,8 @@
       "away": "Netherlands (Holland)",
       "venue": "Kansas City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021459",
@@ -884,10 +942,11 @@
       "match_number": 59,
       "kickoff_utc": "2026-06-26T02:00:00Z",
       "home": "Türkiye (Turkey)",
-      "away": "USA",
+      "away": "USA (United States)",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021461",
@@ -902,7 +961,8 @@
       "away": "Australia",
       "venue": "San Francisco Bay Area",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021489",
@@ -917,7 +977,8 @@
       "away": "France",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021493",
@@ -932,7 +993,8 @@
       "away": "Iraq",
       "venue": "Toronto",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021484",
@@ -947,7 +1009,8 @@
       "away": "Spain",
       "venue": "Guadalajara",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021485",
@@ -962,7 +1025,8 @@
       "away": "Saudi Arabia",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021479",
@@ -977,7 +1041,8 @@
       "away": "Iran",
       "venue": "Seattle",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021481",
@@ -992,7 +1057,8 @@
       "away": "Belgium",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021508",
@@ -1007,7 +1073,8 @@
       "away": "England",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021509",
@@ -1022,7 +1089,8 @@
       "away": "Ghana",
       "venue": "Philadelphia",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021500",
@@ -1037,7 +1105,8 @@
       "away": "Uzbekistan",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021505",
@@ -1052,7 +1121,8 @@
       "away": "Portugal",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021495",
@@ -1067,7 +1137,8 @@
       "away": "Argentina",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021497",
@@ -1082,7 +1153,8 @@
       "away": "Austria",
       "venue": "Kansas City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021518",
@@ -1097,7 +1169,8 @@
       "away": "2B",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021516",
@@ -1112,7 +1185,8 @@
       "away": "2F",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021513",
@@ -1127,7 +1201,8 @@
       "away": "3ABCDF",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021522",
@@ -1142,7 +1217,8 @@
       "away": "2C",
       "venue": "Monterrey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021514",
@@ -1157,7 +1233,8 @@
       "away": "2I",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021523",
@@ -1172,7 +1249,8 @@
       "away": "3CDFGH",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021520",
@@ -1187,7 +1265,8 @@
       "away": "3CEFHI",
       "venue": "Mexico City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021512",
@@ -1202,7 +1281,8 @@
       "away": "3EHIJK",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021525",
@@ -1217,7 +1297,8 @@
       "away": "3AEHIJ",
       "venue": "Seattle",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021524",
@@ -1232,7 +1313,8 @@
       "away": "3BEFIJ",
       "venue": "San Francisco Bay Area",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021519",
@@ -1247,7 +1329,8 @@
       "away": "2J",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021526",
@@ -1262,7 +1345,8 @@
       "away": "2L",
       "venue": "Toronto",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021527",
@@ -1277,7 +1361,8 @@
       "away": "3EFGIJ",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021515",
@@ -1292,7 +1377,8 @@
       "away": "2G",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021521",
@@ -1307,7 +1393,8 @@
       "away": "2H",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021517",
@@ -1322,7 +1409,8 @@
       "away": "3DEIJL",
       "venue": "Kansas City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021530",
@@ -1337,7 +1425,8 @@
       "away": "W75",
       "venue": "Houston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021533",
@@ -1352,7 +1441,8 @@
       "away": "W77",
       "venue": "Philadelphia",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021532",
@@ -1367,7 +1457,8 @@
       "away": "W78",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021531",
@@ -1382,7 +1473,8 @@
       "away": "W80",
       "venue": "Mexico City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021529",
@@ -1397,7 +1489,8 @@
       "away": "W84",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021534",
@@ -1412,7 +1505,8 @@
       "away": "W82",
       "venue": "Seattle",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021528",
@@ -1427,7 +1521,8 @@
       "away": "W88",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021535",
@@ -1442,7 +1537,8 @@
       "away": "W87",
       "venue": "Vancouver",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021536",
@@ -1457,7 +1553,8 @@
       "away": "W90",
       "venue": "Boston",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021538",
@@ -1472,7 +1569,8 @@
       "away": "W94",
       "venue": "Los Angeles",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021539",
@@ -1487,7 +1585,8 @@
       "away": "W92",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021537",
@@ -1502,7 +1601,8 @@
       "away": "W96",
       "venue": "Kansas City",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021541",
@@ -1517,7 +1617,8 @@
       "away": "W98",
       "venue": "Dallas",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021540",
@@ -1532,7 +1633,8 @@
       "away": "W100",
       "venue": "Atlanta",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021542",
@@ -1547,7 +1649,8 @@
       "away": "RU102",
       "venue": "Miami",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     },
     {
       "id": "fifa-400021543",
@@ -1562,7 +1665,8 @@
       "away": "W102",
       "venue": "New Jersey",
       "home_score": null,
-      "away_score": null
+      "away_score": null,
+      "finished": false
     }
   ]
 }
