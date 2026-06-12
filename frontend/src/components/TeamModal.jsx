@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
+import { useStandingsLookup } from "../hooks/useStandingsLookup";
 import { flagUrl } from "../lib/data";
 import { formatHouseLabel } from "../lib/format";
 import { copy } from "../lib/labels";
+import { enrichTeamWithStandings } from "../lib/teamStats";
 
 function DetailRow({ label, value, hint }) {
   if (value == null || value === "") return null;
@@ -14,7 +16,14 @@ function DetailRow({ label, value, hint }) {
   );
 }
 
-export function TeamModal({ team, onClose }) {
+export function TeamModal({ team, standings: standingsProp, onClose }) {
+  const loadedStandings = useStandingsLookup();
+  const standings = standingsProp ?? loadedStandings;
+  const enrichedTeam = useMemo(
+    () => enrichTeamWithStandings(team, standings),
+    [team, standings],
+  );
+
   useEffect(() => {
     if (!team) return undefined;
 
@@ -30,14 +39,14 @@ export function TeamModal({ team, onClose }) {
     };
   }, [team, onClose]);
 
-  if (!team) return null;
+  if (!enrichedTeam) return null;
 
   const status =
-    team.status === "eliminated"
+    enrichedTeam.status === "eliminated"
       ? "Eliminated from the World Cup"
-      : team.status === "alive"
+      : enrichedTeam.status === "alive"
         ? "Still in the tournament"
-        : team.status;
+        : enrichedTeam.status;
 
   return createPortal(
     <div className="modal-backdrop" onClick={onClose} role="presentation">
@@ -54,16 +63,16 @@ export function TeamModal({ team, onClose }) {
 
         <div className="modal-header">
           <img
-            src={flagUrl(team.fifa_code)}
+            src={flagUrl(enrichedTeam.fifa_code)}
             alt=""
             width="48"
             height="48"
             fetchPriority="high"
           />
           <div>
-            <h3 id="team-modal-title">{team.display_name}</h3>
-            {team.draw_name && team.draw_name !== team.display_name ? (
-              <p className="modal-subtitle">Name in the draw: {team.draw_name}</p>
+            <h3 id="team-modal-title">{enrichedTeam.display_name}</h3>
+            {enrichedTeam.draw_name && enrichedTeam.draw_name !== enrichedTeam.display_name ? (
+              <p className="modal-subtitle">Name in the draw: {enrichedTeam.draw_name}</p>
             ) : null}
           </div>
         </div>
@@ -71,43 +80,43 @@ export function TeamModal({ team, onClose }) {
         <dl className="modal-details">
           <DetailRow
             label="World ranking"
-            value={copy.worldRankingLong(team.fifa_rank)}
+            value={copy.worldRankingLong(enrichedTeam.fifa_rank)}
             hint="FIFA world ranking — lower number means a stronger team"
           />
           <DetailRow
             label="World Cup group"
-            value={team.group ? `Group ${team.group}` : null}
+            value={enrichedTeam.group ? `Group ${enrichedTeam.group}` : null}
             hint="Group stage letter in the World Cup"
           />
           <DetailRow
             label="Sweepstake house"
-            value={team.house_id ? formatHouseLabel(team.house_id) : null}
+            value={enrichedTeam.house_id ? formatHouseLabel(enrichedTeam.house_id) : null}
           />
           <DetailRow label="Tournament status" value={status} />
           <DetailRow
             label="Goals conceded"
-            value={copy.goalsConcededCount(team.goals_conceded ?? 0)}
+            value={copy.goalsConcededCount(enrichedTeam.goals_conceded ?? 0)}
             hint="Total goals scored against this team so far"
           />
-          {team.fair_play_points != null ? (
+          {enrichedTeam.fair_play_points != null ? (
             <DetailRow
               label="Fair play points"
-              value={String(team.fair_play_points)}
+              value={String(enrichedTeam.fair_play_points)}
               hint="Disciplinary points — used for the fair play side prize"
             />
           ) : null}
-          {team.position != null ? (
+          {enrichedTeam.position != null ? (
             <DetailRow
               label="Wooden spoon position"
-              value={String(team.position)}
+              value={String(enrichedTeam.position)}
               hint="Position in the most-goals-conceded league table"
             />
           ) : null}
         </dl>
 
-        {team.fifa_code ? (
+        {enrichedTeam.fifa_code ? (
           <p className="modal-actions">
-            <a href={`fixtures.html?team=${team.fifa_code}`}>View fixtures</a>
+            <a href={`fixtures.html?team=${enrichedTeam.fifa_code}`}>View fixtures</a>
           </p>
         ) : null}
       </div>

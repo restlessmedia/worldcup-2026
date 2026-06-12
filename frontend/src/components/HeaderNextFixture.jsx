@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { flagUrl } from "../lib/data";
+import { formatHouseLabel } from "../lib/format";
 import { formatKickoffUk, getTodaysUpcomingFixtures } from "../lib/fixtures";
 import { teamDisplayName } from "../lib/placeholderLabels";
 import { FlagPlaceholder } from "./FlagPlaceholder";
@@ -10,6 +11,7 @@ const FLAG_SIZE = 16;
 
 function TeamSide({ team }) {
   const name = teamDisplayName(team);
+  const house = team?.house_id ? formatHouseLabel(team.house_id) : null;
 
   return (
     <span className="topbar-next-fixture__team">
@@ -29,7 +31,10 @@ function TeamSide({ team }) {
           className="topbar-next-fixture__flag-placeholder"
         />
       )}
-      <span className="topbar-next-fixture__team-name">{name}</span>
+      <span className="topbar-next-fixture__team-name">
+        {name}
+        {house ? ` (${house})` : ""}
+      </span>
     </span>
   );
 }

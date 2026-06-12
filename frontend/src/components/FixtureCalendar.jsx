@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { flagUrl } from "../lib/data";
 import {
   fixtureHouseMatchupShort,
@@ -106,6 +107,20 @@ export function FixtureCalendar({
   const todayKey = todayDateKey();
   const currentDisplayMode = displayMode === "houses" || displayMode === "counts" ? displayMode : "teams";
   const showsMatchups = currentDisplayMode !== "counts";
+  const scrollRef = useRef(null);
+  const selectedDayRef = useRef(null);
+
+  useEffect(() => {
+    const scrollEl = scrollRef.current;
+    const dayEl = selectedDayRef.current;
+    if (!selectedDay || !scrollEl || !dayEl) return;
+
+    const targetLeft = dayEl.offsetLeft - (scrollEl.clientWidth - dayEl.offsetWidth) / 2;
+    scrollEl.scrollTo({
+      left: Math.max(0, targetLeft),
+      behavior: "smooth",
+    });
+  }, [selectedDay, year, month]);
 
   return (
     <div className="fixture-calendar">
@@ -131,7 +146,7 @@ export function FixtureCalendar({
         </button>
       </div>
 
-      <div className="fixture-calendar__grid-scroll">
+      <div className="fixture-calendar__grid-scroll" ref={scrollRef}>
         <div className="fixture-calendar__weekdays" aria-hidden="true">
           {WEEKDAYS.map((label) => (
             <span key={label} className="fixture-calendar__weekday">
@@ -183,6 +198,7 @@ export function FixtureCalendar({
                 key={cell.key}
                 type="button"
                 role="gridcell"
+                ref={isSelected ? selectedDayRef : undefined}
                 className={className}
                 onClick={() => onSelectDay(cell.key)}
                 disabled={!hasMatches}

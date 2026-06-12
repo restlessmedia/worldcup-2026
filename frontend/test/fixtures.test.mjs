@@ -126,6 +126,20 @@ test("getTodaysUpcomingFixtures returns unplayed fixtures still to kick off toda
   );
 });
 
+test("initialSelectedDay prefers the next day with matches when today is empty", () => {
+  const allFixtures = [
+    {
+      id: "today-empty",
+      kickoff_utc: "2026-06-11T19:00:00Z",
+      home: { fifa_code: "MEX" },
+      away: { fifa_code: "RSA" },
+    },
+  ];
+  const viewMonth = { year: 2026, month: 5 };
+
+  assert.equal(fixtures.initialSelectedDay(allFixtures, null, viewMonth), "2026-06-11");
+});
+
 test("initialSelectedDay can select the next fixture matching a house filter", () => {
   const filter = (fixture) => fixtures.fixtureInvolvesAnyTeam(fixture, ["BEL", "URU"]);
   const allFixtures = [

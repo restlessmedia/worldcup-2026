@@ -282,6 +282,11 @@ export function initialSelectedDay(fixtures, teamFilter, viewMonth, fixtureFilte
     if (teamKeys[0]) return teamKeys[0];
   }
 
-  if (todayKey?.startsWith(monthPrefix)) return todayKey;
+  if (todayKey?.startsWith(monthPrefix)) {
+    if (byDay.get(todayKey)?.length) return todayKey;
+    const upcoming = monthKeys.find((key) => key >= todayKey);
+    if (upcoming) return upcoming;
+  }
+
   return monthKeys[0] || null;
 }

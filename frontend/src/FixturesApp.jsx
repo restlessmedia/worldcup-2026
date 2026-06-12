@@ -248,7 +248,11 @@ export function FixturesApp() {
         />
       </Card>
 
-      <TeamModal team={selectedTeam} onClose={() => setSelectedTeam(null)} />
+      <TeamModal
+        team={selectedTeam}
+        standings={standings}
+        onClose={() => setSelectedTeam(null)}
+      />
     </Layout>
   );
 }

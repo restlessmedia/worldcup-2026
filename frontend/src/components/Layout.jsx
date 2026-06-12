@@ -1,10 +1,24 @@
 import "../styles/global.css";
 import "../styles/motion.css";
+import { useHeaderFixtures } from "../hooks/useHeaderFixtures";
 import { formatDateTimeShort } from "../lib/format";
 import { prefetchPageData } from "../lib/navPrefetch";
+import { HeaderNextFixture } from "./HeaderNextFixture";
 
-export function Layout({ title, tagline, updatedAt, activeNav, headerExtra, children, footer }) {
+export function Layout({
+  title,
+  tagline,
+  updatedAt,
+  activeNav,
+  headerExtra,
+  showNextFixture = true,
+  children,
+  footer,
+}) {
+  const headerFixtures = useHeaderFixtures();
   const updatedLabel = formatDateTimeShort(updatedAt);
+  const nextFixture =
+    showNextFixture && !headerExtra ? <HeaderNextFixture fixtures={headerFixtures} /> : null;
 
   return (
     <>
@@ -20,7 +34,7 @@ export function Layout({ title, tagline, updatedAt, activeNav, headerExtra, chil
             ) : null}
           </div>
           {tagline ? <p className="tagline">{tagline}</p> : null}
-          {headerExtra || null}
+          {headerExtra ?? nextFixture}
           <div className="site-nav-scroll">
             <nav className="site-nav" aria-label="Site sections">
               <a
