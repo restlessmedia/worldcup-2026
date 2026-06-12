@@ -1,17 +1,50 @@
 # Admin runbook — updating the sweepstake site
 
-Step-by-step guide for Philip. Use this walkthrough each time you update results during the tournament. Automate only after this flow feels smooth.
+Step-by-step guide for updating results during the tournament.
 
 **Live site:** https://restlessmedia.github.io/worldcup-2026/
 
 ---
 
-## Start here (interactive)
+## Start here (recommended — auto-sync from FIFA)
 
-When you come back to update the site, run:
+```bash
+python3 scripts/run_tournament_update.py --skip-build
+```
 
-```powershell
-python scripts/update_walkthrough.py
+This single command:
+
+1. **Fetches** live fixtures and scores from the [official FIFA calendar API](https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023)
+2. **Computes** cumulative goals conceded and eliminations from finished matches
+3. **Writes** `data/results.json` only when something changed (**idempotent** — safe to run twice in one day)
+4. **Validates** and regenerates `app/data/*.json`
+5. **Audits** the run to `output/update-audit/`
+
+Then commit and push. GitHub Actions builds and deploys the site.
+
+| Flag | Effect |
+| --- | --- |
+| `--dry-run` | Fetch + validate only; no files written |
+| `--skip-build` | Skip `npm run build` (CI builds on push) |
+| `--skip-publish` | Sync + validate only; do not regenerate `app/data/` |
+| `--no-fetch` | Use existing `data/fixtures.json` (offline / replay) |
+
+**Audit log:** see `output/update-audit/audit.log` and timestamped JSON files in the same folder.
+
+**Cloud agent prompt:** *"Run the tournament update from FIFA, review the audit log, commit, and push if validation passes."*
+
+**GitHub Actions:** repo → Actions → **Tournament update** → Run workflow.
+
+Knockout bracket pairings are still manual in `data/knockout.json` — see [Step 3 — knockout](#step-3--edit-dataknockoutjson-when-relevant) below.
+
+---
+
+## Manual walkthrough (desktop fallback)
+
+If FIFA auto-sync is unavailable or you need to override data by hand:
+
+```bash
+python3 scripts/update_walkthrough.py
 ```
 
 This **interviews you step by step**:
@@ -29,8 +62,6 @@ Other options in the same script:
 
 - **2** — validate only (no edits)
 - **3** — validate + publish what is already saved
-
-Knockout bracket updates are still manual in `data/knockout.json` for now — see [Step 3 — knockout](#step-3--edit-dataknockoutjson-when-relevant) below.
 
 ---
 
@@ -51,8 +82,8 @@ Knockout bracket updates are still manual in `data/knockout.json` for now — se
 ## Recommended flow (every update)
 
 ```
-1. python scripts/update_walkthrough.py   ← prompts you for data
-2. Preview locally
+1. python3 scripts/run_tournament_update.py --skip-build
+2. Review output/update-audit/audit.log (and validation report if warnings)
 3. Commit + push to main (GitHub Pages redeploys)
 ```
 
@@ -61,18 +92,18 @@ Manual alternative (if you prefer editing JSON directly):
 ```
 1. Open FIFA match centre
 2. Edit data/results.json (and knockout.json if needed)
-3. Validate  →  python scripts/validate_results.py
+3. Validate  →  python3 scripts/validate_results.py
 4. Read the report in output/update-validation-YYYY-MM-DD.md
 5. Fix any errors; review warnings
-6. Publish   →  python scripts/publish_update.py
+6. Publish   →  python3 scripts/publish_update.py
 7. Preview locally
 8. Commit + push to main
 ```
 
-### One command (validate + publish + build)
+### Publish only (after manual edits)
 
-```powershell
-python scripts/publish_update.py
+```bash
+python3 scripts/publish_update.py
 ```
 
 - **`--dry-run`** — validate only, no publish
@@ -105,16 +136,18 @@ https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fix
 
 https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams
 
-### Do we need to “validate” FIFA?
+### How auto-sync works
 
-You do **not** need a second website. Instead:
+`scripts/sync_results_from_fifa.py` pulls the same data as the FIFA match centre:
 
-1. Use FIFA as the single source of truth
-2. Spot-check 2–3 finished matches (goals against each team) before publishing
-3. Run `validate_results.py` — it catches typos, unknown team names, and goals going *down*
-4. Read the human-readable report before confirming publish
+- **Goals conceded** — summed from every finished match (home concedes away goals, and vice versa)
+- **Eliminations** — 4th place in a completed group; 3rd place not among the best eight after all groups finish; knockout losers once the knockout stage starts
 
-Full FIFA scraping can be added later; for now manual entry + validation is enough.
+You do **not** need a second website. Still:
+
+1. Spot-check 2–3 finished matches against FIFA before the first auto-sync publish
+2. Run validation (included in `run_tournament_update.py`) — catches typos, unknown team names, and goals going *down*
+3. Read the audit log / validation report when warnings appear
 
 ---
 
@@ -334,14 +367,15 @@ Algeria · Argentina · Australia · Austria · Belgium · Bosnia and Herzegovin
 
 ---
 
-## Future automation (not built yet)
+## Automation reference
 
-When this manual flow is comfortable:
-
-- Script to fetch FIFA match centre and propose JSON diffs
-- Still require human review (`validate_results.py` + report) before publish
-
-Until then, this runbook + `publish_update.py` is the supported workflow.
+| Script | Purpose |
+| --- | --- |
+| `run_tournament_update.py` | Full pipeline: fetch → sync → validate → publish → audit |
+| `sync_results_from_fifa.py` | Sync `data/results.json` from FIFA only |
+| `fetch_fifa_fixtures.py` | Refresh `data/fixtures.json` only |
+| `update_walkthrough.py` | Interactive manual entry |
+| `publish_update.py` | Validate + publish after manual edits |
 
 ---
 

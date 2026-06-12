@@ -1,0 +1,367 @@
+"""Derive tournament results from the official FIFA calendar API.
+
+Computes cumulative goals conceded and eliminations from finished matches.
+Idempotent: re-running with unchanged FIFA data produces no file write.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from copy import deepcopy
+from datetime import date, datetime, timezone
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "data"
+
+from fifa_source import (  # noqa: E402
+    FIFA_FIXTURES_URL,
+    draw_team_names,
+    fetch_and_write_fixtures,
+    load_json,
+    load_name_map,
+)
+
+PLACEHOLDER_RE = re.compile(r"^[0-9A-Z]+(/[0-9A-Z]+)*$|^W[0-9]+$|^RU[0-9]+$|^L[0-9]+$")
+
+
+def is_draw_team(name: str | None, draw_names: set[str]) -> bool:
+    return bool(name and name in draw_names)
+
+
+def is_placeholder(name: str | None) -> bool:
+    if not name:
+        return True
+    return bool(PLACEHOLDER_RE.fullmatch(name.replace(" ", "")))
+
+
+def goals_conceded_from_fixtures(fixtures: list[dict], draw_names: set[str]) -> dict[str, int]:
+    totals: dict[str, int] = {}
+    for fixture in fixtures:
+        if not fixture.get("finished"):
+            continue
+        home = fixture.get("home")
+        away = fixture.get("away")
+        home_score = fixture.get("home_score")
+        away_score = fixture.get("away_score")
+        if home_score is None or away_score is None:
+            continue
+        if is_draw_team(home, draw_names) and not is_placeholder(away):
+            totals[home] = totals.get(home, 0) + int(away_score)
+        if is_draw_team(away, draw_names) and not is_placeholder(home):
+            totals[away] = totals.get(away, 0) + int(home_score)
+    return totals
+
+
+def group_standings(
+    fixtures: list[dict], draw_names: set[str], fifa_groups: dict[str, str]
+) -> dict[str, list[dict]]:
+    """Build per-group tables from finished group-stage matches."""
+    by_group: dict[str, dict[str, dict]] = {}
+
+    for draw_name in draw_names:
+        group = fifa_groups.get(draw_name)
+        if not group:
+            continue
+        by_group.setdefault(group, {})
+        by_group[group].setdefault(
+            draw_name,
+            {
+                "team": draw_name,
+                "played": 0,
+                "won": 0,
+                "drawn": 0,
+                "lost": 0,
+                "gf": 0,
+                "ga": 0,
+                "points": 0,
+            },
+        )
+
+    for fixture in fixtures:
+        if fixture.get("stage") != "group" or not fixture.get("finished"):
+            continue
+        home = fixture.get("home")
+        away = fixture.get("away")
+        group = fixture.get("group")
+        if not group or not is_draw_team(home, draw_names) or not is_draw_team(away, draw_names):
+            continue
+        home_score = int(fixture["home_score"])
+        away_score = int(fixture["away_score"])
+        tables = by_group.setdefault(group, {})
+        for team in (home, away):
+            tables.setdefault(
+                team,
+                {
+                    "team": team,
+                    "played": 0,
+                    "won": 0,
+                    "drawn": 0,
+                    "lost": 0,
+                    "gf": 0,
+                    "ga": 0,
+                    "points": 0,
+                },
+            )
+        h, a = tables[home], tables[away]
+        h["played"] += 1
+        a["played"] += 1
+        h["gf"] += home_score
+        h["ga"] += away_score
+        a["gf"] += away_score
+        a["ga"] += home_score
+        if home_score > away_score:
+            h["won"] += 1
+            h["points"] += 3
+            a["lost"] += 1
+        elif away_score > home_score:
+            a["won"] += 1
+            a["points"] += 3
+            h["lost"] += 1
+        else:
+            h["drawn"] += 1
+            a["drawn"] += 1
+            h["points"] += 1
+            a["points"] += 1
+
+    ranked: dict[str, list[dict]] = {}
+    for group, table in by_group.items():
+        rows = list(table.values())
+        rows.sort(
+            key=lambda row: (
+                -row["points"],
+                -(row["gf"] - row["ga"]),
+                -row["gf"],
+                row["team"],
+            )
+        )
+        ranked[group] = rows
+    return ranked
+
+
+def group_is_complete(group: str, standings: dict[str, list[dict]]) -> bool:
+    rows = standings.get(group) or []
+    if len(rows) != 4:
+        return False
+    return all(row["played"] == 3 for row in rows)
+
+
+def all_groups_complete(standings: dict[str, list[dict]]) -> bool:
+    return bool(standings) and all(group_is_complete(group, standings) for group in standings)
+
+
+def third_place_rank_key(row: dict) -> tuple:
+    return (-row["points"], -(row["gf"] - row["ga"]), -row["gf"], row["team"])
+
+
+def eliminations_from_groups(
+    fixtures: list[dict], draw_names: set[str], fifa_groups: dict[str, str]
+) -> tuple[list[str], list[str]]:
+    """Return (eliminated teams, notes)."""
+    notes: list[str] = []
+    standings = group_standings(fixtures, draw_names, fifa_groups)
+    eliminated: set[str] = set()
+
+    for group, rows in sorted(standings.items()):
+        if not group_is_complete(group, standings):
+            continue
+        fourth = rows[3]["team"]
+        eliminated.add(fourth)
+        notes.append(f"Group {group}: {fourth} eliminated (4th place)")
+
+    if not all_groups_complete(standings):
+        return sorted(eliminated), notes
+
+    third_places = [rows[2] for rows in standings.values() if len(rows) >= 3]
+    third_places.sort(key=third_place_rank_key)
+    qualifying_thirds = {row["team"] for row in third_places[:8]}
+    for row in third_places:
+        if row["team"] not in qualifying_thirds:
+            eliminated.add(row["team"])
+            notes.append(f"{row['team']} eliminated (3rd place, not among best 8)")
+
+    return sorted(eliminated), notes
+
+
+def eliminations_from_knockout(fixtures: list[dict], draw_names: set[str]) -> tuple[list[str], list[str]]:
+    notes: list[str] = []
+    eliminated: set[str] = set()
+    for fixture in fixtures:
+        if fixture.get("stage") == "group" or not fixture.get("finished"):
+            continue
+        home = fixture.get("home")
+        away = fixture.get("away")
+        if not is_draw_team(home, draw_names) or not is_draw_team(away, draw_names):
+            continue
+        home_score = int(fixture["home_score"])
+        away_score = int(fixture["away_score"])
+        if home_score == away_score:
+            continue
+        loser = away if home_score > away_score else home
+        eliminated.add(loser)
+        notes.append(
+            f"{fixture.get('stage_label')}: {loser} eliminated "
+            f"({home} {home_score}-{away_score} {away})"
+        )
+    return sorted(eliminated), notes
+
+
+def fifa_group_lookup() -> dict[str, str]:
+    fifa = load_json("fifa-teams.json")
+    draw_map = fifa.get("draw_name_map") or {}
+    fifa_to_draw = {fifa_name: draw_name for draw_name, fifa_name in draw_map.items()}
+    lookup: dict[str, str] = {}
+    for team in fifa.get("teams") or []:
+        draw_name = fifa_to_draw.get(team["fifa_name"], team["fifa_name"])
+        lookup[draw_name] = team["group"]
+    return lookup
+
+
+def canonical_results_payload(
+    goals_conceded: dict[str, int],
+    teams_eliminated: list[str],
+    *,
+    last_updated: str | None,
+    existing: dict | None = None,
+) -> dict[str, Any]:
+    base = deepcopy(existing) if existing else {}
+    payload = {
+        "matches": base.get("matches") or [],
+        "teams_eliminated": sorted(teams_eliminated),
+        "goals_conceded": dict(sorted(goals_conceded.items())),
+        "fair_play_points": base.get("fair_play_points") or {},
+        "last_updated": last_updated,
+        "source_url": FIFA_FIXTURES_URL,
+        "source_label": "FIFA match centre (auto-synced from calendar API)",
+        "notes": base.get("notes"),
+    }
+    return payload
+
+
+def results_fingerprint(payload: dict) -> str:
+    """Stable hash input for idempotency checks."""
+    material = {
+        "teams_eliminated": payload.get("teams_eliminated") or [],
+        "goals_conceded": payload.get("goals_conceded") or {},
+        "fair_play_points": payload.get("fair_play_points") or {},
+        "source_url": payload.get("source_url"),
+        "source_label": payload.get("source_label"),
+    }
+    return json.dumps(material, sort_keys=True, ensure_ascii=False)
+
+
+def compute_results(fixtures: list[dict]) -> tuple[dict, dict[str, int], list[str]]:
+    draw = load_json("draw.json")
+    draw_names = draw_team_names(draw)
+    fifa_groups = fifa_group_lookup()
+
+    goals = goals_conceded_from_fixtures(fixtures, draw_names)
+    group_elim, group_notes = eliminations_from_groups(fixtures, draw_names, fifa_groups)
+    ko_elim, ko_notes = eliminations_from_knockout(fixtures, draw_names)
+    eliminated = sorted(set(group_elim) | set(ko_elim))
+
+    finished = [f for f in fixtures if f.get("finished")]
+    details = {
+        "finished_matches": len(finished),
+        "goals_teams": len(goals),
+        "eliminated_teams": len(eliminated),
+        "elimination_notes": group_notes + ko_notes,
+        "goals_conceded": goals,
+        "teams_eliminated": eliminated,
+    }
+    return details, goals, eliminated
+
+
+def sync_results(
+    fixtures: list[dict] | None = None,
+    *,
+    write: bool = True,
+    refresh_fixtures: bool = True,
+) -> dict[str, Any]:
+    fixture_path = None
+    if refresh_fixtures:
+        fixtures, fixture_path = fetch_and_write_fixtures()
+    elif fixtures is None:
+        fixtures = (load_json("fixtures.json").get("fixtures") or [])
+
+    details, goals, eliminated = compute_results(fixtures)
+    existing = load_json("results.json")
+    proposed = canonical_results_payload(
+        goals,
+        eliminated,
+        last_updated=existing.get("last_updated"),
+        existing=existing,
+    )
+
+    changed = results_fingerprint(proposed) != results_fingerprint(existing)
+    if changed:
+        proposed["last_updated"] = date.today().isoformat()
+
+    result: dict[str, Any] = {
+        "changed": changed,
+        "proposed": proposed,
+        "previous": existing,
+        "details": details,
+        "fixture_path": str(fixture_path) if fixture_path else None,
+        "finished_matches": details["finished_matches"],
+    }
+
+    if write and changed:
+        path = DATA / "results.json"
+        path.write_text(json.dumps(proposed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        result["results_path"] = str(path)
+    elif write:
+        result["results_path"] = str(DATA / "results.json")
+        result["skipped_write"] = True
+
+    return result
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Sync results.json from FIFA calendar API.")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Compute and print summary without writing results.json",
+    )
+    parser.add_argument(
+        "--no-fetch",
+        action="store_true",
+        help="Use existing data/fixtures.json instead of fetching FIFA",
+    )
+    args = parser.parse_args()
+
+    try:
+        outcome = sync_results(refresh_fixtures=not args.no_fetch, write=not args.dry_run)
+    except RuntimeError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+
+    print(f"Finished matches: {outcome['finished_matches']}")
+    print(f"Goals recorded:   {len(outcome['details']['goals_conceded'])} teams")
+    print(f"Eliminated:       {len(outcome['details']['teams_eliminated'])} teams")
+    if outcome["details"]["goals_conceded"]:
+        print("Goals conceded:")
+        for team, total in sorted(
+            outcome["details"]["goals_conceded"].items(),
+            key=lambda item: (-item[1], item[0]),
+        ):
+            print(f"  {team}: {total}")
+    if outcome["details"]["elimination_notes"]:
+        print("Eliminations:")
+        for note in outcome["details"]["elimination_notes"]:
+            print(f"  {note}")
+
+    if outcome["changed"]:
+        print("\nResults changed — written to data/results.json" if not args.dry_run else "\nResults would change (dry run).")
+    else:
+        print("\nNo changes — results.json already up to date (idempotent).")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

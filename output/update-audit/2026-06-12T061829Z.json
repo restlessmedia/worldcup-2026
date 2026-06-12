@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-06-12T06:18:28.842124+00:00",
+  "mode": "live",
+  "steps": [
+    {
+      "name": "sync_results",
+      "changed": true,
+      "finished_matches": 2,
+      "teams_eliminated": 0,
+      "goals_teams": 4,
+      "elimination_notes": [],
+      "skipped_write": false
+    },
+    {
+      "name": "validate",
+      "ok": true
+    }
+  ],
+  "summary": {},
+  "status": "error",
+  "validation_report": "# Update validation report\n\nGenerated: 2026-06-12 06:18 UTC\n\n**Source URL in data:** https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures\n**Results date:** 2026-06-12\n**Knockout phase:** pre_knockout\n\n## Results (houses + wooden spoon)\n\n### Warnings (review)\n- goals_conceded: 'Czechia (Czech Republic)' 0 → 2\n- goals_conceded: 'South Africa' 0 → 2\n- goals_conceded: 'South Korea (Korea Republic)' 0 → 1\n\n### Wooden spoon preview (top 5)\n- Czechia (Czech Republic): 2 goals conceded\n- South Africa: 2 goals conceded\n- South Korea (Korea Republic): 1 goals conceded\n- Mexico: 0 goals conceded\n\n**Summary:** 48 teams still in · 0 eliminated · 4 teams with goals recorded\n\n## Knockout bracket\n\nNo issues found.\n\n## Verdict\n\n**OK to publish after you have reviewed the warnings.**\n",
+  "finished_at": "2026-06-12T06:18:29.510589+00:00",
+  "error": "Command '['/usr/bin/python3', 'scripts/publish_update.py', '--yes']' returned non-zero exit status 1.",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scripts/run_tournament_update.py\", line 131, in main\n    run_publish(skip_build=args.skip_build)\n  File \"/workspace/scripts/run_tournament_update.py\", line 55, in run_publish\n    subprocess.run(cmd, cwd=ROOT, check=True)\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/usr/bin/python3', 'scripts/publish_update.py', '--yes']' returned non-zero exit status 1.\n"
+}
