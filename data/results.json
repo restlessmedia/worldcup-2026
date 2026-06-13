@@ -2,13 +2,17 @@
   "matches": [],
   "teams_eliminated": [],
   "goals_conceded": {
+    "Bosnia and Herzegovina (Bosnia)": 1,
+    "Canada": 1,
     "Czechia (Czech Republic)": 2,
     "Mexico": 0,
+    "Paraguay": 4,
     "South Africa": 2,
-    "South Korea (Korea Republic)": 1
+    "South Korea (Korea Republic)": 1,
+    "USA (United States)": 1
   },
   "fair_play_points": {},
-  "last_updated": "2026-06-12",
+  "last_updated": "2026-06-13",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "notes": "Admin: see docs/admin-runbook.md — edit goals_conceded, run python scripts/publish_update.py"
