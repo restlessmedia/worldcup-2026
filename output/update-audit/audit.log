@@ -6,3 +6,4 @@
 2026-06-12T20:51:51.141927+00:00 | status=ok | changed=False | finished_matches=2 | eliminated=0 | published=False | detail=2026-06-12T205151Z.json
 2026-06-13T09:12:34.842325+00:00 | status=ok | changed=True | finished_matches=4 | eliminated=0 | published=False | detail=2026-06-13T091235Z.json
 2026-06-13T12:26:12.912798+00:00 | status=ok | changed=False | finished_matches=4 | eliminated=0 | published=False | detail=2026-06-13T122613Z.json
+2026-06-13T12:48:39.303924+00:00 | status=ok | changed=False | finished_matches=4 | eliminated=0 | published=True | detail=2026-06-13T124839Z.json
