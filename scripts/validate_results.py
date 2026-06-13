@@ -222,12 +222,16 @@ def render_report(
     section("Knockout bracket", knockout_errors, knockout_warnings)
 
     all_errors = result_errors + knockout_errors
+    all_warnings = result_warnings + knockout_warnings
     lines.append("## Verdict")
     lines.append("")
     if all_errors:
         lines.append("**Do not publish** until errors are fixed.")
-    elif result_warnings or knockout_warnings:
-        lines.append("**OK to publish after you have reviewed the warnings.**")
+    elif all_warnings:
+        lines.append(
+            "**Ready to publish** — warnings are informational only; "
+            "no approval step. Fix retrospectively if anything looks wrong."
+        )
     else:
         lines.append("**Ready to publish.**")
     lines.append("")
