@@ -12,7 +12,9 @@ from generate_update_message import (  # noqa: E402
     format_house_label,
     generate_message,
     team_with_house,
+    wooden_spoon_closer,
     wooden_spoon_lines,
+    wooden_spoon_ranking,
 )
 
 
@@ -34,7 +36,7 @@ class GenerateUpdateMessageTest(unittest.TestCase):
             "Group D: Paraguay (House 16) eliminated (4th place)",
         )
 
-    def test_wooden_spoon_lines_include_houses(self):
+    def test_wooden_spoon_lines_include_houses_and_bullets(self):
         lookup = {"Paraguay": "16", "Czechia (Czech Republic)": "3"}
         results = {
             "goals_conceded": {
@@ -43,12 +45,25 @@ class GenerateUpdateMessageTest(unittest.TestCase):
             }
         }
         lines = wooden_spoon_lines(results, lookup, limit=2)
-        self.assertEqual(lines[0], "Paraguay (House 16) — 4 conceded")
-        self.assertEqual(lines[1], "Czechia (House 3) — 2 conceded")
+        self.assertEqual(lines[0], "* Paraguay (House 16) — 4 conceded 😬")
+        self.assertEqual(lines[1], "* Czechia (House 3) — 2 conceded")
 
-    def test_generate_message_has_new_header_and_no_source(self):
+    def test_wooden_spoon_closer_calls_out_leader(self):
+        ranked = [("Paraguay (House 16)", 4), ("Czechia (House 3)", 2)]
+        self.assertEqual(
+            wooden_spoon_closer(ranked),
+            "Plenty of football left, but Paraguay have an early grip on the spoon. 👀",
+        )
+
+    def test_generate_message_matches_casual_format(self):
         text = generate_message()
-        self.assertTrue(text.startswith("World Cup Sweepstake update!"))
+        self.assertIn("Nobody's heading home yet…", text)
+        self.assertIn("🥄 Wooden Spoon Watch", text)
+        self.assertIn("* Paraguay (House 16) — 4 conceded 😬", text)
+        self.assertIn(
+            "Plenty of football left, but Paraguay have an early grip on the spoon. 👀",
+            text,
+        )
         self.assertNotIn("Source:", text)
         self.assertNotIn("Live table:", text)
         self.assertNotIn("Banter, not betting tips", text)

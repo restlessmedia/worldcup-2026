@@ -90,20 +90,45 @@ def houses_summary(draw: list[dict], eliminated: set[str]) -> list[str]:
     return lines
 
 
+def wooden_spoon_ranking(
+    results: dict,
+    lookup: dict[str, str],
+    *,
+    limit: int = 5,
+) -> list[tuple[str, int]]:
+    goals = results.get("goals_conceded") or {}
+    ranked = sorted(goals.items(), key=lambda item: (-int(item[1]), item[0]))
+    return [
+        (team_with_house(team, lookup), int(total))
+        for team, total in ranked[:limit]
+        if int(total) > 0
+    ]
+
+
 def wooden_spoon_lines(
     results: dict,
     lookup: dict[str, str],
     *,
     limit: int = 5,
 ) -> list[str]:
-    goals = results.get("goals_conceded") or {}
-    if not goals:
-        return ["No goals conceded yet."]
-    ranked = sorted(goals.items(), key=lambda item: (-int(item[1]), item[0]))
-    return [
-        f"{team_with_house(team, lookup)} — {total} conceded"
-        for team, total in ranked[:limit]
-    ]
+    ranked = wooden_spoon_ranking(results, lookup, limit=limit)
+    if not ranked:
+        return ["* No goals conceded yet."]
+    lines: list[str] = []
+    for index, (label, total) in enumerate(ranked):
+        grimace = " 😬" if index == 0 else ""
+        lines.append(f"* {label} — {total} conceded{grimace}")
+    return lines
+
+
+def wooden_spoon_closer(ranked: list[tuple[str, int]]) -> str | None:
+    if not ranked:
+        return "Plenty of football left — nobody's leaking goals yet. 👀"
+    leader, goals = ranked[0]
+    leader_name = leader.split(" (", 1)[0]
+    return (
+        f"Plenty of football left, but {leader_name} have an early grip on the spoon. 👀"
+    )
 
 
 def generate_message(
@@ -119,31 +144,32 @@ def generate_message(
     prev_eliminated = set((previous_results or {}).get("teams_eliminated") or [])
     new_eliminations = sorted(eliminated - prev_eliminated)
 
-    lines = [
-        "World Cup Sweepstake update!",
-        "",
-    ]
+    lines: list[str] = []
 
     if new_eliminations:
         knocked_out = ", ".join(team_with_house(t, lookup) for t in new_eliminations)
-        lines.append(f"Just knocked out: {knocked_out}.")
-        lines.append("")
+        lines.append(f"Heading home this round: {knocked_out}.")
     elif eliminated:
         lines.append(
-            f"{len(eliminated)} teams out already — nothing new since last time."
+            f"{len(eliminated)} teams out already — quiet round, nothing new."
         )
-        lines.append("")
     else:
-        lines.append("Nobody out yet.")
-        lines.append("")
+        lines.append("Nobody's heading home yet…")
 
     alive_houses = sum(
         1 for entry in draw if any(team not in eliminated for team in entry["teams"])
     )
+    lines.append("")
     lines.append(f"{alive_houses} of 17 houses still alive.")
     lines.append("")
-    lines.append("Wooden spoon watch:")
+    lines.append("🥄 Wooden Spoon Watch")
+    lines.append("")
+    spoon_ranked = wooden_spoon_ranking(results, lookup)
     lines.extend(wooden_spoon_lines(results, lookup))
+    lines.append("")
+    closer = wooden_spoon_closer(spoon_ranked)
+    if closer:
+        lines.append(closer)
     lines.append("")
 
     if sync_notes:
