@@ -33,7 +33,7 @@ Then commit and push. GitHub Actions builds and deploys the site.
 
 **WhatsApp draft:** `output/whatsapp/latest.txt` — copy-paste into the group after reviewing.
 
-**Scheduled sync:** GitHub Actions runs at **08:00 and 20:00 UTC** and commits changes automatically.
+**Scheduled sync:** GitHub Actions runs at **08:00 and 20:00 UTC**, syncs from FIFA, **publishes automatically** when validation passes (warnings are OK), and commits changes.
 
 **Cloud agent prompt:** *"Run the tournament update from FIFA, review the audit log and WhatsApp draft, commit, and push if validation passes."*
 
@@ -87,7 +87,7 @@ Other options in the same script:
 
 ```
 1. python3 scripts/run_tournament_update.py --skip-build
-2. Review output/update-audit/audit.log (and validation report if warnings)
+2. Skim output/update-audit/audit.log if warnings appear (optional — publish is automatic)
 3. Commit + push to main (GitHub Pages redeploys)
 ```
 
@@ -261,12 +261,13 @@ This writes `output/update-validation-YYYY-MM-DD.md` and prints the same report.
 | Unknown team name | Yes — error |
 | Goals conceded decreased vs last publish | Yes — error |
 | Missing `last_updated` | Warning |
+| Goals conceded increased | Warning (expected after matches) |
 | Knockout score only half-filled | Warning |
 | Knockout tied score (no winner) | Warning |
 | Phase still `pre_knockout` but R32 filled | Warning |
 | Name mapped from FIFA label to draw name | Warning |
 
-**Fix all errors.** Review warnings — they are often intentional (e.g. first publish).
+**Fix all errors.** Warnings are informational — the scheduled sync and `run_tournament_update.py` publish automatically when validation passes. Review the audit log if something looks off and fix retrospectively.
 
 ---
 

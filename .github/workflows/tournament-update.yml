@@ -29,7 +29,7 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
             python scripts/run_tournament_update.py --dry-run
           else
-            python scripts/run_tournament_update.py --skip-build --skip-publish
+            python scripts/run_tournament_update.py --skip-build
           fi
 
       - name: Commit tournament data if changed
@@ -37,9 +37,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ output/update-audit/ output/whatsapp/
+          git add data/ app/data/ output/update-audit/ output/whatsapp/
           if git diff --staged --quiet; then
-            echo "No data changes to commit."
+            echo "No changes to commit."
           else
             git commit -m "chore: auto-sync tournament results from FIFA"
             git push
