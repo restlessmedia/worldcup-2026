@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Tournament update pushes with GITHUB_TOKEN, which does not fire push workflows.
+  workflow_run:
+    workflows: ["Tournament update"]
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
@@ -16,12 +21,20 @@ concurrency:
 
 jobs:
   deploy:
+    if: >
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
       - uses: actions/setup-python@v5
         with:

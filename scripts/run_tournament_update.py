@@ -198,9 +198,14 @@ def main() -> int:
         if data_changed:
             print("\nTournament data updated from FIFA.")
         else:
-            print("\nTournament data unchanged (idempotent — no write needed).")
+            print("\nTournament data unchanged (idempotent — results/knockout not rewritten).")
         if published:
-            print("Site data published.")
+            print("Site data published to app/data/.")
+            if not data_changed:
+                print(
+                    "Note: live site updates when Deploy GitHub Pages runs "
+                    "(auto after tournament sync commits)."
+                )
         elif args.dry_run:
             print("Dry run — nothing published.")
         elif args.skip_publish:

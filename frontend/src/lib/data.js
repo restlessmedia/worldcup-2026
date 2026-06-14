@@ -13,13 +13,17 @@ function readCache() {
   }
 }
 
+function fileVersion(name, payload) {
+  if (name === "meta.json") return payload.published_at;
+  return payload.generated_at || payload.last_updated || null;
+}
+
 function writeCache(name, payload, version) {
   try {
     const cache = readCache();
-    if (cache.version && cache.version !== version) {
-      cache.files = {};
-    }
-    cache.version = version;
+    cache.versions = cache.versions || {};
+    cache.files = cache.files || {};
+    if (version) cache.versions[name] = version;
     cache.files[name] = payload;
     sessionStorage.setItem(CACHE_STORAGE_KEY, JSON.stringify(cache));
   } catch {
@@ -32,14 +36,15 @@ async function loadJsonCached(name) {
     loaders.set(
       name,
       (async () => {
-        const response = await fetch(`${DATA_BASE}/${name}`);
+        const response = await fetch(`${DATA_BASE}/${name}`, { cache: "no-store" });
         if (!response.ok) throw new Error(`Failed to load ${name}`);
         const payload = await response.json();
-        const version =
-          name === "meta.json"
-            ? payload.published_at
-            : payload.generated_at || payload.last_updated || readCache().version;
-        if (version) writeCache(name, payload, version);
+        const version = fileVersion(name, payload);
+        const cache = readCache();
+        if (version && cache.versions?.[name] === version && cache.files?.[name]) {
+          return cache.files[name];
+        }
+        writeCache(name, payload, version);
         return payload;
       })(),
     );
@@ -48,11 +53,6 @@ async function loadJsonCached(name) {
 }
 
 export async function loadJson(name) {
-  const cache = readCache();
-  if (cache.files[name]) {
-    loadJsonCached(name).catch(() => {});
-    return cache.files[name];
-  }
   return loadJsonCached(name);
 }
 
