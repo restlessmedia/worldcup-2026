@@ -104,6 +104,16 @@ function FixtureRow({ fixture, onSelectTeam, highlightCode, highlightCodes, high
   );
 }
 
+function dayHeading(dayKey) {
+  const [year, month, day] = dayKey.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
 export function FixtureDayPanel({
   dayKey,
   fixtures,
@@ -111,6 +121,10 @@ export function FixtureDayPanel({
   highlightCodes,
   highlightLabel,
   displayMode = "teams",
+  prevDayKey,
+  nextDayKey,
+  onPrevDay,
+  onNextDay,
   onSelectTeam,
 }) {
   if (!dayKey) {
@@ -121,13 +135,7 @@ export function FixtureDayPanel({
     return <p className="empty-note">No matches on this day.</p>;
   }
 
-  const [year, month, day] = dayKey.split("-").map(Number);
-  const heading = new Date(year, month - 1, day).toLocaleDateString("en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const heading = dayHeading(dayKey);
   const highlightCodeSet = new Set(
     highlightCodes?.length ? highlightCodes : teamFilter ? [teamFilter] : [],
   );
@@ -135,10 +143,30 @@ export function FixtureDayPanel({
 
   return (
     <section className="fixture-day-panel" aria-labelledby="fixture-day-title">
-      <h3 id="fixture-day-title" className="fixture-day-panel__title">
-        {heading}
-        <span className="fixture-day-panel__tz">UK time</span>
-      </h3>
+      <div className="fixture-day-panel__head">
+        <button
+          type="button"
+          className="fixture-day-panel__nav-btn"
+          onClick={onPrevDay}
+          disabled={!prevDayKey}
+          aria-label={prevDayKey ? `Previous match day, ${dayHeading(prevDayKey)}` : "Previous match day"}
+        >
+          ‹
+        </button>
+        <h3 id="fixture-day-title" className="fixture-day-panel__title">
+          {heading}
+          <span className="fixture-day-panel__tz">UK time</span>
+        </h3>
+        <button
+          type="button"
+          className="fixture-day-panel__nav-btn"
+          onClick={onNextDay}
+          disabled={!nextDayKey}
+          aria-label={nextDayKey ? `Next match day, ${dayHeading(nextDayKey)}` : "Next match day"}
+        >
+          ›
+        </button>
+      </div>
       <div className="fixture-day-panel__list">
         {fixtures.map((fixture) => (
           <FixtureRow

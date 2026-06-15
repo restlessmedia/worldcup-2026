@@ -1,1 +1,0 @@
-import{A as c,G as a}from"./Layout-D1ejEEZW.js";function f(s=c){const[r,u]=a.useState(null),[n,o]=a.useState(null);return a.useEffect(()=>{let t=!1;return s().then(e=>{t||u(e)}).catch(e=>{t||o(e.message)}),()=>{t=!0}},[s]),{data:r,error:n,loading:!r&&!n}}export{f as u};

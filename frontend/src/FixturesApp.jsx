@@ -13,9 +13,11 @@ import {
   fixtureInvolvesTeam,
   getHouseFilterFromUrl,
   getTeamFilterFromUrl,
+  adjacentMatchDayKey,
   groupFixturesByDay,
   initialSelectedDay,
   initialViewMonth,
+  parseDateKey,
   setFixtureFiltersInUrl,
   teamsFromFixtures,
 } from "./lib/fixtures";
@@ -168,6 +170,20 @@ export function FixturesApp() {
     });
   }
 
+  const dayNavigationByDay = teamFilter || selectedHouse ? filteredByDay : fixturesByDay;
+  const prevDayKey = adjacentMatchDayKey(dayNavigationByDay, selectedDay, -1);
+  const nextDayKey = adjacentMatchDayKey(dayNavigationByDay, selectedDay, 1);
+
+  function selectDay(dayKey) {
+    if (!dayKey) return;
+    setSelectedDay(dayKey);
+    const parts = parseDateKey(dayKey);
+    setViewMonth((current) => {
+      if (current.year === parts.year && current.month === parts.month) return current;
+      return { year: parts.year, month: parts.month, day: parts.day };
+    });
+  }
+
   const dayFixtures = selectedDay
     ? (selectedHouse ? filteredByDay : fixturesByDay).get(selectedDay) || []
     : [];
@@ -232,7 +248,7 @@ export function FixturesApp() {
           teamFilter={teamFilter}
           highlightCodes={highlightCodes}
           displayMode={fixtureDisplayMode}
-          onSelectDay={setSelectedDay}
+          onSelectDay={selectDay}
           onPrevMonth={() => shiftMonth(-1)}
           onNextMonth={() => shiftMonth(1)}
         />
@@ -244,6 +260,10 @@ export function FixturesApp() {
           highlightCodes={highlightCodes}
           highlightLabel={highlightLabel}
           displayMode={fixtureDisplayMode}
+          prevDayKey={prevDayKey}
+          nextDayKey={nextDayKey}
+          onPrevDay={() => selectDay(prevDayKey)}
+          onNextDay={() => selectDay(nextDayKey)}
           onSelectTeam={setSelectedTeam}
         />
       </Card>

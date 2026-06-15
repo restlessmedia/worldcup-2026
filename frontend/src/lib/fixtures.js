@@ -262,6 +262,26 @@ export function initialViewMonth(fixtures, teamFilter, fixtureFilter) {
   return clampViewMonth(todayParts());
 }
 
+export function matchDayKeys(fixturesByDay) {
+  return [...fixturesByDay.keys()].sort();
+}
+
+export function adjacentMatchDayKey(fixturesByDay, currentKey, direction) {
+  if (!currentKey || !direction) return null;
+  const keys = matchDayKeys(fixturesByDay);
+  if (!keys.length) return null;
+
+  const index = keys.indexOf(currentKey);
+  if (index === -1) {
+    const nextIndex = direction < 0 ? keys.findLastIndex((key) => key < currentKey) : keys.findIndex((key) => key > currentKey);
+    return nextIndex === -1 ? null : keys[nextIndex];
+  }
+
+  const nextIndex = index + direction;
+  if (nextIndex < 0 || nextIndex >= keys.length) return null;
+  return keys[nextIndex];
+}
+
 export function initialSelectedDay(fixtures, teamFilter, viewMonth, fixtureFilter) {
   const byDay = groupFixturesByDay(fixtures);
   const todayKey = todayDateKey();

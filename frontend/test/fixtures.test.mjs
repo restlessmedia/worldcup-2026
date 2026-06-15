@@ -140,6 +140,29 @@ test("initialSelectedDay prefers the next day with matches when today is empty",
   assert.equal(fixtures.initialSelectedDay(allFixtures, null, viewMonth), "2026-06-11");
 });
 
+test("adjacentMatchDayKey returns neighbouring days with matches", () => {
+  const byDay = new Map([
+    ["2026-06-11", [{ id: "a" }]],
+    ["2026-06-14", [{ id: "b" }]],
+    ["2026-06-18", [{ id: "c" }]],
+  ]);
+
+  assert.equal(fixtures.adjacentMatchDayKey(byDay, "2026-06-14", -1), "2026-06-11");
+  assert.equal(fixtures.adjacentMatchDayKey(byDay, "2026-06-14", 1), "2026-06-18");
+  assert.equal(fixtures.adjacentMatchDayKey(byDay, "2026-06-11", -1), null);
+  assert.equal(fixtures.adjacentMatchDayKey(byDay, "2026-06-18", 1), null);
+});
+
+test("adjacentMatchDayKey finds the nearest day when the current day has no matches", () => {
+  const byDay = new Map([
+    ["2026-06-11", [{ id: "a" }]],
+    ["2026-06-18", [{ id: "c" }]],
+  ]);
+
+  assert.equal(fixtures.adjacentMatchDayKey(byDay, "2026-06-14", -1), "2026-06-11");
+  assert.equal(fixtures.adjacentMatchDayKey(byDay, "2026-06-14", 1), "2026-06-18");
+});
+
 test("initialSelectedDay can select the next fixture matching a house filter", () => {
   const filter = (fixture) => fixtures.fixtureInvolvesAnyTeam(fixture, ["BEL", "URU"]);
   const allFixtures = [

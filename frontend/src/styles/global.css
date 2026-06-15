@@ -1371,14 +1371,48 @@ a:hover {
   border-top: 1px solid var(--line);
 }
 
+.fixture-day-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.fixture-day-panel__nav-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fixture-day-panel__nav-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.fixture-day-panel__nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .fixture-day-panel__title {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: center;
   gap: 0.35rem 0.75rem;
-  margin: 0 0 0.85rem;
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .fixture-day-panel__tz {
