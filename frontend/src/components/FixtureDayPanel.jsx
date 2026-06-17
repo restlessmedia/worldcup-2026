@@ -58,15 +58,15 @@ function FixtureSide({ team, onSelectTeam, highlighted, highlightLabel, displayM
   );
 }
 
-function FixtureRow({ fixture, onSelectTeam, highlightCode, highlightCodes, highlightLabel, displayMode }) {
+function FixtureRow({ fixture, onSelectTeam, highlightCodes, highlightLabel, displayMode }) {
   const kickoff = formatKickoffUk(fixture.kickoff_utc);
   const score = scoreLine(fixture);
   const highlightHome = highlightCodes?.size
     ? highlightCodes.has(fixture.home?.fifa_code)
-    : highlightCode && fixture.home?.fifa_code === highlightCode;
+    : false;
   const highlightAway = highlightCodes?.size
     ? highlightCodes.has(fixture.away?.fifa_code)
-    : highlightCode && fixture.away?.fifa_code === highlightCode;
+    : false;
 
   return (
     <article className="fixture-row">
@@ -117,7 +117,6 @@ function dayHeading(dayKey) {
 export function FixtureDayPanel({
   dayKey,
   fixtures,
-  teamFilter,
   highlightCodes,
   highlightLabel,
   displayMode = "teams",
@@ -136,9 +135,7 @@ export function FixtureDayPanel({
   }
 
   const heading = dayHeading(dayKey);
-  const highlightCodeSet = new Set(
-    highlightCodes?.length ? highlightCodes : teamFilter ? [teamFilter] : [],
-  );
+  const highlightCodeSet = new Set(highlightCodes || []);
   const currentDisplayMode = displayMode === "houses" ? "houses" : "teams";
 
   return (
@@ -173,7 +170,6 @@ export function FixtureDayPanel({
             key={fixture.id}
             fixture={fixture}
             onSelectTeam={onSelectTeam}
-            highlightCode={teamFilter}
             highlightCodes={highlightCodeSet}
             highlightLabel={highlightLabel}
             displayMode={currentDisplayMode}

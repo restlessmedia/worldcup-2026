@@ -95,7 +95,6 @@ export function FixtureCalendar({
   grid,
   fixturesByDay,
   selectedDay,
-  teamFilter,
   highlightCodes,
   displayMode = "teams",
   onSelectDay,
@@ -164,9 +163,7 @@ export function FixtureCalendar({
             const dayFixtures = fixturesByDay.get(cell.key) || [];
             const previewFixtures = sortFixturesByRank(dayFixtures);
             const hasMatches = dayFixtures.length > 0;
-            const highlightCodeSet = new Set(
-              highlightCodes?.length ? highlightCodes : teamFilter ? [teamFilter] : [],
-            );
+            const highlightCodeSet = new Set(highlightCodes || []);
             const highlightedMatches = highlightCodeSet.size
               ? dayFixtures.filter((fixture) => fixtureInvolvesAnyTeam(fixture, highlightCodeSet))
               : [];
