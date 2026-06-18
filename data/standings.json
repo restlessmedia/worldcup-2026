@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T09:39:23.468234+00:00",
+  "generated_at": "2026-06-18T18:00:21.474353+00:00",
   "tournament_status": "in_progress",
   "results_updated": "2026-06-18",
   "teams_in_play": 48,
@@ -114,7 +114,7 @@
           "group": "A",
           "fifa_rank": 41,
           "status": "alive",
-          "goals_conceded": 2,
+          "goals_conceded": 3,
           "wooden_spoon_likelihood": 2,
           "fair_play_points": 0
         }
@@ -638,7 +638,7 @@
           "group": "A",
           "fifa_rank": 60,
           "status": "alive",
-          "goals_conceded": 2,
+          "goals_conceded": 3,
           "wooden_spoon_likelihood": 3,
           "fair_play_points": 0
         }
@@ -749,6 +749,16 @@
       "status": "alive"
     },
     {
+      "house_id": "3",
+      "display_name": "Czechia",
+      "fifa_code": "CZE",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 2,
+      "fifa_rank": 41,
+      "group": "A",
+      "status": "alive"
+    },
+    {
       "house_id": "8",
       "display_name": "Jordan",
       "fifa_code": "JOR",
@@ -769,6 +779,16 @@
       "status": "alive"
     },
     {
+      "house_id": "22",
+      "display_name": "South Africa",
+      "fifa_code": "RSA",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 3,
+      "fifa_rank": 60,
+      "group": "A",
+      "status": "alive"
+    },
+    {
       "house_id": "6",
       "display_name": "Uzbekistan",
       "fifa_code": "UZB",
@@ -776,16 +796,6 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 50,
       "group": "K",
-      "status": "alive"
-    },
-    {
-      "house_id": "3",
-      "display_name": "Czechia",
-      "fifa_code": "CZE",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 2,
-      "fifa_rank": 41,
-      "group": "A",
       "status": "alive"
     },
     {
@@ -836,16 +846,6 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 85,
       "group": "G",
-      "status": "alive"
-    },
-    {
-      "house_id": "22",
-      "display_name": "South Africa",
-      "fifa_code": "RSA",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 3,
-      "fifa_rank": 60,
-      "group": "A",
       "status": "alive"
     },
     {
@@ -1238,6 +1238,17 @@
     },
     {
       "position": 6,
+      "house_id": "3",
+      "display_name": "Czechia",
+      "fifa_code": "CZE",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 2,
+      "fifa_rank": 41,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "position": 6,
       "house_id": "8",
       "display_name": "Jordan",
       "fifa_code": "JOR",
@@ -1260,6 +1271,17 @@
     },
     {
       "position": 6,
+      "house_id": "22",
+      "display_name": "South Africa",
+      "fifa_code": "RSA",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 3,
+      "fifa_rank": 60,
+      "group": "A",
+      "status": "alive"
+    },
+    {
+      "position": 6,
       "house_id": "6",
       "display_name": "Uzbekistan",
       "fifa_code": "UZB",
@@ -1270,18 +1292,7 @@
       "status": "alive"
     },
     {
-      "position": 10,
-      "house_id": "3",
-      "display_name": "Czechia",
-      "fifa_code": "CZE",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 2,
-      "fifa_rank": 41,
-      "group": "A",
-      "status": "alive"
-    },
-    {
-      "position": 10,
+      "position": 12,
       "house_id": "4",
       "display_name": "England",
       "fifa_code": "ENG",
@@ -1292,7 +1303,7 @@
       "status": "alive"
     },
     {
-      "position": 10,
+      "position": 12,
       "house_id": "21",
       "display_name": "Iran",
       "fifa_code": "IRN",
@@ -1303,7 +1314,7 @@
       "status": "alive"
     },
     {
-      "position": 10,
+      "position": 12,
       "house_id": "2",
       "display_name": "Japan",
       "fifa_code": "JPN",
@@ -1314,7 +1325,7 @@
       "status": "alive"
     },
     {
-      "position": 10,
+      "position": 12,
       "house_id": "4",
       "display_name": "Netherlands",
       "fifa_code": "NED",
@@ -1325,7 +1336,7 @@
       "status": "alive"
     },
     {
-      "position": 10,
+      "position": 12,
       "house_id": "1",
       "display_name": "New Zealand",
       "fifa_code": "NZL",
@@ -1336,18 +1347,7 @@
       "status": "alive"
     },
     {
-      "position": 10,
-      "house_id": "22",
-      "display_name": "South Africa",
-      "fifa_code": "RSA",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 3,
-      "fifa_rank": 60,
-      "group": "A",
-      "status": "alive"
-    },
-    {
-      "position": 10,
+      "position": 12,
       "house_id": "5",
       "display_name": "Türkiye",
       "fifa_code": "TUR",
