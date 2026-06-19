@@ -1,6 +1,6 @@
 {
   "phase": "pre_knockout",
-  "last_updated": null,
+  "last_updated": "2026-06-19",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
@@ -68,7 +68,15 @@
         },
         {
           "id": "r32-07",
-          "home": null,
+          "home": {
+            "draw_name": "Mexico",
+            "display_name": "Mexico",
+            "fifa_code": "MEX",
+            "house_id": "4",
+            "group": "A",
+            "fifa_rank": 15,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -157,8 +165,10 @@
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "4"
+      ],
+      "teams_count": 1
     },
     {
       "id": "r16",
