@@ -10,19 +10,21 @@ import {
   buildMonthGrid,
   buildHouseFixtureList,
   fixtureInvolvesAnyTeam,
+  fixtureInvolvesTeam,
   getHouseFilterFromUrl,
+  getTeamFilterFromUrl,
   adjacentMatchDayKey,
   groupFixturesByDay,
   initialSelectedDay,
   initialViewMonth,
   parseDateKey,
-  setHouseFilterInUrl,
+  setFixtureFiltersInUrl,
+  teamsFromFixtures,
 } from "./lib/fixtures";
 
 const FIXTURE_DISPLAY_MODES = [
   { value: "teams", label: "Teams" },
   { value: "houses", label: "House" },
-  { value: "counts", label: "Matches" },
 ];
 
 function FixtureDisplayControl({ value, onChange }) {
@@ -50,7 +52,10 @@ export function FixturesApp() {
   const [meta, setMeta] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [houseFilter, setHouseFilter] = useState(() => getHouseFilterFromUrl());
+  const [teamFilter, setTeamFilter] = useState(() => getTeamFilterFromUrl());
+  const [houseFilter, setHouseFilter] = useState(() =>
+    getTeamFilterFromUrl() ? null : getHouseFilterFromUrl(),
+  );
   const [fixtureDisplayMode, setFixtureDisplayMode] = useState("teams");
   const [selectedTeam, setSelectedTeam] = useState(null);
 
@@ -62,16 +67,19 @@ export function FixturesApp() {
     [selectedHouse],
   );
   const activeFixtureFilter = useMemo(() => {
-    if (!selectedHouseTeamCodes.length) return null;
-    const codeSet = new Set(selectedHouseTeamCodes);
-    return (fixture) => fixtureInvolvesAnyTeam(fixture, codeSet);
-  }, [selectedHouseTeamCodes]);
+    if (teamFilter) return (fixture) => fixtureInvolvesTeam(fixture, teamFilter);
+    if (selectedHouseTeamCodes.length) {
+      const codeSet = new Set(selectedHouseTeamCodes);
+      return (fixture) => fixtureInvolvesAnyTeam(fixture, codeSet);
+    }
+    return null;
+  }, [teamFilter, selectedHouseTeamCodes]);
   const fixturesByDay = useMemo(() => groupFixturesByDay(fixtures), [fixtures]);
 
-  const [viewMonth, setViewMonth] = useState(() => initialViewMonth(fixtures));
+  const [viewMonth, setViewMonth] = useState(() => initialViewMonth(fixtures, teamFilter));
   const [selectedDay, setSelectedDay] = useState(() => {
-    const month = initialViewMonth([]);
-    return initialSelectedDay([], month);
+    const month = initialViewMonth([], teamFilter);
+    return initialSelectedDay([], teamFilter, month);
   });
 
   useEffect(() => {
@@ -100,23 +108,26 @@ export function FixturesApp() {
 
   useEffect(() => {
     if (!fixtures.length) return;
-    const month = initialViewMonth(fixtures, activeFixtureFilter);
+    const month = initialViewMonth(fixtures, teamFilter, activeFixtureFilter);
     setViewMonth(month);
-    setSelectedDay(initialSelectedDay(fixtures, month, activeFixtureFilter));
-  }, [fixtures, activeFixtureFilter]);
+    setSelectedDay(initialSelectedDay(fixtures, teamFilter, month, activeFixtureFilter));
+  }, [fixtures, teamFilter, activeFixtureFilter]);
 
   useEffect(() => {
     function onPopState() {
-      setHouseFilter(getHouseFilterFromUrl());
+      const nextTeamFilter = getTeamFilterFromUrl();
+      setTeamFilter(nextTeamFilter);
+      setHouseFilter(nextTeamFilter ? null : getHouseFilterFromUrl());
     }
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
   const filteredFixtures = useMemo(() => {
+    if (teamFilter) return fixtures.filter((fixture) => fixtureInvolvesTeam(fixture, teamFilter));
     if (selectedHouse) return buildHouseFixtureList(fixtures, selectedHouse.teams);
     return fixtures;
-  }, [fixtures, selectedHouse]);
+  }, [fixtures, teamFilter, selectedHouse]);
 
   const filteredByDay = useMemo(() => groupFixturesByDay(filteredFixtures), [filteredFixtures]);
 
@@ -125,12 +136,32 @@ export function FixturesApp() {
     [viewMonth.year, viewMonth.month],
   );
 
-  const highlightCodes = selectedHouseTeamCodes;
-  const highlightLabel = selectedHouse ? "house team" : null;
+  const teams = useMemo(() => teamsFromFixtures(fixtures), [fixtures]);
+  const highlightCodes = teamFilter
+    ? [teamFilter]
+    : selectedHouseTeamCodes.length
+      ? selectedHouseTeamCodes
+      : [];
+  const highlightLabel = selectedHouse ? "house team" : teamFilter ? "selected team" : null;
+
+  function applyTeamFilter(fifaCode) {
+    setTeamFilter(fifaCode);
+    setHouseFilter(null);
+    setFixtureFiltersInUrl({ team: fifaCode, house: null });
+  }
 
   function applyHouseFilter(houseId) {
     setHouseFilter(houseId);
-    setHouseFilterInUrl(houseId);
+    setTeamFilter(null);
+    setFixtureFiltersInUrl({ team: null, house: houseId });
+  }
+
+  function handleSelectTeam(team) {
+    if (team?.fifa_code) {
+      applyTeamFilter(team.fifa_code);
+      return;
+    }
+    setSelectedTeam(team);
   }
 
   function shiftMonth(delta) {
@@ -141,12 +172,12 @@ export function FixturesApp() {
         month: ((nextMonth % 12) + 12) % 12,
         day: 1,
       };
-      setSelectedDay(initialSelectedDay(fixtures, next, activeFixtureFilter));
+      setSelectedDay(initialSelectedDay(fixtures, teamFilter, next, activeFixtureFilter));
       return next;
     });
   }
 
-  const dayNavigationByDay = selectedHouse ? filteredByDay : fixturesByDay;
+  const dayNavigationByDay = teamFilter || selectedHouse ? filteredByDay : fixturesByDay;
   const prevDayKey = adjacentMatchDayKey(dayNavigationByDay, selectedDay, -1);
   const nextDayKey = adjacentMatchDayKey(dayNavigationByDay, selectedDay, 1);
 
@@ -161,7 +192,7 @@ export function FixturesApp() {
   }
 
   const dayFixtures = selectedDay
-    ? (selectedHouse ? filteredByDay : fixturesByDay).get(selectedDay) || []
+    ? (teamFilter || selectedHouse ? filteredByDay : fixturesByDay).get(selectedDay) || []
     : [];
 
   if (loading) {
@@ -201,6 +232,9 @@ export function FixturesApp() {
           <h2>Fixture calendar</h2>
           <div className="fixture-card__controls">
             <FixtureToolbar
+              teams={teams}
+              teamFilter={teamFilter}
+              onTeamFilterChange={applyTeamFilter}
               houses={houses}
               houseFilter={houseFilter}
               onHouseFilterChange={applyHouseFilter}
@@ -218,6 +252,7 @@ export function FixturesApp() {
           grid={grid}
           fixturesByDay={filteredByDay}
           selectedDay={selectedDay}
+          teamFilter={teamFilter}
           highlightCodes={highlightCodes}
           displayMode={fixtureDisplayMode}
           onSelectDay={selectDay}
@@ -228,6 +263,7 @@ export function FixturesApp() {
         <FixtureDayPanel
           dayKey={selectedDay}
           fixtures={dayFixtures}
+          teamFilter={teamFilter}
           highlightCodes={highlightCodes}
           highlightLabel={highlightLabel}
           displayMode={fixtureDisplayMode}
@@ -235,7 +271,7 @@ export function FixturesApp() {
           nextDayKey={nextDayKey}
           onPrevDay={() => selectDay(prevDayKey)}
           onNextDay={() => selectDay(nextDayKey)}
-          onSelectTeam={setSelectedTeam}
+          onSelectTeam={handleSelectTeam}
         />
       </Card>
 

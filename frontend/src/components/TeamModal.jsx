@@ -116,15 +116,7 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
 
         {enrichedTeam.fifa_code ? (
           <p className="modal-actions">
-            <a
-              href={
-                enrichedTeam.house_id
-                  ? `fixtures.html?house=${encodeURIComponent(enrichedTeam.house_id)}`
-                  : "fixtures.html"
-              }
-            >
-              View fixtures
-            </a>
+            <a href={`fixtures.html?team=${enrichedTeam.fifa_code}`}>View fixtures</a>
           </p>
         ) : null}
       </div>

@@ -63,6 +63,11 @@ export function groupFixturesByDay(fixtures) {
   return byDay;
 }
 
+export function fixtureInvolvesTeam(fixture, fifaCode) {
+  if (!fifaCode) return true;
+  return fixture.home?.fifa_code === fifaCode || fixture.away?.fifa_code === fifaCode;
+}
+
 export function fixtureInvolvesAnyTeam(fixture, fifaCodes) {
   const codes = fifaCodes instanceof Set ? fifaCodes : new Set((fifaCodes || []).filter(Boolean));
   if (!codes.size) return true;
@@ -127,6 +132,16 @@ export function sortFixturesByRank(fixtures) {
   });
 }
 
+export function teamsFromFixtures(fixtures) {
+  const byCode = new Map();
+  for (const fixture of fixtures) {
+    for (const side of [fixture.home, fixture.away]) {
+      if (side?.fifa_code) byCode.set(side.fifa_code, side);
+    }
+  }
+  return [...byCode.values()].sort((a, b) => a.display_name.localeCompare(b.display_name));
+}
+
 export function housesFromFixtures(fixtures) {
   const ids = new Set();
   for (const fixture of fixtures) {
@@ -142,16 +157,29 @@ export function housesFromFixtures(fixtures) {
   });
 }
 
+export function getTeamFilterFromUrl() {
+  return new URLSearchParams(window.location.search).get("team");
+}
+
 export function getHouseFilterFromUrl() {
   return new URLSearchParams(window.location.search).get("house");
 }
 
-export function setHouseFilterInUrl(houseId) {
+export function setTeamFilterInUrl(fifaCode) {
+  setFixtureFiltersInUrl({ team: fifaCode, house: null });
+}
+
+export function setFixtureFiltersInUrl({ team, house }) {
   const url = new URL(window.location.href);
-  url.searchParams.delete("team");
-  if (houseId) url.searchParams.set("house", houseId);
+  if (team) url.searchParams.set("team", team);
+  else url.searchParams.delete("team");
+  if (house) url.searchParams.set("house", house);
   else url.searchParams.delete("house");
   window.history.replaceState({}, "", url);
+}
+
+export function setHouseFilterInUrl(houseId) {
+  setFixtureFiltersInUrl({ team: null, house: houseId });
 }
 
 export function parseDateKey(key) {
@@ -220,14 +248,18 @@ export function buildMonthGrid(year, monthIndex) {
   return cells;
 }
 
-export function initialViewMonth(fixtures, fixtureFilter) {
+export function initialViewMonth(fixtures, teamFilter, fixtureFilter) {
   const byDay = groupFixturesByDay(fixtures);
   const todayKey = todayDateKey();
   const keys = [...byDay.keys()].sort();
 
-  if (fixtureFilter) {
-    const filteredKeys = keys.filter((key) => byDay.get(key).some(fixtureFilter));
-    const upcoming = filteredKeys.find((key) => key >= todayKey);
+  if (teamFilter || fixtureFilter) {
+    const teamKeys = keys.filter((key) =>
+      byDay.get(key).some((fixture) =>
+        fixtureFilter ? fixtureFilter(fixture) : fixtureInvolvesTeam(fixture, teamFilter),
+      ),
+    );
+    const upcoming = teamKeys.find((key) => key >= todayKey);
     if (upcoming) return parseDateKey(upcoming);
   }
 
@@ -254,7 +286,7 @@ export function adjacentMatchDayKey(fixturesByDay, currentKey, direction) {
   return keys[nextIndex];
 }
 
-export function initialSelectedDay(fixtures, viewMonth, fixtureFilter) {
+export function initialSelectedDay(fixtures, teamFilter, viewMonth, fixtureFilter) {
   const byDay = groupFixturesByDay(fixtures);
   const todayKey = todayDateKey();
   const monthPrefix = `${viewMonth.year}-${String(viewMonth.month + 1).padStart(2, "0")}`;
@@ -263,11 +295,15 @@ export function initialSelectedDay(fixtures, viewMonth, fixtureFilter) {
     .filter((key) => key.startsWith(monthPrefix))
     .sort();
 
-  if (fixtureFilter) {
-    const filteredKeys = monthKeys.filter((key) => byDay.get(key).some(fixtureFilter));
-    const upcoming = filteredKeys.find((key) => key >= todayKey);
+  if (teamFilter || fixtureFilter) {
+    const teamKeys = monthKeys.filter((key) =>
+      byDay.get(key).some((fixture) =>
+        fixtureFilter ? fixtureFilter(fixture) : fixtureInvolvesTeam(fixture, teamFilter),
+      ),
+    );
+    const upcoming = teamKeys.find((key) => key >= todayKey);
     if (upcoming) return upcoming;
-    if (filteredKeys[0]) return filteredKeys[0];
+    if (teamKeys[0]) return teamKeys[0];
   }
 
   if (todayKey?.startsWith(monthPrefix)) {

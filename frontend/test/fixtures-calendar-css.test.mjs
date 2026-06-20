@@ -57,7 +57,7 @@ test("fixture calendar active states are stronger than inactive match states", a
 
   assert.match(
     css,
-    /\.fixture-calendar__day--flags:not\(\.fixture-calendar__day--selected\),\s*\.fixture-calendar__day--houses:not\(\.fixture-calendar__day--selected\),\s*\.fixture-calendar__day--has-matches:not\(\.fixture-calendar__day--selected\)\s*\{[^}]*border-color:\s*var\(--line-strong\);/s,
+    /\.fixture-calendar__day--flags:not\(\.fixture-calendar__day--selected\),\s*\.fixture-calendar__day--houses:not\(\.fixture-calendar__day--selected\)\s*\{[^}]*border-color:\s*var\(--line-strong\);/s,
     "inactive match days should keep a neutral stronger-than-empty border",
   );
   assert.match(

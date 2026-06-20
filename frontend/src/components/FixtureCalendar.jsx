@@ -95,6 +95,7 @@ export function FixtureCalendar({
   grid,
   fixturesByDay,
   selectedDay,
+  teamFilter,
   highlightCodes,
   displayMode = "teams",
   onSelectDay,
@@ -104,8 +105,7 @@ export function FixtureCalendar({
   const atStart = year === TOURNAMENT_START.year && month === TOURNAMENT_START.month;
   const atEnd = year === TOURNAMENT_END.year && month === TOURNAMENT_END.month;
   const todayKey = todayDateKey();
-  const currentDisplayMode = displayMode === "houses" || displayMode === "counts" ? displayMode : "teams";
-  const showsMatchups = currentDisplayMode !== "counts";
+  const currentDisplayMode = displayMode === "houses" ? "houses" : "teams";
   const scrollRef = useRef(null);
   const selectedDayRef = useRef(null);
 
@@ -163,7 +163,9 @@ export function FixtureCalendar({
             const dayFixtures = fixturesByDay.get(cell.key) || [];
             const previewFixtures = sortFixturesByRank(dayFixtures);
             const hasMatches = dayFixtures.length > 0;
-            const highlightCodeSet = new Set(highlightCodes || []);
+            const highlightCodeSet = new Set(
+              highlightCodes?.length ? highlightCodes : teamFilter ? [teamFilter] : [],
+            );
             const highlightedMatches = highlightCodeSet.size
               ? dayFixtures.filter((fixture) => fixtureInvolvesAnyTeam(fixture, highlightCodeSet))
               : [];
@@ -178,7 +180,6 @@ export function FixtureCalendar({
             if (highlightTeam) className += " fixture-calendar__day--team";
             if (currentDisplayMode === "teams" && hasMatches) className += " fixture-calendar__day--flags";
             if (currentDisplayMode === "houses" && hasMatches) className += " fixture-calendar__day--houses";
-            if (currentDisplayMode === "counts" && hasMatches) className += " fixture-calendar__day--has-matches";
 
             const matchupSummary = hasMatches
               ? previewFixtures
@@ -202,9 +203,7 @@ export function FixtureCalendar({
                 aria-pressed={isSelected}
                 aria-label={
                   hasMatches
-                    ? showsMatchups
-                      ? `${cell.day} ${formatMonthYear(year, month)}, ${matchupSummary}`
-                      : `${cell.day} ${formatMonthYear(year, month)}, ${dayFixtures.length} match${dayFixtures.length === 1 ? "" : "es"}`
+                    ? `${cell.day} ${formatMonthYear(year, month)}, ${matchupSummary}`
                     : `${cell.day} ${formatMonthYear(year, month)}, no matches`
                 }
               >
@@ -235,23 +234,6 @@ export function FixtureCalendar({
                         +{dayFixtures.length - MAX_MATCHUPS_IN_CELL} more
                       </span>
                     ) : null}
-                  </span>
-                ) : null}
-                {hasMatches && currentDisplayMode === "counts" ? (
-                  <span className="fixture-calendar__day-matches" aria-hidden="true">
-                    <span className="fixture-calendar__match-count">{dayFixtures.length}</span>
-                    <span className="fixture-calendar__match-dots">
-                      {previewFixtures.slice(0, 4).map((fixture) => (
-                        <span
-                          key={fixture.id}
-                          className={
-                            highlightCodeSet.size > 0 && fixtureInvolvesAnyTeam(fixture, highlightCodeSet)
-                              ? "fixture-calendar__dot fixture-calendar__dot--team"
-                              : "fixture-calendar__dot"
-                          }
-                        />
-                      ))}
-                    </span>
                   </span>
                 ) : null}
               </button>

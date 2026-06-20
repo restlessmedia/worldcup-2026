@@ -137,7 +137,7 @@ test("initialSelectedDay prefers the next day with matches when today is empty",
   ];
   const viewMonth = { year: 2026, month: 5 };
 
-  assert.equal(fixtures.initialSelectedDay(allFixtures, viewMonth), "2026-06-11");
+  assert.equal(fixtures.initialSelectedDay(allFixtures, null, viewMonth), "2026-06-11");
 });
 
 test("adjacentMatchDayKey returns neighbouring days with matches", () => {
@@ -181,7 +181,7 @@ test("initialSelectedDay can select the next fixture matching a house filter", (
   ];
 
   assert.equal(
-    fixtures.initialSelectedDay(allFixtures, { year: 2026, month: 5 }, filter),
+    fixtures.initialSelectedDay(allFixtures, null, { year: 2026, month: 5 }, filter),
     "2026-06-14",
   );
 });
