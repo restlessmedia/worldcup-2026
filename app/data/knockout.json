@@ -1,6 +1,6 @@
 {
   "phase": "pre_knockout",
-  "last_updated": "2026-06-19",
+  "last_updated": "2026-06-20",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
@@ -94,7 +94,15 @@
         },
         {
           "id": "r32-09",
-          "home": null,
+          "home": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -166,9 +174,10 @@
         }
       ],
       "houses": [
-        "4"
+        "4",
+        "5"
       ],
-      "teams_count": 1
+      "teams_count": 2
     },
     {
       "id": "r16",

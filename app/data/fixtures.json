@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-19T22:46:10.407414+00:00",
+  "generated_at": "2026-06-20T06:20:42.184937+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-19T22:46:10.335124+00:00",
+  "fetched_at": "2026-06-20T06:20:42.103213+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -965,9 +965,9 @@
         "fifa_rank": 83,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 3,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021460",
@@ -996,9 +996,9 @@
         "fifa_rank": 40,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 1,
+      "played": true
     },
     {
       "id": "fifa-400021472",
@@ -2529,13 +2529,13 @@
       "kickoff_utc": "2026-07-02T00:00:00Z",
       "venue": "San Francisco Bay Area",
       "home": {
-        "draw_name": "1D",
-        "display_name": "1st in Group D",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "USA (United States)",
+        "display_name": "USA",
+        "fifa_code": "USA",
+        "house_id": "5",
+        "group": "D",
+        "fifa_rank": 16,
+        "status": "alive"
       },
       "away": {
         "draw_name": "3BEFIJ",

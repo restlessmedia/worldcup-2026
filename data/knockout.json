@@ -1,6 +1,6 @@
 {
   "phase": "pre_knockout",
-  "last_updated": "2026-06-19",
+  "last_updated": "2026-06-20",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -73,7 +73,7 @@
         },
         {
           "id": "r32-09",
-          "home": null,
+          "home": "USA (United States)",
           "away": null,
           "home_score": null,
           "away_score": null,
