@@ -10,6 +10,7 @@ import {
   todayDateKey,
 } from "../lib/fixtures";
 import { placeholderLabel } from "../lib/placeholderLabels";
+import { isTeamEliminated } from "../lib/teamStats";
 import { FlagPlaceholder } from "./FlagPlaceholder";
 
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -17,12 +18,14 @@ const CAL_FLAG_SIZE = 26;
 const MAX_MATCHUPS_IN_CELL = 2;
 
 function CalendarSideFlag({ team }) {
+  const eliminated = isTeamEliminated(team);
+
   if (team?.fifa_code) {
     return (
       <img
         src={flagUrl(team.fifa_code)}
         alt=""
-        className="fixture-calendar__flag"
+        className={`fixture-calendar__flag${eliminated ? " fixture-calendar__flag--out" : ""}`}
         width={CAL_FLAG_SIZE}
         height={CAL_FLAG_SIZE}
         loading="lazy"

@@ -5,6 +5,7 @@ import { flagUrl } from "../lib/data";
 import { formatHouseLabel } from "../lib/format";
 import { copy } from "../lib/labels";
 import { enrichTeamWithStandings, isTeamEliminated } from "../lib/teamStats";
+import { EliminatedBadge } from "./EliminatedBadge";
 
 function DetailRow({ label, value, hint }) {
   if (value == null || value === "") return null;
@@ -70,7 +71,10 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
             fetchPriority="high"
           />
           <div>
-            <h3 id="team-modal-title">{enrichedTeam.display_name}</h3>
+            <div className="modal-header__title-row">
+              <h3 id="team-modal-title">{enrichedTeam.display_name}</h3>
+              {eliminated ? <EliminatedBadge /> : null}
+            </div>
             {enrichedTeam.draw_name && enrichedTeam.draw_name !== enrichedTeam.display_name ? (
               <p className="modal-subtitle">Name in the draw: {enrichedTeam.draw_name}</p>
             ) : null}

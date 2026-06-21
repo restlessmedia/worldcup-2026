@@ -2,6 +2,7 @@ import { fixtureSideHouseLabel, formatKickoffUk } from "../lib/fixtures";
 import { teamDisplayName } from "../lib/placeholderLabels";
 import { isTeamEliminated } from "../lib/teamStats";
 import { roundLabels } from "../lib/labels";
+import { EliminatedBadge } from "./EliminatedBadge";
 import { TeamFlag } from "./TeamFlag";
 
 function stageLabel(fixture) {
@@ -32,30 +33,79 @@ function HouseBadge({ team }) {
   );
 }
 
+function FixtureSideName({ team, name, highlighted, highlightLabel, onSelectTeam, away = false }) {
+  const canOpenModal = Boolean(team?.fifa_code);
+  const nameContent = (
+    <>
+      {highlighted ? <span className="fixture-row__highlight-dot" aria-hidden="true" /> : null}
+      <span>{name}</span>
+    </>
+  );
+
+  if (!canOpenModal) {
+    return <span className="fixture-row__name">{nameContent}</span>;
+  }
+
+  return (
+    <button
+      type="button"
+      className={`fixture-row__name fixture-row__name-btn${away ? " fixture-row__name-btn--away" : ""}`}
+      onClick={() => onSelectTeam(team)}
+      aria-label={highlighted && highlightLabel ? `${name} (${highlightLabel})` : name}
+    >
+      {nameContent}
+    </button>
+  );
+}
+
 function FixtureSide({ team, onSelectTeam, highlighted, highlightLabel, displayMode, away = false }) {
   const name = teamDisplayName(team);
   const eliminated = isTeamEliminated(team);
   const showHouse = displayMode === "houses";
-  const className = `fixture-row__side${away ? " fixture-row__side--away" : ""}${
+  const sideClassName = `fixture-row__side${away ? " fixture-row__side--away" : ""}${
     highlighted ? " fixture-row__side--highlight" : ""
-  }${showHouse ? " fixture-row__side--house" : ""}${eliminated ? " fixture-row__side--out" : ""}`;
-  const ariaLabel = !showHouse && highlighted && highlightLabel
-    ? `${name} (${highlightLabel})`
-    : undefined;
+  }${showHouse ? " fixture-row__side--house" : ""}`;
 
-  return (
-    <div className={className} aria-label={ariaLabel}>
+  const teamContent = (
+    <>
       {showHouse ? (
         <HouseBadge team={team} />
       ) : team?.fifa_code ? (
-        <TeamFlag team={team} onSelect={onSelectTeam} size={24} showName={false} />
+        <TeamFlag
+          team={team}
+          onSelect={onSelectTeam}
+          size={24}
+          showName={false}
+          showEliminatedStyle={false}
+        />
       ) : (
         <span className="fixture-row__placeholder" aria-hidden="true" />
       )}
-      <span className="fixture-row__name">
-        {highlighted ? <span className="fixture-row__highlight-dot" aria-hidden="true" /> : null}
-        <span>{name}</span>
-      </span>
+      <FixtureSideName
+        team={team}
+        name={name}
+        highlighted={highlighted}
+        highlightLabel={highlightLabel}
+        onSelectTeam={onSelectTeam}
+        away={away}
+      />
+      {eliminated && !showHouse ? <EliminatedBadge compact /> : null}
+    </>
+  );
+
+  return (
+    <div className={sideClassName}>
+      {eliminated && !showHouse ? (
+        <div
+          className={`fixture-row__team-chip fixture-row__team-chip--out${
+            away ? " fixture-row__team-chip--away" : ""
+          }${highlighted ? " fixture-row__team-chip--highlight" : ""}`}
+        >
+          {teamContent}
+        </div>
+      ) : (
+        teamContent
+      )}
     </div>
   );
 }

@@ -14,6 +14,7 @@ import {
 } from "../lib/knockoutTree";
 import { copy, roundLabels } from "../lib/labels";
 import { isTeamEliminated } from "../lib/teamStats";
+import { EliminatedBadge } from "./EliminatedBadge";
 import { FlagPlaceholder } from "./FlagPlaceholder";
 import { TeamModal } from "./TeamModal";
 
@@ -57,7 +58,10 @@ function KnockoutSlot({ team, score, isWinner, onSelect, compact = false, fetchP
           className={`knockout-slot__placeholder ${flagClass}`}
         />
       )}
-      <span className="knockout-slot__name">{team.display_name}</span>
+      <span className="knockout-slot__name">
+        <span className="knockout-slot__name-text">{team.display_name}</span>
+        {eliminated ? <EliminatedBadge compact className="knockout-slot__out-badge" /> : null}
+      </span>
       {!compact && team.house_id ? (
         <span className="knockout-slot__house">{formatHouseLabel(team.house_id)}</span>
       ) : null}

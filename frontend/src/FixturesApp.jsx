@@ -157,10 +157,7 @@ export function FixturesApp() {
   }
 
   function handleSelectTeam(team) {
-    if (team?.fifa_code) {
-      applyTeamFilter(team.fifa_code);
-      return;
-    }
+    if (!team) return;
     setSelectedTeam(team);
   }
 

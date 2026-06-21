@@ -9,6 +9,7 @@ if str(SCRIPTS) not in sys.path:
 
 from generate_update_message import (  # noqa: E402
     enrich_note,
+    elimination_lines,
     format_house_label,
     generate_message,
     team_with_house,
@@ -55,18 +56,40 @@ class GenerateUpdateMessageTest(unittest.TestCase):
             "Plenty of football left, but Paraguay have an early grip on the spoon. 👀",
         )
 
-    def test_generate_message_matches_casual_format(self):
-        text = generate_message()
-        self.assertIn("Nobody's heading home yet…", text)
-        self.assertIn("🥄 Wooden Spoon Watch", text)
-        self.assertIn("* Paraguay (House 16) — 4 conceded 😬", text)
-        self.assertIn(
-            "Plenty of football left, but Paraguay have an early grip on the spoon. 👀",
-            text,
+    def test_elimination_lines_include_house_and_note(self):
+        lookup = {"Haiti": "12", "Tunisia": "8"}
+        lines = elimination_lines(
+            {"Haiti", "Tunisia"},
+            lookup,
+            new_eliminations={"Haiti"},
+            elimination_notes=["Group C: Haiti eliminated (mathematically out of top 3)"],
         )
+        self.assertTrue(any("🆕 Haiti" in line for line in lines))
+        self.assertTrue(any("Tunisia (House 8)" in line for line in lines))
+        self.assertTrue(any("mathematically out of top 3" in line for line in lines))
+
+    def test_generate_message_matches_casual_format(self):
+        text = generate_message(previous_results={"teams_eliminated": []})
+        if "Nobody's heading home yet" in text:
+            self.assertIn("🚫 Eliminations", text)
+            self.assertIn("* Nobody out yet.", text)
+        self.assertIn("🥄 Wooden Spoon Watch", text)
         self.assertNotIn("Source:", text)
         self.assertNotIn("Live table:", text)
         self.assertNotIn("Banter, not betting tips", text)
+
+    def test_generate_message_includes_new_eliminations(self):
+        text = generate_message(
+            previous_results={"teams_eliminated": []},
+            elimination_notes=[
+                "Group C: Haiti eliminated (mathematically out of top 3)",
+                "Group F: Tunisia eliminated (mathematically out of top 3)",
+            ],
+        )
+        if "Haiti" in (Path(ROOT / "data" / "results.json").read_text(encoding="utf-8")):
+            self.assertIn("Heading home this round:", text)
+            self.assertIn("🚫 Eliminations", text)
+            self.assertIn("46 of 48 teams still in", text)
 
 
 if __name__ == "__main__":

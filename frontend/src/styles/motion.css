@@ -42,6 +42,40 @@
   }
 }
 
+@keyframes team-out-cross-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.88;
+  }
+}
+
+@keyframes team-out-glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 1px 4px var(--out-glow), 0 0 0 0 rgba(234, 88, 12, 0);
+  }
+  50% {
+    box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35), 0 0 0 3px rgba(251, 146, 60, 0.12);
+  }
+}
+
+@keyframes team-out-ember-float {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.96;
+    transform: translateY(-1px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   /*
    * translateY on enter-rise paints outside layout boxes and can briefly
@@ -202,6 +236,20 @@
   .topbar-next-fixture__item--enter {
     animation: next-fixture-roll-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
+
+  .team-out-badge__cross {
+    animation: team-out-cross-pulse 1.8s ease-in-out infinite;
+  }
+
+  .team-out-badge {
+    animation: team-out-glow-pulse 2.4s ease-in-out infinite;
+  }
+
+  .flag-btn--out.flag-btn--with-name,
+  .fixture-row__team-chip--out,
+  .modal-header--out {
+    animation: team-out-ember-float 3s ease-in-out infinite;
+  }
 }
 
 @supports not (overflow: clip) {
@@ -232,7 +280,12 @@
   .modal,
   .knockout-tree,
   .topbar-next-fixture__item--exit,
-  .topbar-next-fixture__item--enter {
+  .topbar-next-fixture__item--enter,
+  .team-out-badge__cross,
+  .team-out-badge,
+  .flag-btn--out.flag-btn--with-name,
+  .fixture-row__team-chip--out,
+  .modal-header--out {
     animation: none;
   }
 }

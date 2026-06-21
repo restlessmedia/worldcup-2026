@@ -37,11 +37,13 @@ def write_audit(record: dict) -> tuple[Path, Path]:
     detail_path.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     summary = record.get("summary") or {}
+    eliminations = record.get("eliminations") or {}
     line = (
         f"{record.get('started_at')} | status={record.get('status')} | "
         f"changed={summary.get('data_changed')} | "
         f"finished_matches={summary.get('finished_matches')} | "
         f"eliminated={summary.get('teams_eliminated')} | "
+        f"new_eliminated={len(eliminations.get('new_this_run') or [])} | "
         f"published={summary.get('published')} | "
         f"detail={detail_path.name}\n"
     )
@@ -56,6 +58,18 @@ def run_publish(skip_build: bool) -> None:
     if skip_build:
         cmd.append("--skip-build")
     subprocess.run(cmd, cwd=ROOT, check=True)
+
+
+def build_eliminations_audit(previous_results: dict, sync_outcome: dict) -> dict:
+    prev_eliminated = set(previous_results.get("teams_eliminated") or [])
+    teams_eliminated = list(sync_outcome["details"]["teams_eliminated"])
+    current = set(teams_eliminated)
+    return {
+        "total": len(current),
+        "teams": teams_eliminated,
+        "new_this_run": sorted(current - prev_eliminated),
+        "notes": sync_outcome["details"]["elimination_notes"],
+    }
 
 
 def main() -> int:
@@ -116,14 +130,18 @@ def main() -> int:
             write=not args.dry_run,
             refresh_fixtures=False,
         )
+        eliminations_audit = build_eliminations_audit(previous_results, sync_outcome)
+        record["eliminations"] = eliminations_audit
         record["steps"].append(
             {
                 "name": "sync_results",
                 "changed": sync_outcome["changed"],
                 "finished_matches": sync_outcome["finished_matches"],
-                "teams_eliminated": len(sync_outcome["details"]["teams_eliminated"]),
+                "teams_eliminated": eliminations_audit["total"],
+                "teams_eliminated_list": eliminations_audit["teams"],
+                "new_eliminations": eliminations_audit["new_this_run"],
                 "goals_teams": len(sync_outcome["details"]["goals_conceded"]),
-                "elimination_notes": sync_outcome["details"]["elimination_notes"],
+                "elimination_notes": eliminations_audit["notes"],
                 "skipped_write": sync_outcome.get("skipped_write", False),
             }
         )
@@ -153,7 +171,9 @@ def main() -> int:
             record["summary"] = {
                 "data_changed": sync_outcome["changed"] or knockout_outcome["changed"],
                 "finished_matches": sync_outcome["finished_matches"],
-                "teams_eliminated": len(sync_outcome["details"]["teams_eliminated"]),
+                "teams_eliminated": eliminations_audit["total"],
+                "teams_eliminated_list": eliminations_audit["teams"],
+                "new_eliminations": eliminations_audit["new_this_run"],
                 "published": False,
             }
             detail_path, log_path = write_audit(record)
@@ -173,7 +193,11 @@ def main() -> int:
             sync_notes = (
                 sync_outcome["details"]["elimination_notes"] + knockout_outcome["details"]["notes"]
             )
-            message = generate_message(previous_results=previous_results, sync_notes=sync_notes)
+            message = generate_message(
+                previous_results=previous_results,
+                sync_notes=sync_notes,
+                elimination_notes=eliminations_audit["notes"],
+            )
             latest, archive = write_message(message, stamp=started)
             whatsapp_paths = [str(latest), str(archive)]
             record["steps"].append({"name": "whatsapp_draft", "paths": whatsapp_paths})
@@ -186,7 +210,10 @@ def main() -> int:
             "results_changed": sync_outcome["changed"],
             "knockout_changed": knockout_outcome["changed"],
             "finished_matches": sync_outcome["finished_matches"],
-            "teams_eliminated": len(sync_outcome["details"]["teams_eliminated"]),
+            "teams_eliminated": eliminations_audit["total"],
+            "teams_eliminated_list": eliminations_audit["teams"],
+            "new_eliminations": eliminations_audit["new_this_run"],
+            "elimination_notes": eliminations_audit["notes"],
             "teams_still_in": summary.get("teams_still_in"),
             "published": published,
             "whatsapp_draft": whatsapp_paths[0] if whatsapp_paths else None,

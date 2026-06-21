@@ -1,16 +1,21 @@
 import { flagUrl } from "../lib/data";
 import { copy } from "../lib/labels";
 import { isTeamEliminated } from "../lib/teamStats";
+import { EliminatedBadge } from "./EliminatedBadge";
 
-export function TeamFlag({ team, onSelect, size = 28, showName = true, fetchPriority }) {
-  const eliminated = isTeamEliminated(team);
+export function TeamFlag({ team, onSelect, size = 28, showName = true, fetchPriority, showEliminatedStyle = true }) {
+  const eliminated = showEliminatedStyle && isTeamEliminated(team);
 
   return (
     <button
       type="button"
       className={`flag-btn${showName ? " flag-btn--with-name" : ""}${eliminated ? " flag-btn--out" : ""}`}
       onClick={() => onSelect(team)}
-      aria-label={`${team.display_name}, ${copy.worldRankingLong(team.fifa_rank)}`}
+      aria-label={
+        eliminated
+          ? `${team.display_name}, eliminated, ${copy.worldRankingLong(team.fifa_rank)}`
+          : `${team.display_name}, ${copy.worldRankingLong(team.fifa_rank)}`
+      }
       title={showName ? undefined : team.display_name}
     >
       <img
@@ -22,6 +27,7 @@ export function TeamFlag({ team, onSelect, size = 28, showName = true, fetchPrio
         fetchPriority={fetchPriority}
       />
       {showName ? <span className="flag-btn__name">{team.display_name}</span> : null}
+      {eliminated ? <EliminatedBadge compact={!showName} /> : null}
     </button>
   );
 }

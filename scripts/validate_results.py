@@ -113,12 +113,17 @@ def validate_results(draw_names: set[str], aliases: dict[str, str], results: dic
                 f"teams_eliminated: these teams were eliminated before but are no longer listed: "
                 f"{', '.join(sorted(removed))}"
             )
+        new_eliminations = sorted(set(normalized_eliminated) - prev_elim)
+    else:
+        new_eliminations = sorted(set(normalized_eliminated))
 
     still_in = draw_names - set(normalized_eliminated)
     summary = {
         "teams_with_goals": len(normalized_goals),
         "teams_eliminated": len(normalized_eliminated),
         "teams_still_in": len(still_in),
+        "eliminated_teams": sorted(normalized_eliminated),
+        "new_eliminations": new_eliminations,
         "top_spoon": sorted(
             normalized_goals.items(), key=lambda item: (-item[1], item[0])
         )[:5],
@@ -211,6 +216,17 @@ def render_report(
         for team, goals in result_summary["top_spoon"]:
             lines.append(f"- {team}: {goals} goals conceded")
         lines.append("")
+
+    eliminated_teams = result_summary.get("eliminated_teams") or []
+    if eliminated_teams:
+        lines.append("### Eliminated teams")
+        for team in eliminated_teams:
+            lines.append(f"- {team}")
+        lines.append("")
+        new_eliminations = result_summary.get("new_eliminations") or []
+        if new_eliminations:
+            lines.append(f"**New this run:** {', '.join(new_eliminations)}")
+            lines.append("")
 
     lines.append(
         f"**Summary:** {result_summary.get('teams_still_in', '?')} teams still in · "

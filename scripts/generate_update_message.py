@@ -131,10 +131,40 @@ def wooden_spoon_closer(ranked: list[tuple[str, int]]) -> str | None:
     )
 
 
+def elimination_lines(
+    eliminated: set[str],
+    lookup: dict[str, str],
+    *,
+    new_eliminations: set[str] | None = None,
+    elimination_notes: list[str] | None = None,
+) -> list[str]:
+    if not eliminated:
+        return ["* Nobody out yet."]
+
+    lines: list[str] = []
+    notes_by_team: dict[str, str] = {}
+    for note in elimination_notes or []:
+        for team in eliminated:
+            if team in note and team not in notes_by_team:
+                notes_by_team[team] = enrich_note(note, lookup)
+
+    for team in sorted(eliminated):
+        label = team_with_house(team, lookup)
+        prefix = "🆕 " if new_eliminations and team in new_eliminations else "* "
+        reason = notes_by_team.get(team)
+        if reason:
+            lines.append(f"{prefix}{label} — {reason}")
+        else:
+            lines.append(f"{prefix}{label}")
+
+    return lines
+
+
 def generate_message(
     *,
     previous_results: dict | None = None,
     sync_notes: list[str] | None = None,
+    elimination_notes: list[str] | None = None,
 ) -> str:
     draw = load_json("draw.json")
     results = load_json("results.json")
@@ -142,25 +172,35 @@ def generate_message(
     lookup = build_team_house_lookup(draw)
 
     prev_eliminated = set((previous_results or {}).get("teams_eliminated") or [])
-    new_eliminations = sorted(eliminated - prev_eliminated)
+    new_eliminations = set(sorted(eliminated - prev_eliminated))
 
     lines: list[str] = []
 
     if new_eliminations:
-        knocked_out = ", ".join(team_with_house(t, lookup) for t in new_eliminations)
+        knocked_out = ", ".join(team_with_house(t, lookup) for t in sorted(new_eliminations))
         lines.append(f"Heading home this round: {knocked_out}.")
     elif eliminated:
-        lines.append(
-            f"{len(eliminated)} teams out already — quiet round, nothing new."
-        )
+        lines.append(f"{len(eliminated)} teams out already — quiet round, nothing new.")
     else:
         lines.append("Nobody's heading home yet…")
 
+    still_in = 48 - len(eliminated)
     alive_houses = sum(
         1 for entry in draw if any(team not in eliminated for team in entry["teams"])
     )
     lines.append("")
-    lines.append(f"{alive_houses} of 17 houses still alive.")
+    lines.append(f"{still_in} of 48 teams still in · {alive_houses} of 17 houses still alive.")
+    lines.append("")
+    lines.append("🚫 Eliminations")
+    lines.append("")
+    lines.extend(
+        elimination_lines(
+            eliminated,
+            lookup,
+            new_eliminations=new_eliminations,
+            elimination_notes=elimination_notes,
+        )
+    )
     lines.append("")
     lines.append("🥄 Wooden Spoon Watch")
     lines.append("")
