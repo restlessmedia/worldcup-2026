@@ -1,6 +1,6 @@
 {
   "phase": "pre_knockout",
-  "last_updated": "2026-06-20",
+  "last_updated": "2026-06-21",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
@@ -23,7 +23,15 @@
         },
         {
           "id": "r32-02",
-          "home": null,
+          "home": {
+            "draw_name": "Germany",
+            "display_name": "Germany",
+            "fifa_code": "GER",
+            "house_id": "20",
+            "group": "E",
+            "fifa_rank": 10,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -175,9 +183,10 @@
       ],
       "houses": [
         "4",
-        "5"
+        "5",
+        "20"
       ],
-      "teams_count": 2
+      "teams_count": 3
     },
     {
       "id": "r16",
