@@ -1,4 +1,5 @@
 import { formatHouseLabel } from "../lib/format";
+import { isTeamEliminated } from "../lib/teamStats";
 
 export function FixtureToolbar({
   teams,
@@ -22,6 +23,7 @@ export function FixtureToolbar({
           {teams.map((team) => (
             <option key={team.fifa_code} value={team.fifa_code}>
               {team.display_name}
+              {isTeamEliminated(team) ? " (out)" : ""}
             </option>
           ))}
         </select>

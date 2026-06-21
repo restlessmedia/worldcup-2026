@@ -13,6 +13,7 @@ import {
   resolveMatch,
 } from "../lib/knockoutTree";
 import { copy, roundLabels } from "../lib/labels";
+import { isTeamEliminated } from "../lib/teamStats";
 import { FlagPlaceholder } from "./FlagPlaceholder";
 import { TeamModal } from "./TeamModal";
 
@@ -32,7 +33,7 @@ function KnockoutSlot({ team, score, isWinner, onSelect, compact = false, fetchP
     );
   }
 
-  const eliminated = team.status === "eliminated";
+  const eliminated = isTeamEliminated(team);
 
   return (
     <button

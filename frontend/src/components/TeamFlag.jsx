@@ -1,8 +1,9 @@
 import { flagUrl } from "../lib/data";
 import { copy } from "../lib/labels";
+import { isTeamEliminated } from "../lib/teamStats";
 
 export function TeamFlag({ team, onSelect, size = 28, showName = true, fetchPriority }) {
-  const eliminated = team.status === "eliminated";
+  const eliminated = isTeamEliminated(team);
 
   return (
     <button

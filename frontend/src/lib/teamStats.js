@@ -27,6 +27,10 @@ export function buildTeamStatsLookup(standings) {
   return { byFifaCode, byDrawName };
 }
 
+export function isTeamEliminated(team) {
+  return team?.status === "eliminated";
+}
+
 export function enrichTeamWithStandings(team, standings) {
   if (!team || !standings) return team;
 
@@ -41,6 +45,7 @@ export function enrichTeamWithStandings(team, standings) {
 
   return {
     ...team,
+    status: team.status ?? stats.status,
     goals_conceded: team.goals_conceded ?? stats.goals_conceded,
     fair_play_points: team.fair_play_points ?? stats.fair_play_points,
     position: team.position ?? stats.position,

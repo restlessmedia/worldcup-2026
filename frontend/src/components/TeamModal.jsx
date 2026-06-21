@@ -4,7 +4,7 @@ import { useStandingsLookup } from "../hooks/useStandingsLookup";
 import { flagUrl } from "../lib/data";
 import { formatHouseLabel } from "../lib/format";
 import { copy } from "../lib/labels";
-import { enrichTeamWithStandings } from "../lib/teamStats";
+import { enrichTeamWithStandings, isTeamEliminated } from "../lib/teamStats";
 
 function DetailRow({ label, value, hint }) {
   if (value == null || value === "") return null;
@@ -41,12 +41,12 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
 
   if (!enrichedTeam) return null;
 
-  const status =
-    enrichedTeam.status === "eliminated"
-      ? "Eliminated from the World Cup"
-      : enrichedTeam.status === "alive"
-        ? "Still in the tournament"
-        : enrichedTeam.status;
+  const eliminated = isTeamEliminated(enrichedTeam);
+  const status = eliminated
+    ? "Eliminated from the World Cup"
+    : enrichedTeam.status === "alive"
+      ? "Still in the tournament"
+      : enrichedTeam.status;
 
   return createPortal(
     <div className="modal-backdrop" onClick={onClose} role="presentation">
@@ -61,7 +61,7 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
           ×
         </button>
 
-        <div className="modal-header">
+        <div className={`modal-header${eliminated ? " modal-header--out" : ""}`}>
           <img
             src={flagUrl(enrichedTeam.fifa_code)}
             alt=""

@@ -16,6 +16,67 @@ from sync_results_from_fifa import (  # noqa: E402
 
 
 class SyncResultsTest(unittest.TestCase):
+    def test_mathematically_eliminated_after_two_losses(self):
+        """Teams with two losses and no path to top 3 are eliminated before MD3 ends."""
+        fixtures = [
+            {
+                "stage": "group",
+                "group": "C",
+                "finished": True,
+                "home": "Haiti",
+                "away": "Scotland",
+                "home_score": 0,
+                "away_score": 1,
+            },
+            {
+                "stage": "group",
+                "group": "C",
+                "finished": True,
+                "home": "Brazil",
+                "away": "Haiti",
+                "home_score": 3,
+                "away_score": 0,
+            },
+            {
+                "stage": "group",
+                "group": "C",
+                "finished": True,
+                "home": "Brazil",
+                "away": "Morocco",
+                "home_score": 1,
+                "away_score": 1,
+            },
+            {
+                "stage": "group",
+                "group": "C",
+                "finished": True,
+                "home": "Scotland",
+                "away": "Morocco",
+                "home_score": 0,
+                "away_score": 1,
+            },
+            {
+                "stage": "group",
+                "group": "C",
+                "finished": False,
+                "home": "Morocco",
+                "away": "Haiti",
+                "home_score": None,
+                "away_score": None,
+            },
+            {
+                "stage": "group",
+                "group": "C",
+                "finished": False,
+                "home": "Scotland",
+                "away": "Brazil",
+                "home_score": None,
+                "away_score": None,
+            },
+        ]
+        _, _, eliminated = compute_results(fixtures)
+        self.assertIn("Haiti", eliminated)
+
     def test_goals_conceded_from_finished_matches(self):
         draw_names = {
             "Mexico",

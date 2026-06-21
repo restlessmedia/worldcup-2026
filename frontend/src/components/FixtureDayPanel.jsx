@@ -1,5 +1,6 @@
 import { fixtureSideHouseLabel, formatKickoffUk } from "../lib/fixtures";
 import { teamDisplayName } from "../lib/placeholderLabels";
+import { isTeamEliminated } from "../lib/teamStats";
 import { roundLabels } from "../lib/labels";
 import { TeamFlag } from "./TeamFlag";
 
@@ -33,10 +34,11 @@ function HouseBadge({ team }) {
 
 function FixtureSide({ team, onSelectTeam, highlighted, highlightLabel, displayMode, away = false }) {
   const name = teamDisplayName(team);
+  const eliminated = isTeamEliminated(team);
   const showHouse = displayMode === "houses";
   const className = `fixture-row__side${away ? " fixture-row__side--away" : ""}${
     highlighted ? " fixture-row__side--highlight" : ""
-  }${showHouse ? " fixture-row__side--house" : ""}`;
+  }${showHouse ? " fixture-row__side--house" : ""}${eliminated ? " fixture-row__side--out" : ""}`;
   const ariaLabel = !showHouse && highlighted && highlightLabel
     ? `${name} (${highlightLabel})`
     : undefined;

@@ -29,6 +29,7 @@ from tournament_groups import (  # noqa: E402
     group_is_complete,
     group_standings,
     load_draw_names,
+    mathematically_eliminated_teams,
     third_place_rank_key,
 )
 
@@ -154,15 +155,16 @@ def compute_results(fixtures: list[dict]) -> tuple[dict, dict[str, int], list[st
 
     goals = goals_conceded_from_fixtures(fixtures, draw_names)
     group_elim, group_notes = eliminations_from_groups(fixtures, draw_names, fifa_groups)
+    math_elim, math_notes = mathematically_eliminated_teams(fixtures, draw_names, fifa_groups)
     ko_elim, ko_notes = eliminations_from_knockout(fixtures, draw_names)
-    eliminated = sorted(set(group_elim) | set(ko_elim))
+    eliminated = sorted(set(group_elim) | set(math_elim) | set(ko_elim))
 
     finished = [f for f in fixtures if f.get("finished")]
     details = {
         "finished_matches": len(finished),
         "goals_teams": len(goals),
         "eliminated_teams": len(eliminated),
-        "elimination_notes": group_notes + ko_notes,
+        "elimination_notes": group_notes + math_notes + ko_notes,
         "goals_conceded": goals,
         "teams_eliminated": eliminated,
     }

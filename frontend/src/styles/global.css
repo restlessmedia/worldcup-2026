@@ -13,6 +13,7 @@
   --line: #e2e8f0;
   --line-strong: #cbd5e1;
   --out: #94a3b8;
+  --out-soft: #f1f5f9;
   --gold: #d97706;
   --gold-soft: #fef3c7;
   --silver-soft: #f1f5f9;
@@ -707,9 +708,27 @@ a:hover {
   white-space: nowrap;
 }
 
-.flag-btn--out .flag-btn__name {
+/* Eliminated teams — grey strikethrough name, muted flag */
+.flag-btn--out .flag-btn__name,
+.knockout-slot--out .knockout-slot__name,
+.fixture-row__side--out .fixture-row__name,
+.modal-header--out h3 {
   color: var(--out);
   text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.flag-btn--out img,
+.knockout-slot--out img,
+.fixture-row__side--out img,
+.modal-header--out > img {
+  opacity: 0.45;
+  filter: grayscale(0.6);
+}
+
+.flag-btn--out:hover {
+  border-color: var(--line);
+  background: var(--out-soft);
 }
 
 .flag-btn:hover {
@@ -729,11 +748,6 @@ a:hover {
   background: #fff;
   border: 1px solid var(--line);
   display: block;
-}
-
-.flag-btn--out img {
-  opacity: 0.4;
-  filter: grayscale(0.5);
 }
 
 /* ── Modal ── */
@@ -1482,6 +1496,12 @@ a:hover {
   color: var(--accent);
 }
 
+.fixture-row__side--highlight.fixture-row__side--out .fixture-row__name {
+  border-color: var(--out);
+  background: var(--out-soft);
+  color: var(--out);
+}
+
 .fixture-row__name {
   font-size: 0.875rem;
   font-weight: 600;
@@ -2074,11 +2094,6 @@ a:hover {
 
 .knockout-slot--winner {
   background: var(--accent-soft);
-}
-
-.knockout-slot--out .knockout-slot__name {
-  color: var(--out);
-  text-decoration: line-through;
 }
 
 .knockout-slot:hover:not(.knockout-slot--tbd) {
