@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-06-22T21:06:20.592158+00:00",
+  "fetched_at": "2026-06-23T09:03:06.719013+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -672,9 +672,9 @@
       "home": "France",
       "away": "Iraq",
       "venue": "Philadelphia",
-      "home_score": 0,
+      "home_score": 3,
       "away_score": 0,
-      "finished": false
+      "finished": true
     },
     {
       "id": "fifa-400021491",
@@ -688,9 +688,9 @@
       "home": "Norway",
       "away": "Senegal",
       "venue": "New Jersey",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 3,
+      "away_score": 2,
+      "finished": true
     },
     {
       "id": "fifa-400021499",
@@ -704,9 +704,9 @@
       "home": "Jordan",
       "away": "Algeria",
       "venue": "San Francisco Bay Area",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 1,
+      "away_score": 2,
+      "finished": true
     },
     {
       "id": "fifa-400021503",
@@ -1389,7 +1389,7 @@
       "matchday": null,
       "match_number": 86,
       "kickoff_utc": "2026-07-03T22:00:00Z",
-      "home": "1J",
+      "home": "Argentina",
       "away": "2H",
       "venue": "Miami",
       "home_score": null,
