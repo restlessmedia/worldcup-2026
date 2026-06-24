@@ -52,6 +52,26 @@ test("mobile fixture calendar scrolls horizontally instead of shrinking country 
   );
 });
 
+test("fixture row matchup grid allows long placeholder names to truncate without overlap", async () => {
+  const css = await globalCss();
+
+  assert.match(
+    css,
+    /\.fixture-row__matchup\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*auto\s*minmax\(0,\s*1fr\);/s,
+    "fixture row grid columns should shrink below content width so sides do not overlap",
+  );
+  assert.match(
+    css,
+    /\.fixture-row__side\s*\{[^}]*overflow:\s*hidden;/s,
+    "fixture row sides should clip overflowing team labels",
+  );
+  assert.match(
+    css,
+    /\.fixture-row__name\s*\{[^}]*min-width:\s*0;/s,
+    "fixture row team names should be allowed to shrink for ellipsis",
+  );
+});
+
 test("fixture calendar active states are stronger than inactive match states", async () => {
   const css = await globalCss();
 
