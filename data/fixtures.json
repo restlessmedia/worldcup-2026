@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-06-24T20:40:39.208556+00:00",
+  "fetched_at": "2026-06-24T21:33:25.061897+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -784,9 +784,9 @@
       "home": "Bosnia and Herzegovina (Bosnia)",
       "away": "Qatar",
       "venue": "Seattle",
-      "home_score": 2,
+      "home_score": 3,
       "away_score": 1,
-      "finished": false
+      "finished": true
     },
     {
       "id": "fifa-400021451",
@@ -802,7 +802,7 @@
       "venue": "Vancouver",
       "home_score": 2,
       "away_score": 1,
-      "finished": false
+      "finished": true
     },
     {
       "id": "fifa-400021452",
@@ -1166,7 +1166,7 @@
       "match_number": 73,
       "kickoff_utc": "2026-06-28T19:00:00Z",
       "home": "2A",
-      "away": "2B",
+      "away": "Canada",
       "venue": "Los Angeles",
       "home_score": null,
       "away_score": null,
@@ -1357,7 +1357,7 @@
       "matchday": null,
       "match_number": 85,
       "kickoff_utc": "2026-07-03T03:00:00Z",
-      "home": "1B",
+      "home": "Switzerland",
       "away": "3EFGIJ",
       "venue": "Vancouver",
       "home_score": null,

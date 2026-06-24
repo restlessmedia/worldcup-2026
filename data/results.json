@@ -2,6 +2,7 @@
   "matches": [],
   "teams_eliminated": [
     "Haiti",
+    "Qatar",
     "Tunisia"
   ],
   "goals_conceded": {
@@ -10,9 +11,9 @@
     "Australia": 2,
     "Austria": 3,
     "Belgium": 1,
-    "Bosnia and Herzegovina (Bosnia)": 5,
+    "Bosnia and Herzegovina (Bosnia)": 6,
     "Brazil": 1,
-    "Canada": 1,
+    "Canada": 3,
     "Cape Verde": 2,
     "Colombia": 1,
     "Croatia": 4,
@@ -39,7 +40,7 @@
     "Panama": 2,
     "Paraguay": 4,
     "Portugal": 1,
-    "Qatar": 7,
+    "Qatar": 10,
     "Saudi Arabia": 5,
     "Scotland": 1,
     "Senegal": 6,
@@ -47,7 +48,7 @@
     "South Korea (Korea Republic)": 2,
     "Spain": 0,
     "Sweden": 6,
-    "Switzerland": 2,
+    "Switzerland": 3,
     "Tunisia": 9,
     "Türkiye (Turkey)": 3,
     "USA (United States)": 1,

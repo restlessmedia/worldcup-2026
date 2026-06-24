@@ -1,6 +1,6 @@
 {
   "phase": "pre_knockout",
-  "last_updated": "2026-06-23",
+  "last_updated": "2026-06-24",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -10,7 +10,7 @@
         {
           "id": "r32-01",
           "home": null,
-          "away": null,
+          "away": "Canada",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -105,7 +105,7 @@
         },
         {
           "id": "r32-13",
-          "home": null,
+          "home": "Switzerland",
           "away": null,
           "home_score": null,
           "away_score": null,

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-24T20:40:39.288202+00:00",
+  "generated_at": "2026-06-24T21:33:25.142001+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-24T20:40:39.208556+00:00",
+  "fetched_at": "2026-06-24T21:33:25.061897+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -148,7 +148,7 @@
         "house_id": "18",
         "group": "B",
         "fifa_rank": 55,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Switzerland",
@@ -839,7 +839,7 @@
         "house_id": "18",
         "group": "B",
         "fifa_rank": 55,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 6,
       "away_score": 0,
@@ -1521,9 +1521,9 @@
         "house_id": "18",
         "group": "B",
         "fifa_rank": 55,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": 2,
+      "home_score": 3,
       "away_score": 1,
       "played": true
     },
@@ -2259,13 +2259,13 @@
         "status": "placeholder"
       },
       "away": {
-        "draw_name": "2B",
-        "display_name": "2nd in Group B",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Canada",
+        "display_name": "Canada",
+        "fifa_code": "CAN",
+        "house_id": "Coppice",
+        "group": "B",
+        "fifa_rank": 30,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
@@ -2622,13 +2622,13 @@
       "kickoff_utc": "2026-07-03T03:00:00Z",
       "venue": "Vancouver",
       "home": {
-        "draw_name": "1B",
-        "display_name": "1st in Group B",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Switzerland",
+        "display_name": "Switzerland",
+        "fifa_code": "SUI",
+        "house_id": "13",
+        "group": "B",
+        "fifa_rank": 19,
+        "status": "alive"
       },
       "away": {
         "draw_name": "3EFGIJ",
