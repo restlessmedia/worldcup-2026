@@ -18,7 +18,7 @@
     "Croatia": 4,
     "Curacao (Curaçao)": 7,
     "Czechia (Czech Republic)": 3,
-    "DR Congo (Democratic Republic of the Congo)": 1,
+    "DR Congo (Democratic Republic of the Congo)": 2,
     "Ecuador": 1,
     "Egypt": 2,
     "England": 2,
@@ -36,7 +36,7 @@
     "Netherlands (Holland)": 3,
     "New Zealand": 5,
     "Norway": 3,
-    "Panama": 1,
+    "Panama": 2,
     "Paraguay": 4,
     "Portugal": 1,
     "Qatar": 7,
@@ -55,7 +55,7 @@
     "Uzbekistan": 8
   },
   "fair_play_points": {},
-  "last_updated": "2026-06-23",
+  "last_updated": "2026-06-24",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "notes": "Admin: see docs/admin-runbook.md — edit goals_conceded, run python scripts/publish_update.py"

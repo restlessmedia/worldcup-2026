@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-23T20:50:51.081542+00:00",
+  "generated_at": "2026-06-24T09:16:31.401267+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-23T20:50:50.988129+00:00",
+  "fetched_at": "2026-06-24T09:16:31.316053+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -1461,9 +1461,9 @@
         "fifa_rank": 11,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 1,
+      "played": true
     },
     {
       "id": "fifa-400021501",
@@ -1492,9 +1492,9 @@
         "fifa_rank": 46,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 1,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021448",

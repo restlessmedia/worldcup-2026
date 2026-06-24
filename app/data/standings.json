@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-23T20:50:51.079468+00:00",
+  "generated_at": "2026-06-24T09:16:31.399248+00:00",
   "tournament_status": "in_progress",
-  "results_updated": "2026-06-23",
+  "results_updated": "2026-06-24",
   "teams_in_play": 46,
   "teams_total": 48,
   "houses": [
@@ -419,7 +419,7 @@
           "group": "L",
           "fifa_rank": 33,
           "status": "alive",
-          "goals_conceded": 1,
+          "goals_conceded": 2,
           "wooden_spoon_likelihood": 2,
           "fair_play_points": 0
         },
@@ -627,7 +627,7 @@
           "group": "K",
           "fifa_rank": 46,
           "status": "alive",
-          "goals_conceded": 1,
+          "goals_conceded": 2,
           "wooden_spoon_likelihood": 3,
           "fair_play_points": 0
         },
@@ -929,6 +929,16 @@
       "status": "alive"
     },
     {
+      "house_id": "22",
+      "display_name": "DR Congo",
+      "fifa_code": "COD",
+      "goals_conceded": 2,
+      "wooden_spoon_likelihood": 3,
+      "fifa_rank": 46,
+      "group": "K",
+      "status": "alive"
+    },
+    {
       "house_id": "13",
       "display_name": "Egypt",
       "fifa_code": "EGY",
@@ -986,6 +996,16 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 18,
       "group": "F",
+      "status": "alive"
+    },
+    {
+      "house_id": "13",
+      "display_name": "Panama",
+      "fifa_code": "PAN",
+      "goals_conceded": 2,
+      "wooden_spoon_likelihood": 2,
+      "fifa_rank": 33,
+      "group": "L",
       "status": "alive"
     },
     {
@@ -1049,16 +1069,6 @@
       "status": "alive"
     },
     {
-      "house_id": "22",
-      "display_name": "DR Congo",
-      "fifa_code": "COD",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 3,
-      "fifa_rank": 46,
-      "group": "K",
-      "status": "alive"
-    },
-    {
       "house_id": "3",
       "display_name": "Ecuador",
       "fifa_code": "ECU",
@@ -1086,16 +1096,6 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 8,
       "group": "C",
-      "status": "alive"
-    },
-    {
-      "house_id": "13",
-      "display_name": "Panama",
-      "fifa_code": "PAN",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 2,
-      "fifa_rank": 33,
-      "group": "L",
       "status": "alive"
     },
     {
@@ -1436,6 +1436,17 @@
     },
     {
       "position": 23,
+      "house_id": "22",
+      "display_name": "DR Congo",
+      "fifa_code": "COD",
+      "goals_conceded": 2,
+      "wooden_spoon_likelihood": 3,
+      "fifa_rank": 46,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "position": 23,
       "house_id": "13",
       "display_name": "Egypt",
       "fifa_code": "EGY",
@@ -1502,6 +1513,17 @@
     },
     {
       "position": 23,
+      "house_id": "13",
+      "display_name": "Panama",
+      "fifa_code": "PAN",
+      "goals_conceded": 2,
+      "wooden_spoon_likelihood": 2,
+      "fifa_rank": 33,
+      "group": "L",
+      "status": "alive"
+    },
+    {
+      "position": 23,
       "house_id": "16",
       "display_name": "South Korea",
       "fifa_code": "KOR",
@@ -1523,7 +1545,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "1",
       "display_name": "Belgium",
       "fifa_code": "BEL",
@@ -1534,7 +1556,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "6",
       "display_name": "Brazil",
       "fifa_code": "BRA",
@@ -1545,7 +1567,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "Coppice",
       "display_name": "Canada",
       "fifa_code": "CAN",
@@ -1556,7 +1578,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "Coppice",
       "display_name": "Colombia",
       "fifa_code": "COL",
@@ -1567,18 +1589,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
-      "house_id": "22",
-      "display_name": "DR Congo",
-      "fifa_code": "COD",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 3,
-      "fifa_rank": 46,
-      "group": "K",
-      "status": "alive"
-    },
-    {
-      "position": 33,
+      "position": 35,
       "house_id": "3",
       "display_name": "Ecuador",
       "fifa_code": "ECU",
@@ -1589,7 +1600,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "21",
       "display_name": "France",
       "fifa_code": "FRA",
@@ -1600,7 +1611,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "19",
       "display_name": "Morocco",
       "fifa_code": "MAR",
@@ -1611,18 +1622,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
-      "house_id": "13",
-      "display_name": "Panama",
-      "fifa_code": "PAN",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 2,
-      "fifa_rank": 33,
-      "group": "L",
-      "status": "alive"
-    },
-    {
-      "position": 33,
+      "position": 35,
       "house_id": "21",
       "display_name": "Portugal",
       "fifa_code": "POR",
@@ -1633,7 +1633,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "22",
       "display_name": "Scotland",
       "fifa_code": "SCO",
@@ -1644,7 +1644,7 @@
       "status": "alive"
     },
     {
-      "position": 33,
+      "position": 35,
       "house_id": "5",
       "display_name": "USA",
       "fifa_code": "USA",
