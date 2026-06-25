@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-24T21:33:25.142001+00:00",
+  "generated_at": "2026-06-25T06:08:52.389045+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-24T21:33:25.061897+00:00",
+  "fetched_at": "2026-06-25T06:08:52.310561+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -64,7 +64,7 @@
         "house_id": "3",
         "group": "A",
         "fifa_rank": 41,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 2,
       "away_score": 1,
@@ -768,7 +768,7 @@
         "house_id": "3",
         "group": "A",
         "fifa_rank": 41,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "South Africa",
@@ -1585,9 +1585,9 @@
         "fifa_rank": 83,
         "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 4,
+      "away_score": 2,
+      "played": true
     },
     {
       "id": "fifa-400021455",
@@ -1616,9 +1616,9 @@
         "fifa_rank": 6,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 3,
+      "played": true
     },
     {
       "id": "fifa-400021444",
@@ -1636,7 +1636,7 @@
         "house_id": "3",
         "group": "A",
         "fifa_rank": 41,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Mexico",
@@ -1647,9 +1647,9 @@
         "fifa_rank": 15,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 3,
+      "played": true
     },
     {
       "id": "fifa-400021445",
@@ -1678,9 +1678,9 @@
         "fifa_rank": 25,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 1,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021466",
@@ -2250,13 +2250,13 @@
       "kickoff_utc": "2026-06-28T19:00:00Z",
       "venue": "Los Angeles",
       "home": {
-        "draw_name": "2A",
-        "display_name": "2nd in Group A",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "South Africa",
+        "display_name": "South Africa",
+        "fifa_code": "RSA",
+        "house_id": "22",
+        "group": "A",
+        "fifa_rank": 60,
+        "status": "alive"
       },
       "away": {
         "draw_name": "Canada",
@@ -2281,13 +2281,13 @@
       "kickoff_utc": "2026-06-29T17:00:00Z",
       "venue": "Houston",
       "home": {
-        "draw_name": "1C",
-        "display_name": "1st in Group C",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Brazil",
+        "display_name": "Brazil",
+        "fifa_code": "BRA",
+        "house_id": "6",
+        "group": "C",
+        "fifa_rank": 6,
+        "status": "alive"
       },
       "away": {
         "draw_name": "2F",
@@ -2352,13 +2352,13 @@
         "status": "placeholder"
       },
       "away": {
-        "draw_name": "2C",
-        "display_name": "2nd in Group C",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Morocco",
+        "display_name": "Morocco",
+        "fifa_code": "MAR",
+        "house_id": "19",
+        "group": "C",
+        "fifa_rank": 8,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,

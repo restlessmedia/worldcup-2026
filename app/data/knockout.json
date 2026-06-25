@@ -1,11 +1,11 @@
 {
-  "phase": "pre_knockout",
-  "last_updated": "2026-06-24",
+  "phase": "knockout",
+  "last_updated": "2026-06-25",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
-    "teams_in_bracket": 0,
-    "r32_fixtures_set": 0
+    "teams_in_bracket": 9,
+    "r32_fixtures_set": 1
   },
   "rounds": [
     {
@@ -14,7 +14,15 @@
       "matches": [
         {
           "id": "r32-01",
-          "home": null,
+          "home": {
+            "draw_name": "South Africa",
+            "display_name": "South Africa",
+            "fifa_code": "RSA",
+            "house_id": "22",
+            "group": "A",
+            "fifa_rank": 60,
+            "status": "alive"
+          },
           "away": {
             "draw_name": "Canada",
             "display_name": "Canada",
@@ -49,7 +57,15 @@
         {
           "id": "r32-03",
           "home": null,
-          "away": null,
+          "away": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -57,7 +73,15 @@
         },
         {
           "id": "r32-04",
-          "home": null,
+          "home": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -208,12 +232,15 @@
       "houses": [
         "4",
         "5",
+        "6",
         "12",
         "13",
+        "19",
         "20",
+        "22",
         "Coppice"
       ],
-      "teams_count": 6
+      "teams_count": 9
     },
     {
       "id": "r16",

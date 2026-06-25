@@ -1,6 +1,6 @@
 {
-  "phase": "pre_knockout",
-  "last_updated": "2026-06-24",
+  "phase": "knockout",
+  "last_updated": "2026-06-25",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -9,7 +9,7 @@
       "matches": [
         {
           "id": "r32-01",
-          "home": null,
+          "home": "South Africa",
           "away": "Canada",
           "home_score": null,
           "away_score": null,
@@ -26,14 +26,14 @@
         {
           "id": "r32-03",
           "home": null,
-          "away": null,
+          "away": "Morocco",
           "home_score": null,
           "away_score": null,
           "winner": null
         },
         {
           "id": "r32-04",
-          "home": null,
+          "home": "Brazil",
           "away": null,
           "home_score": null,
           "away_score": null,
