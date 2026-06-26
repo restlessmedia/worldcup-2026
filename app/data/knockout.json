@@ -4,8 +4,8 @@
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
-    "teams_in_bracket": 14,
-    "r32_fixtures_set": 4
+    "teams_in_bracket": 16,
+    "r32_fixtures_set": 5
   },
   "rounds": [
     {
@@ -106,7 +106,15 @@
         },
         {
           "id": "r32-05",
-          "home": null,
+          "home": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -124,7 +132,15 @@
             "fifa_rank": 34,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -275,14 +291,16 @@
         "5",
         "6",
         "8",
+        "11",
         "12",
         "13",
         "19",
         "20",
+        "21",
         "22",
         "Coppice"
       ],
-      "teams_count": 14
+      "teams_count": 16
     },
     {
       "id": "r16",

@@ -41,7 +41,7 @@
         },
         {
           "id": "r32-05",
-          "home": null,
+          "home": "France",
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -50,7 +50,7 @@
         {
           "id": "r32-06",
           "home": "Ivory Coast (Côte d'Ivoire)",
-          "away": null,
+          "away": "Norway",
           "home_score": null,
           "away_score": null,
           "winner": null
