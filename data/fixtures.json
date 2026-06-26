@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-06-25T20:46:03.682890+00:00",
+  "fetched_at": "2026-06-26T07:48:36.371314+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -880,9 +880,9 @@
       "home": "Ecuador",
       "away": "Germany",
       "venue": "New Jersey",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 1,
-      "finished": false
+      "finished": true
     },
     {
       "id": "fifa-400021468",
@@ -897,8 +897,8 @@
       "away": "Ivory Coast (Côte d'Ivoire)",
       "venue": "Philadelphia",
       "home_score": 0,
-      "away_score": 1,
-      "finished": false
+      "away_score": 2,
+      "finished": true
     },
     {
       "id": "fifa-400021471",
@@ -912,9 +912,9 @@
       "home": "Japan",
       "away": "Sweden",
       "venue": "Dallas",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 1,
+      "away_score": 1,
+      "finished": true
     },
     {
       "id": "fifa-400021473",
@@ -928,9 +928,9 @@
       "home": "Tunisia",
       "away": "Netherlands (Holland)",
       "venue": "Kansas City",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 1,
+      "away_score": 3,
+      "finished": true
     },
     {
       "id": "fifa-400021459",
@@ -944,9 +944,9 @@
       "home": "Türkiye (Turkey)",
       "away": "USA (United States)",
       "venue": "Los Angeles",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 3,
+      "away_score": 2,
+      "finished": true
     },
     {
       "id": "fifa-400021461",
@@ -960,9 +960,9 @@
       "home": "Paraguay",
       "away": "Australia",
       "venue": "San Francisco Bay Area",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 0,
+      "away_score": 0,
+      "finished": true
     },
     {
       "id": "fifa-400021489",
@@ -1182,7 +1182,7 @@
       "match_number": 76,
       "kickoff_utc": "2026-06-29T17:00:00Z",
       "home": "Brazil",
-      "away": "2F",
+      "away": "Japan",
       "venue": "Houston",
       "home_score": null,
       "away_score": null,
@@ -1213,7 +1213,7 @@
       "matchday": null,
       "match_number": 75,
       "kickoff_utc": "2026-06-30T01:00:00Z",
-      "home": "1F",
+      "home": "Netherlands (Holland)",
       "away": "Morocco",
       "venue": "Monterrey",
       "home_score": null,
@@ -1229,7 +1229,7 @@
       "matchday": null,
       "match_number": 78,
       "kickoff_utc": "2026-06-30T17:00:00Z",
-      "home": "2E",
+      "home": "Ivory Coast (Côte d'Ivoire)",
       "away": "2I",
       "venue": "Dallas",
       "home_score": null,
@@ -1310,7 +1310,7 @@
       "match_number": 81,
       "kickoff_utc": "2026-07-02T00:00:00Z",
       "home": "USA (United States)",
-      "away": "3BEFIJ",
+      "away": "Bosnia and Herzegovina (Bosnia)",
       "venue": "San Francisco Bay Area",
       "home_score": null,
       "away_score": null,
@@ -1373,7 +1373,7 @@
       "matchday": null,
       "match_number": 88,
       "kickoff_utc": "2026-07-03T18:00:00Z",
-      "home": "2D",
+      "home": "Australia",
       "away": "2G",
       "venue": "Dallas",
       "home_score": null,

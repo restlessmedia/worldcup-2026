@@ -1,11 +1,11 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-25",
+  "last_updated": "2026-06-26",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
-    "teams_in_bracket": 9,
-    "r32_fixtures_set": 1
+    "teams_in_bracket": 14,
+    "r32_fixtures_set": 4
   },
   "rounds": [
     {
@@ -56,7 +56,15 @@
         },
         {
           "id": "r32-03",
-          "home": null,
+          "home": {
+            "draw_name": "Netherlands (Holland)",
+            "display_name": "Netherlands",
+            "fifa_code": "NED",
+            "house_id": "4",
+            "group": "F",
+            "fifa_rank": 7,
+            "status": "alive"
+          },
           "away": {
             "draw_name": "Morocco",
             "display_name": "Morocco",
@@ -82,7 +90,15 @@
             "fifa_rank": 6,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Japan",
+            "display_name": "Japan",
+            "fifa_code": "JPN",
+            "house_id": "2",
+            "group": "F",
+            "fifa_rank": 18,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -99,7 +115,15 @@
         },
         {
           "id": "r32-06",
-          "home": null,
+          "home": {
+            "draw_name": "Ivory Coast (Côte d'Ivoire)",
+            "display_name": "Ivory Coast",
+            "fifa_code": "CIV",
+            "house_id": "6",
+            "group": "E",
+            "fifa_rank": 34,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -143,7 +167,15 @@
             "fifa_rank": 16,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Bosnia and Herzegovina (Bosnia)",
+            "display_name": "Bosnia",
+            "fifa_code": "BIH",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 65,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -221,7 +253,15 @@
         },
         {
           "id": "r32-16",
-          "home": null,
+          "home": {
+            "draw_name": "Australia",
+            "display_name": "Australia",
+            "fifa_code": "AUS",
+            "house_id": "8",
+            "group": "D",
+            "fifa_rank": 27,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -230,9 +270,11 @@
         }
       ],
       "houses": [
+        "2",
         "4",
         "5",
         "6",
+        "8",
         "12",
         "13",
         "19",
@@ -240,7 +282,7 @@
         "22",
         "Coppice"
       ],
-      "teams_count": 9
+      "teams_count": 14
     },
     {
       "id": "r16",

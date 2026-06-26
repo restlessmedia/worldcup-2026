@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-25",
+  "last_updated": "2026-06-26",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -25,7 +25,7 @@
         },
         {
           "id": "r32-03",
-          "home": null,
+          "home": "Netherlands (Holland)",
           "away": "Morocco",
           "home_score": null,
           "away_score": null,
@@ -34,7 +34,7 @@
         {
           "id": "r32-04",
           "home": "Brazil",
-          "away": null,
+          "away": "Japan",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -49,7 +49,7 @@
         },
         {
           "id": "r32-06",
-          "home": null,
+          "home": "Ivory Coast (Côte d'Ivoire)",
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -74,7 +74,7 @@
         {
           "id": "r32-09",
           "home": "USA (United States)",
-          "away": null,
+          "away": "Bosnia and Herzegovina (Bosnia)",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -129,7 +129,7 @@
         },
         {
           "id": "r32-16",
-          "home": null,
+          "home": "Australia",
           "away": null,
           "home_score": null,
           "away_score": null,
