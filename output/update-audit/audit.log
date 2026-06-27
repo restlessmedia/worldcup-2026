@@ -59,3 +59,4 @@
 2026-06-26T09:15:25.971112+00:00 | status=ok | changed=False | finished_matches=60 | eliminated=6 | new_eliminated=0 | published=True | detail=2026-06-26T091526Z.json
 2026-06-26T20:40:26.495821+00:00 | status=ok | changed=False | finished_matches=60 | eliminated=6 | new_eliminated=0 | published=True | detail=2026-06-26T204026Z.json
 2026-06-26T21:47:28.337735+00:00 | status=ok | changed=True | finished_matches=62 | eliminated=7 | new_eliminated=1 | published=True | detail=2026-06-26T214728Z.json
+2026-06-27T08:27:36.659912+00:00 | status=ok | changed=True | finished_matches=66 | eliminated=9 | new_eliminated=2 | published=True | detail=2026-06-27T082736Z.json

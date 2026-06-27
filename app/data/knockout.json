@@ -1,11 +1,11 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-26",
+  "last_updated": "2026-06-27",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
-    "teams_in_bracket": 16,
-    "r32_fixtures_set": 5
+    "teams_in_bracket": 22,
+    "r32_fixtures_set": 9
   },
   "rounds": [
     {
@@ -48,7 +48,15 @@
             "fifa_rank": 10,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Paraguay",
+            "display_name": "Paraguay",
+            "fifa_code": "PAR",
+            "house_id": "16",
+            "group": "D",
+            "fifa_rank": 40,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -115,7 +123,15 @@
             "fifa_rank": 1,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Sweden",
+            "display_name": "Sweden",
+            "fifa_code": "SWE",
+            "house_id": "20",
+            "group": "F",
+            "fifa_rank": 38,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -199,7 +215,15 @@
         },
         {
           "id": "r32-10",
-          "home": null,
+          "home": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -217,7 +241,15 @@
         },
         {
           "id": "r32-12",
-          "home": null,
+          "home": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -252,7 +284,15 @@
             "fifa_rank": 3,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Cape Verde",
+            "display_name": "Cape Verde",
+            "fifa_code": "CPV",
+            "house_id": "18",
+            "group": "H",
+            "fifa_rank": 69,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -278,7 +318,15 @@
             "fifa_rank": 27,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Egypt",
+            "display_name": "Egypt",
+            "fifa_code": "EGY",
+            "house_id": "13",
+            "group": "G",
+            "fifa_rank": 29,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -286,6 +334,7 @@
         }
       ],
       "houses": [
+        "1",
         "2",
         "4",
         "5",
@@ -294,13 +343,15 @@
         "11",
         "12",
         "13",
+        "16",
+        "18",
         "19",
         "20",
         "21",
         "22",
         "Coppice"
       ],
-      "teams_count": 16
+      "teams_count": 22
     },
     {
       "id": "r16",

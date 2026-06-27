@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-26",
+  "last_updated": "2026-06-27",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "teams_eliminated": [
@@ -7,7 +7,9 @@
     "Czechia (Czech Republic)",
     "Haiti",
     "Iraq",
+    "New Zealand",
     "Qatar",
+    "Saudi Arabia",
     "Tunisia",
     "Türkiye (Turkey)"
   ],
@@ -16,7 +18,7 @@
     "Argentina": 0,
     "Australia": 2,
     "Austria": 3,
-    "Belgium": 1,
+    "Belgium": 2,
     "Bosnia and Herzegovina (Bosnia)": 6,
     "Brazil": 1,
     "Canada": 3,
@@ -27,13 +29,13 @@
     "Czechia (Czech Republic)": 6,
     "DR Congo (Democratic Republic of the Congo)": 2,
     "Ecuador": 2,
-    "Egypt": 2,
+    "Egypt": 3,
     "England": 2,
     "France": 2,
     "Germany": 4,
     "Ghana": 0,
     "Haiti": 8,
-    "Iran": 2,
+    "Iran": 3,
     "Iraq": 12,
     "Ivory Coast (Côte d'Ivoire)": 2,
     "Japan": 3,
@@ -41,7 +43,7 @@
     "Mexico": 0,
     "Morocco": 3,
     "Netherlands (Holland)": 4,
-    "New Zealand": 5,
+    "New Zealand": 10,
     "Norway": 7,
     "Panama": 2,
     "Paraguay": 4,
@@ -58,7 +60,7 @@
     "Tunisia": 12,
     "Türkiye (Turkey)": 5,
     "USA (United States)": 4,
-    "Uruguay": 3,
+    "Uruguay": 4,
     "Uzbekistan": 8
   }
 }

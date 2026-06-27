@@ -1,0 +1,138 @@
+{
+  "started_at": "2026-06-27T08:27:36.659912+00:00",
+  "mode": "live",
+  "steps": [
+    {
+      "name": "sync_results",
+      "changed": true,
+      "finished_matches": 66,
+      "teams_eliminated": 9,
+      "teams_eliminated_list": [
+        "Curacao (Curaçao)",
+        "Czechia (Czech Republic)",
+        "Haiti",
+        "Iraq",
+        "New Zealand",
+        "Qatar",
+        "Saudi Arabia",
+        "Tunisia",
+        "Türkiye (Turkey)"
+      ],
+      "new_eliminations": [
+        "New Zealand",
+        "Saudi Arabia"
+      ],
+      "goals_teams": 48,
+      "elimination_notes": [
+        "Group A: Czechia (Czech Republic) eliminated (4th place)",
+        "Group B: Qatar eliminated (4th place)",
+        "Group C: Haiti eliminated (4th place)",
+        "Group D: Türkiye (Turkey) eliminated (4th place)",
+        "Group E: Curacao (Curaçao) eliminated (4th place)",
+        "Group F: Tunisia eliminated (4th place)",
+        "Group G: New Zealand eliminated (4th place)",
+        "Group H: Saudi Arabia eliminated (4th place)",
+        "Group I: Iraq eliminated (4th place)"
+      ],
+      "skipped_write": false
+    },
+    {
+      "name": "sync_knockout",
+      "changed": true,
+      "filled_r32": 9,
+      "notes": [
+        "r32-02 away: None → Paraguay",
+        "r32-05 away: None → Sweden",
+        "r32-10 home: None → Belgium",
+        "r32-12 home: None → Spain",
+        "r32-16 away: None → Egypt",
+        "r32-14 away: None → Cape Verde"
+      ],
+      "skipped_write": false
+    },
+    {
+      "name": "validate",
+      "ok": true
+    },
+    {
+      "name": "publish",
+      "skip_build": true
+    },
+    {
+      "name": "whatsapp_draft",
+      "paths": [
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/2026-06-27T082736Z.txt"
+      ]
+    }
+  ],
+  "summary": {
+    "data_changed": true,
+    "results_changed": true,
+    "knockout_changed": true,
+    "finished_matches": 66,
+    "teams_eliminated": 9,
+    "teams_eliminated_list": [
+      "Curacao (Curaçao)",
+      "Czechia (Czech Republic)",
+      "Haiti",
+      "Iraq",
+      "New Zealand",
+      "Qatar",
+      "Saudi Arabia",
+      "Tunisia",
+      "Türkiye (Turkey)"
+    ],
+    "new_eliminations": [
+      "New Zealand",
+      "Saudi Arabia"
+    ],
+    "elimination_notes": [
+      "Group A: Czechia (Czech Republic) eliminated (4th place)",
+      "Group B: Qatar eliminated (4th place)",
+      "Group C: Haiti eliminated (4th place)",
+      "Group D: Türkiye (Turkey) eliminated (4th place)",
+      "Group E: Curacao (Curaçao) eliminated (4th place)",
+      "Group F: Tunisia eliminated (4th place)",
+      "Group G: New Zealand eliminated (4th place)",
+      "Group H: Saudi Arabia eliminated (4th place)",
+      "Group I: Iraq eliminated (4th place)"
+    ],
+    "teams_still_in": 39,
+    "published": true,
+    "whatsapp_draft": "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+    "idempotent_noop": false
+  },
+  "status": "ok",
+  "eliminations": {
+    "total": 9,
+    "teams": [
+      "Curacao (Curaçao)",
+      "Czechia (Czech Republic)",
+      "Haiti",
+      "Iraq",
+      "New Zealand",
+      "Qatar",
+      "Saudi Arabia",
+      "Tunisia",
+      "Türkiye (Turkey)"
+    ],
+    "new_this_run": [
+      "New Zealand",
+      "Saudi Arabia"
+    ],
+    "notes": [
+      "Group A: Czechia (Czech Republic) eliminated (4th place)",
+      "Group B: Qatar eliminated (4th place)",
+      "Group C: Haiti eliminated (4th place)",
+      "Group D: Türkiye (Turkey) eliminated (4th place)",
+      "Group E: Curacao (Curaçao) eliminated (4th place)",
+      "Group F: Tunisia eliminated (4th place)",
+      "Group G: New Zealand eliminated (4th place)",
+      "Group H: Saudi Arabia eliminated (4th place)",
+      "Group I: Iraq eliminated (4th place)"
+    ]
+  },
+  "validation_report": "# Update validation report\n\nGenerated: 2026-06-27 08:27 UTC\n\n**Source URL in data:** https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures\n**Results date:** 2026-06-27\n**Knockout phase:** knockout\n\n## Results (houses + wooden spoon)\n\n### Warnings (review)\n- goals_conceded: 'Belgium' 1 → 2\n- goals_conceded: 'Egypt' 2 → 3\n- goals_conceded: 'Iran' 2 → 3\n- goals_conceded: 'New Zealand' 5 → 10\n- goals_conceded: 'Uruguay' 3 → 4\n\n### Wooden spoon preview (top 5)\n- Iraq: 12 goals conceded\n- Tunisia: 12 goals conceded\n- New Zealand: 10 goals conceded\n- Qatar: 10 goals conceded\n- Curacao (Curaçao): 9 goals conceded\n\n### Eliminated teams\n- Curacao (Curaçao)\n- Czechia (Czech Republic)\n- Haiti\n- Iraq\n- New Zealand\n- Qatar\n- Saudi Arabia\n- Tunisia\n- Türkiye (Turkey)\n\n**New this run:** New Zealand, Saudi Arabia\n\n**Summary:** 39 teams still in · 9 eliminated · 48 teams with goals recorded\n\n## Knockout bracket\n\nNo issues found.\n\n## Verdict\n\n**Ready to publish** — warnings are informational only; no approval step. Fix retrospectively if anything looks wrong.\n",
+  "finished_at": "2026-06-27T08:27:36.913063+00:00"
+}
