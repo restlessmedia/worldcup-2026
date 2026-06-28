@@ -1,0 +1,164 @@
+{
+  "started_at": "2026-06-28T13:12:15.575565+00:00",
+  "mode": "live",
+  "steps": [
+    {
+      "name": "sync_results",
+      "changed": false,
+      "finished_matches": 72,
+      "teams_eliminated": 16,
+      "teams_eliminated_list": [
+        "Curacao (Curaçao)",
+        "Czechia (Czech Republic)",
+        "Haiti",
+        "Iran",
+        "Iraq",
+        "Jordan",
+        "New Zealand",
+        "Panama",
+        "Qatar",
+        "Saudi Arabia",
+        "Scotland",
+        "South Korea (Korea Republic)",
+        "Tunisia",
+        "Türkiye (Turkey)",
+        "Uruguay",
+        "Uzbekistan"
+      ],
+      "new_eliminations": [],
+      "goals_teams": 48,
+      "elimination_notes": [
+        "Group A: Czechia (Czech Republic) eliminated (4th place)",
+        "Group B: Qatar eliminated (4th place)",
+        "Group C: Haiti eliminated (4th place)",
+        "Group D: Türkiye (Turkey) eliminated (4th place)",
+        "Group E: Curacao (Curaçao) eliminated (4th place)",
+        "Group F: Tunisia eliminated (4th place)",
+        "Group G: New Zealand eliminated (4th place)",
+        "Group H: Saudi Arabia eliminated (4th place)",
+        "Group I: Iraq eliminated (4th place)",
+        "Group J: Jordan eliminated (4th place)",
+        "Group K: Uzbekistan eliminated (4th place)",
+        "Group L: Panama eliminated (4th place)",
+        "Iran eliminated (3rd place, not among best 8)",
+        "South Korea (Korea Republic) eliminated (3rd place, not among best 8)",
+        "Scotland eliminated (3rd place, not among best 8)",
+        "Uruguay eliminated (3rd place, not among best 8)"
+      ],
+      "skipped_write": true
+    },
+    {
+      "name": "sync_knockout",
+      "changed": false,
+      "filled_r32": 16,
+      "notes": [],
+      "skipped_write": true
+    },
+    {
+      "name": "validate",
+      "ok": true
+    },
+    {
+      "name": "publish",
+      "skip_build": true
+    },
+    {
+      "name": "whatsapp_draft",
+      "paths": [
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/2026-06-28T131215Z.txt"
+      ]
+    }
+  ],
+  "summary": {
+    "data_changed": false,
+    "results_changed": false,
+    "knockout_changed": false,
+    "finished_matches": 72,
+    "teams_eliminated": 16,
+    "teams_eliminated_list": [
+      "Curacao (Curaçao)",
+      "Czechia (Czech Republic)",
+      "Haiti",
+      "Iran",
+      "Iraq",
+      "Jordan",
+      "New Zealand",
+      "Panama",
+      "Qatar",
+      "Saudi Arabia",
+      "Scotland",
+      "South Korea (Korea Republic)",
+      "Tunisia",
+      "Türkiye (Turkey)",
+      "Uruguay",
+      "Uzbekistan"
+    ],
+    "new_eliminations": [],
+    "elimination_notes": [
+      "Group A: Czechia (Czech Republic) eliminated (4th place)",
+      "Group B: Qatar eliminated (4th place)",
+      "Group C: Haiti eliminated (4th place)",
+      "Group D: Türkiye (Turkey) eliminated (4th place)",
+      "Group E: Curacao (Curaçao) eliminated (4th place)",
+      "Group F: Tunisia eliminated (4th place)",
+      "Group G: New Zealand eliminated (4th place)",
+      "Group H: Saudi Arabia eliminated (4th place)",
+      "Group I: Iraq eliminated (4th place)",
+      "Group J: Jordan eliminated (4th place)",
+      "Group K: Uzbekistan eliminated (4th place)",
+      "Group L: Panama eliminated (4th place)",
+      "Iran eliminated (3rd place, not among best 8)",
+      "South Korea (Korea Republic) eliminated (3rd place, not among best 8)",
+      "Scotland eliminated (3rd place, not among best 8)",
+      "Uruguay eliminated (3rd place, not among best 8)"
+    ],
+    "teams_still_in": 32,
+    "published": true,
+    "whatsapp_draft": "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+    "idempotent_noop": false
+  },
+  "status": "ok",
+  "eliminations": {
+    "total": 16,
+    "teams": [
+      "Curacao (Curaçao)",
+      "Czechia (Czech Republic)",
+      "Haiti",
+      "Iran",
+      "Iraq",
+      "Jordan",
+      "New Zealand",
+      "Panama",
+      "Qatar",
+      "Saudi Arabia",
+      "Scotland",
+      "South Korea (Korea Republic)",
+      "Tunisia",
+      "Türkiye (Turkey)",
+      "Uruguay",
+      "Uzbekistan"
+    ],
+    "new_this_run": [],
+    "notes": [
+      "Group A: Czechia (Czech Republic) eliminated (4th place)",
+      "Group B: Qatar eliminated (4th place)",
+      "Group C: Haiti eliminated (4th place)",
+      "Group D: Türkiye (Turkey) eliminated (4th place)",
+      "Group E: Curacao (Curaçao) eliminated (4th place)",
+      "Group F: Tunisia eliminated (4th place)",
+      "Group G: New Zealand eliminated (4th place)",
+      "Group H: Saudi Arabia eliminated (4th place)",
+      "Group I: Iraq eliminated (4th place)",
+      "Group J: Jordan eliminated (4th place)",
+      "Group K: Uzbekistan eliminated (4th place)",
+      "Group L: Panama eliminated (4th place)",
+      "Iran eliminated (3rd place, not among best 8)",
+      "South Korea (Korea Republic) eliminated (3rd place, not among best 8)",
+      "Scotland eliminated (3rd place, not among best 8)",
+      "Uruguay eliminated (3rd place, not among best 8)"
+    ]
+  },
+  "validation_report": "# Update validation report\n\nGenerated: 2026-06-28 13:12 UTC\n\n**Source URL in data:** https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures\n**Results date:** 2026-06-28\n**Knockout phase:** knockout\n\n## Results (houses + wooden spoon)\n\nNo issues found.\n\n### Wooden spoon preview (top 5)\n- Iraq: 12 goals conceded\n- Tunisia: 12 goals conceded\n- Uzbekistan: 11 goals conceded\n- New Zealand: 10 goals conceded\n- Qatar: 10 goals conceded\n\n### Eliminated teams\n- Curacao (Curaçao)\n- Czechia (Czech Republic)\n- Haiti\n- Iran\n- Iraq\n- Jordan\n- New Zealand\n- Panama\n- Qatar\n- Saudi Arabia\n- Scotland\n- South Korea (Korea Republic)\n- Tunisia\n- Türkiye (Turkey)\n- Uruguay\n- Uzbekistan\n\n**Summary:** 32 teams still in · 16 eliminated · 48 teams with goals recorded\n\n## Knockout bracket\n\nNo issues found.\n\n## Verdict\n\n**Ready to publish.**\n",
+  "finished_at": "2026-06-28T13:12:15.887948+00:00"
+}
