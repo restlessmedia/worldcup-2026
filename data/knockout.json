@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-27",
+  "last_updated": "2026-06-28",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -58,15 +58,15 @@
         {
           "id": "r32-07",
           "home": "Mexico",
-          "away": null,
+          "away": "Ecuador",
           "home_score": null,
           "away_score": null,
           "winner": null
         },
         {
           "id": "r32-08",
-          "home": null,
-          "away": null,
+          "home": "England",
+          "away": "DR Congo (Democratic Republic of the Congo)",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -82,15 +82,15 @@
         {
           "id": "r32-10",
           "home": "Belgium",
-          "away": null,
+          "away": "Senegal",
           "home_score": null,
           "away_score": null,
           "winner": null
         },
         {
           "id": "r32-11",
-          "home": null,
-          "away": null,
+          "home": "Portugal",
+          "away": "Croatia",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -98,7 +98,7 @@
         {
           "id": "r32-12",
           "home": "Spain",
-          "away": null,
+          "away": "Austria",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -106,7 +106,7 @@
         {
           "id": "r32-13",
           "home": "Switzerland",
-          "away": null,
+          "away": "Algeria",
           "home_score": null,
           "away_score": null,
           "winner": null
@@ -121,8 +121,8 @@
         },
         {
           "id": "r32-15",
-          "home": null,
-          "away": null,
+          "home": "Colombia",
+          "away": "Ghana",
           "home_score": null,
           "away_score": null,
           "winner": null

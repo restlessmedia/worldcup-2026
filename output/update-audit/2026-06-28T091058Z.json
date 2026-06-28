@@ -1,0 +1,199 @@
+{
+  "started_at": "2026-06-28T09:10:58.365122+00:00",
+  "mode": "live",
+  "steps": [
+    {
+      "name": "sync_results",
+      "changed": true,
+      "finished_matches": 72,
+      "teams_eliminated": 16,
+      "teams_eliminated_list": [
+        "Curacao (Curaçao)",
+        "Czechia (Czech Republic)",
+        "Haiti",
+        "Iran",
+        "Iraq",
+        "Jordan",
+        "New Zealand",
+        "Panama",
+        "Qatar",
+        "Saudi Arabia",
+        "Scotland",
+        "South Korea (Korea Republic)",
+        "Tunisia",
+        "Türkiye (Turkey)",
+        "Uruguay",
+        "Uzbekistan"
+      ],
+      "new_eliminations": [
+        "Iran",
+        "Jordan",
+        "Panama",
+        "Scotland",
+        "South Korea (Korea Republic)",
+        "Uruguay",
+        "Uzbekistan"
+      ],
+      "goals_teams": 48,
+      "elimination_notes": [
+        "Group A: Czechia (Czech Republic) eliminated (4th place)",
+        "Group B: Qatar eliminated (4th place)",
+        "Group C: Haiti eliminated (4th place)",
+        "Group D: Türkiye (Turkey) eliminated (4th place)",
+        "Group E: Curacao (Curaçao) eliminated (4th place)",
+        "Group F: Tunisia eliminated (4th place)",
+        "Group G: New Zealand eliminated (4th place)",
+        "Group H: Saudi Arabia eliminated (4th place)",
+        "Group I: Iraq eliminated (4th place)",
+        "Group J: Jordan eliminated (4th place)",
+        "Group K: Uzbekistan eliminated (4th place)",
+        "Group L: Panama eliminated (4th place)",
+        "Iran eliminated (3rd place, not among best 8)",
+        "South Korea (Korea Republic) eliminated (3rd place, not among best 8)",
+        "Scotland eliminated (3rd place, not among best 8)",
+        "Uruguay eliminated (3rd place, not among best 8)"
+      ],
+      "skipped_write": false
+    },
+    {
+      "name": "sync_knockout",
+      "changed": true,
+      "filled_r32": 16,
+      "notes": [
+        "r32-07 away: None → Ecuador",
+        "r32-08 home: None → England",
+        "r32-08 away: None → DR Congo (Democratic Republic of the Congo)",
+        "r32-10 away: None → Senegal",
+        "r32-12 away: None → Austria",
+        "r32-11 home: None → Portugal",
+        "r32-11 away: None → Croatia",
+        "r32-13 away: None → Algeria",
+        "r32-15 home: None → Colombia",
+        "r32-15 away: None → Ghana"
+      ],
+      "skipped_write": false
+    },
+    {
+      "name": "validate",
+      "ok": true
+    },
+    {
+      "name": "publish",
+      "skip_build": true
+    },
+    {
+      "name": "whatsapp_draft",
+      "paths": [
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+        "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/2026-06-28T091058Z.txt"
+      ]
+    }
+  ],
+  "summary": {
+    "data_changed": true,
+    "results_changed": true,
+    "knockout_changed": true,
+    "finished_matches": 72,
+    "teams_eliminated": 16,
+    "teams_eliminated_list": [
+      "Curacao (Curaçao)",
+      "Czechia (Czech Republic)",
+      "Haiti",
+      "Iran",
+      "Iraq",
+      "Jordan",
+      "New Zealand",
+      "Panama",
+      "Qatar",
+      "Saudi Arabia",
+      "Scotland",
+      "South Korea (Korea Republic)",
+      "Tunisia",
+      "Türkiye (Turkey)",
+      "Uruguay",
+      "Uzbekistan"
+    ],
+    "new_eliminations": [
+      "Iran",
+      "Jordan",
+      "Panama",
+      "Scotland",
+      "South Korea (Korea Republic)",
+      "Uruguay",
+      "Uzbekistan"
+    ],
+    "elimination_notes": [
+      "Group A: Czechia (Czech Republic) eliminated (4th place)",
+      "Group B: Qatar eliminated (4th place)",
+      "Group C: Haiti eliminated (4th place)",
+      "Group D: Türkiye (Turkey) eliminated (4th place)",
+      "Group E: Curacao (Curaçao) eliminated (4th place)",
+      "Group F: Tunisia eliminated (4th place)",
+      "Group G: New Zealand eliminated (4th place)",
+      "Group H: Saudi Arabia eliminated (4th place)",
+      "Group I: Iraq eliminated (4th place)",
+      "Group J: Jordan eliminated (4th place)",
+      "Group K: Uzbekistan eliminated (4th place)",
+      "Group L: Panama eliminated (4th place)",
+      "Iran eliminated (3rd place, not among best 8)",
+      "South Korea (Korea Republic) eliminated (3rd place, not among best 8)",
+      "Scotland eliminated (3rd place, not among best 8)",
+      "Uruguay eliminated (3rd place, not among best 8)"
+    ],
+    "teams_still_in": 32,
+    "published": true,
+    "whatsapp_draft": "/home/runner/work/worldcup-2026/worldcup-2026/output/whatsapp/latest.txt",
+    "idempotent_noop": false
+  },
+  "status": "ok",
+  "eliminations": {
+    "total": 16,
+    "teams": [
+      "Curacao (Curaçao)",
+      "Czechia (Czech Republic)",
+      "Haiti",
+      "Iran",
+      "Iraq",
+      "Jordan",
+      "New Zealand",
+      "Panama",
+      "Qatar",
+      "Saudi Arabia",
+      "Scotland",
+      "South Korea (Korea Republic)",
+      "Tunisia",
+      "Türkiye (Turkey)",
+      "Uruguay",
+      "Uzbekistan"
+    ],
+    "new_this_run": [
+      "Iran",
+      "Jordan",
+      "Panama",
+      "Scotland",
+      "South Korea (Korea Republic)",
+      "Uruguay",
+      "Uzbekistan"
+    ],
+    "notes": [
+      "Group A: Czechia (Czech Republic) eliminated (4th place)",
+      "Group B: Qatar eliminated (4th place)",
+      "Group C: Haiti eliminated (4th place)",
+      "Group D: Türkiye (Turkey) eliminated (4th place)",
+      "Group E: Curacao (Curaçao) eliminated (4th place)",
+      "Group F: Tunisia eliminated (4th place)",
+      "Group G: New Zealand eliminated (4th place)",
+      "Group H: Saudi Arabia eliminated (4th place)",
+      "Group I: Iraq eliminated (4th place)",
+      "Group J: Jordan eliminated (4th place)",
+      "Group K: Uzbekistan eliminated (4th place)",
+      "Group L: Panama eliminated (4th place)",
+      "Iran eliminated (3rd place, not among best 8)",
+      "South Korea (Korea Republic) eliminated (3rd place, not among best 8)",
+      "Scotland eliminated (3rd place, not among best 8)",
+      "Uruguay eliminated (3rd place, not among best 8)"
+    ]
+  },
+  "validation_report": "# Update validation report\n\nGenerated: 2026-06-28 09:10 UTC\n\n**Source URL in data:** https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures\n**Results date:** 2026-06-28\n**Knockout phase:** knockout\n\n## Results (houses + wooden spoon)\n\n### Warnings (review)\n- goals_conceded: 'Algeria' 4 → 7\n- goals_conceded: 'Argentina' 0 → 1\n- goals_conceded: 'Austria' 3 → 6\n- goals_conceded: 'Croatia' 4 → 5\n- goals_conceded: 'DR Congo (Democratic Republic of the Congo)' 2 → 3\n- goals_conceded: 'Ghana' 0 → 2\n- goals_conceded: 'Jordan' 5 → 8\n- goals_conceded: 'Panama' 2 → 4\n- goals_conceded: 'Uzbekistan' 8 → 11\n\n### Wooden spoon preview (top 5)\n- Iraq: 12 goals conceded\n- Tunisia: 12 goals conceded\n- Uzbekistan: 11 goals conceded\n- New Zealand: 10 goals conceded\n- Qatar: 10 goals conceded\n\n### Eliminated teams\n- Curacao (Curaçao)\n- Czechia (Czech Republic)\n- Haiti\n- Iran\n- Iraq\n- Jordan\n- New Zealand\n- Panama\n- Qatar\n- Saudi Arabia\n- Scotland\n- South Korea (Korea Republic)\n- Tunisia\n- Türkiye (Turkey)\n- Uruguay\n- Uzbekistan\n\n**New this run:** Iran, Jordan, Panama, Scotland, South Korea (Korea Republic), Uruguay, Uzbekistan\n\n**Summary:** 32 teams still in · 16 eliminated · 48 teams with goals recorded\n\n## Knockout bracket\n\nNo issues found.\n\n## Verdict\n\n**Ready to publish** — warnings are informational only; no approval step. Fix retrospectively if anything looks wrong.\n",
+  "finished_at": "2026-06-28T09:10:58.625017+00:00"
+}

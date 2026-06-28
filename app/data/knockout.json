@@ -1,11 +1,11 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-27",
+  "last_updated": "2026-06-28",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
-    "teams_in_bracket": 22,
-    "r32_fixtures_set": 9
+    "teams_in_bracket": 32,
+    "r32_fixtures_set": 16
   },
   "rounds": [
     {
@@ -173,7 +173,15 @@
             "fifa_rank": 15,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Ecuador",
+            "display_name": "Ecuador",
+            "fifa_code": "ECU",
+            "house_id": "3",
+            "group": "E",
+            "fifa_rank": 23,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -181,8 +189,24 @@
         },
         {
           "id": "r32-08",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "DR Congo (Democratic Republic of the Congo)",
+            "display_name": "DR Congo",
+            "fifa_code": "COD",
+            "house_id": "22",
+            "group": "K",
+            "fifa_rank": 46,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -224,7 +248,15 @@
             "fifa_rank": 9,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Senegal",
+            "display_name": "Senegal",
+            "fifa_code": "SEN",
+            "house_id": "6",
+            "group": "I",
+            "fifa_rank": 14,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -232,8 +264,24 @@
         },
         {
           "id": "r32-11",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Portugal",
+            "display_name": "Portugal",
+            "fifa_code": "POR",
+            "house_id": "21",
+            "group": "K",
+            "fifa_rank": 5,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Croatia",
+            "display_name": "Croatia",
+            "fifa_code": "CRO",
+            "house_id": "19",
+            "group": "L",
+            "fifa_rank": 11,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -250,7 +298,15 @@
             "fifa_rank": 2,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Austria",
+            "display_name": "Austria",
+            "fifa_code": "AUT",
+            "house_id": "2",
+            "group": "J",
+            "fifa_rank": 24,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -267,7 +323,15 @@
             "fifa_rank": 19,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Algeria",
+            "display_name": "Algeria",
+            "fifa_code": "ALG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 28,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -300,8 +364,24 @@
         },
         {
           "id": "r32-15",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Colombia",
+            "display_name": "Colombia",
+            "fifa_code": "COL",
+            "house_id": "Coppice",
+            "group": "K",
+            "fifa_rank": 13,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Ghana",
+            "display_name": "Ghana",
+            "fifa_code": "GHA",
+            "house_id": "5",
+            "group": "L",
+            "fifa_rank": 74,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -336,6 +416,7 @@
       "houses": [
         "1",
         "2",
+        "3",
         "4",
         "5",
         "6",
@@ -351,7 +432,7 @@
         "22",
         "Coppice"
       ],
-      "teams_count": 22
+      "teams_count": 32
     },
     {
       "id": "r16",
