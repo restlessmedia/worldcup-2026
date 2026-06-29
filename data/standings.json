@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-28T20:32:53.270748+00:00",
+  "generated_at": "2026-06-29T09:45:04.265873+00:00",
   "tournament_status": "in_progress",
-  "results_updated": "2026-06-28",
-  "teams_in_play": 32,
+  "results_updated": "2026-06-29",
+  "teams_in_play": 31,
   "teams_total": 48,
   "houses": [
     {
@@ -605,7 +605,7 @@
     {
       "house_id": "22",
       "teams_total": 3,
-      "teams_alive": 2,
+      "teams_alive": 1,
       "best_remaining_rank": 46,
       "best_remaining_team": "DR Congo",
       "teams": [
@@ -637,8 +637,8 @@
           "fifa_code": "RSA",
           "group": "A",
           "fifa_rank": 60,
-          "status": "alive",
-          "goals_conceded": 3,
+          "status": "eliminated",
+          "goals_conceded": 4,
           "wooden_spoon_likelihood": 3,
           "fair_play_points": 0
         }
@@ -919,6 +919,16 @@
       "status": "eliminated"
     },
     {
+      "house_id": "22",
+      "display_name": "South Africa",
+      "fifa_code": "RSA",
+      "goals_conceded": 4,
+      "wooden_spoon_likelihood": 3,
+      "fifa_rank": 60,
+      "group": "A",
+      "status": "eliminated"
+    },
+    {
       "house_id": "5",
       "display_name": "USA",
       "fifa_code": "USA",
@@ -996,16 +1006,6 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 8,
       "group": "C",
-      "status": "alive"
-    },
-    {
-      "house_id": "22",
-      "display_name": "South Africa",
-      "fifa_code": "RSA",
-      "goals_conceded": 3,
-      "wooden_spoon_likelihood": 3,
-      "fifa_rank": 60,
-      "group": "A",
       "status": "alive"
     },
     {
@@ -1425,6 +1425,17 @@
     },
     {
       "position": 19,
+      "house_id": "22",
+      "display_name": "South Africa",
+      "fifa_code": "RSA",
+      "goals_conceded": 4,
+      "wooden_spoon_likelihood": 3,
+      "fifa_rank": 60,
+      "group": "A",
+      "status": "eliminated"
+    },
+    {
+      "position": 19,
       "house_id": "5",
       "display_name": "USA",
       "fifa_code": "USA",
@@ -1446,7 +1457,7 @@
       "status": "eliminated"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "Coppice",
       "display_name": "Canada",
       "fifa_code": "CAN",
@@ -1457,7 +1468,7 @@
       "status": "alive"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "22",
       "display_name": "DR Congo",
       "fifa_code": "COD",
@@ -1468,7 +1479,7 @@
       "status": "alive"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "13",
       "display_name": "Egypt",
       "fifa_code": "EGY",
@@ -1479,7 +1490,7 @@
       "status": "alive"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "21",
       "display_name": "Iran",
       "fifa_code": "IRN",
@@ -1490,7 +1501,7 @@
       "status": "eliminated"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "2",
       "display_name": "Japan",
       "fifa_code": "JPN",
@@ -1501,7 +1512,7 @@
       "status": "alive"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "19",
       "display_name": "Morocco",
       "fifa_code": "MAR",
@@ -1512,18 +1523,7 @@
       "status": "alive"
     },
     {
-      "position": 26,
-      "house_id": "22",
-      "display_name": "South Africa",
-      "fifa_code": "RSA",
-      "goals_conceded": 3,
-      "wooden_spoon_likelihood": 3,
-      "fifa_rank": 60,
-      "group": "A",
-      "status": "alive"
-    },
-    {
-      "position": 26,
+      "position": 27,
       "house_id": "16",
       "display_name": "South Korea",
       "fifa_code": "KOR",
@@ -1534,7 +1534,7 @@
       "status": "eliminated"
     },
     {
-      "position": 26,
+      "position": 27,
       "house_id": "13",
       "display_name": "Switzerland",
       "fifa_code": "SUI",

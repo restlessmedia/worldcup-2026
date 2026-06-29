@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-28",
+  "last_updated": "2026-06-29",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
@@ -21,7 +21,7 @@
             "house_id": "22",
             "group": "A",
             "fifa_rank": 60,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Canada",
@@ -32,10 +32,18 @@
             "fifa_rank": 30,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 0,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Canada",
+            "display_name": "Canada",
+            "fifa_code": "CAN",
+            "house_id": "Coppice",
+            "group": "B",
+            "fifa_rank": 30,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-02",
@@ -440,7 +448,15 @@
       "matches": [
         {
           "id": "r16-01",
-          "home": null,
+          "home": {
+            "draw_name": "Canada",
+            "display_name": "Canada",
+            "fifa_code": "CAN",
+            "house_id": "Coppice",
+            "group": "B",
+            "fifa_rank": 30,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -449,7 +465,15 @@
         },
         {
           "id": "r16-02",
-          "home": null,
+          "home": {
+            "draw_name": "Canada",
+            "display_name": "Canada",
+            "fifa_code": "CAN",
+            "house_id": "Coppice",
+            "group": "B",
+            "fifa_rank": 30,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -511,8 +535,10 @@
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "Coppice"
+      ],
+      "teams_count": 1
     },
     {
       "id": "qf",

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-28T20:32:53.272860+00:00",
+  "generated_at": "2026-06-29T09:45:04.267970+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-28T20:32:53.199471+00:00",
+  "fetched_at": "2026-06-29T09:45:04.195727+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -33,7 +33,7 @@
         "house_id": "22",
         "group": "A",
         "fifa_rank": 60,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 2,
       "away_score": 0,
@@ -777,7 +777,7 @@
         "house_id": "22",
         "group": "A",
         "fifa_rank": 60,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -1667,7 +1667,7 @@
         "house_id": "22",
         "group": "A",
         "fifa_rank": 60,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "South Korea (Korea Republic)",
@@ -2256,7 +2256,7 @@
         "house_id": "22",
         "group": "A",
         "fifa_rank": 60,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Canada",
@@ -2268,7 +2268,7 @@
         "status": "alive"
       },
       "home_score": 0,
-      "away_score": 0,
+      "away_score": 1,
       "played": true
     },
     {
@@ -2746,13 +2746,13 @@
       "kickoff_utc": "2026-07-04T17:00:00Z",
       "venue": "Houston",
       "home": {
-        "draw_name": "W73",
-        "display_name": "Winner of Round of 32 (match 73)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Canada",
+        "display_name": "Canada",
+        "fifa_code": "CAN",
+        "house_id": "Coppice",
+        "group": "B",
+        "fifa_rank": 30,
+        "status": "alive"
       },
       "away": {
         "draw_name": "W75",
