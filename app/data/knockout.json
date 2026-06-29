@@ -113,12 +113,20 @@
             "house_id": "2",
             "group": "F",
             "fifa_rank": 18,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-05",
@@ -474,7 +482,15 @@
             "fifa_rank": 30,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -482,7 +498,15 @@
         },
         {
           "id": "r16-03",
-          "home": null,
+          "home": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -536,9 +560,10 @@
         }
       ],
       "houses": [
+        "6",
         "Coppice"
       ],
-      "teams_count": 1
+      "teams_count": 2
     },
     {
       "id": "qf",

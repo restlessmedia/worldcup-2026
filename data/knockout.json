@@ -35,8 +35,8 @@
           "id": "r32-04",
           "home": "Brazil",
           "away": "Japan",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 2,
+          "away_score": 1,
           "winner": null
         },
         {
@@ -159,7 +159,7 @@
         },
         {
           "id": "r16-03",
-          "home": null,
+          "home": "Brazil",
           "away": null,
           "home_score": null,
           "away_score": null,
