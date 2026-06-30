@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-29T20:42:27.831871+00:00",
+  "generated_at": "2026-06-30T06:40:50.571221+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-29T20:42:27.765459+00:00",
+  "fetched_at": "2026-06-30T06:40:50.499849+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -2329,8 +2329,8 @@
         "fifa_rank": 40,
         "status": "alive"
       },
-      "home_score": 0,
-      "away_score": 0,
+      "home_score": 1,
+      "away_score": 1,
       "played": true
     },
     {
@@ -2360,9 +2360,9 @@
         "fifa_rank": 8,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 1,
+      "away_score": 1,
+      "played": true
     },
     {
       "id": "fifa-400021514",
@@ -2755,13 +2755,13 @@
         "status": "alive"
       },
       "away": {
-        "draw_name": "W75",
-        "display_name": "Winner of Round of 32 (match 75)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Morocco",
+        "display_name": "Morocco",
+        "fifa_code": "MAR",
+        "house_id": "19",
+        "group": "C",
+        "fifa_rank": 8,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
@@ -2777,13 +2777,13 @@
       "kickoff_utc": "2026-07-04T21:00:00Z",
       "venue": "Philadelphia",
       "home": {
-        "draw_name": "W74",
-        "display_name": "Winner of Round of 32 (match 74)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Paraguay",
+        "display_name": "Paraguay",
+        "fifa_code": "PAR",
+        "house_id": "16",
+        "group": "D",
+        "fifa_rank": 40,
+        "status": "alive"
       },
       "away": {
         "draw_name": "W77",

@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-06-30",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 17,
@@ -457,12 +457,12 @@
         {
           "id": "r16-01",
           "home": {
-            "draw_name": "Canada",
-            "display_name": "Canada",
-            "fifa_code": "CAN",
-            "house_id": "Coppice",
-            "group": "B",
-            "fifa_rank": 30,
+            "draw_name": "Paraguay",
+            "display_name": "Paraguay",
+            "fifa_code": "PAR",
+            "house_id": "16",
+            "group": "D",
+            "fifa_rank": 40,
             "status": "alive"
           },
           "away": null,
@@ -483,12 +483,12 @@
             "status": "alive"
           },
           "away": {
-            "draw_name": "Brazil",
-            "display_name": "Brazil",
-            "fifa_code": "BRA",
-            "house_id": "6",
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
             "group": "C",
-            "fifa_rank": 6,
+            "fifa_rank": 8,
             "status": "alive"
           },
           "home_score": null,
@@ -561,9 +561,11 @@
       ],
       "houses": [
         "6",
+        "16",
+        "19",
         "Coppice"
       ],
-      "teams_count": 2
+      "teams_count": 4
     },
     {
       "id": "qf",
