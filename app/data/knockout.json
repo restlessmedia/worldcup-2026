@@ -162,7 +162,7 @@
             "house_id": "6",
             "group": "E",
             "fifa_rank": 34,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Norway",
@@ -173,10 +173,18 @@
             "fifa_rank": 31,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-07",
@@ -507,7 +515,15 @@
             "fifa_rank": 6,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -561,11 +577,12 @@
       ],
       "houses": [
         "6",
+        "11",
         "16",
         "19",
         "Coppice"
       ],
-      "teams_count": 4
+      "teams_count": 5
     },
     {
       "id": "qf",
