@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-01T06:55:52.753886+00:00",
+  "generated_at": "2026-07-01T07:03:47.925939+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-01T06:55:52.683594+00:00",
+  "fetched_at": "2026-07-01T07:03:47.873941+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -272,7 +272,7 @@
         "house_id": "20",
         "group": "E",
         "fifa_rank": 10,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Curacao (Curaçao)",
@@ -303,7 +303,7 @@
         "house_id": "4",
         "group": "F",
         "fifa_rank": 7,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Japan",
@@ -1016,7 +1016,7 @@
         "house_id": "4",
         "group": "F",
         "fifa_rank": 7,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Sweden",
@@ -1047,7 +1047,7 @@
         "house_id": "20",
         "group": "E",
         "fifa_rank": 10,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Ivory Coast (Côte d'Ivoire)",
@@ -1707,7 +1707,7 @@
         "house_id": "20",
         "group": "E",
         "fifa_rank": 10,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 2,
       "away_score": 1,
@@ -1800,7 +1800,7 @@
         "house_id": "4",
         "group": "F",
         "fifa_rank": 7,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 3,
@@ -2318,7 +2318,7 @@
         "house_id": "20",
         "group": "E",
         "fifa_rank": 10,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Paraguay",
@@ -2349,7 +2349,7 @@
         "house_id": "4",
         "group": "F",
         "fifa_rank": 7,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Morocco",

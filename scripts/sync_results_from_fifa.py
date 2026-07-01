@@ -35,6 +35,9 @@ from tournament_groups import (  # noqa: E402
 
 PLACEHOLDER_RE = re.compile(r"^[0-9A-Z]+(/[0-9A-Z]+)*$|^W[0-9]+$|^RU[0-9]+$|^L[0-9]+$")
 
+KNOCKOUT_STAGES = frozenset({"r32", "r16", "qf", "sf", "third", "final"})
+LATER_KNOCKOUT_STAGES = frozenset({"r16", "qf", "sf", "third", "final"})
+
 
 def is_draw_team(name: str | None, draw_names: set[str]) -> bool:
     return bool(name and name in draw_names)
@@ -46,10 +49,48 @@ def is_placeholder(name: str | None) -> bool:
     return bool(PLACEHOLDER_RE.fullmatch(name.replace(" ", "")))
 
 
+def teams_in_later_knockout_rounds(fixtures: list[dict], draw_names: set[str]) -> set[str]:
+    """Teams FIFA has already placed in R16 or beyond."""
+    teams: set[str] = set()
+    for fixture in fixtures:
+        if fixture.get("stage") not in LATER_KNOCKOUT_STAGES:
+            continue
+        for side in (fixture.get("home"), fixture.get("away")):
+            if is_draw_team(side, draw_names):
+                teams.add(side)
+    return teams
+
+
+def knockout_match_decided(
+    fixture: dict,
+    draw_names: set[str],
+    later_teams: set[str],
+) -> bool:
+    """True when a knockout tie is settled (finished or winner placed in a later round)."""
+    if fixture.get("finished"):
+        return True
+    if fixture.get("stage") not in KNOCKOUT_STAGES:
+        return False
+    home = fixture.get("home")
+    away = fixture.get("away")
+    if not is_draw_team(home, draw_names) or not is_draw_team(away, draw_names):
+        return False
+    home_score = fixture.get("home_score")
+    away_score = fixture.get("away_score")
+    if home_score is None or away_score is None:
+        return False
+    home_later = home in later_teams
+    away_later = away in later_teams
+    return home_later != away_later
+
+
 def goals_conceded_from_fixtures(fixtures: list[dict], draw_names: set[str]) -> dict[str, int]:
+    later_teams = teams_in_later_knockout_rounds(fixtures, draw_names)
     totals: dict[str, int] = {}
     for fixture in fixtures:
-        if not fixture.get("finished"):
+        if not fixture.get("finished") and not knockout_match_decided(
+            fixture, draw_names, later_teams
+        ):
             continue
         home = fixture.get("home")
         away = fixture.get("away")
@@ -89,6 +130,44 @@ def eliminations_from_groups(
         if row["team"] not in qualifying_thirds:
             eliminated.add(row["team"])
             notes.append(f"{row['team']} eliminated (3rd place, not among best 8)")
+
+    return sorted(eliminated), notes
+
+
+def eliminations_from_bracket_progression(
+    fixtures: list[dict], draw_names: set[str]
+) -> tuple[list[str], list[str]]:
+    """Infer losers when FIFA advances a winner but leaves the match unfinished or tied.
+
+  Common after penalty shootouts: scores stay level and finished=false while the
+  winner already appears in a later-round fixture.
+    """
+    later_teams = teams_in_later_knockout_rounds(fixtures, draw_names)
+    notes: list[str] = []
+    eliminated: set[str] = set()
+
+    for fixture in fixtures:
+        if fixture.get("stage") not in KNOCKOUT_STAGES or fixture.get("stage") == "final":
+            continue
+        home = fixture.get("home")
+        away = fixture.get("away")
+        if not is_draw_team(home, draw_names) or not is_draw_team(away, draw_names):
+            continue
+        home_later = home in later_teams
+        away_later = away in later_teams
+        if home_later == away_later:
+            continue
+        home_score = fixture.get("home_score")
+        away_score = fixture.get("away_score")
+        if home_score is None or away_score is None:
+            continue
+        loser = away if home_later else home
+        winner = home if home_later else away
+        eliminated.add(loser)
+        notes.append(
+            f"{fixture.get('stage_label') or fixture.get('stage')}: {loser} eliminated "
+            f"({home} {home_score}-{away_score} {away}; {winner} advanced in bracket)"
+        )
 
     return sorted(eliminated), notes
 
@@ -157,14 +236,15 @@ def compute_results(fixtures: list[dict]) -> tuple[dict, dict[str, int], list[st
     group_elim, group_notes = eliminations_from_groups(fixtures, draw_names, fifa_groups)
     math_elim, math_notes = mathematically_eliminated_teams(fixtures, draw_names, fifa_groups)
     ko_elim, ko_notes = eliminations_from_knockout(fixtures, draw_names)
-    eliminated = sorted(set(group_elim) | set(math_elim) | set(ko_elim))
+    bracket_elim, bracket_notes = eliminations_from_bracket_progression(fixtures, draw_names)
+    eliminated = sorted(set(group_elim) | set(math_elim) | set(ko_elim) | set(bracket_elim))
 
     finished = [f for f in fixtures if f.get("finished")]
     details = {
         "finished_matches": len(finished),
         "goals_teams": len(goals),
         "eliminated_teams": len(eliminated),
-        "elimination_notes": group_notes + math_notes + ko_notes,
+        "elimination_notes": group_notes + math_notes + ko_notes + bracket_notes,
         "goals_conceded": goals,
         "teams_eliminated": eliminated,
     }

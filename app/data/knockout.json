@@ -3,7 +3,7 @@
   "last_updated": "2026-07-01",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 16,
+    "houses_alive": 15,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -54,7 +54,7 @@
             "house_id": "20",
             "group": "E",
             "fifa_rank": 10,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Paraguay",
@@ -79,7 +79,7 @@
             "house_id": "4",
             "group": "F",
             "fifa_rank": 7,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Morocco",

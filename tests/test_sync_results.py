@@ -147,6 +147,73 @@ class SyncResultsTest(unittest.TestCase):
         self.assertEqual(goals["South Africa"], 2)
         self.assertEqual(eliminated, [])
 
+    def test_bracket_progression_eliminates_penalty_loser(self):
+        """When FIFA advances the winner but leaves the R32 tie unfinished."""
+        fixtures = [
+            {
+                "stage": "r32",
+                "stage_label": "Round of 32",
+                "finished": False,
+                "home": "Germany",
+                "away": "Paraguay",
+                "home_score": 1,
+                "away_score": 1,
+            },
+            {
+                "stage": "r16",
+                "stage_label": "Round of 16",
+                "finished": False,
+                "home": "Paraguay",
+                "away": "France",
+                "home_score": None,
+                "away_score": None,
+            },
+            {
+                "stage": "r32",
+                "stage_label": "Round of 32",
+                "finished": False,
+                "home": "Netherlands (Holland)",
+                "away": "Morocco",
+                "home_score": 1,
+                "away_score": 1,
+            },
+            {
+                "stage": "r16",
+                "stage_label": "Round of 16",
+                "finished": False,
+                "home": "Canada",
+                "away": "Morocco",
+                "home_score": None,
+                "away_score": None,
+            },
+        ]
+        _, _, eliminated = compute_results(fixtures)
+        self.assertIn("Germany", eliminated)
+        self.assertIn("Netherlands (Holland)", eliminated)
+
+    def test_bracket_progression_counts_goals_before_fifa_marks_finished(self):
+        draw_names = {"Germany", "Paraguay"}
+        fixtures = [
+            {
+                "stage": "r32",
+                "finished": False,
+                "home": "Germany",
+                "away": "Paraguay",
+                "home_score": 1,
+                "away_score": 1,
+            },
+            {
+                "stage": "r16",
+                "finished": False,
+                "home": "Paraguay",
+                "away": "France",
+                "home_score": None,
+                "away_score": None,
+            },
+        ]
+        goals = goals_conceded_from_fixtures(fixtures, draw_names)
+        self.assertEqual(goals, {"Germany": 1, "Paraguay": 1})
+
 
 if __name__ == "__main__":
     unittest.main()
