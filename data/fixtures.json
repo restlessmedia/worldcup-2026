@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-07-01T19:46:53.594321+00:00",
+  "fetched_at": "2026-07-01T20:40:49.554235+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -1296,8 +1296,8 @@
       "home": "Belgium",
       "away": "Senegal",
       "venue": "Seattle",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 1,
       "finished": false
     },
     {
