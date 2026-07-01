@@ -67,8 +67,8 @@
           "id": "r32-08",
           "home": "England",
           "away": "DR Congo (Democratic Republic of the Congo)",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 2,
+          "away_score": 1,
           "winner": null
         },
         {
@@ -168,7 +168,7 @@
         {
           "id": "r16-04",
           "home": "Mexico",
-          "away": null,
+          "away": "England",
           "home_score": null,
           "away_score": null,
           "winner": null

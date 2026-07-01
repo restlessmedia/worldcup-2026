@@ -3,7 +3,7 @@
   "last_updated": "2026-07-01",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 15,
+    "houses_alive": 14,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -245,12 +245,20 @@
             "house_id": "22",
             "group": "K",
             "fifa_rank": 46,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-09",
@@ -564,7 +572,15 @@
             "fifa_rank": 15,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -616,7 +632,7 @@
         "21",
         "Coppice"
       ],
-      "teams_count": 7
+      "teams_count": 8
     },
     {
       "id": "qf",
