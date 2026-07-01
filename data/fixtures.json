@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-06-30T20:45:03.674009+00:00",
+  "fetched_at": "2026-07-01T06:26:22.773454+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -1248,9 +1248,9 @@
       "home": "France",
       "away": "Sweden",
       "venue": "New Jersey",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 3,
+      "away_score": 0,
+      "finished": true
     },
     {
       "id": "fifa-400021520",
@@ -1260,13 +1260,13 @@
       "group": null,
       "matchday": null,
       "match_number": 79,
-      "kickoff_utc": "2026-07-01T01:00:00Z",
+      "kickoff_utc": "2026-07-01T02:00:00Z",
       "home": "Mexico",
       "away": "Ecuador",
       "venue": "Mexico City",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 2,
+      "away_score": 0,
+      "finished": true
     },
     {
       "id": "fifa-400021512",
@@ -1438,7 +1438,7 @@
       "match_number": 89,
       "kickoff_utc": "2026-07-04T21:00:00Z",
       "home": "Paraguay",
-      "away": "W77",
+      "away": "France",
       "venue": "Philadelphia",
       "home_score": null,
       "away_score": null,
@@ -1469,7 +1469,7 @@
       "matchday": null,
       "match_number": 92,
       "kickoff_utc": "2026-07-06T00:00:00Z",
-      "home": "W79",
+      "home": "Mexico",
       "away": "W80",
       "venue": "Mexico City",
       "home_score": null,

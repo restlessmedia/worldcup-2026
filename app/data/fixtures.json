@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-30T20:45:03.747923+00:00",
+  "generated_at": "2026-07-01T06:26:22.852085+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-06-30T20:45:03.674009+00:00",
+  "fetched_at": "2026-07-01T06:26:22.773454+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -343,7 +343,7 @@
         "house_id": "3",
         "group": "E",
         "fifa_rank": 23,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 0,
@@ -365,7 +365,7 @@
         "house_id": "20",
         "group": "F",
         "fifa_rank": 38,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Tunisia",
@@ -1025,7 +1025,7 @@
         "house_id": "20",
         "group": "F",
         "fifa_rank": 38,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 5,
       "away_score": 1,
@@ -1078,7 +1078,7 @@
         "house_id": "3",
         "group": "E",
         "fifa_rank": 23,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Curacao (Curaçao)",
@@ -1698,7 +1698,7 @@
         "house_id": "3",
         "group": "E",
         "fifa_rank": 23,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Germany",
@@ -1769,7 +1769,7 @@
         "house_id": "20",
         "group": "F",
         "fifa_rank": 38,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -2420,11 +2420,11 @@
         "house_id": "20",
         "group": "F",
         "fifa_rank": 38,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 3,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021520",
@@ -2433,7 +2433,7 @@
       "group": null,
       "matchday": null,
       "match_number": 79,
-      "kickoff_utc": "2026-07-01T01:00:00Z",
+      "kickoff_utc": "2026-07-01T02:00:00Z",
       "venue": "Mexico City",
       "home": {
         "draw_name": "Mexico",
@@ -2451,11 +2451,11 @@
         "house_id": "3",
         "group": "E",
         "fifa_rank": 23,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 2,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021512",
@@ -2786,13 +2786,13 @@
         "status": "alive"
       },
       "away": {
-        "draw_name": "W77",
-        "display_name": "Winner of Round of 32 (match 77)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "France",
+        "display_name": "France",
+        "fifa_code": "FRA",
+        "house_id": "21",
+        "group": "I",
+        "fifa_rank": 1,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
@@ -2839,13 +2839,13 @@
       "kickoff_utc": "2026-07-06T00:00:00Z",
       "venue": "Mexico City",
       "home": {
-        "draw_name": "W79",
-        "display_name": "Winner of Round of 32 (match 79)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Mexico",
+        "display_name": "Mexico",
+        "fifa_code": "MEX",
+        "house_id": "4",
+        "group": "A",
+        "fifa_rank": 15,
+        "status": "alive"
       },
       "away": {
         "draw_name": "W80",
