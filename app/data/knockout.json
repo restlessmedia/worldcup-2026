@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-01",
+  "last_updated": "2026-07-02",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 14,
@@ -278,12 +278,20 @@
             "house_id": "13",
             "group": "B",
             "fifa_rank": 65,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-10",
@@ -303,7 +311,7 @@
             "house_id": "6",
             "group": "I",
             "fifa_rank": 14,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,
@@ -588,7 +596,15 @@
         },
         {
           "id": "r16-05",
-          "home": null,
+          "home": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -597,8 +613,24 @@
         },
         {
           "id": "r16-06",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -624,7 +656,9 @@
         }
       ],
       "houses": [
+        "1",
         "4",
+        "5",
         "6",
         "11",
         "16",
@@ -632,7 +666,7 @@
         "21",
         "Coppice"
       ],
-      "teams_count": 8
+      "teams_count": 10
     },
     {
       "id": "qf",

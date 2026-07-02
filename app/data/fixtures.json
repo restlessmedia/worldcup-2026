@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-01T20:40:49.625713+00:00",
+  "generated_at": "2026-07-02T06:16:30.129669+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-01T20:40:49.554235+00:00",
+  "fetched_at": "2026-07-02T06:16:30.065584+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -95,7 +95,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 65,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -529,7 +529,7 @@
         "house_id": "6",
         "group": "I",
         "fifa_rank": 14,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 3,
       "away_score": 1,
@@ -808,7 +808,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 65,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 4,
       "away_score": 1,
@@ -1335,7 +1335,7 @@
         "house_id": "6",
         "group": "I",
         "fifa_rank": 14,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 3,
       "away_score": 2,
@@ -1512,7 +1512,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 65,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Qatar",
@@ -1915,7 +1915,7 @@
         "house_id": "6",
         "group": "I",
         "fifa_rank": 14,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Iraq",
@@ -2513,10 +2513,10 @@
         "house_id": "6",
         "group": "I",
         "fifa_rank": 14,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": 0,
-      "away_score": 1,
+      "home_score": 3,
+      "away_score": 2,
       "played": true
     },
     {
@@ -2544,11 +2544,11 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 65,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 2,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021519",
@@ -2901,22 +2901,22 @@
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "venue": "Seattle",
       "home": {
-        "draw_name": "W81",
-        "display_name": "Winner of Round of 32 (match 81)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "USA (United States)",
+        "display_name": "USA",
+        "fifa_code": "USA",
+        "house_id": "5",
+        "group": "D",
+        "fifa_rank": 16,
+        "status": "alive"
       },
       "away": {
-        "draw_name": "W82",
-        "display_name": "Winner of Round of 32 (match 82)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Belgium",
+        "display_name": "Belgium",
+        "fifa_code": "BEL",
+        "house_id": "1",
+        "group": "G",
+        "fifa_rank": 9,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
