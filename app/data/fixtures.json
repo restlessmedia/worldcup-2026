@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-02T09:11:55.475792+00:00",
+  "generated_at": "2026-07-02T21:14:23.937240+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-02T09:11:55.404749+00:00",
+  "fetched_at": "2026-07-02T21:14:23.866168+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -613,7 +613,7 @@
         "house_id": "2",
         "group": "J",
         "fifa_rank": 24,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Jordan",
@@ -1273,7 +1273,7 @@
         "house_id": "2",
         "group": "J",
         "fifa_rank": 24,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 2,
       "away_score": 0,
@@ -2234,7 +2234,7 @@
         "house_id": "2",
         "group": "J",
         "fifa_rank": 24,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 3,
       "away_score": 3,
@@ -2575,11 +2575,11 @@
         "house_id": "2",
         "group": "J",
         "fifa_rank": 24,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 3,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021526",
@@ -2879,13 +2879,13 @@
         "status": "placeholder"
       },
       "away": {
-        "draw_name": "W84",
-        "display_name": "Winner of Round of 32 (match 84)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Spain",
+        "display_name": "Spain",
+        "fifa_code": "ESP",
+        "house_id": "Coppice",
+        "group": "H",
+        "fifa_rank": 2,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,

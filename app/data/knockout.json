@@ -3,7 +3,7 @@
   "last_updated": "2026-07-02",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 14,
+    "houses_alive": 13,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -361,12 +361,20 @@
             "house_id": "2",
             "group": "J",
             "fifa_rank": 24,
+            "status": "eliminated"
+          },
+          "home_score": 3,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-13",
@@ -605,7 +613,15 @@
             "fifa_rank": 16,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -666,7 +682,7 @@
         "21",
         "Coppice"
       ],
-      "teams_count": 10
+      "teams_count": 11
     },
     {
       "id": "qf",

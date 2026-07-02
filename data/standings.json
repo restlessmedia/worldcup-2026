@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-02T09:11:55.473647+00:00",
+  "generated_at": "2026-07-02T21:14:23.935157+00:00",
   "tournament_status": "in_progress",
   "results_updated": "2026-07-02",
-  "teams_in_play": 22,
+  "teams_in_play": 21,
   "teams_total": 48,
   "houses": [
     {
@@ -61,9 +61,9 @@
     {
       "house_id": "2",
       "teams_total": 2,
-      "teams_alive": 1,
-      "best_remaining_rank": 24,
-      "best_remaining_team": "Austria",
+      "teams_alive": 0,
+      "best_remaining_rank": null,
+      "best_remaining_team": null,
       "teams": [
         {
           "draw_name": "Japan",
@@ -82,8 +82,8 @@
           "fifa_code": "AUT",
           "group": "J",
           "fifa_rank": 24,
-          "status": "alive",
-          "goals_conceded": 6,
+          "status": "eliminated",
+          "goals_conceded": 9,
           "wooden_spoon_likelihood": 1,
           "fair_play_points": 0
         }
@@ -749,6 +749,16 @@
       "status": "eliminated"
     },
     {
+      "house_id": "2",
+      "display_name": "Austria",
+      "fifa_code": "AUT",
+      "goals_conceded": 9,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 24,
+      "group": "J",
+      "status": "eliminated"
+    },
+    {
       "house_id": "11",
       "display_name": "Curaçao",
       "fifa_code": "CUW",
@@ -815,16 +825,6 @@
       "goals_conceded": 7,
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 28,
-      "group": "J",
-      "status": "alive"
-    },
-    {
-      "house_id": "2",
-      "display_name": "Austria",
-      "fifa_code": "AUT",
-      "goals_conceded": 6,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 24,
       "group": "J",
       "status": "alive"
     },
@@ -1238,6 +1238,17 @@
     },
     {
       "position": 7,
+      "house_id": "2",
+      "display_name": "Austria",
+      "fifa_code": "AUT",
+      "goals_conceded": 9,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 24,
+      "group": "J",
+      "status": "eliminated"
+    },
+    {
+      "position": 7,
       "house_id": "11",
       "display_name": "Curaçao",
       "fifa_code": "CUW",
@@ -1259,7 +1270,7 @@
       "status": "eliminated"
     },
     {
-      "position": 9,
+      "position": 10,
       "house_id": "13",
       "display_name": "Bosnia",
       "fifa_code": "BIH",
@@ -1270,7 +1281,7 @@
       "status": "eliminated"
     },
     {
-      "position": 9,
+      "position": 10,
       "house_id": "11",
       "display_name": "Haiti",
       "fifa_code": "HAI",
@@ -1281,7 +1292,7 @@
       "status": "eliminated"
     },
     {
-      "position": 9,
+      "position": 10,
       "house_id": "8",
       "display_name": "Jordan",
       "fifa_code": "JOR",
@@ -1292,7 +1303,7 @@
       "status": "eliminated"
     },
     {
-      "position": 9,
+      "position": 10,
       "house_id": "11",
       "display_name": "Norway",
       "fifa_code": "NOR",
@@ -1303,7 +1314,7 @@
       "status": "alive"
     },
     {
-      "position": 13,
+      "position": 14,
       "house_id": "12",
       "display_name": "Algeria",
       "fifa_code": "ALG",
@@ -1314,18 +1325,7 @@
       "status": "alive"
     },
     {
-      "position": 14,
-      "house_id": "2",
-      "display_name": "Austria",
-      "fifa_code": "AUT",
-      "goals_conceded": 6,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 24,
-      "group": "J",
-      "status": "alive"
-    },
-    {
-      "position": 14,
+      "position": 15,
       "house_id": "3",
       "display_name": "Czechia",
       "fifa_code": "CZE",
