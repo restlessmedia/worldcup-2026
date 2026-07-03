@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-03T10:42:24.041327+00:00",
+  "generated_at": "2026-07-03T21:13:13.145449+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-03T10:42:23.970064+00:00",
+  "fetched_at": "2026-07-03T21:13:13.078919+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -241,7 +241,7 @@
         "house_id": "8",
         "group": "D",
         "fifa_rank": 27,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Türkiye (Turkey)",
@@ -901,7 +901,7 @@
         "house_id": "8",
         "group": "D",
         "fifa_rank": 27,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 2,
       "away_score": 0,
@@ -1862,7 +1862,7 @@
         "house_id": "8",
         "group": "D",
         "fifa_rank": 27,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 0,
       "away_score": 0,
@@ -2659,7 +2659,7 @@
         "house_id": "8",
         "group": "D",
         "fifa_rank": 27,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Egypt",
@@ -2670,9 +2670,9 @@
         "fifa_rank": 29,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 1,
+      "away_score": 1,
+      "played": true
     },
     {
       "id": "fifa-400021521",
@@ -2941,13 +2941,13 @@
         "status": "placeholder"
       },
       "away": {
-        "draw_name": "W88",
-        "display_name": "Winner of Round of 32 (match 88)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Egypt",
+        "display_name": "Egypt",
+        "fifa_code": "EGY",
+        "house_id": "13",
+        "group": "G",
+        "fifa_rank": 29,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,

@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-07-03T10:42:23.970064+00:00",
+  "fetched_at": "2026-07-03T21:13:13.078919+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -1376,8 +1376,8 @@
       "home": "Australia",
       "away": "Egypt",
       "venue": "Dallas",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 1,
       "finished": false
     },
     {
@@ -1518,7 +1518,7 @@
       "match_number": 95,
       "kickoff_utc": "2026-07-07T16:00:00Z",
       "home": "W86",
-      "away": "W88",
+      "away": "Egypt",
       "venue": "Atlanta",
       "home_score": null,
       "away_score": null,

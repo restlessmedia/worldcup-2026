@@ -4,6 +4,7 @@
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "teams_eliminated": [
     "Algeria",
+    "Australia",
     "Austria",
     "Bosnia and Herzegovina (Bosnia)",
     "Croatia",
@@ -36,7 +37,7 @@
   "goals_conceded": {
     "Algeria": 9,
     "Argentina": 1,
-    "Australia": 2,
+    "Australia": 3,
     "Austria": 9,
     "Belgium": 4,
     "Bosnia and Herzegovina (Bosnia)": 8,
@@ -49,7 +50,7 @@
     "Czechia (Czech Republic)": 6,
     "DR Congo (Democratic Republic of the Congo)": 5,
     "Ecuador": 4,
-    "Egypt": 3,
+    "Egypt": 4,
     "England": 3,
     "France": 2,
     "Germany": 5,

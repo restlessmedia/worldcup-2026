@@ -3,7 +3,7 @@
   "last_updated": "2026-07-03",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 13,
+    "houses_alive": 12,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -476,7 +476,7 @@
             "house_id": "8",
             "group": "D",
             "fifa_rank": 27,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Egypt",
@@ -679,7 +679,15 @@
             "fifa_rank": 19,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Egypt",
+            "display_name": "Egypt",
+            "fifa_code": "EGY",
+            "house_id": "13",
+            "group": "G",
+            "fifa_rank": 29,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -715,7 +723,7 @@
         "21",
         "Coppice"
       ],
-      "teams_count": 13
+      "teams_count": 14
     },
     {
       "id": "qf",
