@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-02T21:14:23.935157+00:00",
+  "generated_at": "2026-07-03T06:17:25.658465+00:00",
   "tournament_status": "in_progress",
-  "results_updated": "2026-07-02",
-  "teams_in_play": 21,
+  "results_updated": "2026-07-03",
+  "teams_in_play": 19,
   "teams_total": 48,
   "houses": [
     {
@@ -355,7 +355,7 @@
     {
       "house_id": "12",
       "teams_total": 2,
-      "teams_alive": 2,
+      "teams_alive": 1,
       "best_remaining_rank": 3,
       "best_remaining_team": "Argentina",
       "teams": [
@@ -376,8 +376,8 @@
           "fifa_code": "ALG",
           "group": "J",
           "fifa_rank": 28,
-          "status": "alive",
-          "goals_conceded": 7,
+          "status": "eliminated",
+          "goals_conceded": 9,
           "wooden_spoon_likelihood": 1,
           "fair_play_points": 0
         }
@@ -501,7 +501,7 @@
     {
       "house_id": "19",
       "teams_total": 2,
-      "teams_alive": 2,
+      "teams_alive": 1,
       "best_remaining_rank": 8,
       "best_remaining_team": "Morocco",
       "teams": [
@@ -522,8 +522,8 @@
           "fifa_code": "CRO",
           "group": "L",
           "fifa_rank": 11,
-          "status": "alive",
-          "goals_conceded": 5,
+          "status": "eliminated",
+          "goals_conceded": 7,
           "wooden_spoon_likelihood": 1,
           "fair_play_points": 0
         }
@@ -585,7 +585,7 @@
           "group": "K",
           "fifa_rank": 5,
           "status": "alive",
-          "goals_conceded": 1,
+          "goals_conceded": 2,
           "wooden_spoon_likelihood": 1,
           "fair_play_points": 0
         },
@@ -749,6 +749,16 @@
       "status": "eliminated"
     },
     {
+      "house_id": "12",
+      "display_name": "Algeria",
+      "fifa_code": "ALG",
+      "goals_conceded": 9,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 28,
+      "group": "J",
+      "status": "eliminated"
+    },
+    {
       "house_id": "2",
       "display_name": "Austria",
       "fifa_code": "AUT",
@@ -819,14 +829,14 @@
       "status": "alive"
     },
     {
-      "house_id": "12",
-      "display_name": "Algeria",
-      "fifa_code": "ALG",
+      "house_id": "19",
+      "display_name": "Croatia",
+      "fifa_code": "CRO",
       "goals_conceded": 7,
       "wooden_spoon_likelihood": 1,
-      "fifa_rank": 28,
-      "group": "J",
-      "status": "alive"
+      "fifa_rank": 11,
+      "group": "L",
+      "status": "eliminated"
     },
     {
       "house_id": "3",
@@ -837,16 +847,6 @@
       "fifa_rank": 41,
       "group": "A",
       "status": "eliminated"
-    },
-    {
-      "house_id": "19",
-      "display_name": "Croatia",
-      "fifa_code": "CRO",
-      "goals_conceded": 5,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 11,
-      "group": "L",
-      "status": "alive"
     },
     {
       "house_id": "22",
@@ -1119,6 +1119,16 @@
       "status": "alive"
     },
     {
+      "house_id": "21",
+      "display_name": "Portugal",
+      "fifa_code": "POR",
+      "goals_conceded": 2,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 5,
+      "group": "K",
+      "status": "alive"
+    },
+    {
       "house_id": "12",
       "display_name": "Argentina",
       "fifa_code": "ARG",
@@ -1135,16 +1145,6 @@
       "goals_conceded": 1,
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 13,
-      "group": "K",
-      "status": "alive"
-    },
-    {
-      "house_id": "21",
-      "display_name": "Portugal",
-      "fifa_code": "POR",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 5,
       "group": "K",
       "status": "alive"
     },
@@ -1238,6 +1238,17 @@
     },
     {
       "position": 7,
+      "house_id": "12",
+      "display_name": "Algeria",
+      "fifa_code": "ALG",
+      "goals_conceded": 9,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 28,
+      "group": "J",
+      "status": "eliminated"
+    },
+    {
+      "position": 7,
       "house_id": "2",
       "display_name": "Austria",
       "fifa_code": "AUT",
@@ -1270,7 +1281,7 @@
       "status": "eliminated"
     },
     {
-      "position": 10,
+      "position": 11,
       "house_id": "13",
       "display_name": "Bosnia",
       "fifa_code": "BIH",
@@ -1281,7 +1292,7 @@
       "status": "eliminated"
     },
     {
-      "position": 10,
+      "position": 11,
       "house_id": "11",
       "display_name": "Haiti",
       "fifa_code": "HAI",
@@ -1292,7 +1303,7 @@
       "status": "eliminated"
     },
     {
-      "position": 10,
+      "position": 11,
       "house_id": "8",
       "display_name": "Jordan",
       "fifa_code": "JOR",
@@ -1303,7 +1314,7 @@
       "status": "eliminated"
     },
     {
-      "position": 10,
+      "position": 11,
       "house_id": "11",
       "display_name": "Norway",
       "fifa_code": "NOR",
@@ -1314,18 +1325,18 @@
       "status": "alive"
     },
     {
-      "position": 14,
-      "house_id": "12",
-      "display_name": "Algeria",
-      "fifa_code": "ALG",
+      "position": 15,
+      "house_id": "19",
+      "display_name": "Croatia",
+      "fifa_code": "CRO",
       "goals_conceded": 7,
       "wooden_spoon_likelihood": 1,
-      "fifa_rank": 28,
-      "group": "J",
-      "status": "alive"
+      "fifa_rank": 11,
+      "group": "L",
+      "status": "eliminated"
     },
     {
-      "position": 15,
+      "position": 16,
       "house_id": "3",
       "display_name": "Czechia",
       "fifa_code": "CZE",
@@ -1336,18 +1347,7 @@
       "status": "eliminated"
     },
     {
-      "position": 16,
-      "house_id": "19",
-      "display_name": "Croatia",
-      "fifa_code": "CRO",
-      "goals_conceded": 5,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 11,
-      "group": "L",
-      "status": "alive"
-    },
-    {
-      "position": 16,
+      "position": 17,
       "house_id": "22",
       "display_name": "DR Congo",
       "fifa_code": "COD",
@@ -1358,7 +1358,7 @@
       "status": "eliminated"
     },
     {
-      "position": 16,
+      "position": 17,
       "house_id": "20",
       "display_name": "Germany",
       "fifa_code": "GER",
@@ -1369,7 +1369,7 @@
       "status": "eliminated"
     },
     {
-      "position": 16,
+      "position": 17,
       "house_id": "2",
       "display_name": "Japan",
       "fifa_code": "JPN",
@@ -1380,7 +1380,7 @@
       "status": "eliminated"
     },
     {
-      "position": 16,
+      "position": 17,
       "house_id": "4",
       "display_name": "Netherlands",
       "fifa_code": "NED",
@@ -1391,7 +1391,7 @@
       "status": "eliminated"
     },
     {
-      "position": 16,
+      "position": 17,
       "house_id": "16",
       "display_name": "Paraguay",
       "fifa_code": "PAR",
@@ -1402,7 +1402,7 @@
       "status": "alive"
     },
     {
-      "position": 16,
+      "position": 17,
       "house_id": "11",
       "display_name": "Saudi Arabia",
       "fifa_code": "KSA",
@@ -1413,7 +1413,7 @@
       "status": "eliminated"
     },
     {
-      "position": 16,
+      "position": 17,
       "house_id": "5",
       "display_name": "Türkiye",
       "fifa_code": "TUR",
@@ -1644,7 +1644,18 @@
       "status": "alive"
     },
     {
-      "position": 44,
+      "position": 39,
+      "house_id": "21",
+      "display_name": "Portugal",
+      "fifa_code": "POR",
+      "goals_conceded": 2,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 5,
+      "group": "K",
+      "status": "alive"
+    },
+    {
+      "position": 45,
       "house_id": "12",
       "display_name": "Argentina",
       "fifa_code": "ARG",
@@ -1655,24 +1666,13 @@
       "status": "alive"
     },
     {
-      "position": 44,
+      "position": 45,
       "house_id": "Coppice",
       "display_name": "Colombia",
       "fifa_code": "COL",
       "goals_conceded": 1,
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 13,
-      "group": "K",
-      "status": "alive"
-    },
-    {
-      "position": 44,
-      "house_id": "21",
-      "display_name": "Portugal",
-      "fifa_code": "POR",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 5,
       "group": "K",
       "status": "alive"
     },

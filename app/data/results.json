@@ -1,10 +1,12 @@
 {
-  "last_updated": "2026-07-02",
+  "last_updated": "2026-07-03",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "teams_eliminated": [
+    "Algeria",
     "Austria",
     "Bosnia and Herzegovina (Bosnia)",
+    "Croatia",
     "Curacao (Curaçao)",
     "Czechia (Czech Republic)",
     "DR Congo (Democratic Republic of the Congo)",
@@ -32,7 +34,7 @@
     "Uzbekistan"
   ],
   "goals_conceded": {
-    "Algeria": 7,
+    "Algeria": 9,
     "Argentina": 1,
     "Australia": 2,
     "Austria": 9,
@@ -42,7 +44,7 @@
     "Canada": 3,
     "Cape Verde": 2,
     "Colombia": 1,
-    "Croatia": 5,
+    "Croatia": 7,
     "Curacao (Curaçao)": 9,
     "Czechia (Czech Republic)": 6,
     "DR Congo (Democratic Republic of the Congo)": 5,
@@ -65,7 +67,7 @@
     "Norway": 8,
     "Panama": 4,
     "Paraguay": 5,
-    "Portugal": 1,
+    "Portugal": 2,
     "Qatar": 10,
     "Saudi Arabia": 5,
     "Scotland": 4,

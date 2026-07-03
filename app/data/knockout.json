@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-02",
+  "last_updated": "2026-07-03",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 13,
@@ -336,12 +336,20 @@
             "house_id": "19",
             "group": "L",
             "fifa_rank": 11,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Portugal",
+            "display_name": "Portugal",
+            "fifa_code": "POR",
+            "house_id": "21",
+            "group": "K",
+            "fifa_rank": 5,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-12",
@@ -394,12 +402,20 @@
             "house_id": "12",
             "group": "J",
             "fifa_rank": 28,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-14",
@@ -605,12 +621,12 @@
         {
           "id": "r16-05",
           "home": {
-            "draw_name": "USA (United States)",
-            "display_name": "USA",
-            "fifa_code": "USA",
-            "house_id": "5",
-            "group": "D",
-            "fifa_rank": 16,
+            "draw_name": "Portugal",
+            "display_name": "Portugal",
+            "fifa_code": "POR",
+            "house_id": "21",
+            "group": "K",
+            "fifa_rank": 5,
             "status": "alive"
           },
           "away": {
@@ -654,7 +670,15 @@
         },
         {
           "id": "r16-07",
-          "home": null,
+          "home": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -663,7 +687,15 @@
         },
         {
           "id": "r16-08",
-          "home": null,
+          "home": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -677,12 +709,13 @@
         "5",
         "6",
         "11",
+        "13",
         "16",
         "19",
         "21",
         "Coppice"
       ],
-      "teams_count": 11
+      "teams_count": 13
     },
     {
       "id": "qf",
