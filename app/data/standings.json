@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-03T21:13:13.143618+00:00",
+  "generated_at": "2026-07-04T10:16:02.701324+00:00",
   "tournament_status": "in_progress",
-  "results_updated": "2026-07-03",
-  "teams_in_play": 18,
+  "results_updated": "2026-07-04",
+  "teams_in_play": 16,
   "teams_total": 48,
   "houses": [
     {
@@ -165,7 +165,7 @@
     {
       "house_id": "5",
       "teams_total": 3,
-      "teams_alive": 2,
+      "teams_alive": 1,
       "best_remaining_rank": 16,
       "best_remaining_team": "USA",
       "teams": [
@@ -197,8 +197,8 @@
           "fifa_code": "GHA",
           "group": "L",
           "fifa_rank": 74,
-          "status": "alive",
-          "goals_conceded": 2,
+          "status": "eliminated",
+          "goals_conceded": 3,
           "wooden_spoon_likelihood": 4,
           "fair_play_points": 0
         }
@@ -366,7 +366,7 @@
           "group": "J",
           "fifa_rank": 3,
           "status": "alive",
-          "goals_conceded": 1,
+          "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
           "fair_play_points": 0
         },
@@ -470,9 +470,9 @@
     {
       "house_id": "18",
       "teams_total": 2,
-      "teams_alive": 1,
-      "best_remaining_rank": 69,
-      "best_remaining_team": "Cape Verde",
+      "teams_alive": 0,
+      "best_remaining_rank": null,
+      "best_remaining_team": null,
       "teams": [
         {
           "draw_name": "Qatar",
@@ -491,8 +491,8 @@
           "fifa_code": "CPV",
           "group": "H",
           "fifa_rank": 69,
-          "status": "alive",
-          "goals_conceded": 2,
+          "status": "eliminated",
+          "goals_conceded": 5,
           "wooden_spoon_likelihood": 6,
           "fair_play_points": 0
         }
@@ -849,6 +849,16 @@
       "status": "eliminated"
     },
     {
+      "house_id": "18",
+      "display_name": "Cape Verde",
+      "fifa_code": "CPV",
+      "goals_conceded": 5,
+      "wooden_spoon_likelihood": 6,
+      "fifa_rank": 69,
+      "group": "H",
+      "status": "eliminated"
+    },
+    {
       "house_id": "22",
       "display_name": "DR Congo",
       "fifa_code": "COD",
@@ -1019,6 +1029,16 @@
       "status": "eliminated"
     },
     {
+      "house_id": "12",
+      "display_name": "Argentina",
+      "fifa_code": "ARG",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 3,
+      "group": "J",
+      "status": "alive"
+    },
+    {
       "house_id": "8",
       "display_name": "Australia",
       "fifa_code": "AUS",
@@ -1047,6 +1067,16 @@
       "fifa_rank": 4,
       "group": "L",
       "status": "alive"
+    },
+    {
+      "house_id": "5",
+      "display_name": "Ghana",
+      "fifa_code": "GHA",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 4,
+      "fifa_rank": 74,
+      "group": "L",
+      "status": "eliminated"
     },
     {
       "house_id": "21",
@@ -1089,16 +1119,6 @@
       "status": "alive"
     },
     {
-      "house_id": "18",
-      "display_name": "Cape Verde",
-      "fifa_code": "CPV",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 6,
-      "fifa_rank": 69,
-      "group": "H",
-      "status": "alive"
-    },
-    {
       "house_id": "21",
       "display_name": "France",
       "fifa_code": "FRA",
@@ -1109,16 +1129,6 @@
       "status": "alive"
     },
     {
-      "house_id": "5",
-      "display_name": "Ghana",
-      "fifa_code": "GHA",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 4,
-      "fifa_rank": 74,
-      "group": "L",
-      "status": "alive"
-    },
-    {
       "house_id": "21",
       "display_name": "Portugal",
       "fifa_code": "POR",
@@ -1126,16 +1136,6 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 5,
       "group": "K",
-      "status": "alive"
-    },
-    {
-      "house_id": "12",
-      "display_name": "Argentina",
-      "fifa_code": "ARG",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 3,
-      "group": "J",
       "status": "alive"
     },
     {
@@ -1348,6 +1348,17 @@
     },
     {
       "position": 17,
+      "house_id": "18",
+      "display_name": "Cape Verde",
+      "fifa_code": "CPV",
+      "goals_conceded": 5,
+      "wooden_spoon_likelihood": 6,
+      "fifa_rank": 69,
+      "group": "H",
+      "status": "eliminated"
+    },
+    {
+      "position": 17,
       "house_id": "22",
       "display_name": "DR Congo",
       "fifa_code": "COD",
@@ -1424,7 +1435,7 @@
       "status": "eliminated"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "1",
       "display_name": "Belgium",
       "fifa_code": "BEL",
@@ -1435,7 +1446,7 @@
       "status": "alive"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "3",
       "display_name": "Ecuador",
       "fifa_code": "ECU",
@@ -1446,7 +1457,7 @@
       "status": "eliminated"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "13",
       "display_name": "Egypt",
       "fifa_code": "EGY",
@@ -1457,7 +1468,7 @@
       "status": "alive"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "6",
       "display_name": "Ivory Coast",
       "fifa_code": "CIV",
@@ -1468,7 +1479,7 @@
       "status": "eliminated"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "19",
       "display_name": "Morocco",
       "fifa_code": "MAR",
@@ -1479,7 +1490,7 @@
       "status": "alive"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "13",
       "display_name": "Panama",
       "fifa_code": "PAN",
@@ -1490,7 +1501,7 @@
       "status": "eliminated"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "22",
       "display_name": "Scotland",
       "fifa_code": "SCO",
@@ -1501,7 +1512,7 @@
       "status": "eliminated"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "22",
       "display_name": "South Africa",
       "fifa_code": "RSA",
@@ -1512,7 +1523,7 @@
       "status": "eliminated"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "5",
       "display_name": "USA",
       "fifa_code": "USA",
@@ -1523,7 +1534,7 @@
       "status": "alive"
     },
     {
-      "position": 24,
+      "position": 25,
       "house_id": "1",
       "display_name": "Uruguay",
       "fifa_code": "URU",
@@ -1534,7 +1545,18 @@
       "status": "eliminated"
     },
     {
-      "position": 34,
+      "position": 35,
+      "house_id": "12",
+      "display_name": "Argentina",
+      "fifa_code": "ARG",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 1,
+      "fifa_rank": 3,
+      "group": "J",
+      "status": "alive"
+    },
+    {
+      "position": 35,
       "house_id": "8",
       "display_name": "Australia",
       "fifa_code": "AUS",
@@ -1545,7 +1567,7 @@
       "status": "eliminated"
     },
     {
-      "position": 34,
+      "position": 35,
       "house_id": "Coppice",
       "display_name": "Canada",
       "fifa_code": "CAN",
@@ -1556,7 +1578,7 @@
       "status": "alive"
     },
     {
-      "position": 34,
+      "position": 35,
       "house_id": "4",
       "display_name": "England",
       "fifa_code": "ENG",
@@ -1567,7 +1589,18 @@
       "status": "alive"
     },
     {
-      "position": 34,
+      "position": 35,
+      "house_id": "5",
+      "display_name": "Ghana",
+      "fifa_code": "GHA",
+      "goals_conceded": 3,
+      "wooden_spoon_likelihood": 4,
+      "fifa_rank": 74,
+      "group": "L",
+      "status": "eliminated"
+    },
+    {
+      "position": 35,
       "house_id": "21",
       "display_name": "Iran",
       "fifa_code": "IRN",
@@ -1578,7 +1611,7 @@
       "status": "eliminated"
     },
     {
-      "position": 34,
+      "position": 35,
       "house_id": "16",
       "display_name": "South Korea",
       "fifa_code": "KOR",
@@ -1589,7 +1622,7 @@
       "status": "eliminated"
     },
     {
-      "position": 34,
+      "position": 35,
       "house_id": "13",
       "display_name": "Switzerland",
       "fifa_code": "SUI",
@@ -1600,7 +1633,7 @@
       "status": "alive"
     },
     {
-      "position": 40,
+      "position": 43,
       "house_id": "6",
       "display_name": "Brazil",
       "fifa_code": "BRA",
@@ -1611,18 +1644,7 @@
       "status": "alive"
     },
     {
-      "position": 40,
-      "house_id": "18",
-      "display_name": "Cape Verde",
-      "fifa_code": "CPV",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 6,
-      "fifa_rank": 69,
-      "group": "H",
-      "status": "alive"
-    },
-    {
-      "position": 40,
+      "position": 43,
       "house_id": "21",
       "display_name": "France",
       "fifa_code": "FRA",
@@ -1633,18 +1655,7 @@
       "status": "alive"
     },
     {
-      "position": 40,
-      "house_id": "5",
-      "display_name": "Ghana",
-      "fifa_code": "GHA",
-      "goals_conceded": 2,
-      "wooden_spoon_likelihood": 4,
-      "fifa_rank": 74,
-      "group": "L",
-      "status": "alive"
-    },
-    {
-      "position": 40,
+      "position": 43,
       "house_id": "21",
       "display_name": "Portugal",
       "fifa_code": "POR",
@@ -1655,18 +1666,7 @@
       "status": "alive"
     },
     {
-      "position": 45,
-      "house_id": "12",
-      "display_name": "Argentina",
-      "fifa_code": "ARG",
-      "goals_conceded": 1,
-      "wooden_spoon_likelihood": 1,
-      "fifa_rank": 3,
-      "group": "J",
-      "status": "alive"
-    },
-    {
-      "position": 45,
+      "position": 46,
       "house_id": "Coppice",
       "display_name": "Colombia",
       "fifa_code": "COL",

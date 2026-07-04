@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-03",
+  "last_updated": "2026-07-04",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 12,
+    "houses_alive": 11,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -435,7 +435,7 @@
             "house_id": "18",
             "group": "H",
             "fifa_rank": 69,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,
@@ -460,12 +460,20 @@
             "house_id": "5",
             "group": "L",
             "fifa_rank": 74,
+            "status": "eliminated"
+          },
+          "home_score": 1,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Colombia",
+            "display_name": "Colombia",
+            "fifa_code": "COL",
+            "house_id": "Coppice",
+            "group": "K",
+            "fifa_rank": 13,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r32-16",
@@ -671,12 +679,12 @@
         {
           "id": "r16-07",
           "home": {
-            "draw_name": "Switzerland",
-            "display_name": "Switzerland",
-            "fifa_code": "SUI",
-            "house_id": "13",
-            "group": "B",
-            "fifa_rank": 19,
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
             "status": "alive"
           },
           "away": {
@@ -704,7 +712,15 @@
             "fifa_rank": 19,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Colombia",
+            "display_name": "Colombia",
+            "fifa_code": "COL",
+            "house_id": "Coppice",
+            "group": "K",
+            "fifa_rank": 13,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -717,13 +733,14 @@
         "5",
         "6",
         "11",
+        "12",
         "13",
         "16",
         "19",
         "21",
         "Coppice"
       ],
-      "teams_count": 14
+      "teams_count": 16
     },
     {
       "id": "qf",
