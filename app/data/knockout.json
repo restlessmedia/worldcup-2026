@@ -30,7 +30,7 @@
             "house_id": "Coppice",
             "group": "B",
             "fifa_rank": 30,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": 0,
           "away_score": 1,
@@ -41,7 +41,7 @@
             "house_id": "Coppice",
             "group": "B",
             "fifa_rank": 30,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -560,7 +560,7 @@
             "house_id": "Coppice",
             "group": "B",
             "fifa_rank": 30,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Morocco",
@@ -571,10 +571,18 @@
             "fifa_rank": 8,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 0,
+          "away_score": 3,
+          "winner": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-03",
@@ -749,7 +757,15 @@
         {
           "id": "qf-01",
           "home": null,
-          "away": null,
+          "away": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -783,8 +799,10 @@
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "19"
+      ],
+      "teams_count": 1
     },
     {
       "id": "sf",

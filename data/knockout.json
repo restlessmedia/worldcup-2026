@@ -153,8 +153,8 @@
           "id": "r16-02",
           "home": "Canada",
           "away": "Morocco",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 0,
+          "away_score": 3,
           "winner": null
         },
         {
@@ -214,7 +214,7 @@
         {
           "id": "qf-01",
           "home": null,
-          "away": null,
+          "away": "Morocco",
           "home_score": null,
           "away_score": null,
           "winner": null

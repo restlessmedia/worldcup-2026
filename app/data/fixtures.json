@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-04T10:16:02.703414+00:00",
+  "generated_at": "2026-07-04T21:03:43.799452+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-04T10:16:02.628882+00:00",
+  "fetched_at": "2026-07-04T21:03:43.725387+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -86,7 +86,7 @@
         "house_id": "Coppice",
         "group": "B",
         "fifa_rank": 30,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Bosnia and Herzegovina (Bosnia)",
@@ -830,7 +830,7 @@
         "house_id": "Coppice",
         "group": "B",
         "fifa_rank": 30,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Qatar",
@@ -1552,7 +1552,7 @@
         "house_id": "Coppice",
         "group": "B",
         "fifa_rank": 30,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 2,
       "away_score": 1,
@@ -2265,7 +2265,7 @@
         "house_id": "Coppice",
         "group": "B",
         "fifa_rank": 30,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 0,
       "away_score": 1,
@@ -2752,7 +2752,7 @@
         "house_id": "Coppice",
         "group": "B",
         "fifa_rank": 30,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Morocco",
@@ -2763,9 +2763,9 @@
         "fifa_rank": 8,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 3,
+      "played": true
     },
     {
       "id": "fifa-400021533",
@@ -3003,13 +3003,13 @@
         "status": "placeholder"
       },
       "away": {
-        "draw_name": "W90",
-        "display_name": "Winner of Round of 16 (match 90)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Morocco",
+        "display_name": "Morocco",
+        "fifa_code": "MAR",
+        "house_id": "19",
+        "group": "C",
+        "fifa_rank": 8,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
