@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-04",
+  "last_updated": "2026-07-05",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "teams_eliminated": [
@@ -25,6 +25,7 @@
     "Netherlands (Holland)",
     "New Zealand",
     "Panama",
+    "Paraguay",
     "Qatar",
     "Saudi Arabia",
     "Scotland",
@@ -70,7 +71,7 @@
     "New Zealand": 10,
     "Norway": 8,
     "Panama": 4,
-    "Paraguay": 5,
+    "Paraguay": 6,
     "Portugal": 2,
     "Qatar": 10,
     "Saudi Arabia": 5,

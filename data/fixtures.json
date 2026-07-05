@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-07-04T21:03:43.725387+00:00",
+  "fetched_at": "2026-07-05T07:23:23.210992+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -1440,9 +1440,9 @@
       "home": "Paraguay",
       "away": "France",
       "venue": "Philadelphia",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 0,
+      "away_score": 1,
+      "finished": true
     },
     {
       "id": "fifa-400021532",
@@ -1549,7 +1549,7 @@
       "matchday": null,
       "match_number": 97,
       "kickoff_utc": "2026-07-09T20:00:00Z",
-      "home": "W89",
+      "home": "France",
       "away": "Morocco",
       "venue": "Boston",
       "home_score": null,

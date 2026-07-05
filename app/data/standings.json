@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-04T21:03:43.797283+00:00",
+  "generated_at": "2026-07-05T07:23:23.281197+00:00",
   "tournament_status": "in_progress",
-  "results_updated": "2026-07-04",
-  "teams_in_play": 15,
+  "results_updated": "2026-07-05",
+  "teams_in_play": 14,
   "teams_total": 48,
   "houses": [
     {
@@ -439,9 +439,9 @@
     {
       "house_id": "16",
       "teams_total": 2,
-      "teams_alive": 1,
-      "best_remaining_rank": 40,
-      "best_remaining_team": "Paraguay",
+      "teams_alive": 0,
+      "best_remaining_rank": null,
+      "best_remaining_team": null,
       "teams": [
         {
           "draw_name": "South Korea (Korea Republic)",
@@ -460,8 +460,8 @@
           "fifa_code": "PAR",
           "group": "D",
           "fifa_rank": 40,
-          "status": "alive",
-          "goals_conceded": 5,
+          "status": "eliminated",
+          "goals_conceded": 6,
           "wooden_spoon_likelihood": 2,
           "fair_play_points": 0
         }
@@ -859,6 +859,16 @@
       "status": "eliminated"
     },
     {
+      "house_id": "16",
+      "display_name": "Paraguay",
+      "fifa_code": "PAR",
+      "goals_conceded": 6,
+      "wooden_spoon_likelihood": 2,
+      "fifa_rank": 40,
+      "group": "D",
+      "status": "eliminated"
+    },
+    {
       "house_id": "18",
       "display_name": "Cape Verde",
       "fifa_code": "CPV",
@@ -907,16 +917,6 @@
       "fifa_rank": 7,
       "group": "F",
       "status": "eliminated"
-    },
-    {
-      "house_id": "16",
-      "display_name": "Paraguay",
-      "fifa_code": "PAR",
-      "goals_conceded": 5,
-      "wooden_spoon_likelihood": 2,
-      "fifa_rank": 40,
-      "group": "D",
-      "status": "alive"
     },
     {
       "house_id": "11",
@@ -1358,7 +1358,18 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
+      "position": 16,
+      "house_id": "16",
+      "display_name": "Paraguay",
+      "fifa_code": "PAR",
+      "goals_conceded": 6,
+      "wooden_spoon_likelihood": 2,
+      "fifa_rank": 40,
+      "group": "D",
+      "status": "eliminated"
+    },
+    {
+      "position": 19,
       "house_id": "18",
       "display_name": "Cape Verde",
       "fifa_code": "CPV",
@@ -1369,7 +1380,7 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
+      "position": 19,
       "house_id": "22",
       "display_name": "DR Congo",
       "fifa_code": "COD",
@@ -1380,7 +1391,7 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
+      "position": 19,
       "house_id": "20",
       "display_name": "Germany",
       "fifa_code": "GER",
@@ -1391,7 +1402,7 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
+      "position": 19,
       "house_id": "2",
       "display_name": "Japan",
       "fifa_code": "JPN",
@@ -1402,7 +1413,7 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
+      "position": 19,
       "house_id": "4",
       "display_name": "Netherlands",
       "fifa_code": "NED",
@@ -1413,18 +1424,7 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
-      "house_id": "16",
-      "display_name": "Paraguay",
-      "fifa_code": "PAR",
-      "goals_conceded": 5,
-      "wooden_spoon_likelihood": 2,
-      "fifa_rank": 40,
-      "group": "D",
-      "status": "alive"
-    },
-    {
-      "position": 18,
+      "position": 19,
       "house_id": "11",
       "display_name": "Saudi Arabia",
       "fifa_code": "KSA",
@@ -1435,7 +1435,7 @@
       "status": "eliminated"
     },
     {
-      "position": 18,
+      "position": 19,
       "house_id": "5",
       "display_name": "Türkiye",
       "fifa_code": "TUR",

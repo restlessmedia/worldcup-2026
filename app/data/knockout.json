@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-04",
+  "last_updated": "2026-07-05",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 11,
+    "houses_alive": 10,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -63,7 +63,7 @@
             "house_id": "16",
             "group": "D",
             "fifa_rank": 40,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,
@@ -535,7 +535,7 @@
             "house_id": "16",
             "group": "D",
             "fifa_rank": 40,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "France",
@@ -546,10 +546,18 @@
             "fifa_rank": 1,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 0,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-02",
@@ -756,7 +764,15 @@
       "matches": [
         {
           "id": "qf-01",
-          "home": null,
+          "home": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
           "away": {
             "draw_name": "Morocco",
             "display_name": "Morocco",
@@ -800,9 +816,10 @@
         }
       ],
       "houses": [
-        "19"
+        "19",
+        "21"
       ],
-      "teams_count": 1
+      "teams_count": 2
     },
     {
       "id": "sf",
