@@ -1,15 +1,20 @@
 /** World Cup knockout tree layout (left / right pathways → center final). */
 
+/**
+ * R32 display order per pathway. Rows are paired for feeder lines into R16.
+ * Order follows FIFA 2026 match paths (e.g. M85+M87 → M96), not numeric r32 IDs.
+ * @see https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+ */
 export const PATHWAY_LEFT = {
   r32: [
-    "r32-01",
-    "r32-02",
-    "r32-03",
-    "r32-04",
-    "r32-05",
-    "r32-06",
-    "r32-07",
-    "r32-08",
+    "r32-02", // M74 → M89
+    "r32-05", // M77 → M89
+    "r32-01", // M73 → M90
+    "r32-03", // M75 → M90
+    "r32-04", // M76 → M91
+    "r32-06", // M78 → M91
+    "r32-07", // M79 → M92
+    "r32-08", // M80 → M92
   ],
   r16: ["r16-01", "r16-02", "r16-03", "r16-04"],
   qf: ["qf-01", "qf-02"],
@@ -18,14 +23,14 @@ export const PATHWAY_LEFT = {
 
 export const PATHWAY_RIGHT = {
   r32: [
-    "r32-09",
-    "r32-10",
-    "r32-11",
-    "r32-12",
-    "r32-13",
-    "r32-14",
-    "r32-15",
-    "r32-16",
+    "r32-09", // M81 → M94
+    "r32-10", // M82 → M94
+    "r32-11", // M83 → M93
+    "r32-12", // M84 → M93
+    "r32-14", // M86 → M95
+    "r32-16", // M88 → M95
+    "r32-13", // M85 → M96
+    "r32-15", // M87 → M96
   ],
   r16: ["r16-05", "r16-06", "r16-07", "r16-08"],
   qf: ["qf-03", "qf-04"],
