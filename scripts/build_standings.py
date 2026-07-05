@@ -9,6 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
+from tournament_groups import fifa_group_lookup, group_is_complete, group_standings, load_draw_names  # noqa: E402
+
 
 def load_json(name: str):
     return json.loads((DATA / name).read_text(encoding="utf-8"))
@@ -52,6 +54,38 @@ def wooden_spoon_sort_key(team: dict, *, pre_tournament: bool) -> tuple:
     return (-team["goals_conceded"], team["display_name"])
 
 
+def group_stage_snapshot(draw_name: str, group: str, standings: dict[str, list[dict]]) -> dict | None:
+    rows = standings.get(group) or []
+    for index, row in enumerate(rows, start=1):
+        if row["team"] != draw_name:
+            continue
+        if row["played"] == 0:
+            return None
+        gd = row["gf"] - row["ga"]
+        return {
+            "position": index,
+            "played": row["played"],
+            "won": row["won"],
+            "drawn": row["drawn"],
+            "lost": row["lost"],
+            "points": row["points"],
+            "gf": row["gf"],
+            "ga": row["ga"],
+            "gd": gd,
+            "complete": group_is_complete(group, standings),
+        }
+    return None
+
+
+def load_group_standings() -> dict[str, list[dict]]:
+    fixtures_path = DATA / "fixtures.json"
+    if not fixtures_path.exists():
+        return {}
+    fixtures = load_json("fixtures.json").get("fixtures") or []
+    draw_names = load_draw_names()
+    return group_standings(fixtures, draw_names, fifa_group_lookup())
+
+
 def fifa_lookup(fifa_payload: dict) -> dict[str, dict]:
     by_name = {team["fifa_name"]: team for team in fifa_payload["teams"]}
     draw_map = fifa_payload["draw_name_map"]
@@ -77,6 +111,7 @@ def build_standings() -> dict:
     eliminated = set(results.get("teams_eliminated") or [])
     goals_conceded = results.get("goals_conceded") or {}
     fair_play = results.get("fair_play_points") or {}
+    group_standings_by_group = load_group_standings()
 
     houses = []
     all_teams = []
@@ -102,6 +137,7 @@ def build_standings() -> dict:
                 best_team = short_name(info["fifa_name"])
 
             conceded = int(goals_conceded.get(draw_name, goals_conceded.get(info["fifa_name"], 0)) or 0)
+            group_stage = group_stage_snapshot(draw_name, info["group"], group_standings_by_group)
             row = {
                 "draw_name": draw_name,
                 "display_name": short_name(info["fifa_name"]),
@@ -113,6 +149,8 @@ def build_standings() -> dict:
                 "wooden_spoon_likelihood": spoon_likelihood.get(info["fifa_code"], 0),
                 "fair_play_points": int(fair_play.get(draw_name, fair_play.get(info["fifa_name"], 0)) or 0),
             }
+            if group_stage:
+                row["group_stage"] = group_stage
             team_rows.append(row)
             all_teams.append({**row, "house_id": str(entry["house_id"])})
 
@@ -140,6 +178,7 @@ def build_standings() -> dict:
             "fifa_rank": t["fifa_rank"],
             "group": t["group"],
             "status": t["status"],
+            **({"group_stage": t["group_stage"]} if t.get("group_stage") else {}),
         }
         for t in all_teams
     ]

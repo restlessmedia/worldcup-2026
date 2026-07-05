@@ -50,6 +50,8 @@ export function enrichTeamWithStandings(team, standings) {
     fair_play_points: team.fair_play_points ?? stats.fair_play_points,
     position: team.position ?? stats.position,
     house_id: team.house_id ?? stats.house_id,
+    group: team.group ?? stats.group,
+    group_stage: team.group_stage ?? stats.group_stage,
     wooden_spoon_likelihood: team.wooden_spoon_likelihood ?? stats.wooden_spoon_likelihood,
   };
 }
