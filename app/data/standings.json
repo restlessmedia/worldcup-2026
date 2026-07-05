@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T07:23:23.281197+00:00",
+  "generated_at": "2026-07-05T07:33:07.172163+00:00",
   "tournament_status": "in_progress",
   "results_updated": "2026-07-05",
   "teams_in_play": 14,
@@ -21,7 +21,19 @@
           "status": "alive",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 1,
+            "drawn": 2,
+            "lost": 0,
+            "points": 5,
+            "gf": 6,
+            "ga": 2,
+            "gd": 4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Uruguay",
@@ -32,7 +44,19 @@
           "status": "eliminated",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 0,
+            "drawn": 2,
+            "lost": 1,
+            "points": 2,
+            "gf": 3,
+            "ga": 4,
+            "gd": -1,
+            "complete": true
+          }
         },
         {
           "draw_name": "Iraq",
@@ -43,7 +67,19 @@
           "status": "eliminated",
           "goals_conceded": 12,
           "wooden_spoon_likelihood": 4,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 0,
+            "lost": 3,
+            "points": 0,
+            "gf": 1,
+            "ga": 12,
+            "gd": -11,
+            "complete": true
+          }
         },
         {
           "draw_name": "New Zealand",
@@ -54,7 +90,19 @@
           "status": "eliminated",
           "goals_conceded": 10,
           "wooden_spoon_likelihood": 5,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 1,
+            "lost": 2,
+            "points": 1,
+            "gf": 4,
+            "ga": 10,
+            "gd": -6,
+            "complete": true
+          }
         }
       ]
     },
@@ -74,7 +122,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 2,
+            "lost": 0,
+            "points": 5,
+            "gf": 7,
+            "ga": 3,
+            "gd": 4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Austria",
@@ -85,7 +145,19 @@
           "status": "eliminated",
           "goals_conceded": 9,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 6,
+            "ga": 6,
+            "gd": 0,
+            "complete": true
+          }
         }
       ]
     },
@@ -105,7 +177,19 @@
           "status": "eliminated",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0,
+            "complete": true
+          }
         },
         {
           "draw_name": "Czechia (Czech Republic)",
@@ -116,7 +200,19 @@
           "status": "eliminated",
           "goals_conceded": 6,
           "wooden_spoon_likelihood": 2,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 1,
+            "lost": 2,
+            "points": 1,
+            "gf": 2,
+            "ga": 6,
+            "gd": -4,
+            "complete": true
+          }
         }
       ]
     },
@@ -136,7 +232,19 @@
           "status": "alive",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 6,
+            "ga": 2,
+            "gd": 4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Netherlands (Holland)",
@@ -147,7 +255,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 10,
+            "ga": 4,
+            "gd": 6,
+            "complete": true
+          }
         },
         {
           "draw_name": "Mexico",
@@ -158,7 +278,19 @@
           "status": "alive",
           "goals_conceded": 0,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 3,
+            "drawn": 0,
+            "lost": 0,
+            "points": 9,
+            "gf": 6,
+            "ga": 0,
+            "gd": 6,
+            "complete": true
+          }
         }
       ]
     },
@@ -178,7 +310,19 @@
           "status": "alive",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 0,
+            "lost": 1,
+            "points": 6,
+            "gf": 8,
+            "ga": 4,
+            "gd": 4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Türkiye (Turkey)",
@@ -189,7 +333,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 1,
+            "drawn": 0,
+            "lost": 2,
+            "points": 3,
+            "gf": 3,
+            "ga": 5,
+            "gd": -2,
+            "complete": true
+          }
         },
         {
           "draw_name": "Ghana",
@@ -200,7 +356,19 @@
           "status": "eliminated",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 4,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0,
+            "complete": true
+          }
         }
       ]
     },
@@ -220,7 +388,19 @@
           "status": "alive",
           "goals_conceded": 2,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 7,
+            "ga": 1,
+            "gd": 6,
+            "complete": true
+          }
         },
         {
           "draw_name": "Senegal",
@@ -231,7 +411,19 @@
           "status": "eliminated",
           "goals_conceded": 9,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 0,
+            "lost": 2,
+            "points": 3,
+            "gf": 8,
+            "ga": 6,
+            "gd": 2,
+            "complete": true
+          }
         },
         {
           "draw_name": "Ivory Coast (Côte d'Ivoire)",
@@ -242,7 +434,19 @@
           "status": "eliminated",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 2,
+            "drawn": 0,
+            "lost": 1,
+            "points": 6,
+            "gf": 4,
+            "ga": 2,
+            "gd": 2,
+            "complete": true
+          }
         },
         {
           "draw_name": "Uzbekistan",
@@ -253,7 +457,19 @@
           "status": "eliminated",
           "goals_conceded": 11,
           "wooden_spoon_likelihood": 5,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 0,
+            "lost": 3,
+            "points": 0,
+            "gf": 2,
+            "ga": 11,
+            "gd": -9,
+            "complete": true
+          }
         }
       ]
     },
@@ -273,7 +489,19 @@
           "status": "eliminated",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0,
+            "complete": true
+          }
         },
         {
           "draw_name": "Tunisia",
@@ -284,7 +512,19 @@
           "status": "eliminated",
           "goals_conceded": 12,
           "wooden_spoon_likelihood": 2,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 0,
+            "lost": 3,
+            "points": 0,
+            "gf": 2,
+            "ga": 12,
+            "gd": -10,
+            "complete": true
+          }
         },
         {
           "draw_name": "Jordan",
@@ -295,7 +535,19 @@
           "status": "eliminated",
           "goals_conceded": 8,
           "wooden_spoon_likelihood": 5,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 0,
+            "lost": 3,
+            "points": 0,
+            "gf": 3,
+            "ga": 8,
+            "gd": -5,
+            "complete": true
+          }
         }
       ]
     },
@@ -315,7 +567,19 @@
           "status": "alive",
           "goals_conceded": 8,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 2,
+            "drawn": 0,
+            "lost": 1,
+            "points": 6,
+            "gf": 8,
+            "ga": 7,
+            "gd": 1,
+            "complete": true
+          }
         },
         {
           "draw_name": "Saudi Arabia",
@@ -326,7 +590,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 3,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 2,
+            "lost": 1,
+            "points": 2,
+            "gf": 1,
+            "ga": 5,
+            "gd": -4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Curacao (Curaçao)",
@@ -337,7 +613,19 @@
           "status": "eliminated",
           "goals_conceded": 9,
           "wooden_spoon_likelihood": 7,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 1,
+            "lost": 2,
+            "points": 1,
+            "gf": 1,
+            "ga": 9,
+            "gd": -8,
+            "complete": true
+          }
         },
         {
           "draw_name": "Haiti",
@@ -348,7 +636,19 @@
           "status": "eliminated",
           "goals_conceded": 8,
           "wooden_spoon_likelihood": 6,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 0,
+            "lost": 3,
+            "points": 0,
+            "gf": 2,
+            "ga": 8,
+            "gd": -6,
+            "complete": true
+          }
         }
       ]
     },
@@ -368,7 +668,19 @@
           "status": "alive",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 3,
+            "drawn": 0,
+            "lost": 0,
+            "points": 9,
+            "gf": 8,
+            "ga": 1,
+            "gd": 7,
+            "complete": true
+          }
         },
         {
           "draw_name": "Algeria",
@@ -379,7 +691,19 @@
           "status": "eliminated",
           "goals_conceded": 9,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 5,
+            "ga": 7,
+            "gd": -2,
+            "complete": true
+          }
         }
       ]
     },
@@ -399,7 +723,19 @@
           "status": "alive",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 7,
+            "ga": 3,
+            "gd": 4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Egypt",
@@ -410,7 +746,19 @@
           "status": "alive",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 2,
+            "lost": 0,
+            "points": 5,
+            "gf": 5,
+            "ga": 3,
+            "gd": 2,
+            "complete": true
+          }
         },
         {
           "draw_name": "Panama",
@@ -421,7 +769,19 @@
           "status": "eliminated",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 2,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 0,
+            "lost": 3,
+            "points": 0,
+            "gf": 0,
+            "ga": 4,
+            "gd": -4,
+            "complete": true
+          }
         },
         {
           "draw_name": "Bosnia and Herzegovina (Bosnia)",
@@ -432,7 +792,19 @@
           "status": "eliminated",
           "goals_conceded": 8,
           "wooden_spoon_likelihood": 5,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 5,
+            "ga": 6,
+            "gd": -1,
+            "complete": true
+          }
         }
       ]
     },
@@ -452,7 +824,19 @@
           "status": "eliminated",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 0,
+            "lost": 2,
+            "points": 3,
+            "gf": 2,
+            "ga": 3,
+            "gd": -1,
+            "complete": true
+          }
         },
         {
           "draw_name": "Paraguay",
@@ -463,7 +847,19 @@
           "status": "eliminated",
           "goals_conceded": 6,
           "wooden_spoon_likelihood": 2,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 2,
+            "ga": 4,
+            "gd": -2,
+            "complete": true
+          }
         }
       ]
     },
@@ -483,7 +879,19 @@
           "status": "eliminated",
           "goals_conceded": 10,
           "wooden_spoon_likelihood": 4,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 4,
+            "played": 3,
+            "won": 0,
+            "drawn": 1,
+            "lost": 2,
+            "points": 1,
+            "gf": 2,
+            "ga": 10,
+            "gd": -8,
+            "complete": true
+          }
         },
         {
           "draw_name": "Cape Verde",
@@ -494,7 +902,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 6,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 0,
+            "drawn": 3,
+            "lost": 0,
+            "points": 3,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0,
+            "complete": true
+          }
         }
       ]
     },
@@ -514,7 +934,19 @@
           "status": "alive",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 6,
+            "ga": 3,
+            "gd": 3,
+            "complete": true
+          }
         },
         {
           "draw_name": "Croatia",
@@ -525,7 +957,19 @@
           "status": "eliminated",
           "goals_conceded": 7,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 2,
+            "drawn": 0,
+            "lost": 1,
+            "points": 6,
+            "gf": 5,
+            "ga": 5,
+            "gd": 0,
+            "complete": true
+          }
         }
       ]
     },
@@ -545,7 +989,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 0,
+            "lost": 1,
+            "points": 6,
+            "gf": 10,
+            "ga": 4,
+            "gd": 6,
+            "complete": true
+          }
         },
         {
           "draw_name": "Sweden",
@@ -556,7 +1012,19 @@
           "status": "eliminated",
           "goals_conceded": 10,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 7,
+            "ga": 7,
+            "gd": 0,
+            "complete": true
+          }
         }
       ]
     },
@@ -576,7 +1044,19 @@
           "status": "alive",
           "goals_conceded": 2,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 3,
+            "drawn": 0,
+            "lost": 0,
+            "points": 9,
+            "gf": 10,
+            "ga": 2,
+            "gd": 8,
+            "complete": true
+          }
         },
         {
           "draw_name": "Portugal",
@@ -587,7 +1067,19 @@
           "status": "alive",
           "goals_conceded": 2,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 2,
+            "lost": 0,
+            "points": 5,
+            "gf": 6,
+            "ga": 1,
+            "gd": 5,
+            "complete": true
+          }
         },
         {
           "draw_name": "Iran",
@@ -598,7 +1090,19 @@
           "status": "eliminated",
           "goals_conceded": 3,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 0,
+            "drawn": 3,
+            "lost": 0,
+            "points": 3,
+            "gf": 3,
+            "ga": 3,
+            "gd": 0,
+            "complete": true
+          }
         }
       ]
     },
@@ -618,7 +1122,19 @@
           "status": "eliminated",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 2,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 0,
+            "lost": 2,
+            "points": 3,
+            "gf": 1,
+            "ga": 4,
+            "gd": -3,
+            "complete": true
+          }
         },
         {
           "draw_name": "DR Congo (Democratic Republic of the Congo)",
@@ -629,7 +1145,19 @@
           "status": "eliminated",
           "goals_conceded": 5,
           "wooden_spoon_likelihood": 3,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 3,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 4,
+            "ga": 3,
+            "gd": 1,
+            "complete": true
+          }
         },
         {
           "draw_name": "South Africa",
@@ -640,7 +1168,19 @@
           "status": "eliminated",
           "goals_conceded": 4,
           "wooden_spoon_likelihood": 3,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 2,
+            "ga": 3,
+            "gd": -1,
+            "complete": true
+          }
         }
       ]
     },
@@ -660,7 +1200,19 @@
           "status": "alive",
           "goals_conceded": 0,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 5,
+            "ga": 0,
+            "gd": 5,
+            "complete": true
+          }
         },
         {
           "draw_name": "Colombia",
@@ -671,7 +1223,19 @@
           "status": "alive",
           "goals_conceded": 1,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 1,
+            "played": 3,
+            "won": 2,
+            "drawn": 1,
+            "lost": 0,
+            "points": 7,
+            "gf": 4,
+            "ga": 1,
+            "gd": 3,
+            "complete": true
+          }
         },
         {
           "draw_name": "Canada",
@@ -682,7 +1246,19 @@
           "status": "eliminated",
           "goals_conceded": 6,
           "wooden_spoon_likelihood": 1,
-          "fair_play_points": 0
+          "fair_play_points": 0,
+          "group_stage": {
+            "position": 2,
+            "played": 3,
+            "won": 1,
+            "drawn": 1,
+            "lost": 1,
+            "points": 4,
+            "gf": 8,
+            "ga": 3,
+            "gd": 5,
+            "complete": true
+          }
         }
       ]
     }
@@ -696,7 +1272,19 @@
       "wooden_spoon_likelihood": 4,
       "fifa_rank": 57,
       "group": "I",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 1,
+        "ga": 12,
+        "gd": -11,
+        "complete": true
+      }
     },
     {
       "house_id": "8",
@@ -706,7 +1294,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 44,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 12,
+        "gd": -10,
+        "complete": true
+      }
     },
     {
       "house_id": "6",
@@ -716,7 +1316,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 50,
       "group": "K",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 11,
+        "gd": -9,
+        "complete": true
+      }
     },
     {
       "house_id": "1",
@@ -726,7 +1338,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 85,
       "group": "G",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 4,
+        "ga": 10,
+        "gd": -6,
+        "complete": true
+      }
     },
     {
       "house_id": "18",
@@ -736,7 +1360,19 @@
       "wooden_spoon_likelihood": 4,
       "fifa_rank": 55,
       "group": "B",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 2,
+        "ga": 10,
+        "gd": -8,
+        "complete": true
+      }
     },
     {
       "house_id": "20",
@@ -746,7 +1382,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 38,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 7,
+        "ga": 7,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "12",
@@ -756,7 +1404,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 28,
       "group": "J",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 5,
+        "ga": 7,
+        "gd": -2,
+        "complete": true
+      }
     },
     {
       "house_id": "2",
@@ -766,7 +1426,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 24,
       "group": "J",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 6,
+        "ga": 6,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "11",
@@ -776,7 +1448,19 @@
       "wooden_spoon_likelihood": 7,
       "fifa_rank": 82,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 1,
+        "ga": 9,
+        "gd": -8,
+        "complete": true
+      }
     },
     {
       "house_id": "6",
@@ -786,7 +1470,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 14,
       "group": "I",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 8,
+        "ga": 6,
+        "gd": 2,
+        "complete": true
+      }
     },
     {
       "house_id": "13",
@@ -796,7 +1492,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 65,
       "group": "B",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 5,
+        "ga": 6,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "house_id": "11",
@@ -806,7 +1514,19 @@
       "wooden_spoon_likelihood": 6,
       "fifa_rank": 83,
       "group": "C",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 8,
+        "gd": -6,
+        "complete": true
+      }
     },
     {
       "house_id": "8",
@@ -816,7 +1536,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 63,
       "group": "J",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 3,
+        "ga": 8,
+        "gd": -5,
+        "complete": true
+      }
     },
     {
       "house_id": "11",
@@ -826,7 +1558,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 31,
       "group": "I",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 8,
+        "ga": 7,
+        "gd": 1,
+        "complete": true
+      }
     },
     {
       "house_id": "19",
@@ -836,7 +1580,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 11,
       "group": "L",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 5,
+        "ga": 5,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "Coppice",
@@ -846,7 +1602,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 30,
       "group": "B",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 8,
+        "ga": 3,
+        "gd": 5,
+        "complete": true
+      }
     },
     {
       "house_id": "3",
@@ -856,7 +1624,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 41,
       "group": "A",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 2,
+        "ga": 6,
+        "gd": -4,
+        "complete": true
+      }
     },
     {
       "house_id": "16",
@@ -866,7 +1646,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 40,
       "group": "D",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2,
+        "complete": true
+      }
     },
     {
       "house_id": "18",
@@ -876,7 +1668,19 @@
       "wooden_spoon_likelihood": 6,
       "fifa_rank": 69,
       "group": "H",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 0,
+        "drawn": 3,
+        "lost": 0,
+        "points": 3,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "22",
@@ -886,7 +1690,19 @@
       "wooden_spoon_likelihood": 3,
       "fifa_rank": 46,
       "group": "K",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 4,
+        "ga": 3,
+        "gd": 1,
+        "complete": true
+      }
     },
     {
       "house_id": "20",
@@ -896,7 +1712,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 10,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "house_id": "2",
@@ -906,7 +1734,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 18,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 7,
+        "ga": 3,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "house_id": "4",
@@ -916,7 +1756,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 7,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "house_id": "11",
@@ -926,7 +1778,19 @@
       "wooden_spoon_likelihood": 3,
       "fifa_rank": 61,
       "group": "H",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 2,
+        "lost": 1,
+        "points": 2,
+        "gf": 1,
+        "ga": 5,
+        "gd": -4,
+        "complete": true
+      }
     },
     {
       "house_id": "5",
@@ -936,7 +1800,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 22,
       "group": "D",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 3,
+        "ga": 5,
+        "gd": -2,
+        "complete": true
+      }
     },
     {
       "house_id": "1",
@@ -946,7 +1822,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 9,
       "group": "G",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "house_id": "3",
@@ -956,7 +1844,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 23,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "13",
@@ -966,7 +1866,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 29,
       "group": "G",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 5,
+        "ga": 3,
+        "gd": 2,
+        "complete": true
+      }
     },
     {
       "house_id": "6",
@@ -976,7 +1888,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 34,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 4,
+        "ga": 2,
+        "gd": 2,
+        "complete": true
+      }
     },
     {
       "house_id": "19",
@@ -986,7 +1910,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 8,
       "group": "C",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 6,
+        "ga": 3,
+        "gd": 3,
+        "complete": true
+      }
     },
     {
       "house_id": "13",
@@ -996,7 +1932,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 33,
       "group": "L",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 0,
+        "ga": 4,
+        "gd": -4,
+        "complete": true
+      }
     },
     {
       "house_id": "22",
@@ -1006,7 +1954,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 43,
       "group": "C",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 1,
+        "ga": 4,
+        "gd": -3,
+        "complete": true
+      }
     },
     {
       "house_id": "22",
@@ -1016,7 +1976,19 @@
       "wooden_spoon_likelihood": 3,
       "fifa_rank": 60,
       "group": "A",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "house_id": "5",
@@ -1026,7 +1998,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 16,
       "group": "D",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "house_id": "1",
@@ -1036,7 +2020,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 17,
       "group": "H",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 0,
+        "drawn": 2,
+        "lost": 1,
+        "points": 2,
+        "gf": 3,
+        "ga": 4,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "house_id": "12",
@@ -1046,7 +2042,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 3,
       "group": "J",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "points": 9,
+        "gf": 8,
+        "ga": 1,
+        "gd": 7,
+        "complete": true
+      }
     },
     {
       "house_id": "8",
@@ -1056,7 +2064,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 27,
       "group": "D",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "4",
@@ -1066,7 +2086,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 4,
       "group": "L",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "house_id": "5",
@@ -1076,7 +2108,19 @@
       "wooden_spoon_likelihood": 4,
       "fifa_rank": 74,
       "group": "L",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "21",
@@ -1086,7 +2130,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 21,
       "group": "G",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 0,
+        "drawn": 3,
+        "lost": 0,
+        "points": 3,
+        "gf": 3,
+        "ga": 3,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "house_id": "16",
@@ -1096,7 +2152,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 25,
       "group": "A",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "house_id": "13",
@@ -1106,7 +2174,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 19,
       "group": "B",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 7,
+        "ga": 3,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "house_id": "6",
@@ -1116,7 +2196,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 6,
       "group": "C",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "house_id": "21",
@@ -1126,7 +2218,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 1,
       "group": "I",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "points": 9,
+        "gf": 10,
+        "ga": 2,
+        "gd": 8,
+        "complete": true
+      }
     },
     {
       "house_id": "21",
@@ -1136,7 +2240,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 5,
       "group": "K",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 6,
+        "ga": 1,
+        "gd": 5,
+        "complete": true
+      }
     },
     {
       "house_id": "Coppice",
@@ -1146,7 +2262,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 13,
       "group": "K",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 4,
+        "ga": 1,
+        "gd": 3,
+        "complete": true
+      }
     },
     {
       "house_id": "4",
@@ -1156,7 +2284,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 15,
       "group": "A",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "points": 9,
+        "gf": 6,
+        "ga": 0,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "house_id": "Coppice",
@@ -1166,7 +2306,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 2,
       "group": "H",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 5,
+        "ga": 0,
+        "gd": 5,
+        "complete": true
+      }
     }
   ],
   "wooden_spoon_league": [
@@ -1179,7 +2331,19 @@
       "wooden_spoon_likelihood": 4,
       "fifa_rank": 57,
       "group": "I",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 1,
+        "ga": 12,
+        "gd": -11,
+        "complete": true
+      }
     },
     {
       "position": 1,
@@ -1190,7 +2354,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 44,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 12,
+        "gd": -10,
+        "complete": true
+      }
     },
     {
       "position": 3,
@@ -1201,7 +2377,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 50,
       "group": "K",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 11,
+        "gd": -9,
+        "complete": true
+      }
     },
     {
       "position": 4,
@@ -1212,7 +2400,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 85,
       "group": "G",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 4,
+        "ga": 10,
+        "gd": -6,
+        "complete": true
+      }
     },
     {
       "position": 4,
@@ -1223,7 +2423,19 @@
       "wooden_spoon_likelihood": 4,
       "fifa_rank": 55,
       "group": "B",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 2,
+        "ga": 10,
+        "gd": -8,
+        "complete": true
+      }
     },
     {
       "position": 4,
@@ -1234,7 +2446,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 38,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 7,
+        "ga": 7,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 7,
@@ -1245,7 +2469,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 28,
       "group": "J",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 5,
+        "ga": 7,
+        "gd": -2,
+        "complete": true
+      }
     },
     {
       "position": 7,
@@ -1256,7 +2492,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 24,
       "group": "J",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 6,
+        "ga": 6,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 7,
@@ -1267,7 +2515,19 @@
       "wooden_spoon_likelihood": 7,
       "fifa_rank": 82,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 1,
+        "ga": 9,
+        "gd": -8,
+        "complete": true
+      }
     },
     {
       "position": 7,
@@ -1278,7 +2538,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 14,
       "group": "I",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 8,
+        "ga": 6,
+        "gd": 2,
+        "complete": true
+      }
     },
     {
       "position": 11,
@@ -1289,7 +2561,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 65,
       "group": "B",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 5,
+        "ga": 6,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "position": 11,
@@ -1300,7 +2584,19 @@
       "wooden_spoon_likelihood": 6,
       "fifa_rank": 83,
       "group": "C",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 2,
+        "ga": 8,
+        "gd": -6,
+        "complete": true
+      }
     },
     {
       "position": 11,
@@ -1311,7 +2607,19 @@
       "wooden_spoon_likelihood": 5,
       "fifa_rank": 63,
       "group": "J",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 3,
+        "ga": 8,
+        "gd": -5,
+        "complete": true
+      }
     },
     {
       "position": 11,
@@ -1322,7 +2630,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 31,
       "group": "I",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 8,
+        "ga": 7,
+        "gd": 1,
+        "complete": true
+      }
     },
     {
       "position": 15,
@@ -1333,7 +2653,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 11,
       "group": "L",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 5,
+        "ga": 5,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 16,
@@ -1344,7 +2676,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 30,
       "group": "B",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 8,
+        "ga": 3,
+        "gd": 5,
+        "complete": true
+      }
     },
     {
       "position": 16,
@@ -1355,7 +2699,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 41,
       "group": "A",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 1,
+        "lost": 2,
+        "points": 1,
+        "gf": 2,
+        "ga": 6,
+        "gd": -4,
+        "complete": true
+      }
     },
     {
       "position": 16,
@@ -1366,7 +2722,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 40,
       "group": "D",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 4,
+        "gd": -2,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1377,7 +2745,19 @@
       "wooden_spoon_likelihood": 6,
       "fifa_rank": 69,
       "group": "H",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 0,
+        "drawn": 3,
+        "lost": 0,
+        "points": 3,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1388,7 +2768,19 @@
       "wooden_spoon_likelihood": 3,
       "fifa_rank": 46,
       "group": "K",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 4,
+        "ga": 3,
+        "gd": 1,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1399,7 +2791,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 10,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1410,7 +2814,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 18,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 7,
+        "ga": 3,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1421,7 +2837,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 7,
       "group": "F",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1432,7 +2860,19 @@
       "wooden_spoon_likelihood": 3,
       "fifa_rank": 61,
       "group": "H",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 2,
+        "lost": 1,
+        "points": 2,
+        "gf": 1,
+        "ga": 5,
+        "gd": -4,
+        "complete": true
+      }
     },
     {
       "position": 19,
@@ -1443,7 +2883,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 22,
       "group": "D",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 3,
+        "ga": 5,
+        "gd": -2,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1454,7 +2906,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 9,
       "group": "G",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1465,7 +2929,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 23,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1476,7 +2952,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 29,
       "group": "G",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 5,
+        "ga": 3,
+        "gd": 2,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1487,7 +2975,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 34,
       "group": "E",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 4,
+        "ga": 2,
+        "gd": 2,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1498,7 +2998,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 8,
       "group": "C",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 6,
+        "ga": 3,
+        "gd": 3,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1509,7 +3021,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 33,
       "group": "L",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 4,
+        "played": 3,
+        "won": 0,
+        "drawn": 0,
+        "lost": 3,
+        "points": 0,
+        "gf": 0,
+        "ga": 4,
+        "gd": -4,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1520,7 +3044,19 @@
       "wooden_spoon_likelihood": 2,
       "fifa_rank": 43,
       "group": "C",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 1,
+        "ga": 4,
+        "gd": -3,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1531,7 +3067,19 @@
       "wooden_spoon_likelihood": 3,
       "fifa_rank": 60,
       "group": "A",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1542,7 +3090,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 16,
       "group": "D",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 0,
+        "lost": 1,
+        "points": 6,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "position": 26,
@@ -1553,7 +3113,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 17,
       "group": "H",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 0,
+        "drawn": 2,
+        "lost": 1,
+        "points": 2,
+        "gf": 3,
+        "ga": 4,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1564,7 +3136,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 3,
       "group": "J",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "points": 9,
+        "gf": 8,
+        "ga": 1,
+        "gd": 7,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1575,7 +3159,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 27,
       "group": "D",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1586,7 +3182,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 4,
       "group": "L",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 6,
+        "ga": 2,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1597,7 +3205,19 @@
       "wooden_spoon_likelihood": 4,
       "fifa_rank": 74,
       "group": "L",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "points": 4,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1608,7 +3228,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 21,
       "group": "G",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 0,
+        "drawn": 3,
+        "lost": 0,
+        "points": 3,
+        "gf": 3,
+        "ga": 3,
+        "gd": 0,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1619,7 +3251,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 25,
       "group": "A",
-      "status": "eliminated"
+      "status": "eliminated",
+      "group_stage": {
+        "position": 3,
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "points": 3,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1,
+        "complete": true
+      }
     },
     {
       "position": 36,
@@ -1630,7 +3274,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 19,
       "group": "B",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 7,
+        "ga": 3,
+        "gd": 4,
+        "complete": true
+      }
     },
     {
       "position": 43,
@@ -1641,7 +3297,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 6,
       "group": "C",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 7,
+        "ga": 1,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "position": 43,
@@ -1652,7 +3320,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 1,
       "group": "I",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "points": 9,
+        "gf": 10,
+        "ga": 2,
+        "gd": 8,
+        "complete": true
+      }
     },
     {
       "position": 43,
@@ -1663,7 +3343,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 5,
       "group": "K",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 2,
+        "played": 3,
+        "won": 1,
+        "drawn": 2,
+        "lost": 0,
+        "points": 5,
+        "gf": 6,
+        "ga": 1,
+        "gd": 5,
+        "complete": true
+      }
     },
     {
       "position": 46,
@@ -1674,7 +3366,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 13,
       "group": "K",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 4,
+        "ga": 1,
+        "gd": 3,
+        "complete": true
+      }
     },
     {
       "position": 47,
@@ -1685,7 +3389,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 15,
       "group": "A",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 3,
+        "drawn": 0,
+        "lost": 0,
+        "points": 9,
+        "gf": 6,
+        "ga": 0,
+        "gd": 6,
+        "complete": true
+      }
     },
     {
       "position": 47,
@@ -1696,7 +3412,19 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 2,
       "group": "H",
-      "status": "alive"
+      "status": "alive",
+      "group_stage": {
+        "position": 1,
+        "played": 3,
+        "won": 2,
+        "drawn": 1,
+        "lost": 0,
+        "points": 7,
+        "gf": 5,
+        "ga": 0,
+        "gd": 5,
+        "complete": true
+      }
     }
   ],
   "wooden_spoon_leader": {
@@ -1708,7 +3436,19 @@
     "wooden_spoon_likelihood": 4,
     "fifa_rank": 57,
     "group": "I",
-    "status": "eliminated"
+    "status": "eliminated",
+    "group_stage": {
+      "position": 4,
+      "played": 3,
+      "won": 0,
+      "drawn": 0,
+      "lost": 3,
+      "points": 0,
+      "gf": 1,
+      "ga": 12,
+      "gd": -11,
+      "complete": true
+    }
   },
   "results_source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures"
 }

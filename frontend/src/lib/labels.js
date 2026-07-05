@@ -36,6 +36,17 @@ export const copy = {
   toBeDecided: "To be decided",
   goalsConcededCount: (count) =>
     `${count} goal${count === 1 ? "" : "s"} conceded`,
+  groupStageSummary: (team) => {
+    const stage = team?.group_stage;
+    const group = team?.group;
+    if (!stage?.position || !group) return null;
+    const ordinals = ["", "1st", "2nd", "3rd", "4th"];
+    const place = ordinals[stage.position] || `${stage.position}th`;
+    const gd = stage.gd >= 0 ? `+${stage.gd}` : String(stage.gd);
+    const record = `W${stage.won} D${stage.drawn} L${stage.lost}`;
+    const suffix = stage.complete ? "" : " so far";
+    return `${place} in Group ${group} · ${stage.points} pts · ${record} · GD ${gd}${suffix}`;
+  },
   worldRankingShort: (rank) => `#${rank}`,
   worldRankingLong: (rank) => `#${rank} in the FIFA world rankings`,
   rankingsSource: "World rankings from fifa.com — for context only, not predictions",

@@ -93,6 +93,11 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
             hint="Group stage letter in the World Cup"
           />
           <DetailRow
+            label="Group stage"
+            value={copy.groupStageSummary(enrichedTeam)}
+            hint="Final group table position uses points, then goal difference, then goals scored"
+          />
+          <DetailRow
             label="Sweepstake house"
             value={enrichedTeam.house_id ? formatHouseLabel(enrichedTeam.house_id) : null}
           />
