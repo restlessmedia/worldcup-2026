@@ -327,7 +327,7 @@
             "house_id": "21",
             "group": "K",
             "fifa_rank": 5,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Croatia",
@@ -347,7 +347,7 @@
             "house_id": "21",
             "group": "K",
             "fifa_rank": 5,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -667,7 +667,7 @@
             "house_id": "21",
             "group": "K",
             "fifa_rank": 5,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Spain",
@@ -678,10 +678,18 @@
             "fifa_rank": 2,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 0,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-06",
@@ -806,12 +814,12 @@
         {
           "id": "qf-02",
           "home": {
-            "draw_name": "Norway",
-            "display_name": "Norway",
-            "fifa_code": "NOR",
-            "house_id": "11",
-            "group": "I",
-            "fifa_rank": 31,
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
             "status": "alive"
           },
           "away": {
@@ -867,9 +875,10 @@
         "4",
         "11",
         "19",
-        "21"
+        "21",
+        "Coppice"
       ],
-      "teams_count": 4
+      "teams_count": 5
     },
     {
       "id": "sf",

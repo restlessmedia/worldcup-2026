@@ -177,8 +177,8 @@
           "id": "r16-05",
           "home": "Portugal",
           "away": "Spain",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 0,
+          "away_score": 1,
           "winner": null
         },
         {
@@ -221,7 +221,7 @@
         },
         {
           "id": "qf-02",
-          "home": null,
+          "home": "Spain",
           "away": null,
           "home_score": null,
           "away_score": null,
