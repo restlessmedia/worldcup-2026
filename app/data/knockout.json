@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-05",
+  "last_updated": "2026-07-06",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 10,
+    "houses_alive": 9,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -104,7 +104,7 @@
             "house_id": "6",
             "group": "C",
             "fifa_rank": 6,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Japan",
@@ -124,7 +124,7 @@
             "house_id": "6",
             "group": "C",
             "fifa_rank": 6,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -203,7 +203,7 @@
             "house_id": "4",
             "group": "A",
             "fifa_rank": 15,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Ecuador",
@@ -223,7 +223,7 @@
             "house_id": "4",
             "group": "A",
             "fifa_rank": 15,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -601,7 +601,7 @@
             "house_id": "6",
             "group": "C",
             "fifa_rank": 6,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Norway",
@@ -612,10 +612,18 @@
             "fifa_rank": 31,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-04",
@@ -626,7 +634,7 @@
             "house_id": "4",
             "group": "A",
             "fifa_rank": 15,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "England",
@@ -637,10 +645,18 @@
             "fifa_rank": 4,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 2,
+          "away_score": 3,
+          "winner": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-05",
@@ -789,8 +805,24 @@
         },
         {
           "id": "qf-02",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -798,8 +830,24 @@
         },
         {
           "id": "qf-03",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -816,10 +864,12 @@
         }
       ],
       "houses": [
+        "4",
+        "11",
         "19",
         "21"
       ],
-      "teams_count": 2
+      "teams_count": 4
     },
     {
       "id": "sf",
