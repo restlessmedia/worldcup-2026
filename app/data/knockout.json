@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-06",
+  "last_updated": "2026-07-07",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 9,
+    "houses_alive": 8,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -269,7 +269,7 @@
             "house_id": "5",
             "group": "D",
             "fifa_rank": 16,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Bosnia and Herzegovina (Bosnia)",
@@ -289,7 +289,7 @@
             "house_id": "5",
             "group": "D",
             "fifa_rank": 16,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -700,7 +700,7 @@
             "house_id": "5",
             "group": "D",
             "fifa_rank": 16,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Belgium",
@@ -711,10 +711,18 @@
             "fifa_rank": 9,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 1,
+          "away_score": 4,
+          "winner": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-07",
@@ -823,12 +831,12 @@
             "status": "alive"
           },
           "away": {
-            "draw_name": "England",
-            "display_name": "England",
-            "fifa_code": "ENG",
-            "house_id": "4",
-            "group": "L",
-            "fifa_rank": 4,
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
             "status": "alive"
           },
           "home_score": null,
@@ -872,13 +880,14 @@
         }
       ],
       "houses": [
+        "1",
         "4",
         "11",
         "19",
         "21",
         "Coppice"
       ],
-      "teams_count": 5
+      "teams_count": 6
     },
     {
       "id": "sf",

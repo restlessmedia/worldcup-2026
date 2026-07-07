@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-06",
+  "last_updated": "2026-07-07",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -185,8 +185,8 @@
           "id": "r16-06",
           "home": "USA (United States)",
           "away": "Belgium",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 1,
+          "away_score": 4,
           "winner": null
         },
         {
@@ -222,7 +222,7 @@
         {
           "id": "qf-02",
           "home": "Spain",
-          "away": null,
+          "away": "Belgium",
           "home_score": null,
           "away_score": null,
           "winner": null

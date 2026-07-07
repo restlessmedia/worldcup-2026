@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-07-06T21:40:11.757259+00:00",
+  "fetched_at": "2026-07-07T06:28:15.270722+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -1504,9 +1504,9 @@
       "home": "USA (United States)",
       "away": "Belgium",
       "venue": "Seattle",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 1,
+      "away_score": 4,
+      "finished": true
     },
     {
       "id": "fifa-400021528",
@@ -1566,7 +1566,7 @@
       "match_number": 98,
       "kickoff_utc": "2026-07-10T19:00:00Z",
       "home": "Spain",
-      "away": "W94",
+      "away": "Belgium",
       "venue": "Los Angeles",
       "home_score": null,
       "away_score": null,

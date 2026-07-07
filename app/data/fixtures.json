@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-06T21:40:11.864554+00:00",
+  "generated_at": "2026-07-07T06:28:15.371756+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-06T21:40:11.757259+00:00",
+  "fetched_at": "2026-07-07T06:28:15.270722+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -117,7 +117,7 @@
         "house_id": "5",
         "group": "D",
         "fifa_rank": 16,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Paraguay",
@@ -892,7 +892,7 @@
         "house_id": "5",
         "group": "D",
         "fifa_rank": 16,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Australia",
@@ -1831,7 +1831,7 @@
         "house_id": "5",
         "group": "D",
         "fifa_rank": 16,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 3,
       "away_score": 2,
@@ -2535,7 +2535,7 @@
         "house_id": "5",
         "group": "D",
         "fifa_rank": 16,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Bosnia and Herzegovina (Bosnia)",
@@ -2907,7 +2907,7 @@
         "house_id": "5",
         "group": "D",
         "fifa_rank": 16,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Belgium",
@@ -2918,9 +2918,9 @@
         "fifa_rank": 9,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 1,
+      "away_score": 4,
+      "played": true
     },
     {
       "id": "fifa-400021528",
@@ -3034,13 +3034,13 @@
         "status": "alive"
       },
       "away": {
-        "draw_name": "W94",
-        "display_name": "Winner of Round of 16 (match 94)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Belgium",
+        "display_name": "Belgium",
+        "fifa_code": "BEL",
+        "house_id": "1",
+        "group": "G",
+        "fifa_rank": 9,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,

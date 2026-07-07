@@ -36,6 +36,7 @@
     "Sweden",
     "Tunisia",
     "Türkiye (Turkey)",
+    "USA (United States)",
     "Uruguay",
     "Uzbekistan"
   ],
@@ -44,7 +45,7 @@
     "Argentina": 3,
     "Australia": 3,
     "Austria": 9,
-    "Belgium": 4,
+    "Belgium": 5,
     "Bosnia and Herzegovina (Bosnia)": 8,
     "Brazil": 4,
     "Canada": 6,
@@ -85,12 +86,12 @@
     "Switzerland": 3,
     "Tunisia": 12,
     "Türkiye (Turkey)": 5,
-    "USA (United States)": 4,
+    "USA (United States)": 8,
     "Uruguay": 4,
     "Uzbekistan": 11
   },
   "fair_play_points": {},
-  "last_updated": "2026-07-06",
+  "last_updated": "2026-07-07",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_label": "FIFA match centre (auto-synced from calendar API)",
   "notes": "Admin: see docs/admin-runbook.md — edit goals_conceded, run python scripts/publish_update.py"
