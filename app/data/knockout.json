@@ -493,7 +493,7 @@
             "house_id": "13",
             "group": "G",
             "fifa_rank": 29,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,
@@ -742,12 +742,20 @@
             "house_id": "13",
             "group": "G",
             "fifa_rank": 29,
+            "status": "eliminated"
+          },
+          "home_score": 3,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "r16-08",
@@ -871,7 +879,15 @@
         },
         {
           "id": "qf-04",
-          "home": null,
+          "home": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -883,11 +899,12 @@
         "1",
         "4",
         "11",
+        "12",
         "19",
         "21",
         "Coppice"
       ],
-      "teams_count": 6
+      "teams_count": 7
     },
     {
       "id": "sf",

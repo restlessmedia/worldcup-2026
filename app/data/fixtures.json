@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-07T11:12:53.820387+00:00",
+  "generated_at": "2026-07-07T21:28:34.590442+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-07T11:12:53.718248+00:00",
+  "fetched_at": "2026-07-07T21:28:34.484506+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -436,7 +436,7 @@
         "house_id": "13",
         "group": "G",
         "fifa_rank": 29,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -1242,7 +1242,7 @@
         "house_id": "13",
         "group": "G",
         "fifa_rank": 29,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 3,
@@ -2008,7 +2008,7 @@
         "house_id": "13",
         "group": "G",
         "fifa_rank": 29,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Iran",
@@ -2668,7 +2668,7 @@
         "house_id": "13",
         "group": "G",
         "fifa_rank": 29,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -2947,11 +2947,11 @@
         "house_id": "13",
         "group": "G",
         "fifa_rank": 29,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 3,
+      "away_score": 2,
+      "played": true
     },
     {
       "id": "fifa-400021535",
@@ -2980,9 +2980,9 @@
         "fifa_rank": 13,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 0,
+      "played": true
     },
     {
       "id": "fifa-400021536",
@@ -3087,13 +3087,13 @@
       "kickoff_utc": "2026-07-12T01:00:00Z",
       "venue": "Kansas City",
       "home": {
-        "draw_name": "W95",
-        "display_name": "Winner of Round of 16 (match 95)",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Argentina",
+        "display_name": "Argentina",
+        "fifa_code": "ARG",
+        "house_id": "12",
+        "group": "J",
+        "fifa_rank": 3,
+        "status": "alive"
       },
       "away": {
         "draw_name": "W96",

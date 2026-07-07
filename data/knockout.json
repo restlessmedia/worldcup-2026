@@ -193,8 +193,8 @@
           "id": "r16-07",
           "home": "Argentina",
           "away": "Egypt",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 3,
+          "away_score": 2,
           "winner": null
         },
         {
@@ -237,7 +237,7 @@
         },
         {
           "id": "qf-04",
-          "home": null,
+          "home": "Argentina",
           "away": null,
           "home_score": null,
           "away_score": null,
