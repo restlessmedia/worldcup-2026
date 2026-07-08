@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-07",
+  "last_updated": "2026-07-08",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 8,
@@ -888,7 +888,15 @@
             "fifa_rank": 3,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -900,11 +908,12 @@
         "4",
         "11",
         "12",
+        "13",
         "19",
         "21",
         "Coppice"
       ],
-      "teams_count": 7
+      "teams_count": 8
     },
     {
       "id": "sf",
