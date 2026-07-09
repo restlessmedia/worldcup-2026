@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-08",
+  "last_updated": "2026-07-09",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
     "houses_alive": 8,
@@ -830,31 +830,6 @@
         {
           "id": "qf-02",
           "home": {
-            "draw_name": "Spain",
-            "display_name": "Spain",
-            "fifa_code": "ESP",
-            "house_id": "Coppice",
-            "group": "H",
-            "fifa_rank": 2,
-            "status": "alive"
-          },
-          "away": {
-            "draw_name": "Belgium",
-            "display_name": "Belgium",
-            "fifa_code": "BEL",
-            "house_id": "1",
-            "group": "G",
-            "fifa_rank": 9,
-            "status": "alive"
-          },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
-        },
-        {
-          "id": "qf-03",
-          "home": {
             "draw_name": "Norway",
             "display_name": "Norway",
             "fifa_code": "NOR",
@@ -870,6 +845,31 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
+            "status": "alive"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": null,
+          "played": false
+        },
+        {
+          "id": "qf-03",
+          "home": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
             "status": "alive"
           },
           "home_score": null,
