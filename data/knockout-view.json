@@ -1,11 +1,11 @@
 {
-  "phase": "pre_knockout",
-  "last_updated": null,
+  "phase": "knockout",
+  "last_updated": "2026-07-09",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 17,
-    "teams_in_bracket": 0,
-    "r32_fixtures_set": 0
+    "houses_alive": 8,
+    "teams_in_bracket": 32,
+    "r32_fixtures_set": 16
   },
   "rounds": [
     {
@@ -14,17 +14,57 @@
       "matches": [
         {
           "id": "r32-01",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "South Africa",
+            "display_name": "South Africa",
+            "fifa_code": "RSA",
+            "house_id": "22",
+            "group": "A",
+            "fifa_rank": 60,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Canada",
+            "display_name": "Canada",
+            "fifa_code": "CAN",
+            "house_id": "Coppice",
+            "group": "B",
+            "fifa_rank": 30,
+            "status": "eliminated"
+          },
+          "home_score": 0,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Canada",
+            "display_name": "Canada",
+            "fifa_code": "CAN",
+            "house_id": "Coppice",
+            "group": "B",
+            "fifa_rank": 30,
+            "status": "eliminated"
+          },
+          "played": true
         },
         {
           "id": "r32-02",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Germany",
+            "display_name": "Germany",
+            "fifa_code": "GER",
+            "house_id": "20",
+            "group": "E",
+            "fifa_rank": 10,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Paraguay",
+            "display_name": "Paraguay",
+            "fifa_code": "PAR",
+            "house_id": "16",
+            "group": "D",
+            "fifa_rank": 40,
+            "status": "eliminated"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -32,8 +72,24 @@
         },
         {
           "id": "r32-03",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Netherlands (Holland)",
+            "display_name": "Netherlands",
+            "fifa_code": "NED",
+            "house_id": "4",
+            "group": "F",
+            "fifa_rank": 7,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -41,62 +97,222 @@
         },
         {
           "id": "r32-04",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Japan",
+            "display_name": "Japan",
+            "fifa_code": "JPN",
+            "house_id": "2",
+            "group": "F",
+            "fifa_rank": 18,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
+            "status": "eliminated"
+          },
+          "played": true
         },
         {
           "id": "r32-05",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Sweden",
+            "display_name": "Sweden",
+            "fifa_code": "SWE",
+            "house_id": "20",
+            "group": "F",
+            "fifa_rank": 38,
+            "status": "eliminated"
+          },
+          "home_score": 3,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-06",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Ivory Coast (Côte d'Ivoire)",
+            "display_name": "Ivory Coast",
+            "fifa_code": "CIV",
+            "house_id": "6",
+            "group": "E",
+            "fifa_rank": 34,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-07",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Mexico",
+            "display_name": "Mexico",
+            "fifa_code": "MEX",
+            "house_id": "4",
+            "group": "A",
+            "fifa_rank": 15,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Ecuador",
+            "display_name": "Ecuador",
+            "fifa_code": "ECU",
+            "house_id": "3",
+            "group": "E",
+            "fifa_rank": 23,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Mexico",
+            "display_name": "Mexico",
+            "fifa_code": "MEX",
+            "house_id": "4",
+            "group": "A",
+            "fifa_rank": 15,
+            "status": "eliminated"
+          },
+          "played": true
         },
         {
           "id": "r32-08",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "DR Congo (Democratic Republic of the Congo)",
+            "display_name": "DR Congo",
+            "fifa_code": "COD",
+            "house_id": "22",
+            "group": "K",
+            "fifa_rank": 46,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-09",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Bosnia and Herzegovina (Bosnia)",
+            "display_name": "Bosnia",
+            "fifa_code": "BIH",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 65,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
+            "status": "eliminated"
+          },
+          "played": true
         },
         {
           "id": "r32-10",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Senegal",
+            "display_name": "Senegal",
+            "fifa_code": "SEN",
+            "house_id": "6",
+            "group": "I",
+            "fifa_rank": 14,
+            "status": "eliminated"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -104,35 +320,123 @@
         },
         {
           "id": "r32-11",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Portugal",
+            "display_name": "Portugal",
+            "fifa_code": "POR",
+            "house_id": "21",
+            "group": "K",
+            "fifa_rank": 5,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Croatia",
+            "display_name": "Croatia",
+            "fifa_code": "CRO",
+            "house_id": "19",
+            "group": "L",
+            "fifa_rank": 11,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Portugal",
+            "display_name": "Portugal",
+            "fifa_code": "POR",
+            "house_id": "21",
+            "group": "K",
+            "fifa_rank": 5,
+            "status": "eliminated"
+          },
+          "played": true
         },
         {
           "id": "r32-12",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Austria",
+            "display_name": "Austria",
+            "fifa_code": "AUT",
+            "house_id": "2",
+            "group": "J",
+            "fifa_rank": 24,
+            "status": "eliminated"
+          },
+          "home_score": 3,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-13",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Algeria",
+            "display_name": "Algeria",
+            "fifa_code": "ALG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 28,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r32-14",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Cape Verde",
+            "display_name": "Cape Verde",
+            "fifa_code": "CPV",
+            "house_id": "18",
+            "group": "H",
+            "fifa_rank": 69,
+            "status": "eliminated"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -140,25 +444,83 @@
         },
         {
           "id": "r32-15",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Colombia",
+            "display_name": "Colombia",
+            "fifa_code": "COL",
+            "house_id": "Coppice",
+            "group": "K",
+            "fifa_rank": 13,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Ghana",
+            "display_name": "Ghana",
+            "fifa_code": "GHA",
+            "house_id": "5",
+            "group": "L",
+            "fifa_rank": 74,
+            "status": "eliminated"
+          },
+          "home_score": 1,
+          "away_score": 0,
+          "winner": {
+            "draw_name": "Colombia",
+            "display_name": "Colombia",
+            "fifa_code": "COL",
+            "house_id": "Coppice",
+            "group": "K",
+            "fifa_rank": 13,
+            "status": "eliminated"
+          },
+          "played": true
         },
         {
           "id": "r32-16",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Australia",
+            "display_name": "Australia",
+            "fifa_code": "AUS",
+            "house_id": "8",
+            "group": "D",
+            "fifa_rank": 27,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Egypt",
+            "display_name": "Egypt",
+            "fifa_code": "EGY",
+            "house_id": "13",
+            "group": "G",
+            "fifa_rank": 29,
+            "status": "eliminated"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "8",
+        "11",
+        "12",
+        "13",
+        "16",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "Coppice"
+      ],
+      "teams_count": 32
     },
     {
       "id": "r16",
@@ -166,79 +528,275 @@
       "matches": [
         {
           "id": "r16-01",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Paraguay",
+            "display_name": "Paraguay",
+            "fifa_code": "PAR",
+            "house_id": "16",
+            "group": "D",
+            "fifa_rank": 40,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
+          "home_score": 0,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-02",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Canada",
+            "display_name": "Canada",
+            "fifa_code": "CAN",
+            "house_id": "Coppice",
+            "group": "B",
+            "fifa_rank": 30,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
+          "home_score": 0,
+          "away_score": 3,
+          "winner": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-03",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Brazil",
+            "display_name": "Brazil",
+            "fifa_code": "BRA",
+            "house_id": "6",
+            "group": "C",
+            "fifa_rank": 6,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-04",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Mexico",
+            "display_name": "Mexico",
+            "fifa_code": "MEX",
+            "house_id": "4",
+            "group": "A",
+            "fifa_rank": 15,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
+          "home_score": 2,
+          "away_score": 3,
+          "winner": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-05",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Portugal",
+            "display_name": "Portugal",
+            "fifa_code": "POR",
+            "house_id": "21",
+            "group": "K",
+            "fifa_rank": 5,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "home_score": 0,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-06",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "USA (United States)",
+            "display_name": "USA",
+            "fifa_code": "USA",
+            "house_id": "5",
+            "group": "D",
+            "fifa_rank": 16,
+            "status": "eliminated"
+          },
+          "away": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
+          "home_score": 1,
+          "away_score": 4,
+          "winner": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-07",
-          "home": null,
-          "away": null,
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Egypt",
+            "display_name": "Egypt",
+            "fifa_code": "EGY",
+            "house_id": "13",
+            "group": "G",
+            "fifa_rank": 29,
+            "status": "eliminated"
+          },
+          "home_score": 3,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "r16-08",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Colombia",
+            "display_name": "Colombia",
+            "fifa_code": "COL",
+            "house_id": "Coppice",
+            "group": "K",
+            "fifa_rank": 13,
+            "status": "eliminated"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "1",
+        "4",
+        "5",
+        "6",
+        "11",
+        "12",
+        "13",
+        "16",
+        "19",
+        "21",
+        "Coppice"
+      ],
+      "teams_count": 16
     },
     {
       "id": "qf",
@@ -246,8 +804,24 @@
       "matches": [
         {
           "id": "qf-01",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "France",
+            "display_name": "France",
+            "fifa_code": "FRA",
+            "house_id": "21",
+            "group": "I",
+            "fifa_rank": 1,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Morocco",
+            "display_name": "Morocco",
+            "fifa_code": "MAR",
+            "house_id": "19",
+            "group": "C",
+            "fifa_rank": 8,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -255,8 +829,24 @@
         },
         {
           "id": "qf-02",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Norway",
+            "display_name": "Norway",
+            "fifa_code": "NOR",
+            "house_id": "11",
+            "group": "I",
+            "fifa_rank": 31,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -264,8 +854,24 @@
         },
         {
           "id": "qf-03",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Belgium",
+            "display_name": "Belgium",
+            "fifa_code": "BEL",
+            "house_id": "1",
+            "group": "G",
+            "fifa_rank": 9,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -273,16 +879,41 @@
         },
         {
           "id": "qf-04",
-          "home": null,
-          "away": null,
+          "home": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
+          "away": {
+            "draw_name": "Switzerland",
+            "display_name": "Switzerland",
+            "fifa_code": "SUI",
+            "house_id": "13",
+            "group": "B",
+            "fifa_rank": 19,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "1",
+        "4",
+        "11",
+        "12",
+        "13",
+        "19",
+        "21",
+        "Coppice"
+      ],
+      "teams_count": 8
     },
     {
       "id": "sf",
