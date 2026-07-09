@@ -451,7 +451,7 @@
             "house_id": "Coppice",
             "group": "K",
             "fifa_rank": 13,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Ghana",
@@ -471,7 +471,7 @@
             "house_id": "Coppice",
             "group": "K",
             "fifa_rank": 13,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -775,7 +775,7 @@
             "house_id": "Coppice",
             "group": "K",
             "fifa_rank": 13,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,

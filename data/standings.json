@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-09T07:56:10.823008+00:00",
+  "generated_at": "2026-07-09T07:55:39.507904+00:00",
   "tournament_status": "in_progress",
-  "results_updated": "2026-07-07",
-  "teams_in_play": 9,
+  "results_updated": "2026-07-09",
+  "teams_in_play": 8,
   "teams_total": 48,
   "houses": [
     {
@@ -1187,7 +1187,7 @@
     {
       "house_id": "Coppice",
       "teams_total": 3,
-      "teams_alive": 2,
+      "teams_alive": 1,
       "best_remaining_rank": 2,
       "best_remaining_team": "Spain",
       "teams": [
@@ -1220,7 +1220,7 @@
           "fifa_code": "COL",
           "group": "K",
           "fifa_rank": 13,
-          "status": "alive",
+          "status": "eliminated",
           "goals_conceded": 1,
           "wooden_spoon_likelihood": 1,
           "fair_play_points": 0,
@@ -2284,7 +2284,7 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 13,
       "group": "K",
-      "status": "alive",
+      "status": "eliminated",
       "group_stage": {
         "position": 1,
         "played": 3,
@@ -3389,7 +3389,7 @@
       "wooden_spoon_likelihood": 1,
       "fifa_rank": 13,
       "group": "K",
-      "status": "alive",
+      "status": "eliminated",
       "group_stage": {
         "position": 1,
         "played": 3,

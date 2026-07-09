@@ -191,6 +191,32 @@ class SyncResultsTest(unittest.TestCase):
         self.assertIn("Germany", eliminated)
         self.assertIn("Netherlands (Holland)", eliminated)
 
+    def test_bracket_progression_eliminates_r16_penalty_loser(self):
+        """R16 shootouts: winner in QF, loser must not count as 'in R16' anymore."""
+        fixtures = [
+            {
+                "stage": "r16",
+                "stage_label": "Round of 16",
+                "finished": False,
+                "home": "Switzerland",
+                "away": "Colombia",
+                "home_score": 0,
+                "away_score": 0,
+            },
+            {
+                "stage": "qf",
+                "stage_label": "Quarter-final",
+                "finished": False,
+                "home": "Argentina",
+                "away": "Switzerland",
+                "home_score": None,
+                "away_score": None,
+            },
+        ]
+        _, _, eliminated = compute_results(fixtures)
+        self.assertIn("Colombia", eliminated)
+        self.assertNotIn("Switzerland", eliminated)
+
     def test_bracket_progression_counts_goals_before_fifa_marks_finished(self):
         draw_names = {"Germany", "Paraguay"}
         fixtures = [
