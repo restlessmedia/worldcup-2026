@@ -68,8 +68,14 @@ def fifa_match_number_to_bracket_id(match_number: int) -> str | None:
         return f"r32-{match_number - 72:02d}"
     if 89 <= match_number <= 96:
         return f"r16-{match_number - 88:02d}"
-    if 97 <= match_number <= 100:
-        return f"qf-{match_number - 96:02d}"
+    if match_number == 97:
+        return "qf-01"
+    if match_number == 98:
+        return "qf-03"
+    if match_number == 99:
+        return "qf-02"
+    if match_number == 100:
+        return "qf-04"
     if match_number == 101:
         return "sf-01"
     if match_number == 102:

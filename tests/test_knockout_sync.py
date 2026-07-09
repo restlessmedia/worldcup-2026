@@ -11,6 +11,7 @@ from knockout_placeholders import (  # noqa: E402
     fifa_match_number_to_bracket_id,
     resolve_placeholder,
 )
+from build_knockout import ADVANCEMENT  # noqa: E402
 from sync_knockout_from_fifa import knockout_fingerprint, sync_knockout_payload  # noqa: E402
 
 
@@ -19,6 +20,8 @@ class KnockoutSyncTest(unittest.TestCase):
         self.assertEqual(fifa_match_number_to_bracket_id(73), "r32-01")
         self.assertEqual(fifa_match_number_to_bracket_id(89), "r16-01")
         self.assertEqual(fifa_match_number_to_bracket_id(97), "qf-01")
+        self.assertEqual(fifa_match_number_to_bracket_id(98), "qf-03")
+        self.assertEqual(fifa_match_number_to_bracket_id(99), "qf-02")
         self.assertEqual(fifa_match_number_to_bracket_id(101), "sf-01")
         self.assertEqual(fifa_match_number_to_bracket_id(103), "third-01")
         self.assertEqual(fifa_match_number_to_bracket_id(104), "final-01")
@@ -48,6 +51,10 @@ class KnockoutSyncTest(unittest.TestCase):
             "rounds": [{"id": "r32", "matches": [{"id": "r32-01", "home": None, "away": None}]}],
         }
         self.assertEqual(knockout_fingerprint(payload), knockout_fingerprint(payload))
+
+    def test_r16_to_qf_advancement_keeps_m79_m80_path_on_left_side(self):
+        self.assertEqual(ADVANCEMENT["r16-03"], ("qf-02", "home"))
+        self.assertEqual(ADVANCEMENT["r16-04"], ("qf-02", "away"))
 
     def test_sync_leaves_pre_knockout_when_only_placeholders(self):
         fixtures = [
