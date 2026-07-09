@@ -36,7 +36,16 @@ from tournament_groups import (  # noqa: E402
 PLACEHOLDER_RE = re.compile(r"^[0-9A-Z]+(/[0-9A-Z]+)*$|^W[0-9]+$|^RU[0-9]+$|^L[0-9]+$")
 
 KNOCKOUT_STAGES = frozenset({"r32", "r16", "qf", "sf", "third", "final"})
+KNOCKOUT_STAGE_ORDER = ("r32", "r16", "qf", "sf", "third", "final")
 LATER_KNOCKOUT_STAGES = frozenset({"r16", "qf", "sf", "third", "final"})
+
+
+def _stages_after(stage: str) -> frozenset[str]:
+    try:
+        idx = KNOCKOUT_STAGE_ORDER.index(stage)
+    except ValueError:
+        return frozenset()
+    return frozenset(KNOCKOUT_STAGE_ORDER[idx + 1 :])
 
 
 def is_draw_team(name: str | None, draw_names: set[str]) -> bool:
@@ -49,16 +58,35 @@ def is_placeholder(name: str | None) -> bool:
     return bool(PLACEHOLDER_RE.fullmatch(name.replace(" ", "")))
 
 
-def teams_in_later_knockout_rounds(fixtures: list[dict], draw_names: set[str]) -> set[str]:
-    """Teams FIFA has already placed in R16 or beyond."""
+def teams_in_later_knockout_rounds(
+    fixtures: list[dict],
+    draw_names: set[str],
+    *,
+    after_stage: str | None = None,
+) -> set[str]:
+    """Teams FIFA has placed in rounds strictly after *after_stage*.
+
+    When *after_stage* is omitted, counts teams in R16 or beyond (legacy default).
+    For bracket progression on an R16 tie, pass ``after_stage="r16"`` so only QF+
+    placements count — otherwise both sides of the same R16 fixture look "advanced".
+    """
+    allowed = LATER_KNOCKOUT_STAGES if after_stage is None else _stages_after(after_stage)
     teams: set[str] = set()
     for fixture in fixtures:
-        if fixture.get("stage") not in LATER_KNOCKOUT_STAGES:
+        if fixture.get("stage") not in allowed:
             continue
         for side in (fixture.get("home"), fixture.get("away")):
             if is_draw_team(side, draw_names):
                 teams.add(side)
     return teams
+
+
+def teams_after_stage_map(fixtures: list[dict], draw_names: set[str]) -> dict[str, set[str]]:
+    """Precomputed later-round teams for each knockout stage (avoids O(n²) rescans)."""
+    return {
+        stage: teams_in_later_knockout_rounds(fixtures, draw_names, after_stage=stage)
+        for stage in KNOCKOUT_STAGE_ORDER
+    }
 
 
 def knockout_match_decided(
@@ -85,9 +113,11 @@ def knockout_match_decided(
 
 
 def goals_conceded_from_fixtures(fixtures: list[dict], draw_names: set[str]) -> dict[str, int]:
-    later_teams = teams_in_later_knockout_rounds(fixtures, draw_names)
+    later_by_stage = teams_after_stage_map(fixtures, draw_names)
     totals: dict[str, int] = {}
     for fixture in fixtures:
+        stage = fixture.get("stage")
+        later_teams = later_by_stage.get(stage, set()) if stage in KNOCKOUT_STAGES else set()
         if not fixture.get("finished") and not knockout_match_decided(
             fixture, draw_names, later_teams
         ):
@@ -142,17 +172,19 @@ def eliminations_from_bracket_progression(
   Common after penalty shootouts: scores stay level and finished=false while the
   winner already appears in a later-round fixture.
     """
-    later_teams = teams_in_later_knockout_rounds(fixtures, draw_names)
+    later_by_stage = teams_after_stage_map(fixtures, draw_names)
     notes: list[str] = []
     eliminated: set[str] = set()
 
     for fixture in fixtures:
-        if fixture.get("stage") not in KNOCKOUT_STAGES or fixture.get("stage") == "final":
+        stage = fixture.get("stage")
+        if stage not in KNOCKOUT_STAGES or stage == "final":
             continue
         home = fixture.get("home")
         away = fixture.get("away")
         if not is_draw_team(home, draw_names) or not is_draw_team(away, draw_names):
             continue
+        later_teams = later_by_stage.get(stage, set())
         home_later = home in later_teams
         away_later = away in later_teams
         if home_later == away_later:
