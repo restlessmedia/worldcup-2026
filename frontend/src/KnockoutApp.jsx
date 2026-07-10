@@ -16,13 +16,15 @@ function knockoutTagline(knockout) {
 
 export function KnockoutApp() {
   const [knockout, setKnockout] = useState(null);
+  const [standings, setStandings] = useState(null);
   const [meta, setMeta] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Promise.all([loadJson("knockout.json"), loadJson("meta.json")])
-      .then(([knockoutData, metaData]) => {
+    Promise.all([loadJson("knockout.json"), loadJson("standings.json"), loadJson("meta.json")])
+      .then(([knockoutData, standingsData, metaData]) => {
         setKnockout(knockoutData);
+        setStandings(standingsData);
         setMeta(metaData);
       })
       .catch((err) => setError(err.message));
@@ -55,7 +57,7 @@ export function KnockoutApp() {
         className="card--knockout"
         hint="Sweepstake teams and houses on each knockout fixture. Winners advance automatically when scores are entered."
       >
-        <KnockoutBracket knockout={knockout} />
+        <KnockoutBracket knockout={knockout} standings={standings} />
       </Card>
     </Layout>
   );

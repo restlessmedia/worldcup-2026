@@ -31,6 +31,30 @@ export function isTeamEliminated(team) {
   return team?.status === "eliminated";
 }
 
+export function goalsConcededBreakdown(team) {
+  if (!team) return null;
+
+  const stored = team.goals_conceded_breakdown;
+  if (stored && stored.total != null) {
+    return {
+      group: stored.group ?? 0,
+      knockout: stored.knockout ?? 0,
+      total: stored.total,
+    };
+  }
+
+  const total = team.goals_conceded ?? 0;
+  const groupGa = team.group_stage?.ga;
+  if (groupGa == null) return { group: null, knockout: null, total };
+
+  const group = Number(groupGa);
+  return {
+    group,
+    knockout: Math.max(0, total - group),
+    total,
+  };
+}
+
 export function enrichTeamWithStandings(team, standings) {
   if (!team || !standings) return team;
 
@@ -46,7 +70,8 @@ export function enrichTeamWithStandings(team, standings) {
   return {
     ...team,
     status: team.status ?? stats.status,
-    goals_conceded: team.goals_conceded ?? stats.goals_conceded,
+    goals_conceded: stats.goals_conceded ?? team.goals_conceded,
+    goals_conceded_breakdown: stats.goals_conceded_breakdown ?? team.goals_conceded_breakdown,
     fair_play_points: team.fair_play_points ?? stats.fair_play_points,
     position: team.position ?? stats.position,
     house_id: team.house_id ?? stats.house_id,

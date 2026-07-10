@@ -148,7 +148,7 @@ function KnockoutPathway({ side, pathway, matchesById, onSelect }) {
   );
 }
 
-export function KnockoutBracket({ knockout }) {
+export function KnockoutBracket({ knockout, standings }) {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const preKnockout = knockout.phase === "pre_knockout";
   const matchesById = useMemo(
@@ -216,7 +216,7 @@ export function KnockoutBracket({ knockout }) {
         </div>
       ) : null}
 
-      <TeamModal team={selectedTeam} onClose={() => setSelectedTeam(null)} />
+      <TeamModal team={selectedTeam} standings={standings} onClose={() => setSelectedTeam(null)} />
     </div>
   );
 }

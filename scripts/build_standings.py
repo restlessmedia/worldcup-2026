@@ -151,6 +151,13 @@ def build_standings() -> dict:
             }
             if group_stage:
                 row["group_stage"] = group_stage
+                group_ga = int(group_stage["ga"])
+                knockout_ga = max(0, conceded - group_ga)
+                row["goals_conceded_breakdown"] = {
+                    "group": group_ga,
+                    "knockout": knockout_ga,
+                    "total": conceded,
+                }
             team_rows.append(row)
             all_teams.append({**row, "house_id": str(entry["house_id"])})
 

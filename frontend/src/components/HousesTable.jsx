@@ -158,7 +158,7 @@ export function HousesTable({ standings, fixtures = [] }) {
         </div>
       )}
 
-      <TeamModal team={selectedTeam} onClose={() => setSelectedTeam(null)} />
+      <TeamModal team={selectedTeam} standings={standings} onClose={() => setSelectedTeam(null)} />
       <HouseFixturesModal
         house={selectedHouse}
         fixtures={fixtures}

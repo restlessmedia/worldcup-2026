@@ -45,6 +45,22 @@ class BuildStandingsTest(unittest.TestCase):
         self.assertEqual(stage["gd"], 5)
         self.assertTrue(stage["complete"])
 
+    def test_germany_goals_breakdown_includes_knockout(self):
+        standings = build_standings()
+        germany = next(
+            team
+            for house in standings["houses"]
+            for team in house["teams"]
+            if team["fifa_code"] == "GER"
+        )
+
+        breakdown = germany["goals_conceded_breakdown"]
+        self.assertEqual(germany["goals_conceded"], 5)
+        self.assertEqual(germany["group_stage"]["ga"], 4)
+        self.assertEqual(breakdown["group"], 4)
+        self.assertEqual(breakdown["knockout"], 1)
+        self.assertEqual(breakdown["total"], 5)
+
 
 if __name__ == "__main__":
     unittest.main()

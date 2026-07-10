@@ -36,6 +36,13 @@ export const copy = {
   toBeDecided: "To be decided",
   goalsConcededCount: (count) =>
     `${count} goal${count === 1 ? "" : "s"} conceded`,
+  goalsConcededBreakdown: (breakdown) => {
+    if (!breakdown || breakdown.group == null) return null;
+    const group = `${breakdown.group} in the group stage`;
+    if (!breakdown.knockout) return group;
+    const knockout = `${breakdown.knockout} in knockout`;
+    return `${group} · ${knockout}`;
+  },
   groupStageSummary: (team) => {
     const stage = team?.group_stage;
     const group = team?.group;

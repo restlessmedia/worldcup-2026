@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { copy } from "../src/lib/labels.js";
-import { enrichTeamWithStandings } from "../src/lib/teamStats.js";
+import { enrichTeamWithStandings, goalsConcededBreakdown } from "../src/lib/teamStats.js";
 
 const standings = {
   houses: [
@@ -25,6 +25,11 @@ const standings = {
             ga: 2,
             gd: 3,
             complete: true,
+          },
+          goals_conceded_breakdown: {
+            group: 2,
+            knockout: 0,
+            total: 2,
           },
         },
       ],
@@ -51,6 +56,11 @@ const standings = {
         ga: 2,
         gd: 3,
         complete: true,
+      },
+      goals_conceded_breakdown: {
+        group: 2,
+        knockout: 0,
+        total: 2,
       },
     },
   ],
@@ -114,4 +124,36 @@ test("groupStageSummary formats completed group stage finish", () => {
   });
 
   assert.equal(summary, "1st in Group B · 7 pts · W2 D1 L0 · GD +4");
+});
+
+test("goalsConcededBreakdown splits group and knockout totals", () => {
+  const breakdown = goalsConcededBreakdown({
+    goals_conceded: 5,
+    group_stage: { ga: 4 },
+  });
+
+  assert.deepEqual(breakdown, { group: 4, knockout: 1, total: 5 });
+  assert.equal(
+    copy.goalsConcededBreakdown(breakdown),
+    "4 in the group stage · 1 in knockout",
+  );
+});
+
+test("enrichTeamWithStandings prefers standings goals over stale team totals", () => {
+  const fixtureTeam = {
+    draw_name: "Czechia (Czech Republic)",
+    display_name: "Czechia",
+    fifa_code: "CZE",
+    goals_conceded: 1,
+    group_stage: { ga: 1 },
+  };
+
+  const enriched = enrichTeamWithStandings(fixtureTeam, standings);
+
+  assert.equal(enriched.goals_conceded, 2);
+  assert.deepEqual(enriched.goals_conceded_breakdown, {
+    group: 2,
+    knockout: 0,
+    total: 2,
+  });
 });

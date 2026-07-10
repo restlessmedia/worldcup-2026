@@ -95,7 +95,7 @@ export function SpoonLeagueTable({ standings, config, limit, showHeader = true }
         <div className="table-wrap">{table}</div>
       )}
 
-      <TeamModal team={selectedTeam} onClose={() => setSelectedTeam(null)} />
+      <TeamModal team={selectedTeam} standings={standings} onClose={() => setSelectedTeam(null)} />
     </>
   );
 }

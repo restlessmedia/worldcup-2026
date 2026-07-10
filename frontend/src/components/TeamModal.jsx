@@ -4,7 +4,11 @@ import { useStandingsLookup } from "../hooks/useStandingsLookup";
 import { flagUrl } from "../lib/data";
 import { formatHouseLabel } from "../lib/format";
 import { copy } from "../lib/labels";
-import { enrichTeamWithStandings, isTeamEliminated } from "../lib/teamStats";
+import {
+  enrichTeamWithStandings,
+  goalsConcededBreakdown,
+  isTeamEliminated,
+} from "../lib/teamStats";
 import { EliminatedBadge } from "./EliminatedBadge";
 
 function DetailRow({ label, value, hint }) {
@@ -43,6 +47,7 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
   if (!enrichedTeam) return null;
 
   const eliminated = isTeamEliminated(enrichedTeam);
+  const concededBreakdown = goalsConcededBreakdown(enrichedTeam);
   const status = eliminated
     ? "Eliminated from the World Cup"
     : enrichedTeam.status === "alive"
@@ -105,8 +110,15 @@ export function TeamModal({ team, standings: standingsProp, onClose }) {
           <DetailRow
             label="Goals conceded"
             value={copy.goalsConcededCount(enrichedTeam.goals_conceded ?? 0)}
-            hint="Total goals scored against this team so far"
+            hint="Total goals scored against this team in the tournament, including knockout matches"
           />
+          {concededBreakdown?.group != null ? (
+            <DetailRow
+              label="Goals breakdown"
+              value={copy.goalsConcededBreakdown(concededBreakdown)}
+              hint="Group-stage and knockout goals count toward the wooden spoon total"
+            />
+          ) : null}
           {enrichedTeam.fair_play_points != null ? (
             <DetailRow
               label="Fair play points"
