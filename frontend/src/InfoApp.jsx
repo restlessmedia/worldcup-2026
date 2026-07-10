@@ -4,6 +4,7 @@ import { potTotal, resolveSiteUpdatedAt } from "./lib/format";
 import { copy } from "./lib/labels";
 import { Card, ErrorMessage, Layout, LoadingMessage } from "./components/Layout";
 import { PrizeList } from "./components/PrizeList";
+import { PrizeOutlook } from "./components/PrizeOutlook";
 
 function tieBreakSteps(config) {
   const order = config?.side_prize_tie_break?.order;
@@ -33,7 +34,7 @@ export function InfoApp() {
     );
   }
 
-  const { config, meta } = data;
+  const { config, meta, standings, draw, fixtures } = data;
   const ruleLines = config.notes || [];
   const tieBreaks = tieBreakSteps(config);
 
@@ -41,9 +42,21 @@ export function InfoApp() {
     <Layout
       title="Prizes & rules"
       tagline={`${potTotal(config)} pot · main prizes, side prizes, and tie-breakers`}
-      updatedAt={resolveSiteUpdatedAt({ meta })}
+      updatedAt={resolveSiteUpdatedAt({ meta, standings })}
       activeNav="info"
     >
+      <Card
+        title="Who's winning?"
+        hint="Current prize outlook from live standings — wooden spoon uses the published tie-breakers."
+      >
+        <PrizeOutlook
+          standings={standings}
+          draw={draw}
+          fixtures={fixtures}
+          config={config}
+        />
+      </Card>
+
       <Card title="Prizes" hint="Last team standing at each stage wins the main prizes.">
         <PrizeList config={config} />
       </Card>

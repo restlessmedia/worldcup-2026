@@ -67,8 +67,14 @@ export async function loadStandingsPageData() {
 }
 
 export async function loadInfoPageData() {
-  const [config, meta] = await Promise.all([loadJson("config.json"), loadJson("meta.json")]);
-  return { config, meta };
+  const [config, meta, standings, draw, fixtures] = await Promise.all([
+    loadJson("config.json"),
+    loadJson("meta.json"),
+    loadJson("standings.json"),
+    loadJson("draw.json"),
+    loadJson("fixtures.json"),
+  ]);
+  return { config, meta, standings, draw, fixtures };
 }
 
 export async function loadFixturesPageData() {

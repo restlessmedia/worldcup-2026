@@ -1888,6 +1888,125 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.prize-outlook {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.prize-outlook__section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.prize-outlook__section-title {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.prize-outlook__section-copy {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
+.prize-outlook__list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.prize-outlook__item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 0.85rem 0.95rem;
+}
+
+.prize-outlook__item--1st { border-left: 3px solid #eab308; }
+.prize-outlook__item--2nd { border-left: 3px solid #94a3b8; }
+.prize-outlook__item--3rd { border-left: 3px solid #f97316; }
+.prize-outlook__item--4th { border-left: 3px solid var(--accent); }
+.prize-outlook__item--goals { border-left: 3px solid #78716c; }
+.prize-outlook__item--fair-play { border-left: 3px solid #14b8a6; }
+
+.prize-outlook__head {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr auto;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.prize-outlook__head h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.prize-outlook__head p {
+  margin: 0.2rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.prize-outlook__ordinal {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+}
+
+.prize-outlook__ordinal--side {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
+.prize-outlook__amount {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.prize-outlook__houses {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.prize-outlook__houses li {
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.prize-outlook__houses strong {
+  color: var(--text);
+}
+
+.prize-outlook__leader p {
+  margin: 0.85rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.prize-outlook__leader strong {
+  color: var(--text);
+}
+
+.prize-outlook__note,
+.prize-outlook__empty {
+  margin: 0.55rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
 /* ── Knockout ── */
 
 .knockout-bracket-shell {

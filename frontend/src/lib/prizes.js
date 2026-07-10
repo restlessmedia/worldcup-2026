@@ -1,4 +1,4 @@
-import { formatMoney } from "./format";
+import { formatMoney } from "./format.js";
 
 const ORDINALS = ["1st", "2nd", "3rd", "4th"];
 
