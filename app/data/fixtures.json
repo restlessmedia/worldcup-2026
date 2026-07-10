@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-09T21:26:04.697455+00:00",
+  "generated_at": "2026-07-10T11:09:19.590047+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-09T21:26:04.588579+00:00",
+  "fetched_at": "2026-07-10T11:09:19.485040+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -188,7 +188,7 @@
         "house_id": "19",
         "group": "C",
         "fifa_rank": 8,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -932,7 +932,7 @@
         "house_id": "19",
         "group": "C",
         "fifa_rank": 8,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 0,
       "away_score": 1,
@@ -1574,7 +1574,7 @@
         "house_id": "19",
         "group": "C",
         "fifa_rank": 8,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Haiti",
@@ -2358,7 +2358,7 @@
         "house_id": "19",
         "group": "C",
         "fifa_rank": 8,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -2761,7 +2761,7 @@
         "house_id": "19",
         "group": "C",
         "fifa_rank": 8,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 0,
       "away_score": 3,
@@ -3009,9 +3009,9 @@
         "house_id": "19",
         "group": "C",
         "fifa_rank": 8,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 0,
       "played": true
     },
@@ -3118,13 +3118,13 @@
       "kickoff_utc": "2026-07-14T19:00:00Z",
       "venue": "Dallas",
       "home": {
-        "draw_name": "W97",
-        "display_name": "Winner of quarter-final 1",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "France",
+        "display_name": "France",
+        "fifa_code": "FRA",
+        "house_id": "21",
+        "group": "I",
+        "fifa_rank": 1,
+        "status": "alive"
       },
       "away": {
         "draw_name": "W98",
