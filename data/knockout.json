@@ -231,8 +231,8 @@
           "id": "qf-03",
           "home": "Spain",
           "away": "Belgium",
-          "home_score": null,
-          "away_score": null,
+          "home_score": 2,
+          "away_score": 1,
           "winner": null
         },
         {
@@ -252,7 +252,7 @@
         {
           "id": "sf-01",
           "home": "France",
-          "away": null,
+          "away": "Spain",
           "home_score": null,
           "away_score": null,
           "winner": null

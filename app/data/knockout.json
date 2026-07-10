@@ -3,7 +3,7 @@
   "last_updated": "2026-07-10",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 7,
+    "houses_alive": 6,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -302,7 +302,7 @@
             "house_id": "1",
             "group": "G",
             "fifa_rank": 9,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Senegal",
@@ -709,7 +709,7 @@
             "house_id": "1",
             "group": "G",
             "fifa_rank": 9,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": 1,
           "away_score": 4,
@@ -720,7 +720,7 @@
             "house_id": "1",
             "group": "G",
             "fifa_rank": 9,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -878,12 +878,20 @@
             "house_id": "1",
             "group": "G",
             "fifa_rank": 9,
+            "status": "eliminated"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "played": true
         },
         {
           "id": "qf-04",
@@ -938,7 +946,15 @@
             "fifa_rank": 1,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -946,7 +962,15 @@
         },
         {
           "id": "sf-02",
-          "home": null,
+          "home": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -955,9 +979,10 @@
         }
       ],
       "houses": [
-        "21"
+        "21",
+        "Coppice"
       ],
-      "teams_count": 1
+      "teams_count": 2
     },
     {
       "id": "third",

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-10T16:15:29.837203+00:00",
+  "generated_at": "2026-07-10T21:09:59.400108+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-10T16:07:17.075414+00:00",
+  "fetched_at": "2026-07-10T21:09:59.298444+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -427,7 +427,7 @@
         "house_id": "1",
         "group": "G",
         "fifa_rank": 9,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Egypt",
@@ -1171,7 +1171,7 @@
         "house_id": "1",
         "group": "G",
         "fifa_rank": 9,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Iran",
@@ -2048,7 +2048,7 @@
         "house_id": "1",
         "group": "G",
         "fifa_rank": 9,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 5,
@@ -2504,7 +2504,7 @@
         "house_id": "1",
         "group": "G",
         "fifa_rank": 9,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Senegal",
@@ -2916,7 +2916,7 @@
         "house_id": "1",
         "group": "G",
         "fifa_rank": 9,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 4,
@@ -3040,11 +3040,11 @@
         "house_id": "1",
         "group": "G",
         "fifa_rank": 9,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 2,
+      "away_score": 1,
+      "played": true
     },
     {
       "id": "fifa-400021539",
@@ -3127,13 +3127,13 @@
         "status": "alive"
       },
       "away": {
-        "draw_name": "W98",
-        "display_name": "Winner of quarter-final 2",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Spain",
+        "display_name": "Spain",
+        "fifa_code": "ESP",
+        "house_id": "Coppice",
+        "group": "H",
+        "fifa_rank": 2,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
