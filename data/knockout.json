@@ -1,6 +1,6 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-10",
+  "last_updated": "2026-07-12",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "rounds": [
     {
@@ -259,8 +259,8 @@
         },
         {
           "id": "sf-02",
-          "home": null,
-          "away": null,
+          "home": "England",
+          "away": "Argentina",
           "home_score": null,
           "away_score": null,
           "winner": null

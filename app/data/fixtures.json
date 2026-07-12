@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-11T20:55:55.912291+00:00",
+  "generated_at": "2026-07-12T09:54:45.538254+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-11T20:55:55.805651+00:00",
+  "fetched_at": "2026-07-12T09:54:45.435447+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -157,7 +157,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 19,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 1,
@@ -560,7 +560,7 @@
         "house_id": "11",
         "group": "I",
         "fifa_rank": 31,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 4,
@@ -799,7 +799,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 19,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Bosnia and Herzegovina (Bosnia)",
@@ -1326,7 +1326,7 @@
         "house_id": "11",
         "group": "I",
         "fifa_rank": 31,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Senegal",
@@ -1543,7 +1543,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 19,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Canada",
@@ -1884,7 +1884,7 @@
         "house_id": "11",
         "group": "I",
         "fifa_rank": 31,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "France",
@@ -2389,7 +2389,7 @@
         "house_id": "11",
         "group": "I",
         "fifa_rank": 31,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 2,
@@ -2628,7 +2628,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 19,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Algeria",
@@ -2823,7 +2823,7 @@
         "house_id": "11",
         "group": "I",
         "fifa_rank": 31,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 2,
@@ -2969,7 +2969,7 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 19,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Colombia",
@@ -3062,7 +3062,7 @@
         "house_id": "11",
         "group": "I",
         "fifa_rank": 31,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "England",
@@ -3073,9 +3073,9 @@
         "fifa_rank": 4,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 1,
+      "away_score": 2,
+      "played": true
     },
     {
       "id": "fifa-400021537",
@@ -3102,11 +3102,11 @@
         "house_id": "13",
         "group": "B",
         "fifa_rank": 19,
-        "status": "alive"
+        "status": "eliminated"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 3,
+      "away_score": 1,
+      "played": true
     },
     {
       "id": "fifa-400021541",
@@ -3149,22 +3149,22 @@
       "kickoff_utc": "2026-07-15T19:00:00Z",
       "venue": "Atlanta",
       "home": {
-        "draw_name": "W99",
-        "display_name": "Winner of quarter-final 3",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "England",
+        "display_name": "England",
+        "fifa_code": "ENG",
+        "house_id": "4",
+        "group": "L",
+        "fifa_rank": 4,
+        "status": "alive"
       },
       "away": {
-        "draw_name": "W100",
-        "display_name": "Winner of quarter-final 4",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Argentina",
+        "display_name": "Argentina",
+        "fifa_code": "ARG",
+        "house_id": "12",
+        "group": "J",
+        "fifa_rank": 3,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,

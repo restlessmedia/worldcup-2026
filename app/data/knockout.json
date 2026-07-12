@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-10",
+  "last_updated": "2026-07-12",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 6,
+    "houses_alive": 4,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -179,7 +179,7 @@
             "house_id": "11",
             "group": "I",
             "fifa_rank": 31,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": 1,
           "away_score": 2,
@@ -190,7 +190,7 @@
             "house_id": "11",
             "group": "I",
             "fifa_rank": 31,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -393,7 +393,7 @@
             "house_id": "13",
             "group": "B",
             "fifa_rank": 19,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Algeria",
@@ -413,7 +413,7 @@
             "house_id": "13",
             "group": "B",
             "fifa_rank": 19,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -610,7 +610,7 @@
             "house_id": "11",
             "group": "I",
             "fifa_rank": 31,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": 1,
           "away_score": 2,
@@ -621,7 +621,7 @@
             "house_id": "11",
             "group": "I",
             "fifa_rank": 31,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -766,7 +766,7 @@
             "house_id": "13",
             "group": "B",
             "fifa_rank": 19,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Colombia",
@@ -844,7 +844,7 @@
             "house_id": "11",
             "group": "I",
             "fifa_rank": 31,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "England",
@@ -911,7 +911,7 @@
             "house_id": "13",
             "group": "B",
             "fifa_rank": 19,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,
@@ -963,15 +963,23 @@
         {
           "id": "sf-02",
           "home": {
-            "draw_name": "Spain",
-            "display_name": "Spain",
-            "fifa_code": "ESP",
-            "house_id": "Coppice",
-            "group": "H",
-            "fifa_rank": 2,
+            "draw_name": "England",
+            "display_name": "England",
+            "fifa_code": "ENG",
+            "house_id": "4",
+            "group": "L",
+            "fifa_rank": 4,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -979,10 +987,12 @@
         }
       ],
       "houses": [
+        "4",
+        "12",
         "21",
         "Coppice"
       ],
-      "teams_count": 2
+      "teams_count": 4
     },
     {
       "id": "third",
