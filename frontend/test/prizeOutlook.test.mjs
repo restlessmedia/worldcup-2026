@@ -49,12 +49,20 @@ test("computeWoodenSpoonOutlook leads House 1 through Iraq", () => {
 
 test("computeMainPrizeContenders lists only houses with teams still alive", () => {
   const contenders = computeMainPrizeContenders(standings);
+  const expectedHouseIds = (standings.houses || [])
+    .filter((house) => house.teams_alive > 0)
+    .map((house) => house.house_id)
+    .sort();
 
-  assert.equal(contenders.length, standings.teams_in_play);
+  assert.equal(contenders.length, expectedHouseIds.length);
   assert.deepEqual(
     contenders.map((house) => house.houseId).sort(),
-    ["1", "11", "12", "13", "21", "4", "Coppice"],
+    expectedHouseIds,
   );
+  for (const house of contenders) {
+    assert.ok(house.teamsAlive.length > 0);
+    assert.ok(house.teamsAlive.every((teamName) => typeof teamName === "string"));
+  }
 });
 
 test("computePrizeOutlook leaves fair play undecided", () => {
