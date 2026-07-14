@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-14T10:02:39.070734+00:00",
+  "generated_at": "2026-07-14T21:04:10.179710+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-14T10:02:38.968183+00:00",
+  "fetched_at": "2026-07-14T21:04:10.071677+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -520,7 +520,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Senegal",
@@ -1295,7 +1295,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Iraq",
@@ -1893,7 +1893,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 1,
       "away_score": 4,
@@ -2411,7 +2411,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Sweden",
@@ -2792,7 +2792,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "home_score": 0,
       "away_score": 1,
@@ -3000,7 +3000,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Morocco",
@@ -3124,7 +3124,7 @@
         "house_id": "21",
         "group": "I",
         "fifa_rank": 1,
-        "status": "alive"
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "Spain",
@@ -3135,9 +3135,9 @@
         "fifa_rank": 2,
         "status": "alive"
       },
-      "home_score": null,
-      "away_score": null,
-      "played": false
+      "home_score": 0,
+      "away_score": 2,
+      "played": true
     },
     {
       "id": "fifa-400021540",
@@ -3172,21 +3172,21 @@
     },
     {
       "id": "fifa-400021542",
-      "stage": "third",
-      "stage_label": "Play-off for third place",
+      "stage": "bronze_final",
+      "stage_label": "Bronze final",
       "group": null,
       "matchday": null,
       "match_number": 103,
       "kickoff_utc": "2026-07-18T21:00:00Z",
       "venue": "Miami",
       "home": {
-        "draw_name": "RU101",
-        "display_name": "Loser of semi-final 1",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "France",
+        "display_name": "France",
+        "fifa_code": "FRA",
+        "house_id": "21",
+        "group": "I",
+        "fifa_rank": 1,
+        "status": "eliminated"
       },
       "away": {
         "draw_name": "RU102",
@@ -3211,13 +3211,13 @@
       "kickoff_utc": "2026-07-19T19:00:00Z",
       "venue": "New Jersey",
       "home": {
-        "draw_name": "W101",
-        "display_name": "Winner of semi-final 1",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Spain",
+        "display_name": "Spain",
+        "fifa_code": "ESP",
+        "house_id": "Coppice",
+        "group": "H",
+        "fifa_rank": 2,
+        "status": "alive"
       },
       "away": {
         "draw_name": "W102",

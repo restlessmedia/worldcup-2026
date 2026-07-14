@@ -113,3 +113,4 @@
 2026-07-13T11:17:55.525164+00:00 | status=ok | changed=False | finished_matches=92 | eliminated=44 | new_eliminated=0 | published=True | detail=2026-07-13T111755Z.json
 2026-07-13T21:01:25.256130+00:00 | status=ok | changed=False | finished_matches=92 | eliminated=44 | new_eliminated=0 | published=True | detail=2026-07-13T210125Z.json
 2026-07-14T10:02:38.868638+00:00 | status=ok | changed=False | finished_matches=92 | eliminated=44 | new_eliminated=0 | published=True | detail=2026-07-14T100239Z.json
+2026-07-14T21:04:09.829756+00:00 | status=ok | changed=True | finished_matches=93 | eliminated=45 | new_eliminated=1 | published=True | detail=2026-07-14T210410Z.json

@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-12",
+  "last_updated": "2026-07-14",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 4,
+    "houses_alive": 3,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -137,7 +137,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Sweden",
@@ -157,7 +157,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -544,7 +544,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": 0,
           "away_score": 1,
@@ -555,7 +555,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -811,7 +811,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Morocco",
@@ -831,7 +831,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -944,7 +944,7 @@
             "house_id": "21",
             "group": "I",
             "fifa_rank": 1,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Spain",
@@ -955,10 +955,18 @@
             "fifa_rank": 2,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 0,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
+          "played": true
         },
         {
           "id": "sf-02",
@@ -1017,7 +1025,15 @@
       "matches": [
         {
           "id": "final-01",
-          "home": null,
+          "home": {
+            "draw_name": "Spain",
+            "display_name": "Spain",
+            "fifa_code": "ESP",
+            "house_id": "Coppice",
+            "group": "H",
+            "fifa_rank": 2,
+            "status": "alive"
+          },
           "away": null,
           "home_score": null,
           "away_score": null,
@@ -1025,8 +1041,10 @@
           "played": false
         }
       ],
-      "houses": [],
-      "teams_count": 0
+      "houses": [
+        "Coppice"
+      ],
+      "teams_count": 1
     }
   ]
 }
