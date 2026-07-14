@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-07-14T21:04:10.071677+00:00",
+  "fetched_at": "2026-07-14T21:10:48.843710+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
