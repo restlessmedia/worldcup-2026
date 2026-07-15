@@ -1,9 +1,9 @@
 {
   "phase": "knockout",
-  "last_updated": "2026-07-14",
+  "last_updated": "2026-07-15",
   "notes": "Set phase to 'knockout' and fill Round of 32 teams once group stage ends.",
   "summary": {
-    "houses_alive": 3,
+    "houses_alive": 2,
     "teams_in_bracket": 32,
     "r32_fixtures_set": 16
   },
@@ -236,7 +236,7 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "DR Congo (Democratic Republic of the Congo)",
@@ -256,7 +256,7 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -643,7 +643,7 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": 2,
           "away_score": 3,
@@ -654,7 +654,7 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
-            "status": "alive"
+            "status": "eliminated"
           },
           "played": true
         },
@@ -853,7 +853,7 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
-            "status": "alive"
+            "status": "eliminated"
           },
           "home_score": null,
           "away_score": null,
@@ -977,7 +977,7 @@
             "house_id": "4",
             "group": "L",
             "fifa_rank": 4,
-            "status": "alive"
+            "status": "eliminated"
           },
           "away": {
             "draw_name": "Argentina",
@@ -988,10 +988,18 @@
             "fifa_rank": 3,
             "status": "alive"
           },
-          "home_score": null,
-          "away_score": null,
-          "winner": null,
-          "played": false
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
+          "played": true
         }
       ],
       "houses": [
@@ -1034,7 +1042,15 @@
             "fifa_rank": 2,
             "status": "alive"
           },
-          "away": null,
+          "away": {
+            "draw_name": "Argentina",
+            "display_name": "Argentina",
+            "fifa_code": "ARG",
+            "house_id": "12",
+            "group": "J",
+            "fifa_rank": 3,
+            "status": "alive"
+          },
           "home_score": null,
           "away_score": null,
           "winner": null,
@@ -1042,9 +1058,10 @@
         }
       ],
       "houses": [
+        "12",
         "Coppice"
       ],
-      "teams_count": 1
+      "teams_count": 2
     }
   ]
 }
