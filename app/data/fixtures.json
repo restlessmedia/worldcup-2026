@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-15T21:04:09.183068+00:00",
+  "generated_at": "2026-07-16T09:12:35.269243+00:00",
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
-  "fetched_at": "2026-07-15T21:04:09.097673+00:00",
+  "fetched_at": "2026-07-16T09:12:35.156586+00:00",
   "fixture_count": 104,
   "date_range": {
     "first": "2026-06-11T19:00:00Z",
@@ -3189,13 +3189,13 @@
         "status": "eliminated"
       },
       "away": {
-        "draw_name": "RU102",
-        "display_name": "Loser of semi-final 2",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "England",
+        "display_name": "England",
+        "fifa_code": "ENG",
+        "house_id": "4",
+        "group": "L",
+        "fifa_rank": 4,
+        "status": "eliminated"
       },
       "home_score": null,
       "away_score": null,
@@ -3220,13 +3220,13 @@
         "status": "alive"
       },
       "away": {
-        "draw_name": "W102",
-        "display_name": "Winner of semi-final 2",
-        "fifa_code": null,
-        "house_id": null,
-        "group": null,
-        "fifa_rank": null,
-        "status": "placeholder"
+        "draw_name": "Argentina",
+        "display_name": "Argentina",
+        "fifa_code": "ARG",
+        "house_id": "12",
+        "group": "J",
+        "fifa_rank": 3,
+        "status": "alive"
       },
       "home_score": null,
       "away_score": null,
