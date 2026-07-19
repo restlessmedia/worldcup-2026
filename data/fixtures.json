@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "source_api": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
-  "fetched_at": "2026-07-18T20:55:47.198230+00:00",
+  "fetched_at": "2026-07-19T09:55:24.978887+00:00",
   "fixture_count": 104,
   "fixtures": [
     {
@@ -1648,9 +1648,9 @@
       "home": "France",
       "away": "England",
       "venue": "Miami",
-      "home_score": null,
-      "away_score": null,
-      "finished": false
+      "home_score": 4,
+      "away_score": 6,
+      "finished": true
     },
     {
       "id": "fifa-400021543",
