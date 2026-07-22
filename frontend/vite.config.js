@@ -11,10 +11,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        knockout: resolve(__dirname, "knockout.html"),
-        spoon: resolve(__dirname, "spoon.html"),
-        info: resolve(__dirname, "info.html"),
-        fixtures: resolve(__dirname, "fixtures.html"),
       },
       output: {
         manualChunks: {
